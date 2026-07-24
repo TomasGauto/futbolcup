@@ -724,10 +724,11 @@ function OptionCard({ opt, onPick, chosen, faded }: { opt: CareerOption; onPick:
   );
 }
 
-/** Marco de la carta según fama: bronce → plata → oro → leyenda (el DT tiene el suyo). */
+/** Marco de la carta según fama: bronce → plata → oro → leyenda (el DT tiene el suyo).
+ *  LEYENDA exige además haber ganado de verdad: fama sola (jugar mucho) no alcanza. */
 function fameFrame(career: CareerState): { key: string; label: string } {
   if (career.phase === 'dt') return { key: 'dt', label: 'DT' };
-  if (career.fame >= 80) return { key: 'leyenda', label: 'LEYENDA' };
+  if (career.fame >= 80 && career.titles.length >= 5) return { key: 'leyenda', label: 'LEYENDA' };
   if (career.fame >= 55) return { key: 'oro', label: 'ORO' };
   if (career.fame >= 30) return { key: 'plata', label: 'PLATA' };
   return { key: 'bronce', label: 'BRONCE' };

@@ -635,7 +635,8 @@ function playSeason(state: CareerState, rng: Rng): SeasonRow {
   state.formBoost = 0;
   state.promisedStarter = false;
 
-  state.fame = Math.min(100, r1(state.fame + apps * 0.06 + goals * 0.25 + titles.length * 6 + (level >= 82 ? 1.5 : 0) + rivalryFame - 1));
+  // la fama premia sobre todo títulos: jugar mucho ya no alcanza para ser leyenda por acumulación pasiva
+  state.fame = Math.min(100, r1(state.fame + apps * 0.03 + goals * 0.12 + titles.length * 9 + (level >= 82 ? 1.5 : 0) + rivalryFame - 1.5));
 
   // registrar
   const stint = currentStint(state);

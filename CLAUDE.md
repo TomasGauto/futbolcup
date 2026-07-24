@@ -75,6 +75,37 @@ FutbolCup es una webapp simuladora de gestión futbolística construida como una
 - El panel de trayectoria debe ser visible y compacto en desktop sin romper el layout principal.
 - No se usan recursos externos en runtime; todo lo necesario debe estar en `public/data`.
 
+## Repositorio y despliegue
+- **Repo:** [github.com/TomasGauto/futbolcup](https://github.com/TomasGauto/futbolcup) (público, cuenta `TomasGauto` en `gh` CLI).
+- **Hosting:** GitHub Pages, gratis, servido desde la rama `gh-pages` (`build_type: legacy`, no GitHub Actions).
+- **URL en vivo:** https://tomasgauto.github.io/futbolcup/
+- **Por qué no hay workflow de CI/CD:** el token de `gh` para esta cuenta no tiene el scope `workflow`, así que no se puede pushear a `.github/workflows/`. El deploy es manual pero determinista (ver pasos abajo).
+- **`base` de Vite:** `vite.config.ts` define `base: process.env.GH_PAGES ? '/futbolcup/' : '/'` — así el dev local (`npm run dev`) sigue sirviendo en `/` y el build de Pages usa el subpath del repo. Todos los `fetch` a `public/data/*` ya usan `import.meta.env.BASE_URL`, por lo que no hace falta tocar código para que esto funcione.
+
+### Cómo publicar una actualización
+```bash
+# 1) build de producción con el base de GitHub Pages
+GH_PAGES=1 npm run build
+
+# 2) publicar dist/ como commit único en la rama gh-pages
+cd dist
+git init -q
+git add -A
+git commit -q -m "deploy: <descripción breve>"
+git branch -M gh-pages
+git remote add origin https://github.com/TomasGauto/futbolcup.git
+git push -f origin gh-pages
+cd ..
+```
+GitHub Pages reconstruye automáticamente al recibir el push a `gh-pages` (usualmente <1 min). Verificar con:
+```bash
+gh api repos/TomasGauto/futbolcup/pages --jq '.status'   # debe decir "built"
+```
+
+### Notas sobre el token de gh CLI
+- Hay 3 cuentas logueadas en `gh` en esta máquina (`ingenieriagit`, `tomasgauto-telco`, `TomasGauto`). Este repo usa **`TomasGauto`** — si `gh auth status` muestra otra cuenta activa, correr `gh auth switch --user TomasGauto` antes de operar sobre este repo.
+- Si en el futuro se quiere automatizar el deploy con GitHub Actions, hay que agregar el scope `workflow` al token (`gh auth refresh -h github.com -s workflow`, requiere login interactivo del usuario) o usar la cuenta `tomasgauto-telco`, que ya tiene ese scope.
+
 ## Comandos principales
 ```bash
 npm install
