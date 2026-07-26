@@ -693,8 +693,10 @@ function ChipView({ chip }: { chip: Chip }) {
  * más anchas siempre entran todas en una sola fila.
  */
 function decisionGridVars(count: number): React.CSSProperties {
-  const cols = count === 3 ? 3 : Math.min(count, 2);
-  return { '--cols-mobile': String(cols), '--cols-wide': String(count) } as React.CSSProperties;
+  // En mobile: si hay 3+ opciones, apilamos en 1 columna para que no se aplaste el texto.
+  const colsMobile = count > 2 ? 1 : count;
+  const colsWide = count >= 4 ? 2 : count;
+  return { '--cols-mobile': String(colsMobile), '--cols-wide': String(colsWide) } as React.CSSProperties;
 }
 
 function OptionCard({ opt, onPick, chosen, faded }: { opt: CareerOption; onPick: () => void; chosen?: boolean; faded?: boolean }) {
@@ -756,29 +758,29 @@ function PlayerCard({ career }: { career: CareerState }) {
       <div className="flex items-center gap-3 sm:gap-4 relative z-10">
         
         {/* FUT-style massive rating badge */}
-        <div className={`fut-badge fut-${tier} flex flex-col items-center justify-center shadow-lg`}>
+        <div className={`fut-badge fut-${tier} flex-shrink-0 flex flex-col items-center justify-center shadow-lg`}>
           <div className="text-2xl sm:text-3xl font-num font-bold leading-none tracking-tighter"><CountNum value={rating} /></div>
           <div className="text-[10px] sm:text-xs font-display font-bold mt-0.5 opacity-90">{isDt ? 'DT' : career.position}</div>
         </div>
 
         <div className="flex-1 min-w-0">
           <div className="font-display text-xl sm:text-2xl leading-tight" style={{ color: 'var(--club-primary)', textShadow: '0 2px 4px rgba(0,0,0,0.4)' }}>
-            {career.name}
-            <span className={`text-[9px] ml-2 px-1.5 py-0.5 rounded-sm border align-middle frame-${frame.key} shadow-sm`}>{frame.label}</span>
+            <span className="truncate block">{career.name}</span>
+            <span className={`inline-block mt-0.5 text-[9px] px-1.5 py-0.5 rounded-sm border align-middle frame-${frame.key} shadow-sm`}>{frame.label}</span>
           </div>
-          <div className="text-[11px] sm:text-xs font-num mt-1" style={{ color: 'var(--text)' }}>
+          <div className="text-[11px] sm:text-xs font-num mt-1 flex flex-wrap items-center gap-x-1 gap-y-0.5" style={{ color: 'var(--text)' }}>
             <span className="opacity-80">{career.nationality}</span>
-            <span className="mx-1.5 opacity-40">·</span>
-            <span className="opacity-80">{career.age} años</span>
-            <span className="mx-1.5 opacity-40">·</span>
-            <span className="opacity-80">Temp. {career.year}/{String((career.year + 1) % 100).padStart(2, '0')}</span>
+            <span className="opacity-40">·</span>
+            <span className="opacity-80 whitespace-nowrap">{career.age} años</span>
+            <span className="opacity-40">·</span>
+            <span className="opacity-80 whitespace-nowrap">Temp. {career.year}/{String((career.year + 1) % 100).padStart(2, '0')}</span>
           </div>
         </div>
         
         {club && (
-          <div className="flex flex-col items-end gap-1 text-right ml-2">
-            <Crest clubId={club.id} name={club.name} size={42} />
-            <div className="font-display text-xs sm:text-sm truncate w-24 sm:w-32" style={{ color: 'var(--text)' }}>{club.name}</div>
+          <div className="flex flex-col items-end gap-1 text-right ml-2 flex-shrink-0">
+            <Crest clubId={club.id} name={club.name} size={38} />
+            <div className="font-display text-[11px] sm:text-sm truncate w-20 sm:w-28" style={{ color: 'var(--text)' }}>{club.name}</div>
             <div className="text-[9px] sm:text-[10px] font-num opacity-60">Nivel {clubLevel(club)}</div>
           </div>
         )}
