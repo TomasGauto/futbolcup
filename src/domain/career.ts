@@ -1209,20 +1209,44 @@ function socialMemeForOption(
   // reservado a los momentos grandes: apuestas de riesgo, penales y títulos ganados
   // (antes se disparaba en cada oferta/préstamo/convocatoria y saturaba la carrera de memes)
   if (res.risk) {
-    return res.risk.ok
-      ? 'En redes ya rueda el meme: “Esos son los huevos, campeón.”'
-      : 'La hinchada ya te bautizó con el hashtag #JugateOtraVez.';
+    const okMemes = [
+      'Cine 🚬. Te recibiste de basado absoluto.',
+      'El edit con música de Phonk ya es viral en TikTok.',
+      'La termo-esfera decretó que sos más grande que Pelé.',
+      'Masterclass. En redes todos piden tu Balón de Oro.'
+    ];
+    const failMemes = [
+      'En TikTok ya hicieron 14 edits tuyos con música triste.',
+      'Sos tendencia en X por las razones equivocadas. #Jubilate',
+      'Ya apareciste en el compilado de bloopers rústicos.',
+      'En Twitter te están liquidando. Te dicen "Ex Jugador".'
+    ];
+    return res.risk.ok ? okMemes[state.year % okMemes.length] : failMemes[state.year % failMemes.length];
   }
 
   if (event.kind === 'penal') {
-    return res.penalty?.scored
-      ? 'Los hinchas ya corean tu nombre en la tribuna.'
-      : 'El travesaño es el meme viral del día.';
+    const okMemes = [
+      'Ice in my veins 🥶. Te tiraste un pasito y es trend.',
+      'Mente fría, termo intacto. Cerraste el estadio.',
+      'A lo Panenka... en redes ya te comparan con los grandes.'
+    ];
+    const failMemes = [
+      'Ese penal lo agarraron en la estratósfera. Sos meme.',
+      'Apareciste en TV por mandar la pelota a Júpiter.',
+      'Inspiración Sergio Ramos: bajaste un satélite de Starlink.'
+    ];
+    return res.penalty?.scored ? okMemes[state.year % okMemes.length] : failMemes[state.year % failMemes.length];
   }
 
   const wonTitle = res.season?.titles[0] ?? res.cycle?.flatMap((r) => r.titles)[0];
   if (wonTitle) {
-    return `Ya es meme: “${wonTitle}” bajo el brazo.`;
+    const titleMemes = [
+      `Ya sos canon: edit con la ${wonTitle} y reggaetón de fondo.`,
+      `El stream festejando la ${wonTitle} rompió Twitch.`,
+      `Te tatuaste la ${wonTitle} y en redes ya te dicen GOAT 🐐.`,
+      `Campeón de ${wonTitle} y lluvia de historias con lentes de sol.`
+    ];
+    return titleMemes[state.year % titleMemes.length];
   }
 
   return null;

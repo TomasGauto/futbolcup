@@ -643,3 +643,35 @@ body::after {
 .pcard.frame-b-oro { border-color: rgba(var(--club-primary-rgb),0.65); }
 .pcard.frame-b-leyenda { border-color: rgba(125,211,252,0.7); box-shadow: 0 0 18px rgba(125,211,252,0.12); }
 .pcard.frame-b-dt { border-color: rgba(74,222,128,0.55); }
+
+/* ---- Badges de valoración (estilo FUT) ---- */
+.fut-badge {
+  width: 58px;
+  height: 68px;
+  clip-path: polygon(50% 0%, 100% 20%, 100% 80%, 50% 100%, 0% 80%, 0% 20%);
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+}
+@media (min-width: 640px) {
+  .fut-badge {
+    width: 68px;
+    height: 80px;
+  }
+}
+.fut-bronze { background: linear-gradient(135deg, #b07d62, #6b4423); border: 2px solid #d4a373; box-shadow: inset 0 0 8px rgba(0,0,0,0.5); }
+.fut-silver { background: linear-gradient(135deg, #e2e8f0, #94a3b8); color: #1e293b; text-shadow: none; border: 2px solid #fff; box-shadow: inset 0 0 8px rgba(0,0,0,0.2); }
+.fut-gold { background: linear-gradient(135deg, #fbbf24, #b45309); border: 2px solid #fde047; box-shadow: inset 0 0 12px rgba(0,0,0,0.4); }
+.fut-elite { background: linear-gradient(135deg, #38bdf8, #1e3a8a); border: 2px solid #bae6fd; box-shadow: inset 0 0 16px rgba(0,0,0,0.6); }
+
+/* Glow de fondo para la carta */
+.rating-bg-bronze { background: #b07d62; }
+.rating-bg-silver { background: #e2e8f0; }
+.rating-bg-gold { background: #fbbf24; }
+.rating-bg-elite { background: #38bdf8; }
+
+.kpi-rating-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}

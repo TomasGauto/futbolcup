@@ -293,7 +293,7 @@ export type SeasonSummary = {
   playerPosition: number;
   topScorer: { name: string; club: string; goals: number } | null;
   bestPlayer: { name: string; club: string; rating: number } | null;
-  bestYoung: { name: string; club: string; age: number } | null;
+  bestYoung: { name: string; club: string; age: number; score: number } | null;
 };
 
 export function finishSeasonSporting(state: GameState): SeasonSummary {
@@ -379,8 +379,9 @@ export function finishSeasonSporting(state: GameState): SeasonSummary {
       if (!topScorer || p.seasonStats.goals > topScorer.goals) topScorer = { name: p.name, club: club.shortName, goals: p.seasonStats.goals };
       const score = p.seasonStats.rating * Math.min(1, p.seasonStats.apps / 25);
       if (!bestPlayer || score > bestPlayer.rating) bestPlayer = { name: p.name, club: club.shortName, rating: Number(score.toFixed(2)) };
-      if (p.age <= 21 && p.seasonStats.apps >= 15 && (!bestYoung || p.overall > 0)) {
-        if (!bestYoung || p.seasonStats.rating > 0) bestYoung = bestYoung && p.seasonStats.rating <= 6.8 ? bestYoung : { name: p.name, club: club.shortName, age: p.age };
+      if (p.age <= 21 && p.seasonStats.apps >= 15) {
+        const youngScore = p.seasonStats.rating * Math.min(1, p.seasonStats.apps / 30);
+        if (!bestYoung || youngScore > bestYoung.score) bestYoung = { name: p.name, club: club.shortName, age: p.age, score: youngScore };
       }
     }
   }

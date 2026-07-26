@@ -14,9 +14,23 @@ const DEFENSE_WEIGHT: Record<string, number> = {
 export function pickXI(club: Club): Player[] {
   const fit = club.squad.filter((p) => !p.injury && p.fitness > 30);
   const gk = fit.filter((p) => p.position === 'GK').sort((a, b) => b.overall - a.overall)[0];
-  const field = fit.filter((p) => p.position !== 'GK').sort((a, b) => b.overall - a.overall).slice(0, 10);
-  const xi = gk ? [gk, ...field] : field.slice(0, 11);
-  return xi;
+  
+  const defs = fit.filter((p) => ['CB', 'LB', 'RB'].includes(p.position)).sort((a, b) => b.overall - a.overall);
+  const mids = fit.filter((p) => ['DM', 'CM', 'AM'].includes(p.position)).sort((a, b) => b.overall - a.overall);
+  const fwds = fit.filter((p) => ['LW', 'RW', 'ST'].includes(p.position)).sort((a, b) => b.overall - a.overall);
+  
+  const field: Player[] = [];
+  // Asegurar una base mínima: 3 defensores, 3 medios, 1 delantero
+  field.push(...defs.splice(0, Math.min(3, defs.length)));
+  field.push(...mids.splice(0, Math.min(3, mids.length)));
+  field.push(...fwds.splice(0, Math.min(1, fwds.length)));
+  
+  // Completar el resto (hasta 10, o 11 si no hay arquero) con los mejores disponibles
+  const targetFieldCount = gk ? 10 : 11;
+  const remaining = [...defs, ...mids, ...fwds].sort((a, b) => b.overall - a.overall);
+  field.push(...remaining.splice(0, Math.max(0, targetFieldCount - field.length)));
+
+  return gk ? [gk, ...field] : field;
 }
 
 export type TeamStrength = { attack: number; defense: number; avgOverall: number; xi: Player[] };

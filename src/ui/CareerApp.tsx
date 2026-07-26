@@ -744,52 +744,65 @@ function PlayerCard({ career }: { career: CareerState }) {
   const rivals = club ? getClubRivals(club, career.clubs) : [];
   const isDt = career.phase === 'dt';
   const frame = fameFrame(career);
+  
+  const rating = isDt ? career.dtSkill : career.ability;
+  const tier = rating >= 85 ? 'elite' : rating >= 75 ? 'gold' : rating >= 65 ? 'silver' : 'bronze';
+
   return (
-    <header className={`pcard frame-b-${frame.key} p-3`}>
-      <div className="flex items-center gap-3">
-        <div className={`pcard-avatar frame-${frame.key} font-display`} aria-label={`Carta nivel ${frame.label}`}>
-          {isDt ? '📋' : initialsOf(career.name)}
+    <header className={`pcard frame-b-${frame.key} p-3 sm:p-4 relative overflow-hidden`}>
+      {/* Decorative background glow based on rating tier */}
+      <div className={`absolute -top-10 -left-10 w-40 h-40 rounded-full opacity-20 blur-2xl rating-bg-${tier}`} aria-hidden />
+
+      <div className="flex items-center gap-3 sm:gap-4 relative z-10">
+        
+        {/* FUT-style massive rating badge */}
+        <div className={`fut-badge fut-${tier} flex flex-col items-center justify-center shadow-lg`}>
+          <div className="text-2xl sm:text-3xl font-num font-bold leading-none tracking-tighter"><CountNum value={rating} /></div>
+          <div className="text-[10px] sm:text-xs font-display font-bold mt-0.5 opacity-90">{isDt ? 'DT' : career.position}</div>
         </div>
+
         <div className="flex-1 min-w-0">
-          <div className="font-display text-lg leading-tight" style={{ color: 'var(--club-primary)' }}>
+          <div className="font-display text-xl sm:text-2xl leading-tight" style={{ color: 'var(--club-primary)', textShadow: '0 2px 4px rgba(0,0,0,0.4)' }}>
             {career.name}
-            <span className={`text-[9px] ml-2 px-1.5 py-0.5 rounded-sm border align-middle frame-${frame.key}`}>{frame.label}</span>
+            <span className={`text-[9px] ml-2 px-1.5 py-0.5 rounded-sm border align-middle frame-${frame.key} shadow-sm`}>{frame.label}</span>
           </div>
-          <div className="text-[11px] font-num" style={{ color: 'var(--muted)' }}>
-            {isDt ? 'Director técnico' : career.position} · {career.nationality} · {career.age} años · Temporada {career.year}/{String((career.year + 1) % 100).padStart(2, '0')}
+          <div className="text-[11px] sm:text-xs font-num mt-1" style={{ color: 'var(--text)' }}>
+            <span className="opacity-80">{career.nationality}</span>
+            <span className="mx-1.5 opacity-40">·</span>
+            <span className="opacity-80">{career.age} años</span>
+            <span className="mx-1.5 opacity-40">·</span>
+            <span className="opacity-80">Temp. {career.year}/{String((career.year + 1) % 100).padStart(2, '0')}</span>
           </div>
         </div>
+        
         {club && (
-          <div className="flex items-center gap-2 text-right">
-            <div className="min-w-0">
-              <div className="font-display text-xs truncate">{club.name}</div>
-              <div className="text-[10px] font-num" style={{ color: 'var(--muted)' }}>{club.leagueName} · nivel {clubLevel(club)}</div>
-            </div>
-            <Crest clubId={club.id} name={club.name} size={36} />
+          <div className="flex flex-col items-end gap-1 text-right ml-2">
+            <Crest clubId={club.id} name={club.name} size={42} />
+            <div className="font-display text-xs sm:text-sm truncate w-24 sm:w-32" style={{ color: 'var(--text)' }}>{club.name}</div>
+            <div className="text-[9px] sm:text-[10px] font-num opacity-60">Nivel {clubLevel(club)}</div>
           </div>
         )}
       </div>
+
       {club && rivals.length > 0 && (
-        <div className="rival-strip flex items-center gap-2 mt-3 px-2 py-1.5">
+        <div className="rival-strip flex items-center gap-2 mt-4 px-2.5 py-1.5 relative z-10">
           <span className="font-display text-[9px]" style={{ color: 'var(--warn)' }}>CLÁSICOS</span>
-          <div className="flex items-center gap-2 min-w-0">
+          <div className="flex items-center gap-2 min-w-0 overflow-x-auto no-scrollbar">
             {rivals.map((rival) => (
-              <span key={rival.club.id} className="rival-chip inline-flex items-center gap-1.5" title={rival.label}>
-                <Crest clubId={rival.club.id} name={rival.club.name} size={22} />
-                <span className="text-[10px] truncate">{rival.club.name}</span>
+              <span key={rival.club.id} className="rival-chip flex-shrink-0 inline-flex items-center gap-1.5 bg-black/20 px-1.5 py-0.5 rounded" title={rival.label}>
+                <Crest clubId={rival.club.id} name={rival.club.name} size={18} />
+                <span className="text-[10px]">{rival.club.name}</span>
               </span>
             ))}
           </div>
         </div>
       )}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-3 text-center">
-        {isDt
-          ? <Kpi label="NIVEL DT" num={career.dtSkill} accent />
-          : <Kpi label="NIVEL" num={career.ability} accent />}
+      
+      <div className="grid grid-cols-3 gap-2 mt-4 text-center relative z-10">
         <Kpi label="FAMA" num={Math.round(career.fame)} />
         {isDt
           ? <Kpi label="TÍTULOS COMO DT" value={`${career.titles.filter((t) => t.as === 'dt').length}`} accent={career.titles.some((t) => t.as === 'dt')} />
-          : <Kpi label="SELECCIÓN" value={`${career.caps} PJ`} />}
+          : <Kpi label="SELECCIÓN" value={`${career.caps} PJ`} accent={career.caps > 0} />}
         <Kpi label="TÍTULOS" num={career.titles.length} accent={career.titles.length > 0} />
       </div>
     </header>
@@ -798,9 +811,9 @@ function PlayerCard({ career }: { career: CareerState }) {
 
 function Kpi({ label, value, num, accent }: { label: string; value?: string; num?: number; accent?: boolean }) {
   return (
-    <div className="panel py-1.5 px-1">
-      <div className="font-display text-[9px]" style={{ color: 'var(--muted)' }}>{label}</div>
-      <div className="font-num text-lg font-bold" style={{ color: accent ? 'var(--club-primary)' : 'var(--text)' }}>
+    <div className="panel py-2 px-1 bg-black/10 border-white/5">
+      <div className="font-display text-[9px] mb-0.5" style={{ color: 'var(--muted)' }}>{label}</div>
+      <div className="font-num text-xl sm:text-2xl font-bold" style={{ color: accent ? 'var(--club-primary)' : 'var(--text)', textShadow: accent ? '0 0 10px rgba(var(--club-primary-rgb),0.3)' : 'none' }}>
         {num !== undefined ? <CountNum value={num} /> : value}
       </div>
     </div>

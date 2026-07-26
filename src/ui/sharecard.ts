@@ -232,7 +232,17 @@ function drawStintRows(
 
     const rowH = rowHeights[i];
     if (i < stints.length - 1) {
+      // Timeline vertical connector
+      ctx.strokeStyle = 'rgba(255,255,255,0.06)';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(MARGIN + 21, y + 15);
+      ctx.lineTo(MARGIN + 21, y + rowH - 35);
+      ctx.stroke();
+
+      // Horizontal separator
       ctx.strokeStyle = 'rgba(35,42,56,0.6)';
+      ctx.lineWidth = 1;
       ctx.beginPath();
       ctx.moveTo(150, y + rowH - 36);
       ctx.lineTo(W - MARGIN, y + rowH - 36);
@@ -322,10 +332,22 @@ export async function buildShareCard(career: CareerState, legacy: CareerLegacy):
     ctx.scale(k, k);
   }
 
+  const isDt = career.phase === 'dt';
+  const finalRating = isDt ? career.dtSkill : career.ability;
+  const tier = finalRating >= 85 ? 'elite' : finalRating >= 75 ? 'gold' : finalRating >= 65 ? 'silver' : 'bronze';
+
+  const glowColors: Record<string, string> = {
+    elite: 'rgba(56,189,248,',
+    gold: 'rgba(251,191,36,',
+    silver: 'rgba(226,232,240,',
+    bronze: 'rgba(176,125,98,'
+  };
+  const glow = glowColors[tier];
+
   // gradiente de atmósfera
-  const grad = ctx.createRadialGradient(W * 0.2, 0, 100, W * 0.2, 0, naturalH * 0.9);
-  grad.addColorStop(0, 'rgba(212,176,98,0.14)');
-  grad.addColorStop(0.5, 'rgba(212,176,98,0.02)');
+  const grad = ctx.createRadialGradient(W / 2, 100, 50, W / 2, 200, naturalH * 0.7);
+  grad.addColorStop(0, `${glow}0.18)`);
+  grad.addColorStop(0.5, `${glow}0.03)`);
   grad.addColorStop(1, 'transparent');
   ctx.fillStyle = grad;
   ctx.fillRect(0, 0, W, naturalH);
@@ -336,9 +358,47 @@ export async function buildShareCard(career: CareerState, legacy: CareerLegacy):
   ctx.font = `600 25px ${COND}`;
   ctx.fillText('DINASTÍA FC · SIMULADOR DE CARRERA', W / 2, 64);
 
+  // Dibujar el Escudo Hexagonal FUT
+  const badgeSize = 90;
+  const nameText = career.name.toUpperCase();
+  ctx.font = `800 84px ${COND}`;
+  const nameW = ctx.measureText(nameText).width;
+  const totalHeaderW = badgeSize + 20 + nameW;
+  const startX = W / 2 - totalHeaderW / 2;
+  const badgeY = 90;
+
+  ctx.beginPath();
+  ctx.moveTo(startX + badgeSize / 2, badgeY);
+  ctx.lineTo(startX + badgeSize, badgeY + badgeSize * 0.2);
+  ctx.lineTo(startX + badgeSize, badgeY + badgeSize * 0.8);
+  ctx.lineTo(startX + badgeSize / 2, badgeY + badgeSize);
+  ctx.lineTo(startX, badgeY + badgeSize * 0.8);
+  ctx.lineTo(startX, badgeY + badgeSize * 0.2);
+  ctx.closePath();
+
+  const badgeGrad = ctx.createLinearGradient(startX, badgeY, startX + badgeSize, badgeY + badgeSize);
+  if (tier === 'elite') { badgeGrad.addColorStop(0, '#38bdf8'); badgeGrad.addColorStop(1, '#1e3a8a'); ctx.shadowColor = 'rgba(56,189,248,0.6)'; ctx.shadowBlur = 15; }
+  else if (tier === 'gold') { badgeGrad.addColorStop(0, '#fbbf24'); badgeGrad.addColorStop(1, '#b45309'); ctx.shadowColor = 'rgba(251,191,36,0.4)'; ctx.shadowBlur = 12; }
+  else if (tier === 'silver') { badgeGrad.addColorStop(0, '#e2e8f0'); badgeGrad.addColorStop(1, '#94a3b8'); }
+  else { badgeGrad.addColorStop(0, '#b07d62'); badgeGrad.addColorStop(1, '#6b4423'); ctx.shadowColor = 'rgba(0,0,0,0.5)'; ctx.shadowBlur = 8; }
+  
+  ctx.fillStyle = badgeGrad;
+  ctx.fill();
+  ctx.shadowBlur = 0; // reset
+
+  ctx.fillStyle = tier === 'silver' ? '#1e293b' : '#ffffff';
+  ctx.font = `800 ${badgeSize * 0.6}px ${COND}`;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(String(finalRating), startX + badgeSize / 2, badgeY + badgeSize / 2 + 4);
+  ctx.textBaseline = 'alphabetic';
+
+  // Nombre
   ctx.fillStyle = TEXT;
   ctx.font = `800 84px ${COND}`;
-  ctx.fillText(fitText(ctx, career.name.toUpperCase(), W - 140), W / 2, 158);
+  ctx.textAlign = 'left';
+  ctx.fillText(nameText, startX + badgeSize + 20, 168);
+  ctx.textAlign = 'center';
 
   ctx.fillStyle = MUTED;
   ctx.font = `500 28px ${COND}`;
@@ -393,9 +453,13 @@ export async function buildShareCard(career: CareerState, legacy: CareerLegacy):
   const statsTop = 438 + headerShift;
   stats.forEach(([label, value], i) => {
     const x = statsX + i * (statW + statGap);
-    ctx.fillStyle = PANEL;
+    ctx.fillStyle = 'rgba(255,255,255,0.03)';
     roundRect(ctx, x, statsTop, statW, 96, 8);
     ctx.fill();
+    ctx.strokeStyle = 'rgba(255,255,255,0.08)';
+    ctx.lineWidth = 1;
+    roundRect(ctx, x, statsTop, statW, 96, 8);
+    ctx.stroke();
     ctx.fillStyle = MUTED;
     ctx.font = `600 19px ${COND}`;
     ctx.fillText(label, x + statW / 2, statsTop + 32);

@@ -212,9 +212,13 @@ export function aiOffseason(state: GameState, rng: Rng): string[] {
       if (rng.chance('market', 0.3)) club.philosophy = rng.pick('market', PHILOSOPHIES as unknown as string[]) as Club['philosophy'];
     }
 
-    // el rating de estilo heredado del ETL se diluye con los años
-    club.attack *= 0.92;
-    club.defense *= 0.92;
+    // el rating de estilo heredado del ETL se diluye con los años hacia un baseline táctico
+    let baselineAttack = 0;
+    let baselineDefense = 0;
+    if (club.philosophy === 'presión alta' || club.philosophy === 'posesión') baselineAttack += 0.2;
+    if (club.philosophy === 'bloque bajo' || club.philosophy === 'contragolpe') baselineDefense += 0.2;
+    club.attack = club.attack * 0.85 + baselineAttack * 0.15;
+    club.defense = club.defense * 0.85 + baselineDefense * 0.15;
 
     // prestigio sigue a los resultados
     const rec = club.history[club.history.length - 1];
