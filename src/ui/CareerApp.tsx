@@ -6,7 +6,7 @@ import {
   type CareerState, type CareerOption, type SeasonRow, type PlayerPosition, type Chip, type TurnResult,
 } from '../domain/career';
 import { loadAssetManifest, applyClubTheme } from './assets';
-import { Crest, Trophy } from './Crest';
+import { Crest, Trophy, AwardMark } from './Crest';
 import { buildShareCard } from './sharecard';
 import { getClubRivals } from '../domain/rivalries';
 
@@ -303,11 +303,11 @@ export default function CareerApp() {
   }
 
   return (
-    <div className="max-w-screen-xl mx-auto p-3 sm:p-4 flex flex-col gap-3 min-h-screen">
+    <div className="max-w-screen-xl mx-auto p-2 sm:p-4 flex flex-col gap-2 sm:gap-3 min-h-dvh">
       <PlayerCard career={career} />
 
       {flash && (
-        <div className="panel p-3 text-sm slide-in" style={{ borderColor: 'var(--warn)' }}>⚡ {flash}</div>
+        <div className="panel p-2 sm:p-3 text-xs sm:text-sm slide-in" style={{ borderColor: 'var(--warn)' }}>⚡ {flash}</div>
       )}
       {lastCycle
         ? <CycleResult rows={lastCycle} />
@@ -315,9 +315,9 @@ export default function CareerApp() {
 
       {/* El evento del año: opciones comparables */}
       <div className="decision-trajectory-layout">
-        <section className="panel p-4 slide-in decision-panel">
-          <h2 className="font-display text-base" style={{ color: 'var(--club-primary)' }}>{career.pendingEvent.title}</h2>
-          <p className="text-sm mt-1 mb-3" style={{ color: 'var(--muted)' }}>{career.pendingEvent.body}</p>
+        <section className="panel p-2 sm:p-4 slide-in decision-panel">
+          <h2 className="font-display text-sm sm:text-base" style={{ color: 'var(--club-primary)' }}>{career.pendingEvent.title}</h2>
+          <p className="text-xs sm:text-sm mt-0.5 sm:mt-1 mb-2 sm:mb-3" style={{ color: 'var(--muted)' }}>{career.pendingEvent.body}</p>
           <div className="decision-grid" style={decisionGridVars(career.pendingEvent.options.length)}>
             {career.pendingEvent.options.map((opt) => (
               <OptionCard key={opt.id} opt={opt} onPick={() => pick(opt)}
@@ -675,7 +675,7 @@ function MomentsPanel({ career, full }: { career: CareerState; full?: boolean })
 // ------------------------------ Piezas ------------------------------
 
 function Center({ children }: { children: React.ReactNode }) {
-  return <div className="min-h-screen flex items-center justify-center p-4">{children}</div>;
+  return <div className="min-h-dvh flex items-center justify-center p-4">{children}</div>;
 }
 
 function ChipView({ chip }: { chip: Chip }) {
@@ -701,21 +701,21 @@ function decisionGridVars(count: number): React.CSSProperties {
 
 function OptionCard({ opt, onPick, chosen, faded }: { opt: CareerOption; onPick: () => void; chosen?: boolean; faded?: boolean }) {
   return (
-    <button className={`panel opt-card p-2 sm:p-3 text-left cursor-pointer w-full ${chosen ? 'chosen' : ''} ${faded ? 'faded' : ''}`} onClick={onPick}>
+    <button className={`panel opt-card p-1.5 sm:p-3 text-left cursor-pointer w-full ${chosen ? 'chosen' : ''} ${faded ? 'faded' : ''}`} onClick={onPick}>
       <div className="flex items-center gap-1.5 sm:gap-3">
-        {opt.clubId && <Crest clubId={opt.clubId} name={opt.label} size={30} />}
+        {opt.clubId && <Crest clubId={opt.clubId} name={opt.label} size={22} />}
         <div className="flex-1 min-w-0">
-          <div className="font-display text-xs sm:text-sm" style={{ color: 'var(--club-primary)' }}>{opt.label}</div>
-          <div className="text-[10px] sm:text-[11px]" style={{ color: 'var(--muted)' }}>{opt.sub}</div>
+          <div className="font-display text-[11px] sm:text-sm" style={{ color: 'var(--club-primary)' }}>{opt.label}</div>
+          <div className="text-[9px] sm:text-[11px]" style={{ color: 'var(--muted)' }}>{opt.sub}</div>
           {opt.badge && (
-            <div className={`option-badge option-badge-${opt.badge.tone} mt-1`}>
+            <div className={`option-badge option-badge-${opt.badge.tone} mt-0.5 sm:mt-1`}>
               {opt.badge.icon && <span className="option-badge-icon">{opt.badge.icon}</span>}
               <span>{opt.badge.t}</span>
             </div>
           )}
         </div>
       </div>
-      <div className="flex flex-wrap gap-1 sm:gap-1.5 mt-1.5 sm:mt-2">
+      <div className="flex flex-wrap gap-1 sm:gap-1.5 mt-1 sm:mt-2">
         {opt.chips.map((c, i) => (
           <span key={i} className="chip-in" style={{ '--d': `${i * 70}ms` } as React.CSSProperties}>
             <ChipView chip={c} />
@@ -751,24 +751,27 @@ function PlayerCard({ career }: { career: CareerState }) {
   const tier = rating >= 85 ? 'elite' : rating >= 75 ? 'gold' : rating >= 65 ? 'silver' : 'bronze';
 
   return (
-    <header className={`pcard frame-b-${frame.key} p-3 sm:p-4 relative overflow-hidden`}>
+    <header className={`pcard frame-b-${frame.key} p-2 sm:p-4 relative overflow-hidden`}>
       {/* Decorative background glow based on rating tier */}
       <div className={`absolute -top-10 -left-10 w-40 h-40 rounded-full opacity-20 blur-2xl rating-bg-${tier}`} aria-hidden />
 
-      <div className="flex items-center gap-3 sm:gap-4 relative z-10">
-        
+      <div className="flex items-center gap-2 sm:gap-4 relative z-10">
+
         {/* FUT-style massive rating badge */}
         <div className={`fut-badge fut-${tier} flex-shrink-0 flex flex-col items-center justify-center shadow-lg`}>
-          <div className="text-2xl sm:text-3xl font-num font-bold leading-none tracking-tighter"><CountNum value={rating} /></div>
-          <div className="text-[10px] sm:text-xs font-display font-bold mt-0.5 opacity-90">{isDt ? 'DT' : career.position}</div>
+          <div className="text-base sm:text-3xl font-num font-bold leading-none tracking-tighter"><CountNum value={rating} /></div>
+          <div className="text-[8px] sm:text-xs font-display font-bold mt-0.5 opacity-90">
+            {/* abreviatura siempre: el nombre completo no entra en el hexágono */}
+            {isDt ? 'DT' : (POS_META[career.position]?.abbr ?? career.position)}
+          </div>
         </div>
 
         <div className="flex-1 min-w-0">
-          <div className="font-display text-xl sm:text-2xl leading-tight" style={{ color: 'var(--club-primary)', textShadow: '0 2px 4px rgba(0,0,0,0.4)' }}>
+          <div className="font-display text-sm sm:text-2xl leading-tight" style={{ color: 'var(--club-primary)', textShadow: '0 2px 4px rgba(0,0,0,0.4)' }}>
             <span className="truncate block">{career.name}</span>
-            <span className={`inline-block mt-0.5 text-[9px] px-1.5 py-0.5 rounded-sm border align-middle frame-${frame.key} shadow-sm`}>{frame.label}</span>
+            <span className={`inline-block mt-0.5 text-[8px] sm:text-[9px] px-1.5 py-0.5 rounded-sm border align-middle frame-${frame.key} shadow-sm`}>{frame.label}</span>
           </div>
-          <div className="text-[11px] sm:text-xs font-num mt-1 flex flex-wrap items-center gap-x-1 gap-y-0.5" style={{ color: 'var(--text)' }}>
+          <div className="text-[9px] sm:text-xs font-num mt-0.5 sm:mt-1 flex flex-wrap items-center gap-x-1 gap-y-0.5" style={{ color: 'var(--text)' }}>
             <span className="opacity-80">{career.nationality}</span>
             <span className="opacity-40">·</span>
             <span className="opacity-80 whitespace-nowrap">{career.age} años</span>
@@ -776,18 +779,18 @@ function PlayerCard({ career }: { career: CareerState }) {
             <span className="opacity-80 whitespace-nowrap">Temp. {career.year}/{String((career.year + 1) % 100).padStart(2, '0')}</span>
           </div>
         </div>
-        
+
         {club && (
           <div className="flex flex-col items-end gap-1 text-right ml-2 flex-shrink-0">
-            <Crest clubId={club.id} name={club.name} size={38} />
-            <div className="font-display text-[11px] sm:text-sm truncate w-20 sm:w-28" style={{ color: 'var(--text)' }}>{club.name}</div>
-            <div className="text-[9px] sm:text-[10px] font-num opacity-60">Nivel {clubLevel(club)}</div>
+            <Crest clubId={club.id} name={club.name} size={30} />
+            <div className="font-display text-[9px] sm:text-sm truncate w-16 sm:w-28" style={{ color: 'var(--text)' }}>{club.name}</div>
+            <div className="hidden sm:block text-[10px] font-num opacity-60">Nivel {clubLevel(club)}</div>
           </div>
         )}
       </div>
 
       {club && rivals.length > 0 && (
-        <div className="rival-strip flex items-center gap-2 mt-4 px-2.5 py-1.5 relative z-10">
+        <div className="rival-strip hidden sm:flex items-center gap-2 mt-4 px-2.5 py-1.5 relative z-10">
           <span className="font-display text-[9px]" style={{ color: 'var(--warn)' }}>CLÁSICOS</span>
           <div className="flex items-center gap-2 min-w-0 overflow-x-auto no-scrollbar">
             {rivals.map((rival) => (
@@ -799,11 +802,11 @@ function PlayerCard({ career }: { career: CareerState }) {
           </div>
         </div>
       )}
-      
-      <div className="grid grid-cols-3 gap-2 mt-4 text-center relative z-10">
+
+      <div className="grid grid-cols-3 gap-1.5 sm:gap-2 mt-2 sm:mt-4 text-center relative z-10">
         <Kpi label="FAMA" num={Math.round(career.fame)} />
         {isDt
-          ? <Kpi label="TÍTULOS COMO DT" value={`${career.titles.filter((t) => t.as === 'dt').length}`} accent={career.titles.some((t) => t.as === 'dt')} />
+          ? <Kpi label="TÍT. DT" value={`${career.titles.filter((t) => t.as === 'dt').length}`} accent={career.titles.some((t) => t.as === 'dt')} />
           : <Kpi label="SELECCIÓN" value={`${career.caps} PJ`} accent={career.caps > 0} />}
         <Kpi label="TÍTULOS" num={career.titles.length} accent={career.titles.length > 0} />
       </div>
@@ -813,9 +816,9 @@ function PlayerCard({ career }: { career: CareerState }) {
 
 function Kpi({ label, value, num, accent }: { label: string; value?: string; num?: number; accent?: boolean }) {
   return (
-    <div className="panel py-2 px-1 bg-black/10 border-white/5">
-      <div className="font-display text-[9px] mb-0.5" style={{ color: 'var(--muted)' }}>{label}</div>
-      <div className="font-num text-xl sm:text-2xl font-bold" style={{ color: accent ? 'var(--club-primary)' : 'var(--text)', textShadow: accent ? '0 0 10px rgba(var(--club-primary-rgb),0.3)' : 'none' }}>
+    <div className="panel py-1 sm:py-2 px-1 bg-black/10 border-white/5">
+      <div className="font-display text-[7px] sm:text-[9px] mb-0 sm:mb-0.5" style={{ color: 'var(--muted)' }}>{label}</div>
+      <div className="font-num text-sm sm:text-2xl font-bold" style={{ color: accent ? 'var(--club-primary)' : 'var(--text)', textShadow: accent ? '0 0 10px rgba(var(--club-primary-rgb),0.3)' : 'none' }}>
         {num !== undefined ? <CountNum value={num} /> : value}
       </div>
     </div>
@@ -829,23 +832,26 @@ function CycleResult({ rows }: { rows: SeasonRow[] }) {
   const matches = rows.reduce((a, r) => a + r.apps, 0);
   const d = (i: number) => ({ '--d': `${i * 150}ms` } as React.CSSProperties);
   return (
-    <section className="panel p-3 slide-in" key={`${first.year}-${first.clubId}`}>
-      <div className="flex items-center gap-2">
-        <Crest clubId={first.clubId} name={first.clubName} size={28} />
-        <div className="font-display text-xs" style={{ color: 'var(--muted)' }}>
+    <section className="panel p-2 sm:p-3 slide-in" key={`${first.year}-${first.clubId}`}>
+      <div className="flex items-center gap-1.5 sm:gap-2">
+        <Crest clubId={first.clubId} name={first.clubName} size={20} />
+        <div className="font-display text-[10px] sm:text-xs truncate" style={{ color: 'var(--muted)' }}>
           CICLO {first.year}–{last.year + 1} · {first.clubName} · {matches} PJ dirigidos
         </div>
       </div>
-      <div className="flex flex-col gap-1 mt-2">
+      <div className="flex flex-col gap-0.5 sm:gap-1 mt-1 sm:mt-2">
         {rows.map((r, i) => {
           const posColor = r.leaguePos === 1 ? 'var(--club-primary)' : r.leaguePos <= 4 ? 'var(--good)' : r.leaguePos >= 17 ? 'var(--bad)' : 'var(--text)';
           return (
-            <div key={r.year} className="reveal-item flex items-center gap-3 font-num text-sm" style={d(i)}>
-              <span className="font-display text-[10px] w-14" style={{ color: 'var(--muted)' }}>{r.year}/{String((r.year + 1) % 100).padStart(2, '0')}</span>
+            <div key={r.year} className="reveal-item flex items-center gap-2 sm:gap-3 font-num text-xs sm:text-sm" style={d(i)}>
+              <span className="font-display text-[9px] sm:text-[10px] w-12 sm:w-14" style={{ color: 'var(--muted)' }}>{r.year}/{String((r.year + 1) % 100).padStart(2, '0')}</span>
               <b style={{ color: posColor, width: 34 }}>{r.leaguePos}°</b>
               <span style={{ color: r.rating >= 7 ? 'var(--good)' : r.rating < 6 ? 'var(--bad)' : 'var(--text)' }}>nota {r.rating.toFixed(1)}</span>
               <span className="flex-1 text-right">
-                {r.titles.length > 0 ? <span style={{ color: 'var(--club-primary)' }}>🏆 {r.titles.join(' + ')}</span>
+                {r.titles.length > 0
+                  ? <span className="inline-flex items-center gap-1 flex-wrap justify-end" style={{ color: 'var(--club-primary)' }}>
+                      {r.titles.map((t, j) => <TitleMark key={j} title={t} size={14} />)} {r.titles.join(' + ')}
+                    </span>
                   : r.note ? <span style={{ color: 'var(--bad)' }}>{r.note}</span>
                     : <span style={{ color: 'var(--muted)' }}>—</span>}
               </span>
@@ -862,24 +868,24 @@ function SeasonResult({ career, row }: { career: CareerState; row: SeasonRow }) 
   // el resultado cae por etapas: PJ → goles → nota → posición → título
   const d = (i: number) => ({ '--d': `${i * 150}ms` } as React.CSSProperties);
   return (
-    <section className="panel p-3 slide-in" key={`${row.year}-${row.clubId}`}>
-      <div className="flex items-center gap-2">
-        <Crest clubId={row.clubId} name={row.clubName} size={28} />
-        <div className="font-display text-xs" style={{ color: 'var(--muted)' }}>
+    <section className="panel p-2 sm:p-3 slide-in" key={`${row.year}-${row.clubId}`}>
+      <div className="flex items-center gap-1.5 sm:gap-2">
+        <Crest clubId={row.clubId} name={row.clubName} size={20} />
+        <div className="font-display text-[10px] sm:text-xs truncate" style={{ color: 'var(--muted)' }}>
           TEMPORADA {row.year}/{String((row.year + 1) % 100).padStart(2, '0')} · {row.clubName}
         </div>
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-2 text-center font-num">
-        <div className="reveal-item" style={d(0)}><div className="text-lg font-bold">{row.apps}</div><div className="text-[9px] font-display" style={{ color: 'var(--muted)' }}>{row.role === 'Director técnico' ? 'PJ DIRIGIDOS' : 'PARTIDOS'}</div></div>
-        <div className="reveal-item" style={d(1)}><div className="text-lg font-bold">{row.role === 'Director técnico' ? '—' : row.goals}</div><div className="text-[9px] font-display" style={{ color: 'var(--muted)' }}>GOLES</div></div>
-        <div className="reveal-item" style={d(2)}><div className="text-lg font-bold" style={{ color: row.rating >= 7 ? 'var(--good)' : row.rating < 6 ? 'var(--bad)' : 'var(--text)' }}>{row.rating.toFixed(1)}</div><div className="text-[9px] font-display" style={{ color: 'var(--muted)' }}>NOTA</div></div>
-        <div className="reveal-item" style={d(3)}><div className="text-lg font-bold" style={{ color: posColor }}>{row.leaguePos}°</div><div className="text-[9px] font-display" style={{ color: 'var(--muted)' }}>EL EQUIPO</div></div>
+      <div className="grid grid-cols-4 gap-1 sm:gap-2 mt-1 sm:mt-2 text-center font-num">
+        <div className="reveal-item" style={d(0)}><div className="text-sm sm:text-lg font-bold">{row.apps}</div><div className="text-[7px] sm:text-[9px] font-display" style={{ color: 'var(--muted)' }}>{row.role === 'Director técnico' ? 'PJ DIRIGIDOS' : 'PARTIDOS'}</div></div>
+        <div className="reveal-item" style={d(1)}><div className="text-sm sm:text-lg font-bold">{row.role === 'Director técnico' ? '—' : row.goals}</div><div className="text-[7px] sm:text-[9px] font-display" style={{ color: 'var(--muted)' }}>GOLES</div></div>
+        <div className="reveal-item" style={d(2)}><div className="text-sm sm:text-lg font-bold" style={{ color: row.rating >= 7 ? 'var(--good)' : row.rating < 6 ? 'var(--bad)' : 'var(--text)' }}>{row.rating.toFixed(1)}</div><div className="text-[7px] sm:text-[9px] font-display" style={{ color: 'var(--muted)' }}>NOTA</div></div>
+        <div className="reveal-item" style={d(3)}><div className="text-sm sm:text-lg font-bold" style={{ color: posColor }}>{row.leaguePos}°</div><div className="text-[7px] sm:text-[9px] font-display" style={{ color: 'var(--muted)' }}>EL EQUIPO</div></div>
       </div>
-      <div className="text-[11px] mt-1.5 font-num reveal-item" style={{ color: 'var(--muted)', ...d(4) }}>Rol: {row.role}{row.note ? ` · ${row.note}` : ''}</div>
+      <div className="text-[9px] sm:text-[11px] mt-1 sm:mt-1.5 font-num reveal-item" style={{ color: 'var(--muted)', ...d(4) }}>Rol: {row.role}{row.note ? ` · ${row.note}` : ''}</div>
       {row.titles.length > 0 && (
-        <div className="panel p-2 mt-2 text-center reveal-item" style={{ borderColor: 'var(--club-primary)', background: 'rgba(var(--club-primary-rgb),0.08)', ...d(5) }}>
-          <span className="font-display text-sm inline-flex items-center gap-1 flex-wrap justify-center" style={{ color: 'var(--club-primary)' }}>
-            {row.titles.map((t, i) => <TitleMark key={i} title={t} size={18} />)} ¡CAMPEÓN! {row.titles.join(' + ')}
+        <div className="panel p-1.5 sm:p-2 mt-1.5 sm:mt-2 text-center reveal-item" style={{ borderColor: 'var(--club-primary)', background: 'rgba(var(--club-primary-rgb),0.08)', ...d(5) }}>
+          <span className="font-display text-xs sm:text-sm inline-flex items-center gap-1 flex-wrap justify-center" style={{ color: 'var(--club-primary)' }}>
+            {row.titles.map((t, i) => <TitleMark key={i} title={t} size={16} />)} ¡CAMPEÓN! {row.titles.join(' + ')}
           </span>
         </div>
       )}
@@ -931,22 +937,22 @@ function Trajectory({ career, full }: { career: CareerState; full?: boolean }) {
               <div className="text-[11px] font-num" style={{ color: 'var(--muted)' }}>
                 {s.startYear}–{s.endYear} · {s.apps} PJ · {s.goals} goles
               </div>
-            </div>
-            <div className="timeline-titles flex flex-wrap items-center gap-1 mt-1.5">
-              {s.titles.length === 0
-                ? <span className="text-[11px]" style={{ color: 'var(--muted)' }}>—</span>
-                : <>
-                  <span className="font-num text-[10px]" style={{ color: s.as === 'dt' ? '#86efac' : 'var(--club-primary)' }}>
-                    {s.titles.length} {s.titles.length === 1 ? 'título' : 'títulos'}
-                  </span>
-                  {s.titles.slice(0, full ? 99 : 6).map((t, j) => (
-                  <span key={`${t}-${j}`} title={t}
-                    className={`inline-flex align-middle ${i === 0 ? 'trophy-drop' : ''}`}
-                    style={i === 0 ? ({ '--d': `${j * 120}ms` } as React.CSSProperties) : undefined}>
-                    <TitleMark title={t} size={22} />
-                  </span>
-                  ))}
-                </>}
+              <div className="timeline-titles flex flex-wrap items-center gap-1 mt-1.5">
+                {s.titles.length === 0
+                  ? <span className="text-[11px]" style={{ color: 'var(--muted)' }}>—</span>
+                  : <>
+                    <span className="font-num text-[10px]" style={{ color: s.as === 'dt' ? '#86efac' : 'var(--club-primary)' }}>
+                      {s.titles.length} {s.titles.length === 1 ? 'título' : 'títulos'}
+                    </span>
+                    {s.titles.slice(0, full ? 99 : 6).map((t, j) => (
+                    <span key={`${t}-${j}`} title={t}
+                      className={`inline-flex align-middle ${i === 0 ? 'trophy-drop' : ''}`}
+                      style={i === 0 ? ({ '--d': `${j * 120}ms` } as React.CSSProperties) : undefined}>
+                      <TitleMark title={t} size={22} />
+                    </span>
+                    ))}
+                  </>}
+              </div>
             </div>
           </div>
           </React.Fragment>
@@ -977,9 +983,10 @@ const NAT_ISO: Record<string, string> = {
   Marruecos: 'ma', Senegal: 'sn', Nigeria: 'ng', 'Costa de Marfil': 'ci', Argelia: 'dz', Camerún: 'cm', Egipto: 'eg', Ghana: 'gh', Malí: 'ml', Sudáfrica: 'za',
   Japón: 'jp', 'Corea del Sur': 'kr', Irán: 'ir', Australia: 'au', 'Arabia Saudita': 'sa', Qatar: 'qa',
 };
+// banderas locales (public/data/flags/): runtime 100% offline, sin CDN
 const flagUrl = (n: string) => {
   const iso = NAT_ISO[n];
-  return iso ? `https://cdn.gtranslate.net/flags/svg/countries/${iso}.svg` : undefined;
+  return iso ? `${import.meta.env.BASE_URL ?? '/'}data/flags/${iso}.svg` : undefined;
 };
 // Agrupación por confederación para estructurar el selector (en vez de una pared plana).
 const NAT_GROUPS: { label: string; nats: string[] }[] = [
@@ -1024,16 +1031,16 @@ function StartScreen({ onStart }: { onStart: (name: string, nat: string, pos: Pl
   };
 
   return (
-    <div className="max-w-xl mx-auto p-3 sm:p-4 flex flex-col gap-4 min-h-screen justify-start sm:justify-center">
-      <header className="create-hero px-5 pt-6 pb-5 text-center">
+    <div className="max-w-xl mx-auto p-3 sm:p-4 flex flex-col gap-3 sm:gap-4 min-h-dvh justify-start sm:justify-center">
+      <header className="create-hero px-5 pt-4 pb-4 sm:pt-6 sm:pb-5 text-center">
         <div className="field-label" style={{ opacity: 0.8 }}>Dinastía FC · Simulador de carrera</div>
-        <h1 className="font-display text-5xl sm:text-6xl mt-1 leading-none" style={{ color: 'var(--club-primary)' }}>CARRERA</h1>
-        <p className="mt-3 text-sm mx-auto" style={{ color: 'var(--muted)', maxWidth: '38ch' }}>
+        <h1 className="font-display text-4xl sm:text-6xl mt-1 leading-none" style={{ color: 'var(--club-primary)' }}>CARRERA</h1>
+        <p className="mt-2 sm:mt-3 text-xs sm:text-sm mx-auto" style={{ color: 'var(--muted)', maxWidth: '38ch' }}>
           De la cantera al retiro, un club a la vez. Tomá decisiones, asumí consecuencias y construí tu leyenda.
         </p>
       </header>
 
-      <div className="panel p-4 flex flex-col gap-5">
+      <div className="panel p-3 sm:p-4 flex flex-col gap-3 sm:gap-5">
         <label className="flex flex-col gap-1.5">
           <span className="field-label">Tu nombre</span>
           <input className="panel px-3 py-2.5 text-base" value={name} maxLength={26} placeholder="Ej: Juan Cruz Ledesma" onChange={(e) => setName(e.target.value)} />
@@ -1061,7 +1068,7 @@ function StartScreen({ onStart }: { onStart: (name: string, nat: string, pos: Pl
           </button>
 
           {showNatDropdown && (
-            <div className="nationality-dropdown-panel panel mt-2" role="listbox">
+            <div className="nationality-dropdown-panel panel" role="listbox">
               {NAT_GROUPS.map((g) => (
                 <div key={g.label} className="nationality-group">
                   <div className="nationality-group-name">{g.label}</div>
@@ -1215,7 +1222,7 @@ function RetirementScreen({ career, onReset, saved, onSaved }: { career: CareerS
     `\n¿Cómo sería tu carrera? — Dinastía FC`;
 
   return (
-    <div className="max-w-xl mx-auto p-3 sm:p-4 flex flex-col gap-3 min-h-screen justify-start sm:justify-center">
+    <div className="max-w-xl mx-auto p-3 sm:p-4 flex flex-col gap-3 min-h-dvh justify-start sm:justify-center">
       <header className="text-center">
         <p className="font-display text-xs" style={{ color: 'var(--muted)' }}>FIN DE LA CARRERA · {career.year}</p>
         <h1 className="font-display text-3xl sm:text-4xl mt-1" style={{ color: 'var(--club-primary)' }}>{legacy.tier}</h1>
@@ -1267,7 +1274,7 @@ function RetirementScreen({ career, onReset, saved, onSaved }: { career: CareerS
           <div className="flex flex-wrap justify-center gap-x-4 gap-y-1">
             {legacy.awards.map((a, i) => (
               <span key={i} className="font-num text-xs inline-flex items-center gap-1">
-                {a.award.startsWith('Balón de Oro') ? '🥇' : '⭐'} {a.award}
+                <AwardMark award={a.award} size={16} /> {a.award}
               </span>
             ))}
           </div>

@@ -159,7 +159,9 @@ input:focus-visible, select:focus-visible { outline: 2px solid var(--club-primar
 }
 .nationality-dropdown-panel {
   position: absolute;
-  inset: auto 0 0;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
   z-index: 40;
   max-height: min(56vh, 380px);
   overflow-y: auto;
@@ -219,6 +221,11 @@ input:focus-visible, select:focus-visible { outline: 2px solid var(--club-primar
   letter-spacing: 0.12em;
   font-size: 0.72rem;
   color: var(--muted);
+}
+/* en pantallas angostas el código FIFA aplasta el nombre del país: fuera */
+@media (max-width: 479px) {
+  .nationality-option { grid-template-columns: auto 1fr; padding: 0.65rem 0.7rem; }
+  .nationality-option .nat-code { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -465,27 +472,6 @@ body::after {
   color: var(--club-primary); font-size: 9px; letter-spacing: 0.12em;
   border-left: 2px solid var(--club-primary); background: color-mix(in srgb, var(--club-primary) 7%, transparent);
 }
-.timeline-row {
-  position: relative; z-index: 1; min-height: 74px;
-}
-.timeline-marker {
-  width: 38px; flex: 0 0 38px; display: flex; flex-direction: column; align-items: center; position: relative;
-}
-.timeline-crest {
-  width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--panel-2); border: 1px solid color-mix(in srgb, var(--club-primary) 50%, var(--line)); box-shadow: 0 0 0 4px var(--panel);
-}
-.timeline-row-dt .timeline-crest { border-color: rgba(74,222,128,0.65); }
-.timeline-connector { width: 2px; flex: 1; min-height: 14px; margin-top: 3px; background: linear-gradient(180deg, var(--club-primary), var(--line)); }
-.timeline-row-dt .timeline-connector { background: linear-gradient(180deg, #4ade80, var(--line)); }
-.timeline-entry { padding: 8px 10px 10px; border-bottom: 1px solid var(--line); }
-.timeline-row:last-child .timeline-entry { border-bottom: none; }
-.timeline-dt-badge { color: #86efac; border-color: #4ade80; }
-.timeline-titles { min-height: 20px; }
-.timeline-phase-label {
-  position: relative; z-index: 1; margin: 3px 0 2px 66px; padding: 4px 8px;
-  color: var(--club-primary); font-size: 9px; letter-spacing: 0.12em;
-  border-left: 2px solid var(--club-primary); background: color-mix(in srgb, var(--club-primary) 7%, transparent);
-}
 .timeline-phase-dt { color: #86efac; border-left-color: #4ade80; background: rgba(74,222,128,0.06); }
 .timeline-row { position: relative; z-index: 1; min-height: 74px; }
 .timeline-marker { width: 52px; flex: 0 0 52px; display: flex; flex-direction: column; align-items: center; position: relative; }
@@ -646,8 +632,8 @@ body::after {
 
 /* ---- Badges de valoración (estilo FUT) ---- */
 .fut-badge {
-  width: 58px;
-  height: 68px;
+  width: 42px;
+  height: 50px;
   clip-path: polygon(50% 0%, 100% 20%, 100% 80%, 50% 100%, 0% 80%, 0% 20%);
   color: #fff;
   text-shadow: 0 1px 3px rgba(0,0,0,0.8);
