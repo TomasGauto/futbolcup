@@ -1,7 +1,7 @@
 # FutbolCup — Plataforma y reglas de diseño
 
 ## Descripción general
-El repo `FutbolCup` (paquete `dinastia-fc`) contiene una webapp de fútbol offline y determinista. **La experiencia que está montada y en vivo es "Dinastía FC": un simulador de CARRERA DE JUGADOR**, no de gestión de club. El jugador es un futbolista al que dirige desde la cantera hasta el retiro, tomando una decisión clave por temporada (ofertas de clubes, préstamos, mercado, selección, riesgos) y viendo cómo evoluciona su leyenda. Al colgar los botines puede empezar una **segunda vida como director técnico**.
+El repo `FutbolCup` (paquete `dinastia-fc`) contiene una webapp de fútbol offline y determinista. **La experiencia que está montada y en vivo es "Mi carrera profesional" (ex "Dinastía FC"): un simulador de CARRERA DE JUGADOR**, no de gestión de club. El jugador es un futbolista al que dirige desde la cantera hasta el retiro, tomando una decisión clave por temporada (ofertas de clubes, préstamos, mercado, selección, riesgos) y viendo cómo evoluciona su leyenda. Al colgar los botines puede empezar una **segunda vida como director técnico**.
 
 > **Importante:** el motor de *gestión de club* (finanzas, junta, mercado, FFP) existe en `src/domain/` pero solo lo usa `QuickApp.tsx`, que **no está montado** en `main.tsx`. La app viva es `CareerApp.tsx`. Cualquier descripción de "dirigir un club" aplica a ese modo dormido, no a lo que ve el usuario hoy.
 

@@ -356,7 +356,7 @@ export async function buildShareCard(career: CareerState, legacy: CareerLegacy):
   ctx.textAlign = 'center';
   ctx.fillStyle = MUTED;
   ctx.font = `600 25px ${COND}`;
-  ctx.fillText('DINASTÍA FC · SIMULADOR DE CARRERA', W / 2, 64);
+  ctx.fillText('MI CARRERA PROFESIONAL · SIMULADOR', W / 2, 64);
 
   // Dibujar el Escudo Hexagonal FUT
   const badgeSize = 90;
@@ -528,7 +528,7 @@ export async function buildShareCard(career: CareerState, legacy: CareerLegacy):
   ctx.textAlign = 'center';
   ctx.fillStyle = MUTED;
   ctx.font = `500 25px ${COND}`;
-  ctx.fillText('¿Cómo sería tu carrera? — DINASTÍA FC', W / 2, k < 1 ? naturalH - 40 : H - 44);
+  ctx.fillText('¿Cómo sería tu carrera? — MI CARRERA PROFESIONAL', W / 2, k < 1 ? naturalH - 40 : H - 44);
 
   ctx.restore();
 
