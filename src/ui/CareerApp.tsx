@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import type { EtlData } from '../domain/worldgen';
 import {
   createCareer, chooseOption, computeCareerLegacy, clubLevel, flagEmoji,
-  NATIONALITIES, POSITION_LIST,
+  NATIONALITIES,
   type CareerState, type CareerOption, type SeasonRow, type PlayerPosition, type Chip, type TurnResult,
 } from '../domain/career';
 import { loadAssetManifest, applyClubTheme } from './assets';
@@ -51,6 +51,8 @@ const MUSEUM_KEY = 'dinastia-career-museum-v1';
 
 // detecta títulos continentales (de club o de selección) por su nombre oficial
 const CONTINENTAL_RE = /Champions League|Europa League|Conference League|Copa Libertadores|Copa Sudamericana|Concacaf Champions|Copa América|Eurocopa|Copa Oro|Copa Africana|Copa Asiática/;
+// copas de SELECCIÓN: se festejan con la bandera del país, no con el escudo del club
+const SELECTION_CUP_RE = /Copa del Mundo|Copa América|Eurocopa|Copa Oro|Copa Africana|Copa Asiática/;
 
 type MuseumEntry = {
   name: string; position: string; nationality: string;
@@ -362,6 +364,7 @@ function PenaltyScene({ body, competition, nationality, result, onShoot, onDone 
 }) {
   const shot = result != null;
   const isMundial = competition.startsWith('Copa del Mundo') || result?.titleName.startsWith('Copa del Mundo');
+  const isSeleccion = isMundial || SELECTION_CUP_RE.test(competition) || SELECTION_CUP_RE.test(result?.titleName ?? '');
   useEffect(() => {
     if (!shot) return;
     const t = window.setTimeout(onDone, 2600);
@@ -391,7 +394,7 @@ function PenaltyScene({ body, competition, nationality, result, onShoot, onDone 
 
   return (
     <div className={`pitch-bg fixed inset-0 z-50 flex flex-col items-center justify-center gap-4 px-4 overflow-hidden select-none ${result?.titleName.startsWith('Copa del Mundo') ? 'key-moment moment-mundial' : ''}`}>
-      {isMundial && <span className="flag-wave text-5xl" aria-hidden>{flagEmoji(nationality)}</span>}
+      {isSeleccion && <FlagWave nationality={nationality} size={64} />}
       <div className="font-display text-sm text-center" style={{ color: 'var(--club-primary)' }}>{competition}</div>
       {!shot && <p className="text-xs text-center max-w-sm" style={{ color: 'var(--muted)' }}>{body}</p>}
 
@@ -581,7 +584,7 @@ function SortingOverlay({ info, onSkip }: {
           {tier === 'mundial' ? (
             <>
               <div className="trophy-pop flex items-center justify-center gap-4">
-                <span className="flag-wave text-7xl" aria-hidden>{flagEmoji(info.nationality)}</span>
+                <FlagWave nationality={info.nationality} size={96} />
                 <Trophy title="Copa del Mundo" size={110} />
               </div>
               <div className="font-display text-3xl sm:text-4xl gold-glow text-center px-4" style={{ color: 'var(--club-primary)' }}>
@@ -591,7 +594,9 @@ function SortingOverlay({ info, onSkip }: {
             </>
           ) : (
             <>
-              <div className="trophy-pop flex gap-2 items-end justify-center flex-wrap">
+              <div className="trophy-pop flex gap-3 items-center justify-center flex-wrap">
+                {/* copa de selección: la bandera del país festeja junto a la copa */}
+                {info.titles.some((t) => SELECTION_CUP_RE.test(t)) && <FlagWave nationality={info.nationality} size={80} />}
                 {(info.titles.length ? info.titles : ['']).slice(0, 3).map((t, i) => (
                   <Trophy key={i} title={t} size={tier === 'continental' ? 96 : 84} />
                 ))}
@@ -599,6 +604,9 @@ function SortingOverlay({ info, onSkip }: {
               <div className="font-display text-2xl sm:text-3xl gold-glow text-center px-4" style={{ color: 'var(--club-primary)' }}>
                 {tier === 'continental' ? '¡GLORIA CONTINENTAL!' : '¡CAMPEÓN!'}
               </div>
+              {info.titles.some((t) => SELECTION_CUP_RE.test(t)) && (
+                <div className="font-display text-lg text-center" style={{ color: 'var(--muted)' }}>{info.nationality}</div>
+              )}
             </>
           )}
           <div className="font-display text-base text-center px-6">
@@ -676,6 +684,18 @@ function MomentsPanel({ career, full }: { career: CareerState; full?: boolean })
 
 function Center({ children }: { children: React.ReactNode }) {
   return <div className="min-h-dvh flex items-center justify-center p-4">{children}</div>;
+}
+
+/** Bandera del país con la animación de festejo: SVG local (el emoji se ve como letras en Windows). */
+function FlagWave({ nationality, size = 76 }: { nationality: string; size?: number }) {
+  const url = flagUrl(nationality);
+  if (!url) return <span className="flag-wave" style={{ fontSize: size * 0.62 }} aria-hidden>{flagEmoji(nationality)}</span>;
+  return (
+    <img
+      className="flag-wave" src={url} alt={nationality}
+      style={{ width: size, height: Math.round(size * 0.7), objectFit: 'cover', borderRadius: 6, boxShadow: '0 6px 22px rgba(0,0,0,0.55)' }}
+    />
+  );
 }
 
 function ChipView({ chip }: { chip: Chip }) {
@@ -808,9 +828,37 @@ function PlayerCard({ career }: { career: CareerState }) {
         {isDt
           ? <Kpi label="TÍT. DT" value={`${career.titles.filter((t) => t.as === 'dt').length}`} accent={career.titles.some((t) => t.as === 'dt')} />
           : <Kpi label="SELECCIÓN" value={`${career.caps} PJ`} accent={career.caps > 0} />}
-        <Kpi label="TÍTULOS" num={career.titles.length} accent={career.titles.length > 0} />
+        <KpiTitles titles={career.titles} />
       </div>
     </header>
+  );
+}
+
+/** KPI de títulos: el número + las copas como imágenes (las últimas, con +N si hay más). */
+function KpiTitles({ titles }: { titles: CareerState['titles'] }) {
+  const shown = titles.slice(-5);
+  const extra = titles.length - shown.length;
+  return (
+    <div className="panel py-1 sm:py-2 px-1 bg-black/10 border-white/5">
+      <div className="font-display text-[7px] sm:text-[9px] mb-0 sm:mb-0.5" style={{ color: 'var(--muted)' }}>TÍTULOS</div>
+      {titles.length === 0 ? (
+        <div className="font-num text-sm sm:text-2xl font-bold" style={{ color: 'var(--text)' }}>0</div>
+      ) : (
+        <div className="flex items-center justify-center gap-1 sm:gap-1.5 flex-wrap">
+          <span className="font-num text-sm sm:text-2xl font-bold" style={{ color: 'var(--club-primary)', textShadow: '0 0 10px rgba(var(--club-primary-rgb),0.3)' }}>
+            <CountNum value={titles.length} />
+          </span>
+          <span className="inline-flex items-center gap-0.5 sm:gap-1">
+            {shown.map((t) => (
+              <span key={`${t.title}-${t.year}`} className="trophy-drop inline-flex" title={`${t.title} (${t.year})`}>
+                <TitleMark title={t.title} size={16} />
+              </span>
+            ))}
+            {extra > 0 && <span className="font-num text-[9px] sm:text-[10px]" style={{ color: 'var(--muted)' }}>+{extra}</span>}
+          </span>
+        </div>
+      )}
+    </div>
   );
 }
 
@@ -998,10 +1046,50 @@ const NAT_GROUPS: { label: string; nats: string[] }[] = [
 ];
 // Posición: abreviatura + línea del campo (color).
 const POS_META: Record<string, { abbr: string; line: 'arco' | 'def' | 'med' | 'del' }> = {
-  Arquero: { abbr: 'POR', line: 'arco' }, 'Defensa central': { abbr: 'DFC', line: 'def' }, Lateral: { abbr: 'LAT', line: 'def' },
+  Arquero: { abbr: 'POR', line: 'arco' },
+  'Lateral derecho': { abbr: 'LD', line: 'def' }, 'Defensa central': { abbr: 'DFC', line: 'def' }, 'Lateral izquierdo': { abbr: 'LI', line: 'def' },
   'Mediocampista defensivo': { abbr: 'MCD', line: 'med' }, Mediocampista: { abbr: 'MC', line: 'med' }, Mediapunta: { abbr: 'MP', line: 'med' },
-  Extremo: { abbr: 'EXT', line: 'del' }, Delantero: { abbr: 'DC', line: 'del' },
+  'Extremo derecho': { abbr: 'ED', line: 'del' }, 'Extremo izquierdo': { abbr: 'EI', line: 'del' },
+  'Segundo delantero': { abbr: 'SD', line: 'del' }, Delantero: { abbr: 'DC', line: 'del' },
+  Lateral: { abbr: 'LAT', line: 'def' }, Extremo: { abbr: 'EXT', line: 'del' }, // compat con saves viejos
 };
+
+// Ubicación de cada posición en la cancha (ataque arriba, % del área de juego).
+const PITCH_SPOTS: { pos: PlayerPosition; x: number; y: number }[] = [
+  { pos: 'Delantero', x: 50, y: 10 },
+  { pos: 'Extremo izquierdo', x: 15, y: 22 }, { pos: 'Segundo delantero', x: 50, y: 25 }, { pos: 'Extremo derecho', x: 85, y: 22 },
+  { pos: 'Mediapunta', x: 50, y: 40 },
+  { pos: 'Mediocampista', x: 30, y: 56 }, { pos: 'Mediocampista defensivo', x: 70, y: 56 },
+  { pos: 'Lateral izquierdo', x: 15, y: 74 }, { pos: 'Defensa central', x: 50, y: 76 }, { pos: 'Lateral derecho', x: 85, y: 74 },
+  { pos: 'Arquero', x: 50, y: 91 },
+];
+
+/** Selector de posición: una cancha vertical con las 11 posiciones ubicadas donde juegan. */
+function PitchPicker({ pos, onPick }: { pos: PlayerPosition; onPick: (p: PlayerPosition) => void }) {
+  return (
+    <div className="pitch-picker" role="radiogroup" aria-label="Posición en la cancha">
+      <div className="pitch-half-line" aria-hidden />
+      <div className="pitch-center-circle" aria-hidden />
+      <div className="pitch-box pitch-box-top" aria-hidden />
+      <div className="pitch-box-small pitch-box-top" aria-hidden />
+      <div className="pitch-box pitch-box-bottom" aria-hidden />
+      <div className="pitch-box-small pitch-box-bottom" aria-hidden />
+      {PITCH_SPOTS.map(({ pos: p, x, y }) => {
+        const m = POS_META[p];
+        return (
+          <button
+            key={p} type="button" role="radio" aria-checked={pos === p} title={p} aria-label={p}
+            className={`pitch-spot ${pos === p ? 'sel' : ''}`}
+            style={{ left: `${x}%`, top: `${y}%` }}
+            onClick={() => onPick(p)}
+          >
+            <span className={`posb ${m.line}`}>{m.abbr}</span>
+          </button>
+        );
+      })}
+    </div>
+  );
+}
 
 function StartScreen({ onStart }: { onStart: (name: string, nat: string, pos: PlayerPosition) => void }) {
   const [name, setName] = useState('');
@@ -1033,8 +1121,8 @@ function StartScreen({ onStart }: { onStart: (name: string, nat: string, pos: Pl
   return (
     <div className="max-w-xl mx-auto p-3 sm:p-4 flex flex-col gap-3 sm:gap-4 min-h-dvh justify-start sm:justify-center">
       <header className="create-hero px-5 pt-4 pb-4 sm:pt-6 sm:pb-5 text-center">
-        <div className="field-label" style={{ opacity: 0.8 }}>Dinastía FC · Simulador de carrera</div>
-        <h1 className="font-display text-4xl sm:text-6xl mt-1 leading-none" style={{ color: 'var(--club-primary)' }}>CARRERA</h1>
+        <div className="field-label" style={{ opacity: 0.8 }}>Simulador de carrera</div>
+        <h1 className="font-display text-3xl sm:text-5xl mt-1 leading-none" style={{ color: 'var(--club-primary)' }}>MI CARRERA PROFESIONAL</h1>
         <p className="mt-2 sm:mt-3 text-xs sm:text-sm mx-auto" style={{ color: 'var(--muted)', maxWidth: '38ch' }}>
           De la cantera al retiro, un club a la vez. Tomá decisiones, asumí consecuencias y construí tu leyenda.
         </p>
@@ -1096,17 +1184,13 @@ function StartScreen({ onStart }: { onStart: (name: string, nat: string, pos: Pl
         </div>
 
         <div>
-          <div className="field-label mb-2">Posición</div>
-          <div className="flex flex-wrap gap-1.5">
-            {POSITION_LIST.map((p) => {
-              const m = POS_META[p] ?? { abbr: '?', line: 'del' as const };
-              return (
-                <button key={p} className={`pick ${pos === p ? 'sel' : ''}`} onClick={() => setPos(p)}>
-                  <span className={`posb ${m.line}`}>{m.abbr}</span>{p}
-                </button>
-              );
-            })}
+          <div className="mb-2 flex items-baseline justify-between gap-2">
+            <span className="field-label">Posición</span>
+            <span className="font-display text-xs flex items-center gap-1.5" style={{ color: 'var(--club-primary)' }}>
+              <span className={`posb ${POS_META[pos]?.line ?? 'del'}`}>{POS_META[pos]?.abbr ?? '?'}</span>{pos}
+            </span>
           </div>
+          <PitchPicker pos={pos} onPick={setPos} />
         </div>
 
         <button className="btn btn-primary pulse-cta text-base w-full sm:w-auto sm:self-center px-8 py-3 justify-center" disabled={!name.trim()}
@@ -1189,7 +1273,7 @@ function RetirementScreen({ career, onReset, saved, onSaved }: { career: CareerS
         && typeof navigator.canShare === 'function' && navigator.canShare({ files: [file] });
       if (canShareFile && file) {
         // hoja nativa de compartir (WhatsApp, Instagram, etc.) con la tarjeta como imagen adjunta
-        await navigator.share({ files: [file], title: 'Dinastía FC', text: shareText });
+        await navigator.share({ files: [file], title: 'Mi carrera profesional', text: shareText });
       } else {
         // sin soporte para adjuntar imágenes (típico en desktop): manda el resumen directo a WhatsApp
         window.open(`https://wa.me/?text=${encodeURIComponent(shareText)}`, '_blank', 'noopener,noreferrer');
@@ -1219,7 +1303,7 @@ function RetirementScreen({ career, onReset, saved, onSaved }: { career: CareerS
     `${career.seasons.length} temporadas · ${legacy.totalApps} PJ · ${legacy.totalGoals} goles · ${career.titles.length} títulos\n` +
     (legacy.awards.length > 0 ? `${legacy.awards.map((a) => a.award).join(' · ')}\n` : '') +
     career.stints.map((s) => `${s.startYear}-${s.endYear} ${s.as === 'dt' ? '[DT] ' : ''}${s.clubName}${s.titles.length ? ' ×' + s.titles.length : ''}`).join('\n') +
-    `\n¿Cómo sería tu carrera? — Dinastía FC`;
+    `\n¿Cómo sería tu carrera? — Mi carrera profesional`;
 
   return (
     <div className="max-w-xl mx-auto p-3 sm:p-4 flex flex-col gap-3 min-h-dvh justify-start sm:justify-center">

@@ -136,20 +136,25 @@ function addMoment(state: CareerState, icon: string, text: string): void {
 
 const START_YEAR = 2026;
 const POSITIONS = [
-  'Arquero', 'Defensa central', 'Lateral', 'Mediocampista defensivo',
-  'Mediocampista', 'Mediapunta', 'Extremo', 'Delantero',
+  'Arquero', 'Lateral derecho', 'Defensa central', 'Lateral izquierdo',
+  'Mediocampista defensivo', 'Mediocampista', 'Mediapunta',
+  'Extremo derecho', 'Extremo izquierdo', 'Segundo delantero', 'Delantero',
 ] as const;
 export type PlayerPosition = (typeof POSITIONS)[number];
 export const POSITION_LIST = POSITIONS;
 
 // Tasa de gol por posición (goles esperados por partido, base).
 const GOAL_RATE: Record<string, number> = {
-  Arquero: 0.001, 'Defensa central': 0.03, Lateral: 0.05, 'Mediocampista defensivo': 0.06,
-  Mediocampista: 0.14, Mediapunta: 0.3, Extremo: 0.34, Delantero: 0.55,
-  Defensor: 0.04, // compat con carreras guardadas del set viejo
+  Arquero: 0.001, 'Defensa central': 0.03, 'Lateral derecho': 0.05, 'Lateral izquierdo': 0.05,
+  'Mediocampista defensivo': 0.06, Mediocampista: 0.14, Mediapunta: 0.3,
+  'Extremo derecho': 0.34, 'Extremo izquierdo': 0.34, 'Segundo delantero': 0.42, Delantero: 0.55,
+  Lateral: 0.05, Extremo: 0.34, Defensor: 0.04, // compat con carreras guardadas de sets viejos
 };
 // Posiciones ofensivas (suman goles con la selección).
-const ATTACKING_POS = new Set(['Delantero', 'Extremo', 'Mediapunta', 'Mediocampista']);
+const ATTACKING_POS = new Set([
+  'Delantero', 'Segundo delantero', 'Extremo derecho', 'Extremo izquierdo', 'Mediapunta', 'Mediocampista',
+  'Extremo', // compat
+]);
 
 // Fuerza de la selección (0–100): afecta convocatorias, goles internacionales y Mundial.
 const NAT_STRENGTH: Record<string, number> = {
@@ -986,11 +991,15 @@ function dtOfferOption(state: CareerState, c: CareerClub): CareerOption {
 function genDtOffers(state: CareerState, rng: Rng, n: number): CareerClub[] {
   const pool = Object.values(state.clubs).filter((c) => c.id !== state.clubId && c.id !== 'GULF-AlQimma');
   const current = state.clubId ? state.clubs[state.clubId] : null;
-  const myLevel = current ? clubLevel(current) : Math.max(56, state.dtSkill - 8);
-  // Realismo: te llaman clubes a los que les cerrás por chapa (nivel ≤ dtSkill+5)
-  // y a los que vos no bajarías: si estás empleado, nada muy por debajo de tu club.
-  const floor = current ? myLevel - 3 : myLevel - 9;
-  const cap = state.dtSkill + 5;
+  // El mercado de DTs te mide por lo que DIRIGISTE, no por lo que jugaste: la
+  // chapa de ex jugador abre bancos medianos y el techo sube con ciclos y
+  // títulos en el banco. Nadie le da un gigante a un técnico sin rodaje.
+  const dtSeasons = state.seasons.filter((s) => s.role === 'Director técnico').length;
+  const dtTitles = state.titles.filter((t) => t.as === 'dt').length;
+  const cap = Math.min(state.dtSkill + 5, 55 + dtSeasons * 2 + dtTitles * 3 + Math.round(state.fame * 0.11));
+  // Si estás empleado, nada muy por debajo de tu club (y si tu club ya está por
+  // encima de tu mercado, no hay ofertas: se activa el "quedate donde estás").
+  const floor = current ? clubLevel(current) - 3 : cap - 9;
   const candidates = pool
     .filter((c) => { const l = clubLevel(c); return l >= floor && l <= cap; })
     .sort((a, b) => b.elo - a.elo)
