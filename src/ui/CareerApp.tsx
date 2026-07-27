@@ -144,10 +144,10 @@ export default function CareerApp() {
     }
   }, [etl]);
 
-  const start = (name: string, nationality: string, position: PlayerPosition) => {
+  const start = (name: string, nationality: string, position: PlayerPosition, dorsal: number) => {
     if (!etl) return;
     const seed = `carrera-${Date.now() % 1e9}-${Math.floor(Math.random() * 1e6)}`;
-    careerRef.current = createCareer(etl, { name, nationality, position, seed });
+    careerRef.current = createCareer(etl, { name, nationality, position, seed, dorsal });
     setLastSeason(null);
     setFlash(null);
     setSaved(false);
@@ -266,18 +266,25 @@ export default function CareerApp() {
     window.setTimeout(() => runTurn(opt), 200);
   };
 
+  // snapshot del evento de penal: chooseOption avanza pendingEvent al instante,
+  // pero la escena tiene que seguir en pantalla hasta que termine la animación.
+  const penaltySceneRef = useRef<{ title: string; body: string } | null>(null);
   const shootPenalty = (zone: number) => {
     const c = careerRef.current;
     if (!c || penaltyResult) return;
+    penaltySceneRef.current = { title: c.pendingEvent.title, body: c.pendingEvent.body };
     const res = chooseOption(c, `pen:${zone}`);
     saveCurrent(c.retired ? null : c);
     pendingRef.current = res;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { reveal(res); return; }
-    setPenaltyResult(res.penalty ?? null);
+    // el resultado del penal SIEMPRE se muestra: con reduced-motion la escena
+    // aparece sin animaciones (el CSS ya las anula), pero el veredicto se ve.
+    if (!res.penalty) { reveal(res); return; }
+    setPenaltyResult(res.penalty);
   };
   const finishPenalty = () => {
     const res = pendingRef.current;
     pendingRef.current = null;
+    penaltySceneRef.current = null;
     setPenaltyResult(null);
     if (res) reveal(res);
   };
@@ -298,11 +305,16 @@ export default function CareerApp() {
 
   const career = careerRef.current;
   if (!career) return <StartScreen onStart={start} />;
-  if (career.retired && !simulating) return <RetirementScreen career={career} onReset={reset} saved={saved} onSaved={() => setSaved(true)} />;
-  if (career.pendingEvent.kind === 'penal') {
-    return <PenaltyScene body={career.pendingEvent.body} competition={career.pendingEvent.title} nationality={career.nationality}
+  // el penal va ANTES que todo: si hay un resultado en el aire, la escena sigue
+  // montada aunque pendingEvent ya haya avanzado (o la carrera haya terminado).
+  if (penaltyResult || career.pendingEvent.kind === 'penal') {
+    const scene = career.pendingEvent.kind === 'penal'
+      ? { title: career.pendingEvent.title, body: career.pendingEvent.body }
+      : penaltySceneRef.current ?? { title: '', body: '' };
+    return <PenaltyScene body={scene.body} competition={scene.title} nationality={career.nationality}
       result={penaltyResult} onShoot={shootPenalty} onDone={finishPenalty} />;
   }
+  if (career.retired && !simulating) return <RetirementScreen career={career} onReset={reset} saved={saved} onSaved={() => setSaved(true)} />;
 
   return (
     <div className="max-w-screen-xl mx-auto p-2 sm:p-4 flex flex-col gap-2 sm:gap-3 min-h-dvh">
@@ -365,10 +377,14 @@ function PenaltyScene({ body, competition, nationality, result, onShoot, onDone 
   const shot = result != null;
   const isMundial = competition.startsWith('Copa del Mundo') || result?.titleName.startsWith('Copa del Mundo');
   const isSeleccion = isMundial || SELECTION_CUP_RE.test(competition) || SELECTION_CUP_RE.test(result?.titleName ?? '');
+  // el veredicto recién se conoce cuando la pelota LLEGA: primero el vuelo, después el grito
+  const [impact, setImpact] = useState(false);
   useEffect(() => {
-    if (!shot) return;
-    const t = window.setTimeout(onDone, 2600);
-    return () => window.clearTimeout(t);
+    if (!shot) { setImpact(false); return; }
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const t1 = window.setTimeout(() => setImpact(true), reduced ? 0 : 480);
+    const t2 = window.setTimeout(onDone, 3200);
+    return () => { window.clearTimeout(t1); window.clearTimeout(t2); };
   }, [shot]);
 
   // posición destino de la pelota y del arquero (en % dentro del arco)
@@ -379,18 +395,20 @@ function PenaltyScene({ body, competition, nationality, result, onShoot, onDone 
     : {};
   const saved = result != null && !result.scored && !result.offTarget;
   const keeperCls = result
-    ? `${PK_COL(result.keeperZone) === 0 ? 'dive-left' : PK_COL(result.keeperZone) === 2 ? 'dive-right' : ''} ${saved ? 'saved' : ''}`
+    ? `${PK_COL(result.keeperZone) === 0 ? 'dive-left' : PK_COL(result.keeperZone) === 2 ? 'dive-right' : ''} ${saved && impact ? 'saved' : ''}`
     : 'idle';
   const ballStyle: React.CSSProperties = result
     ? (result.offTarget
-      ? { left: `${colX[PK_COL(result.zone)]}%`, top: '-14%', opacity: 0 } // se va arriba
-      : { ...zoneStyle(result.zone), opacity: 1 })
+      ? { left: `${colX[PK_COL(result.zone)]}%`, top: '-18%', opacity: impact ? 0 : 1 } // se va por arriba y se pierde
+      : saved
+        ? { left: `${[16, 50, 84][PK_COL(result.keeperZone)]}%`, top: `${PK_ROW(result.keeperZone) === 0 ? 28 : 60}%`, opacity: 1 } // queda en las manos del arquero
+        : { ...zoneStyle(result.zone), opacity: 1 })
     : {};
 
   const verdict = !result ? null
-    : result.scored ? { t: '¡GOOOL!', c: 'var(--good)' }
-      : result.offTarget ? { t: 'AFUERA', c: 'var(--bad)' }
-        : { t: 'LA ATAJÓ', c: 'var(--bad)' };
+    : result.scored ? { t: '¡GOOOL!', c: 'var(--good)', sub: 'Inatajable: la mandaste donde quisiste' }
+      : result.offTarget ? { t: 'AFUERA', c: 'var(--bad)', sub: 'Se fue por arriba del travesaño' }
+        : { t: '¡LA ATAJÓ!', c: 'var(--bad)', sub: 'El arquero adivinó el palo y voló' };
 
   return (
     <div className={`pitch-bg fixed inset-0 z-50 flex flex-col items-center justify-center gap-4 px-4 overflow-hidden select-none ${result?.titleName.startsWith('Copa del Mundo') ? 'key-moment moment-mundial' : ''}`}>
@@ -398,7 +416,7 @@ function PenaltyScene({ body, competition, nationality, result, onShoot, onDone 
       <div className="font-display text-sm text-center" style={{ color: 'var(--club-primary)' }}>{competition}</div>
       {!shot && <p className="text-xs text-center max-w-sm" style={{ color: 'var(--muted)' }}>{body}</p>}
 
-      <div className={`pk-goal ${result?.scored ? 'scored' : ''}`}>
+      <div className={`pk-goal ${result?.scored && impact ? 'scored' : ''}`}>
         <div className={`pk-grid ${shot ? 'aim-done' : ''}`}>
           {[1, 3, 5, 2, 4, 6].map((z) => (
             <button key={z} className={`pk-zone ${shot ? 'aim-off' : ''} ${result?.zone === z ? 'picked' : ''}`}
@@ -412,12 +430,15 @@ function PenaltyScene({ body, competition, nationality, result, onShoot, onDone 
 
       {!shot
         ? <div className="font-display text-base text-center pulse-cta px-4 py-1 rounded" style={{ color: 'var(--club-primary)' }}>¿A DÓNDE LA MANDÁS?</div>
-        : verdict && (
-          <div className="flex flex-col items-center gap-1">
-            <div className="font-display text-4xl sm:text-5xl gold-glow trophy-pop" style={{ color: verdict.c }}>{verdict.t}</div>
-            <div className="text-xs" style={{ color: 'var(--muted)' }}>tocá para seguir</div>
-          </div>
-        )}
+        : !impact
+          ? <div className="font-display text-base text-center px-4 py-1" style={{ color: 'var(--muted)', minHeight: 76 }}>…</div>
+          : verdict && (
+            <div className="flex flex-col items-center gap-1" style={{ minHeight: 76 }}>
+              <div className="font-display text-4xl sm:text-5xl gold-glow trophy-pop" style={{ color: verdict.c }}>{verdict.t}</div>
+              <div className="text-xs" style={{ color: 'var(--muted)' }}>{verdict.sub}</div>
+              <div className="text-[10px] mt-1" style={{ color: 'var(--muted)' }}>tocá para seguir</div>
+            </div>
+          )}
       {shot && <div className="fixed inset-0" onClick={onDone} />}
     </div>
   );
@@ -792,6 +813,10 @@ function PlayerCard({ career }: { career: CareerState }) {
             <span className={`inline-block mt-0.5 text-[8px] sm:text-[9px] px-1.5 py-0.5 rounded-sm border align-middle frame-${frame.key} shadow-sm`}>{frame.label}</span>
           </div>
           <div className="text-[9px] sm:text-xs font-num mt-0.5 sm:mt-1 flex flex-wrap items-center gap-x-1 gap-y-0.5" style={{ color: 'var(--text)' }}>
+            {career.dorsal != null && <>
+              <span className="opacity-90 font-bold" style={{ color: 'var(--club-primary)' }}>Nº {career.dorsal}</span>
+              <span className="opacity-40">·</span>
+            </>}
             <span className="opacity-80">{career.nationality}</span>
             <span className="opacity-40">·</span>
             <span className="opacity-80 whitespace-nowrap">{career.age} años</span>
@@ -1091,9 +1116,13 @@ function PitchPicker({ pos, onPick }: { pos: PlayerPosition; onPick: (p: PlayerP
   );
 }
 
-function StartScreen({ onStart }: { onStart: (name: string, nat: string, pos: PlayerPosition) => void }) {
+const DORSAL_QUICK = [1, 5, 7, 9, 10, 11];
+
+function StartScreen({ onStart }: { onStart: (name: string, nat: string, pos: PlayerPosition, dorsal: number) => void }) {
+  const [step, setStep] = useState<1 | 2>(1);
   const [name, setName] = useState('');
   const [nat, setNat] = useState('Argentina');
+  const [dorsal, setDorsal] = useState(10);
   const [pos, setPos] = useState<PlayerPosition>('Delantero');
   const [showNatDropdown, setShowNatDropdown] = useState(false);
   const natDropdownRef = useRef<HTMLDivElement | null>(null);
@@ -1128,7 +1157,8 @@ function StartScreen({ onStart }: { onStart: (name: string, nat: string, pos: Pl
         </p>
       </header>
 
-      <div className="panel p-3 sm:p-4 flex flex-col gap-3 sm:gap-5">
+      {step === 1 && <div className="panel p-3 sm:p-4 flex flex-col gap-3 sm:gap-5 slide-in">
+        <div className="field-label text-center" style={{ opacity: 0.65 }}>Paso 1 de 2 · Tu identidad</div>
         <label className="flex flex-col gap-1.5">
           <span className="field-label">Tu nombre</span>
           <input className="panel px-3 py-2.5 text-base" value={name} maxLength={26} placeholder="Ej: Juan Cruz Ledesma" onChange={(e) => setName(e.target.value)} />
@@ -1184,6 +1214,33 @@ function StartScreen({ onStart }: { onStart: (name: string, nat: string, pos: Pl
         </div>
 
         <div>
+          <div className="field-label mb-2">Tu dorsal</div>
+          <div className="flex items-center gap-1.5 flex-wrap">
+            <input
+              className="panel px-3 py-2.5 text-base font-num w-20 text-center" inputMode="numeric" maxLength={2}
+              value={dorsal || ''} placeholder="10" aria-label="Dorsal (1 a 99)"
+              onChange={(e) => setDorsal(Math.min(99, parseInt(e.target.value.replace(/\D/g, ''), 10) || 0))}
+            />
+            {DORSAL_QUICK.map((n) => (
+              <button key={n} type="button" className={`pick ${dorsal === n ? 'sel' : ''}`} onClick={() => setDorsal(n)}>
+                <span className={`code ${dorsal === n ? 'sel-code' : ''}`}>{n}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <button className="btn btn-primary pulse-cta text-base w-full sm:w-auto sm:self-center px-8 py-3 justify-center" disabled={!name.trim() || dorsal < 1}
+          onClick={() => setStep(2)}>
+          Continuar →
+        </button>
+      </div>}
+
+      {step === 2 && <div className="panel p-3 sm:p-4 flex flex-col gap-3 sm:gap-4 slide-in">
+        <div className="field-label text-center" style={{ opacity: 0.65 }}>
+          Paso 2 de 2 · {name.trim()} · {nat} · Nº {dorsal}
+        </div>
+
+        <div>
           <div className="mb-2 flex items-baseline justify-between gap-2">
             <span className="field-label">Posición</span>
             <span className="font-display text-xs flex items-center gap-1.5" style={{ color: 'var(--club-primary)' }}>
@@ -1193,13 +1250,16 @@ function StartScreen({ onStart }: { onStart: (name: string, nat: string, pos: Pl
           <PitchPicker pos={pos} onPick={setPos} />
         </div>
 
-        <button className="btn btn-primary pulse-cta text-base w-full sm:w-auto sm:self-center px-8 py-3 justify-center" disabled={!name.trim()}
-          onClick={() => onStart(name.trim(), nat, pos)}>
-          Empezar mi carrera →
-        </button>
-      </div>
+        <div className="flex gap-2 justify-center flex-wrap">
+          <button className="btn px-5 py-3" onClick={() => setStep(1)}>← Volver</button>
+          <button className="btn btn-primary pulse-cta text-base px-8 py-3 justify-center" disabled={!name.trim()}
+            onClick={() => onStart(name.trim(), nat, pos, dorsal)}>
+            Empezar mi carrera →
+          </button>
+        </div>
+      </div>}
 
-      {records && (
+      {step === 1 && records && (
         <section className="panel p-3">
           <div className="font-display text-xs mb-2 text-center" style={{ color: 'var(--club-primary)' }}>TU HISTORIA COMO FUTBOLISTA VIRTUAL</div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center">

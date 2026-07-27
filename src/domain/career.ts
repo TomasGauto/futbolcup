@@ -82,6 +82,8 @@ export type CareerState = {
   name: string;
   nationality: string;
   position: string;
+  /** dorsal elegido (1-99); opcional para compat con saves viejos */
+  dorsal?: number;
   year: number;
   age: number;
   ability: number; // 1-99, nivel real
@@ -236,7 +238,7 @@ function wageLabel(level: number): string {
 
 export function createCareer(
   etl: EtlData,
-  opts: { name: string; nationality: string; position: PlayerPosition; seed: string },
+  opts: { name: string; nationality: string; position: PlayerPosition; seed: string; dorsal?: number },
 ): CareerState {
   const rngState = initRngState(opts.seed);
   const rng = new Rng(rngState);
@@ -258,6 +260,7 @@ export function createCareer(
   const state: CareerState = {
     seed: opts.seed, rng: rngState,
     name: opts.name, nationality: opts.nationality, position: opts.position,
+    dorsal: Math.max(1, Math.min(99, Math.round(opts.dorsal ?? 10))),
     year: START_YEAR, age: 16,
     ability: 58 + rng.int('world', 0, 6),
     potential: 74 + rng.int('world', 0, 22), // el techo es secreto: se descubre jugando
