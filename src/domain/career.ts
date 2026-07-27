@@ -657,8 +657,10 @@ function playSeason(state: CareerState, rng: Rng): SeasonRow {
   state.formBoost = 0;
   state.promisedStarter = false;
 
-  // la fama premia sobre todo títulos: jugar mucho ya no alcanza para ser leyenda por acumulación pasiva
-  state.fame = Math.min(100, r1(state.fame + apps * 0.03 + goals * 0.12 + titles.length * 9 + (level >= 82 ? 1.5 : 0) + rivalryFame - 1.5));
+  const baseFameGain = apps * 0.03 + goals * 0.12 + titles.length * 5 + (level >= 82 ? 1.5 : 0) + rivalryFame;
+  const fameMultiplier = Math.max(0.1, (105 - state.fame) / 100);
+  const fameDecay = state.fame > 70 ? 2.5 : 1.5;
+  state.fame = Math.min(100, r1(state.fame + (baseFameGain * fameMultiplier) - fameDecay));
 
   // registrar
   const stint = currentStint(state);
@@ -1095,7 +1097,10 @@ function playDtSeason(state: CareerState, rng: Rng): SeasonRow {
   // el nivel de DT evoluciona de forma más progresiva (máx 88)
   const skillDelta = titles.length * 0.8 + (over >= 3 ? 0.6 : over >= 0 ? 0.3 : over >= -3 ? -0.4 : -1.2);
   state.dtSkill = Math.round(Math.max(40, Math.min(88, state.dtSkill + skillDelta)));
-  state.fame = Math.min(100, r1(state.fame + titles.length * 4 + (over >= 3 ? 1.5 : 0) + rivalryFame - 0.5));
+  const baseFameGain = titles.length * 4 + (over >= 3 ? 1.5 : 0) + rivalryFame;
+  const fameMultiplier = Math.max(0.1, (105 - state.fame) / 100);
+  const fameDecay = state.fame > 70 ? 1.5 : 0.5;
+  state.fame = Math.min(100, r1(state.fame + (baseFameGain * fameMultiplier) - fameDecay));
 
   const stint = currentStint(state);
   stint.apps += matches;
@@ -1234,6 +1239,7 @@ function socialMemeForOption(
   event: CareerEvent,
   option: CareerOption,
   res: { risk?: TurnResult['risk']; flash: string | null; season: SeasonRow | null; penalty?: TurnResult['penalty']; cycle?: SeasonRow[] },
+  rng: Rng,
 ): string | null {
   // reservado a los momentos grandes: apuestas de riesgo, penales y títulos ganados
   // (antes se disparaba en cada oferta/préstamo/convocatoria y saturaba la carrera de memes)
@@ -1242,29 +1248,45 @@ function socialMemeForOption(
       'Cine 🚬. Te recibiste de basado absoluto.',
       'El edit con música de Phonk ya es viral en TikTok.',
       'La termo-esfera decretó que sos más grande que Pelé.',
-      'Masterclass. En redes todos piden tu Balón de Oro.'
+      'Masterclass. En redes todos piden tu Balón de Oro.',
+      'Top 10 cerradas de estadio. No trates de entenderlo, disfrutalo.',
+      'Espectáculo puro. Guardiola anotó esa jugada en su libreta.',
+      'La mística intacta. En X ya armaron el hilo de por qué sos el mejor de la historia.',
+      'Noche mágica. Hasta tus detractores tuvieron que aplaudir de pie.'
     ];
     const failMemes = [
       'En TikTok ya hicieron 14 edits tuyos con música triste.',
       'Sos tendencia en X por las razones equivocadas. #Jubilate',
       'Ya apareciste en el compilado de bloopers rústicos.',
-      'En Twitter te están liquidando. Te dicen "Ex Jugador".'
+      'En Twitter te están liquidando. Te dicen "Ex Jugador".',
+      'La cuenta oficial del club rival te dedicó un meme. Tristísimo.',
+      'Papelón histórico. La tribuna murmuró cada vez que tocaste la pelota.',
+      'Te hicieron un video con música de circo de fondo. Inremontable.',
+      'En la TV analizaron tu partido con lupa. Conclusión: un desastre.'
     ];
-    return res.risk.ok ? okMemes[state.year % okMemes.length] : failMemes[state.year % failMemes.length];
+    return res.risk.ok ? rng.pick('misc', okMemes) : rng.pick('misc', failMemes);
   }
 
   if (event.kind === 'penal') {
     const okMemes = [
       'Ice in my veins 🥶. Te tiraste un pasito y es trend.',
       'Mente fría, termo intacto. Cerraste el estadio.',
-      'A lo Panenka... en redes ya te comparan con los grandes.'
+      'A lo Panenka... en redes ya te comparan con los grandes.',
+      'El arquero fue para un lado y vos la picaste. Humillación total.',
+      'Tiraste el "Topo Gigio" en el festejo. Sos inalcanzable.',
+      'Penal clavado al ángulo y beso a la cámara. Naciste para estos momentos.',
+      'Pura sangre fría. El comentarista gritó el gol hasta quedarse sin voz.'
     ];
     const failMemes = [
       'Ese penal lo agarraron en la estratósfera. Sos meme.',
       'Apareciste en TV por mandar la pelota a Júpiter.',
-      'Inspiración Sergio Ramos: bajaste un satélite de Starlink.'
+      'Inspiración Sergio Ramos: bajaste un satélite de Starlink.',
+      'El arquero ni se movió y se la diste a las manos. Desconexión total.',
+      'Quisiste picarla y te tropezaste. Directo a "Lo peor de la fecha".',
+      'El estadio enmudeció. Dejaste el pasto levantado y la pelota en la barrera.',
+      'Te adivinaron el palo. La tapa de los diarios de mañana ya está escrita.'
     ];
-    return res.penalty?.scored ? okMemes[state.year % okMemes.length] : failMemes[state.year % failMemes.length];
+    return res.penalty?.scored ? rng.pick('misc', okMemes) : rng.pick('misc', failMemes);
   }
 
   const wonTitle = res.season?.titles[0] ?? res.cycle?.flatMap((r) => r.titles)[0];
@@ -1273,9 +1295,13 @@ function socialMemeForOption(
       `Ya sos canon: edit con la ${wonTitle} y reggaetón de fondo.`,
       `El stream festejando la ${wonTitle} rompió Twitch.`,
       `Te tatuaste la ${wonTitle} y en redes ya te dicen GOAT 🐐.`,
-      `Campeón de ${wonTitle} y lluvia de historias con lentes de sol.`
+      `Campeón de ${wonTitle} y lluvia de historias con lentes de sol.`,
+      `Levantaste la ${wonTitle} y te pusiste una túnica de rey. Icónico.`,
+      `Llegaste al festejo de la ${wonTitle} con la copa en la cabeza.`,
+      `Foto durmiendo abrazado a la ${wonTitle}. Ya es fondo de pantalla de miles.`,
+      `El festejo en el vestuario con la ${wonTitle} es la storie más vista del año.`
     ];
-    return titleMemes[state.year % titleMemes.length];
+    return rng.pick('misc', titleMemes);
   }
 
   return null;
@@ -1288,13 +1314,14 @@ function resultWithMeme(
   option: CareerOption,
 ): TurnResult {
   if (!res.meme) {
+    const localRng = new Rng(initRngState(state.rng.misc.toString() + '-' + state.year + '-' + (event.kind || 'misc')));
     res.meme = socialMemeForOption(state, event, option, {
       risk: res.risk,
       flash: res.flash,
       season: res.season,
       penalty: res.penalty,
       cycle: res.cycle,
-    }) ?? undefined;
+    }, localRng) ?? undefined;
   }
   if (res.meme) {
     addMoment(state, '🎭', res.meme);
