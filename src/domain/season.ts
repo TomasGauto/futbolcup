@@ -67,6 +67,9 @@ const CONFED_TIERS: Record<Confederation, ConfedTier[]> = {
   CONCACAF: [
     { comp: 'elite', name: 'Concacaf Champions Cup', size: 8, prizePerWin: 6, participation: 6, sched: [0.4, 0.65, 0.9] },
   ],
+  AFC: [
+    { comp: 'elite', name: 'AFC Champions League', size: 8, prizePerWin: 8, participation: 7, sched: [0.4, 0.65, 0.9] },
+  ],
 };
 
 const floorPow2 = (n: number): number => (n < 2 ? 0 : 1 << Math.floor(Math.log2(n)));

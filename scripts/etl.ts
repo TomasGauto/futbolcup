@@ -18,7 +18,7 @@ const CACHE = join(ROOT, '.etl-cache');
 //   fd-new       → football-data.co.uk /new/{PAÍS}.csv (archivo único, solo goles)
 //   static-file  → CSV commiteado en scripts/data-manual/{sourceKey}.csv (formato fd-new)
 type SourceKind = 'datasets-gh' | 'fd-main' | 'fd-new' | 'static-file';
-type Confederation = 'UEFA' | 'CONMEBOL' | 'CONCACAF';
+type Confederation = 'UEFA' | 'CONMEBOL' | 'CONCACAF' | 'AFC';
 
 type SourceLeague = {
   id: string;

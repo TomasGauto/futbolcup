@@ -259,7 +259,9 @@ export function createCareer(
 
   const state: CareerState = {
     seed: opts.seed, rng: rngState,
-    name: opts.name, nationality: opts.nationality, position: opts.position,
+    // nombre capitalizado: "john cena" → "John Cena" (el input llega tal cual se tipeó)
+    name: opts.name.trim().replace(/\S+/g, (w) => w[0].toUpperCase() + w.slice(1)),
+    nationality: opts.nationality, position: opts.position,
     dorsal: Math.max(1, Math.min(99, Math.round(opts.dorsal ?? 10))),
     year: START_YEAR, age: 16,
     ability: 58 + rng.int('world', 0, 6),
@@ -286,6 +288,17 @@ const NAT_TO_COUNTRY: Record<string, string> = {
   Argentina: 'Argentina', Brasil: 'Brasil', Francia: 'Francia', Inglaterra: 'Inglaterra',
   España: 'España', Alemania: 'Alemania', Italia: 'Italia', Portugal: 'Portugal',
   'Países Bajos': 'Holanda', México: 'México', 'Estados Unidos': 'Estados Unidos', Colombia: 'Colombia',
+  Perú: 'Perú', Uruguay: 'Uruguay', Chile: 'Chile', Bélgica: 'Bélgica', Rusia: 'Rusia', 'Arabia Saudita': 'Arabia Saudita',
+};
+
+// Sin liga propia, las canteras salen de los países FORMADORES de tu región (los
+// circuitos reales de captación juvenil), nunca del top mundial a ciegas.
+const ACADEMY_REGION: Record<NatConfed, string[]> = {
+  CONMEBOL: ['Argentina', 'Brasil', 'Colombia', 'Uruguay', 'Chile', 'Perú'],
+  CONCACAF: ['México', 'Estados Unidos'],
+  CAF: ['Francia', 'Portugal', 'Bélgica'], // el pipeline África→Europa de siempre
+  AFC: ['Arabia Saudita', 'Holanda', 'Portugal'],
+  UEFA: ['Holanda', 'Portugal', 'Bélgica', 'Francia', 'Rusia'], // europeos sin liga propia
 };
 
 function academyEvent(state: CareerState, rng: Rng): CareerEvent {
@@ -296,15 +309,16 @@ function academyEvent(state: CareerState, rng: Rng): CareerEvent {
   // Sólo se recurre al mercado global cuando tu país no tiene suficientes clubes de primera.
   const homeCountry = NAT_TO_COUNTRY[state.nationality];
   const home = homeCountry ? sorted.filter((c) => c.country === homeCountry) : [];
-  const grande = home.length >= 3
-    ? rng.pick('event', home.slice(0, 3))
-    : rng.pick('event', sorted.slice(0, 10));
-  const medio = home.length >= 8
-    ? rng.pick('event', home.slice(3, 8))
-    : rng.pick('event', sorted.slice(25, 55));
-  const chico = home.length >= 12
-    ? rng.pick('event', home.slice(8))
-    : rng.pick('event', sorted.slice(65, Math.min(95, sorted.length)));
+  // Sin liga propia (o liga chica): el pool son los países formadores de tu región,
+  // ordenados por nivel — un peruano se prueba en River o en la U, no en el United.
+  const region = new Set(ACADEMY_REGION[natConfedOf(state.nationality)] ?? []);
+  if (homeCountry) region.add(homeCountry);
+  const regional = sorted.filter((c) => region.has(c.country));
+  const pool = home.length >= 12 ? home : (regional.length >= 12 ? regional : sorted);
+  const third = Math.floor(pool.length / 3);
+  const grande = rng.pick('event', pool.slice(0, Math.max(3, Math.min(5, third))));
+  const medio = rng.pick('event', pool.slice(third, third * 2));
+  const chico = rng.pick('event', pool.slice(third * 2));
   const mk = (c: CareerClub, tier: 'grande' | 'medio' | 'chico'): CareerOption => ({
     id: `join:${c.id}`,
     label: c.name,
@@ -999,7 +1013,7 @@ function genDtOffers(state: CareerState, rng: Rng, n: number): CareerClub[] {
   // títulos en el banco. Nadie le da un gigante a un técnico sin rodaje.
   const dtSeasons = state.seasons.filter((s) => s.role === 'Director técnico').length;
   const dtTitles = state.titles.filter((t) => t.as === 'dt').length;
-  const cap = Math.min(state.dtSkill + 5, 55 + dtSeasons * 2 + dtTitles * 3 + Math.round(state.fame * 0.11));
+  const cap = Math.min(state.dtSkill + 2, 50 + dtSeasons * 1.0 + dtTitles * 2.5 + Math.round(state.fame * 0.05));
   // Si estás empleado, nada muy por debajo de tu club (y si tu club ya está por
   // encima de tu mercado, no hay ofertas: se activa el "quedate donde estás").
   const floor = current ? clubLevel(current) - 3 : cap - 9;
@@ -1058,9 +1072,8 @@ function playDtSeason(state: CareerState, rng: Rng): SeasonRow {
   const edge = state.dtSkill - level + (state.dtEdgeBoost ?? 0); // DT mejor que el plantel = sobrerrinde
   state.dtEdgeBoost = 0;
 
-  // impacto del DT en el sorteo de la liga: bono temporal de Elo
-  // (tope moderado: ni el mejor DT del mundo debería ganar la Champions todos los años)
-  const bonus = Math.max(-55, Math.min(55, edge * 7));
+  // impacto del DT en el sorteo de la liga: bono temporal de Elo moderado (máximo +/-25 Elo)
+  const bonus = Math.max(-25, Math.min(25, edge * 2.5));
   club.elo += bonus;
   const out = leagueOutcome(state, rng, club.id);
   club.elo -= bonus;
@@ -1079,11 +1092,10 @@ function playDtSeason(state: CareerState, rng: Rng): SeasonRow {
   const rivalryFame = playRivalryMatches(state, rng, club, true);
   const rating = r1(Math.max(4.5, Math.min(9.8, 6.4 + over * 0.18 + titles.length * 0.5 + rng.normal('match', 0, 0.3))));
 
-  // el nivel de DT también puede bajar: una mala temporada te desgasta como a cualquier
-  // técnico real, no hay un ascenso garantizado a leyenda con solo acumular años en el banco.
-  const skillDelta = titles.length * 1.5 + (over >= 3 ? 1 : over >= 0 ? 0.5 : over >= -4 ? -0.6 : -1.6);
-  state.dtSkill = Math.round(Math.max(40, Math.min(92, state.dtSkill + skillDelta)));
-  state.fame = Math.min(100, r1(state.fame + titles.length * 5 + (over >= 3 ? 2 : 0) + rivalryFame - 0.5));
+  // el nivel de DT evoluciona de forma más progresiva (máx 88)
+  const skillDelta = titles.length * 0.8 + (over >= 3 ? 0.6 : over >= 0 ? 0.3 : over >= -3 ? -0.4 : -1.2);
+  state.dtSkill = Math.round(Math.max(40, Math.min(88, state.dtSkill + skillDelta)));
+  state.fame = Math.min(100, r1(state.fame + titles.length * 4 + (over >= 3 ? 1.5 : 0) + rivalryFame - 0.5));
 
   const stint = currentStint(state);
   stint.apps += matches;
@@ -1094,12 +1106,16 @@ function playDtSeason(state: CareerState, rng: Rng): SeasonRow {
     addMoment(state, '🏆', `Campeón como DT: ${t} con ${club.name} (${state.year})`);
   }
 
-  // ¿te echan? rendir muy por debajo de lo esperado enciende el banco
+  // ¿te echan? En clubes gigantes la exigencia es extrema (deben ganar o pelear el título)
   let note = '';
-  const firedNow = over <= -5 || (out.pos >= peers.length - 2 && expectedRank < peers.length - 4);
+  const isTopClub = level >= 80;
+  const failedExpectations = isTopClub
+    ? (out.pos > 3 || (out.pos > 1 && titles.length === 0 && rng.chance('match', 0.45)))
+    : (over <= -4);
+  const firedNow = failedExpectations || (out.pos >= peers.length - 2 && expectedRank < peers.length - 4);
   if (firedNow) {
     state.dtJustFired = true;
-    note = 'La dirigencia te echó al terminar la temporada.';
+    note = isTopClub && out.pos > 1 ? 'La exigencia del club gigante no perdonó no salir campeón.' : 'La dirigencia te echó al terminar la temporada.';
     state.clubId = null;
     addMoment(state, '🪑', `${club.name} te echó del banco (${state.year})`);
   }
@@ -1183,9 +1199,10 @@ const DT_RISK_EVENTS: ((state: CareerState) => CareerEvent | null)[] = [
 ];
 
 function nextDtEvent(state: CareerState, rng: Rng): CareerEvent {
-  if (state.age >= 65) {
+  const dtSeasons = state.seasons.filter((s) => s.role === 'Director técnico').length;
+  if (dtSeasons >= 30 || state.age >= 68) {
     state.retired = true;
-    state.retirementNote = `A los ${state.age} años, el fútbol te despide de pie. Dos vidas en una: jugador y entrenador.`;
+    state.retirementNote = `A los ${state.age} años y tras ${dtSeasons} temporadas en los bancos (10 decisiones), el fútbol te despide de pie. Dos vidas en una: jugador y entrenador.`;
     return state.pendingEvent;
   }
   // si seguís empleado, a veces la decisión del año no es de mercado sino de vestuario
@@ -1375,7 +1392,7 @@ export function chooseOption(state: CareerState, optionId: string): TurnResult {
     }
     // dt:start — el prestigio de jugador define desde dónde arrancás
     state.phase = 'dt';
-    state.dtSkill = Math.round(Math.min(82, 52 + state.fame * 0.28 + state.titles.length * 1.2));
+    state.dtSkill = Math.round(Math.min(68, 48 + state.fame * 0.15 + state.titles.length * 0.5));
     state.clubId = null;
     addMoment(state, '📋', `Curso de DT aprobado: empieza tu segunda vida en los bancos (nivel ${state.dtSkill})`);
     state.pendingEvent = dtOffersEvent(state, rng, true);

@@ -51,6 +51,8 @@ El repo `FutbolCup` (paquete `dinastia-fc`) contiene una webapp de fútbol offli
   - Móvil: 1–2 opciones lado a lado; **3+ opciones se apilan en 1 columna** (para que no se aplaste el texto).
   - Desde `640px`: todas las opciones en una fila (`--cols-wide`).
 - El panel `.trajectory-side` es sticky y limitado a `360px` en pantallas grandes.
+- **Carta FUT premium (`PlayerCard`):** rail de identidad estilo Ultimate Team a la izquierda (badge valoración+posición, **bandera** vía `NatFlag`/`flagUrl`, escudo del club apilados). Materialidad metálica por tier en `.fut-badge` (gloss diagonal, barrido de brillo en oro/leyenda) y **foil holográfico** (`.pcard-foil`) solo en la carta LEYENDA. Todo respeta `prefers-reduced-motion`.
+- **Trayectoria (`Trajectory`):** cada etapa muestra su **nota promedio** (pill `.stint-nota`, coloreada por rendimiento) y un cartel **★ PRIME** (`.stint-prime`) en la etapa de mayor nota con minutos — dorado para el jugador, verde para el DT (lógica simétrica por fase). La nota se calcula desde `career.seasons` (filtrando por `clubId` + rango de años de la etapa), así funciona en partidas ya guardadas.
 - **Verificación visual:** los cambios de UI se validaron manejando el juego real con Playwright en viewport móvil (capturas + chequeo de overflow horizontal a 360/393px). Preferir ese método antes que asumir que "se ve bien".
 
 ## Datos y ETL
@@ -73,6 +75,19 @@ El repo `FutbolCup` (paquete `dinastia-fc`) contiene una webapp de fútbol offli
 - **Excepción conocida:** `sharecard.ts` dibuja la tarjeta en canvas y todavía usa emojis (🌍🏆🥇⭐); convertirla a imágenes reales implica cargar y rasterizar los assets sobre el canvas (pendiente).
 - Los "momentos de carrera" (timeline) usan un emoji por evento por diseño (no son visualización de copas).
 
+### Pipeline de assets y el manifiesto (CRÍTICO — leer antes de deployar)
+`assets-manifest.json` es la **única fuente de verdad** para escudos: `crestSrc(clubId)` (en `assets.ts`) busca `clubId` en `man.crests[]`; si el id **no está**, devuelve `null` y `Crest` cae a **iniciales de texto** (no da 404, no hay error en consola). Por eso el síntoma de "escudos rotos" es texto tipo `RP`/`IND`/`SL` en vez de la imagen.
+
+- **La bandera NO usa el manifiesto** (`flagUrl` arma la ruta directa desde `public/data/flags/`). Diagnóstico útil: si la **bandera carga pero el escudo no**, el problema es el manifiesto, no la ruta base ni el hosting.
+- **Regla de oro:** el manifiesto **debe cubrir todos los clubes de `clubs.json`**. Un `clubs.json` regenerado por el ETL con un `assets-manifest.json` viejo/incompleto = **todos** los escudos de los clubes faltantes rotos. Nunca deployar con esa desincronización.
+- **Regenerar el manifiesto:**
+  - `node scripts/rebuild-manifest.mjs` → **offline, determinista**. Matchea `clubs.json` ↔ archivos en `public/data/crests/` por id (con fallback case-insensitive). Cubre todos los clubes que tengan archivo en disco (si falta alguno, sale con `CLUBS SIN ARCHIVO` y exit 1). **No calcula colores** de club → el theming cae al dorado por defecto.
+  - `node scripts/assets.mjs` → **pipeline completo, necesita red** (TheSportsDB): descarga escudos faltantes y **calcula los colores** (`primary`/`secondary`) por club. Es el que agrega el tema cromático.
+  - Los escudos generados (SVG) tienen `source: "generated"`; los reales (PNG) `source: "real"`.
+  - `.etl-cache/crest-lookup.json` cachea el match id→URL (no guarda colores).
+- **Bug de datos conocido:** ids que colisionan case-insensitive (ej. `ARG1-ColonSantaFe`, `GER1-MGladbach`) comparten archivo de escudo en FS case-insensitive (Windows/macOS). `rebuild-manifest.mjs` lo avisa; no es fatal.
+- **Verificación del build de producción:** `vite preview` en Windows a veces da un `404 ERR_ABORTED` fantasma del bundle JS (el shell queda en blanco) aunque el archivo exista. No es un bug del build. Para verificar el `dist/` real, servirlo con un server estático plano (Node/Python) bajo `/futbolcup/` y manejar el juego con Playwright, en vez de confiar en `vite preview`.
+
 ## Reglas importantes de la plataforma
 - El modo vivo es una **carrera de jugador** (no gestión de club): la atención está en la decisión por temporada y en construir la leyenda.
 - El runtime debe ser 100% local y determinista según seed.
@@ -90,6 +105,11 @@ El repo `FutbolCup` (paquete `dinastia-fc`) contiene una webapp de fútbol offli
 
 ### Cómo publicar una actualización
 ```bash
+# 0) CHEQUEO PRE-DEPLOY (evita el bug de "escudos rotos"):
+#    el manifiesto debe cubrir todos los clubes de clubs.json.
+node -e "const fs=require('fs');const c=JSON.parse(fs.readFileSync('public/data/clubs.json'));const m=JSON.parse(fs.readFileSync('public/data/assets-manifest.json'));const ids=new Set((m.crests||[]).map(x=>x.id));const falt=c.filter(x=>!ids.has(x.id));console.log('clubes:',c.length,'| crests:',(m.crests||[]).length,'| sin escudo:',falt.length);if(falt.length)console.log('FALTAN:',falt.slice(0,10).map(x=>x.id).join(', '));"
+#    Si "sin escudo" > 0: correr `node scripts/rebuild-manifest.mjs` (offline) o `node scripts/assets.mjs` (con red, agrega colores) ANTES de buildear.
+
 # 1) build de producción con el base de GitHub Pages
 GH_PAGES=1 npm run build
 

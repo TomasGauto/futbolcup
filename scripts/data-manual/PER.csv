@@ -1,0 +1,919 @@
+Country,League,Season,Home,Away,HG,AG
+Perú,Liga 1,2023,Universitario,Alianza Lima,2,0
+Perú,Liga 1,2023,Universitario,Sporting Cristal,1,2
+Perú,Liga 1,2023,Universitario,Melgar,2,0
+Perú,Liga 1,2023,Universitario,Cusco FC,1,1
+Perú,Liga 1,2023,Universitario,Cienciano,2,0
+Perú,Liga 1,2023,Universitario,Sport Huancayo,9,1
+Perú,Liga 1,2023,Universitario,Deportivo Garcilaso,1,1
+Perú,Liga 1,2023,Universitario,ADT,1,2
+Perú,Liga 1,2023,Universitario,Atlético Grau,7,0
+Perú,Liga 1,2023,Universitario,César Vallejo,0,0
+Perú,Liga 1,2023,Universitario,Sport Boys,1,0
+Perú,Liga 1,2023,Universitario,Alianza Atlético,4,1
+Perú,Liga 1,2023,Universitario,UTC Cajamarca,2,0
+Perú,Liga 1,2023,Universitario,Juan Pablo II,3,0
+Perú,Liga 1,2023,Universitario,Los Chankas,0,0
+Perú,Liga 1,2023,Universitario,Ayacucho FC,3,2
+Perú,Liga 1,2023,Universitario,Comerciantes Unidos,2,0
+Perú,Liga 1,2023,Alianza Lima,Universitario,1,1
+Perú,Liga 1,2023,Alianza Lima,Sporting Cristal,4,0
+Perú,Liga 1,2023,Alianza Lima,Melgar,2,2
+Perú,Liga 1,2023,Alianza Lima,Cusco FC,2,1
+Perú,Liga 1,2023,Alianza Lima,Cienciano,1,1
+Perú,Liga 1,2023,Alianza Lima,Sport Huancayo,2,0
+Perú,Liga 1,2023,Alianza Lima,Deportivo Garcilaso,5,0
+Perú,Liga 1,2023,Alianza Lima,ADT,0,0
+Perú,Liga 1,2023,Alianza Lima,Atlético Grau,2,1
+Perú,Liga 1,2023,Alianza Lima,César Vallejo,2,1
+Perú,Liga 1,2023,Alianza Lima,Sport Boys,2,0
+Perú,Liga 1,2023,Alianza Lima,Alianza Atlético,1,0
+Perú,Liga 1,2023,Alianza Lima,UTC Cajamarca,0,0
+Perú,Liga 1,2023,Alianza Lima,Juan Pablo II,1,0
+Perú,Liga 1,2023,Alianza Lima,Los Chankas,3,0
+Perú,Liga 1,2023,Alianza Lima,Ayacucho FC,5,0
+Perú,Liga 1,2023,Alianza Lima,Comerciantes Unidos,3,0
+Perú,Liga 1,2023,Sporting Cristal,Universitario,0,0
+Perú,Liga 1,2023,Sporting Cristal,Alianza Lima,2,1
+Perú,Liga 1,2023,Sporting Cristal,Melgar,2,0
+Perú,Liga 1,2023,Sporting Cristal,Cusco FC,1,0
+Perú,Liga 1,2023,Sporting Cristal,Cienciano,2,3
+Perú,Liga 1,2023,Sporting Cristal,Sport Huancayo,4,1
+Perú,Liga 1,2023,Sporting Cristal,Deportivo Garcilaso,1,2
+Perú,Liga 1,2023,Sporting Cristal,ADT,2,0
+Perú,Liga 1,2023,Sporting Cristal,Atlético Grau,4,0
+Perú,Liga 1,2023,Sporting Cristal,César Vallejo,1,0
+Perú,Liga 1,2023,Sporting Cristal,Sport Boys,7,0
+Perú,Liga 1,2023,Sporting Cristal,Alianza Atlético,2,0
+Perú,Liga 1,2023,Sporting Cristal,UTC Cajamarca,2,0
+Perú,Liga 1,2023,Sporting Cristal,Juan Pablo II,3,0
+Perú,Liga 1,2023,Sporting Cristal,Los Chankas,2,0
+Perú,Liga 1,2023,Sporting Cristal,Ayacucho FC,2,0
+Perú,Liga 1,2023,Sporting Cristal,Comerciantes Unidos,1,0
+Perú,Liga 1,2023,Melgar,Universitario,0,0
+Perú,Liga 1,2023,Melgar,Alianza Lima,1,1
+Perú,Liga 1,2023,Melgar,Sporting Cristal,2,0
+Perú,Liga 1,2023,Melgar,Cusco FC,1,1
+Perú,Liga 1,2023,Melgar,Cienciano,2,0
+Perú,Liga 1,2023,Melgar,Sport Huancayo,0,1
+Perú,Liga 1,2023,Melgar,Deportivo Garcilaso,5,0
+Perú,Liga 1,2023,Melgar,ADT,2,2
+Perú,Liga 1,2023,Melgar,Atlético Grau,2,0
+Perú,Liga 1,2023,Melgar,César Vallejo,1,2
+Perú,Liga 1,2023,Melgar,Sport Boys,2,0
+Perú,Liga 1,2023,Melgar,Alianza Atlético,0,2
+Perú,Liga 1,2023,Melgar,UTC Cajamarca,4,0
+Perú,Liga 1,2023,Melgar,Juan Pablo II,2,1
+Perú,Liga 1,2023,Melgar,Los Chankas,2,1
+Perú,Liga 1,2023,Melgar,Ayacucho FC,2,0
+Perú,Liga 1,2023,Melgar,Comerciantes Unidos,3,0
+Perú,Liga 1,2023,Cusco FC,Universitario,2,3
+Perú,Liga 1,2023,Cusco FC,Alianza Lima,0,2
+Perú,Liga 1,2023,Cusco FC,Sporting Cristal,0,1
+Perú,Liga 1,2023,Cusco FC,Melgar,1,3
+Perú,Liga 1,2023,Cusco FC,Cienciano,4,3
+Perú,Liga 1,2023,Cusco FC,Sport Huancayo,1,0
+Perú,Liga 1,2023,Cusco FC,Deportivo Garcilaso,5,1
+Perú,Liga 1,2023,Cusco FC,ADT,2,0
+Perú,Liga 1,2023,Cusco FC,Atlético Grau,2,1
+Perú,Liga 1,2023,Cusco FC,César Vallejo,3,1
+Perú,Liga 1,2023,Cusco FC,Sport Boys,2,0
+Perú,Liga 1,2023,Cusco FC,Alianza Atlético,0,1
+Perú,Liga 1,2023,Cusco FC,UTC Cajamarca,3,2
+Perú,Liga 1,2023,Cusco FC,Juan Pablo II,4,0
+Perú,Liga 1,2023,Cusco FC,Los Chankas,1,0
+Perú,Liga 1,2023,Cusco FC,Ayacucho FC,3,0
+Perú,Liga 1,2023,Cusco FC,Comerciantes Unidos,0,1
+Perú,Liga 1,2023,Cienciano,Universitario,1,2
+Perú,Liga 1,2023,Cienciano,Alianza Lima,1,1
+Perú,Liga 1,2023,Cienciano,Sporting Cristal,0,0
+Perú,Liga 1,2023,Cienciano,Melgar,1,0
+Perú,Liga 1,2023,Cienciano,Cusco FC,1,1
+Perú,Liga 1,2023,Cienciano,Sport Huancayo,2,3
+Perú,Liga 1,2023,Cienciano,Deportivo Garcilaso,2,2
+Perú,Liga 1,2023,Cienciano,ADT,1,2
+Perú,Liga 1,2023,Cienciano,Atlético Grau,2,1
+Perú,Liga 1,2023,Cienciano,César Vallejo,1,2
+Perú,Liga 1,2023,Cienciano,Sport Boys,0,0
+Perú,Liga 1,2023,Cienciano,Alianza Atlético,1,1
+Perú,Liga 1,2023,Cienciano,UTC Cajamarca,3,0
+Perú,Liga 1,2023,Cienciano,Juan Pablo II,1,2
+Perú,Liga 1,2023,Cienciano,Los Chankas,2,0
+Perú,Liga 1,2023,Cienciano,Ayacucho FC,1,1
+Perú,Liga 1,2023,Cienciano,Comerciantes Unidos,1,0
+Perú,Liga 1,2023,Sport Huancayo,Universitario,0,5
+Perú,Liga 1,2023,Sport Huancayo,Alianza Lima,0,3
+Perú,Liga 1,2023,Sport Huancayo,Sporting Cristal,1,1
+Perú,Liga 1,2023,Sport Huancayo,Melgar,2,0
+Perú,Liga 1,2023,Sport Huancayo,Cusco FC,0,2
+Perú,Liga 1,2023,Sport Huancayo,Cienciano,1,1
+Perú,Liga 1,2023,Sport Huancayo,Deportivo Garcilaso,1,4
+Perú,Liga 1,2023,Sport Huancayo,ADT,4,2
+Perú,Liga 1,2023,Sport Huancayo,Atlético Grau,3,2
+Perú,Liga 1,2023,Sport Huancayo,César Vallejo,3,0
+Perú,Liga 1,2023,Sport Huancayo,Sport Boys,3,0
+Perú,Liga 1,2023,Sport Huancayo,Alianza Atlético,1,3
+Perú,Liga 1,2023,Sport Huancayo,UTC Cajamarca,3,1
+Perú,Liga 1,2023,Sport Huancayo,Juan Pablo II,2,2
+Perú,Liga 1,2023,Sport Huancayo,Los Chankas,2,1
+Perú,Liga 1,2023,Sport Huancayo,Ayacucho FC,2,2
+Perú,Liga 1,2023,Sport Huancayo,Comerciantes Unidos,3,1
+Perú,Liga 1,2023,Deportivo Garcilaso,Universitario,0,1
+Perú,Liga 1,2023,Deportivo Garcilaso,Alianza Lima,0,1
+Perú,Liga 1,2023,Deportivo Garcilaso,Sporting Cristal,0,2
+Perú,Liga 1,2023,Deportivo Garcilaso,Melgar,1,2
+Perú,Liga 1,2023,Deportivo Garcilaso,Cusco FC,0,0
+Perú,Liga 1,2023,Deportivo Garcilaso,Cienciano,0,3
+Perú,Liga 1,2023,Deportivo Garcilaso,Sport Huancayo,1,0
+Perú,Liga 1,2023,Deportivo Garcilaso,ADT,3,0
+Perú,Liga 1,2023,Deportivo Garcilaso,Atlético Grau,2,0
+Perú,Liga 1,2023,Deportivo Garcilaso,César Vallejo,3,1
+Perú,Liga 1,2023,Deportivo Garcilaso,Sport Boys,5,0
+Perú,Liga 1,2023,Deportivo Garcilaso,Alianza Atlético,0,1
+Perú,Liga 1,2023,Deportivo Garcilaso,UTC Cajamarca,3,1
+Perú,Liga 1,2023,Deportivo Garcilaso,Juan Pablo II,6,2
+Perú,Liga 1,2023,Deportivo Garcilaso,Los Chankas,2,2
+Perú,Liga 1,2023,Deportivo Garcilaso,Ayacucho FC,1,0
+Perú,Liga 1,2023,Deportivo Garcilaso,Comerciantes Unidos,3,1
+Perú,Liga 1,2023,ADT,Universitario,0,1
+Perú,Liga 1,2023,ADT,Alianza Lima,0,2
+Perú,Liga 1,2023,ADT,Sporting Cristal,0,1
+Perú,Liga 1,2023,ADT,Melgar,1,0
+Perú,Liga 1,2023,ADT,Cusco FC,1,1
+Perú,Liga 1,2023,ADT,Cienciano,0,0
+Perú,Liga 1,2023,ADT,Sport Huancayo,2,0
+Perú,Liga 1,2023,ADT,Deportivo Garcilaso,1,0
+Perú,Liga 1,2023,ADT,Atlético Grau,1,1
+Perú,Liga 1,2023,ADT,César Vallejo,1,1
+Perú,Liga 1,2023,ADT,Sport Boys,6,0
+Perú,Liga 1,2023,ADT,Alianza Atlético,2,1
+Perú,Liga 1,2023,ADT,UTC Cajamarca,2,0
+Perú,Liga 1,2023,ADT,Juan Pablo II,2,0
+Perú,Liga 1,2023,ADT,Los Chankas,1,1
+Perú,Liga 1,2023,ADT,Ayacucho FC,0,0
+Perú,Liga 1,2023,ADT,Comerciantes Unidos,1,0
+Perú,Liga 1,2023,Atlético Grau,Universitario,1,4
+Perú,Liga 1,2023,Atlético Grau,Alianza Lima,1,0
+Perú,Liga 1,2023,Atlético Grau,Sporting Cristal,1,3
+Perú,Liga 1,2023,Atlético Grau,Melgar,0,1
+Perú,Liga 1,2023,Atlético Grau,Cusco FC,0,2
+Perú,Liga 1,2023,Atlético Grau,Cienciano,2,1
+Perú,Liga 1,2023,Atlético Grau,Sport Huancayo,0,0
+Perú,Liga 1,2023,Atlético Grau,Deportivo Garcilaso,0,0
+Perú,Liga 1,2023,Atlético Grau,ADT,0,1
+Perú,Liga 1,2023,Atlético Grau,César Vallejo,0,2
+Perú,Liga 1,2023,Atlético Grau,Sport Boys,1,2
+Perú,Liga 1,2023,Atlético Grau,Alianza Atlético,1,2
+Perú,Liga 1,2023,Atlético Grau,UTC Cajamarca,2,0
+Perú,Liga 1,2023,Atlético Grau,Juan Pablo II,3,1
+Perú,Liga 1,2023,Atlético Grau,Los Chankas,2,1
+Perú,Liga 1,2023,Atlético Grau,Ayacucho FC,2,2
+Perú,Liga 1,2023,Atlético Grau,Comerciantes Unidos,1,0
+Perú,Liga 1,2023,César Vallejo,Universitario,1,5
+Perú,Liga 1,2023,César Vallejo,Alianza Lima,0,0
+Perú,Liga 1,2023,César Vallejo,Sporting Cristal,0,2
+Perú,Liga 1,2023,César Vallejo,Melgar,1,1
+Perú,Liga 1,2023,César Vallejo,Cusco FC,1,2
+Perú,Liga 1,2023,César Vallejo,Cienciano,3,0
+Perú,Liga 1,2023,César Vallejo,Sport Huancayo,3,1
+Perú,Liga 1,2023,César Vallejo,Deportivo Garcilaso,1,1
+Perú,Liga 1,2023,César Vallejo,ADT,2,0
+Perú,Liga 1,2023,César Vallejo,Atlético Grau,1,0
+Perú,Liga 1,2023,César Vallejo,Sport Boys,0,0
+Perú,Liga 1,2023,César Vallejo,Alianza Atlético,2,0
+Perú,Liga 1,2023,César Vallejo,UTC Cajamarca,2,0
+Perú,Liga 1,2023,César Vallejo,Juan Pablo II,2,2
+Perú,Liga 1,2023,César Vallejo,Los Chankas,4,1
+Perú,Liga 1,2023,César Vallejo,Ayacucho FC,2,1
+Perú,Liga 1,2023,César Vallejo,Comerciantes Unidos,3,2
+Perú,Liga 1,2023,Sport Boys,Universitario,0,1
+Perú,Liga 1,2023,Sport Boys,Alianza Lima,0,1
+Perú,Liga 1,2023,Sport Boys,Sporting Cristal,0,2
+Perú,Liga 1,2023,Sport Boys,Melgar,0,0
+Perú,Liga 1,2023,Sport Boys,Cusco FC,2,1
+Perú,Liga 1,2023,Sport Boys,Cienciano,2,2
+Perú,Liga 1,2023,Sport Boys,Sport Huancayo,3,1
+Perú,Liga 1,2023,Sport Boys,Deportivo Garcilaso,0,0
+Perú,Liga 1,2023,Sport Boys,ADT,2,0
+Perú,Liga 1,2023,Sport Boys,Atlético Grau,1,1
+Perú,Liga 1,2023,Sport Boys,César Vallejo,1,1
+Perú,Liga 1,2023,Sport Boys,Alianza Atlético,1,1
+Perú,Liga 1,2023,Sport Boys,UTC Cajamarca,4,0
+Perú,Liga 1,2023,Sport Boys,Juan Pablo II,2,0
+Perú,Liga 1,2023,Sport Boys,Los Chankas,0,0
+Perú,Liga 1,2023,Sport Boys,Ayacucho FC,4,0
+Perú,Liga 1,2023,Sport Boys,Comerciantes Unidos,1,2
+Perú,Liga 1,2023,Alianza Atlético,Universitario,1,1
+Perú,Liga 1,2023,Alianza Atlético,Alianza Lima,0,3
+Perú,Liga 1,2023,Alianza Atlético,Sporting Cristal,0,2
+Perú,Liga 1,2023,Alianza Atlético,Melgar,0,0
+Perú,Liga 1,2023,Alianza Atlético,Cusco FC,2,1
+Perú,Liga 1,2023,Alianza Atlético,Cienciano,1,0
+Perú,Liga 1,2023,Alianza Atlético,Sport Huancayo,3,0
+Perú,Liga 1,2023,Alianza Atlético,Deportivo Garcilaso,0,1
+Perú,Liga 1,2023,Alianza Atlético,ADT,0,2
+Perú,Liga 1,2023,Alianza Atlético,Atlético Grau,3,3
+Perú,Liga 1,2023,Alianza Atlético,César Vallejo,2,0
+Perú,Liga 1,2023,Alianza Atlético,Sport Boys,3,1
+Perú,Liga 1,2023,Alianza Atlético,UTC Cajamarca,0,1
+Perú,Liga 1,2023,Alianza Atlético,Juan Pablo II,3,1
+Perú,Liga 1,2023,Alianza Atlético,Los Chankas,1,1
+Perú,Liga 1,2023,Alianza Atlético,Ayacucho FC,2,2
+Perú,Liga 1,2023,Alianza Atlético,Comerciantes Unidos,6,2
+Perú,Liga 1,2023,UTC Cajamarca,Universitario,1,3
+Perú,Liga 1,2023,UTC Cajamarca,Alianza Lima,0,0
+Perú,Liga 1,2023,UTC Cajamarca,Sporting Cristal,0,0
+Perú,Liga 1,2023,UTC Cajamarca,Melgar,1,4
+Perú,Liga 1,2023,UTC Cajamarca,Cusco FC,2,3
+Perú,Liga 1,2023,UTC Cajamarca,Cienciano,1,1
+Perú,Liga 1,2023,UTC Cajamarca,Sport Huancayo,3,3
+Perú,Liga 1,2023,UTC Cajamarca,Deportivo Garcilaso,0,3
+Perú,Liga 1,2023,UTC Cajamarca,ADT,1,1
+Perú,Liga 1,2023,UTC Cajamarca,Atlético Grau,1,1
+Perú,Liga 1,2023,UTC Cajamarca,César Vallejo,2,2
+Perú,Liga 1,2023,UTC Cajamarca,Sport Boys,3,0
+Perú,Liga 1,2023,UTC Cajamarca,Alianza Atlético,1,0
+Perú,Liga 1,2023,UTC Cajamarca,Juan Pablo II,2,1
+Perú,Liga 1,2023,UTC Cajamarca,Los Chankas,4,2
+Perú,Liga 1,2023,UTC Cajamarca,Ayacucho FC,1,1
+Perú,Liga 1,2023,UTC Cajamarca,Comerciantes Unidos,0,1
+Perú,Liga 1,2023,Juan Pablo II,Universitario,1,2
+Perú,Liga 1,2023,Juan Pablo II,Alianza Lima,2,1
+Perú,Liga 1,2023,Juan Pablo II,Sporting Cristal,1,3
+Perú,Liga 1,2023,Juan Pablo II,Melgar,0,3
+Perú,Liga 1,2023,Juan Pablo II,Cusco FC,3,2
+Perú,Liga 1,2023,Juan Pablo II,Cienciano,2,0
+Perú,Liga 1,2023,Juan Pablo II,Sport Huancayo,0,1
+Perú,Liga 1,2023,Juan Pablo II,Deportivo Garcilaso,0,3
+Perú,Liga 1,2023,Juan Pablo II,ADT,3,1
+Perú,Liga 1,2023,Juan Pablo II,Atlético Grau,2,2
+Perú,Liga 1,2023,Juan Pablo II,César Vallejo,2,2
+Perú,Liga 1,2023,Juan Pablo II,Sport Boys,3,1
+Perú,Liga 1,2023,Juan Pablo II,Alianza Atlético,1,0
+Perú,Liga 1,2023,Juan Pablo II,UTC Cajamarca,2,0
+Perú,Liga 1,2023,Juan Pablo II,Los Chankas,6,0
+Perú,Liga 1,2023,Juan Pablo II,Ayacucho FC,4,1
+Perú,Liga 1,2023,Juan Pablo II,Comerciantes Unidos,1,0
+Perú,Liga 1,2023,Los Chankas,Universitario,0,2
+Perú,Liga 1,2023,Los Chankas,Alianza Lima,2,1
+Perú,Liga 1,2023,Los Chankas,Sporting Cristal,0,0
+Perú,Liga 1,2023,Los Chankas,Melgar,0,2
+Perú,Liga 1,2023,Los Chankas,Cusco FC,1,5
+Perú,Liga 1,2023,Los Chankas,Cienciano,1,3
+Perú,Liga 1,2023,Los Chankas,Sport Huancayo,1,2
+Perú,Liga 1,2023,Los Chankas,Deportivo Garcilaso,2,1
+Perú,Liga 1,2023,Los Chankas,ADT,6,2
+Perú,Liga 1,2023,Los Chankas,Atlético Grau,1,1
+Perú,Liga 1,2023,Los Chankas,César Vallejo,1,3
+Perú,Liga 1,2023,Los Chankas,Sport Boys,2,1
+Perú,Liga 1,2023,Los Chankas,Alianza Atlético,2,0
+Perú,Liga 1,2023,Los Chankas,UTC Cajamarca,3,3
+Perú,Liga 1,2023,Los Chankas,Juan Pablo II,1,1
+Perú,Liga 1,2023,Los Chankas,Ayacucho FC,1,0
+Perú,Liga 1,2023,Los Chankas,Comerciantes Unidos,0,1
+Perú,Liga 1,2023,Ayacucho FC,Universitario,1,5
+Perú,Liga 1,2023,Ayacucho FC,Alianza Lima,0,2
+Perú,Liga 1,2023,Ayacucho FC,Sporting Cristal,0,1
+Perú,Liga 1,2023,Ayacucho FC,Melgar,1,0
+Perú,Liga 1,2023,Ayacucho FC,Cusco FC,1,1
+Perú,Liga 1,2023,Ayacucho FC,Cienciano,0,1
+Perú,Liga 1,2023,Ayacucho FC,Sport Huancayo,1,0
+Perú,Liga 1,2023,Ayacucho FC,Deportivo Garcilaso,1,1
+Perú,Liga 1,2023,Ayacucho FC,ADT,1,2
+Perú,Liga 1,2023,Ayacucho FC,Atlético Grau,0,1
+Perú,Liga 1,2023,Ayacucho FC,César Vallejo,0,2
+Perú,Liga 1,2023,Ayacucho FC,Sport Boys,0,1
+Perú,Liga 1,2023,Ayacucho FC,Alianza Atlético,3,3
+Perú,Liga 1,2023,Ayacucho FC,UTC Cajamarca,4,1
+Perú,Liga 1,2023,Ayacucho FC,Juan Pablo II,2,1
+Perú,Liga 1,2023,Ayacucho FC,Los Chankas,4,2
+Perú,Liga 1,2023,Ayacucho FC,Comerciantes Unidos,3,2
+Perú,Liga 1,2023,Comerciantes Unidos,Universitario,0,0
+Perú,Liga 1,2023,Comerciantes Unidos,Alianza Lima,0,2
+Perú,Liga 1,2023,Comerciantes Unidos,Sporting Cristal,1,2
+Perú,Liga 1,2023,Comerciantes Unidos,Melgar,2,0
+Perú,Liga 1,2023,Comerciantes Unidos,Cusco FC,0,0
+Perú,Liga 1,2023,Comerciantes Unidos,Cienciano,2,1
+Perú,Liga 1,2023,Comerciantes Unidos,Sport Huancayo,1,0
+Perú,Liga 1,2023,Comerciantes Unidos,Deportivo Garcilaso,0,1
+Perú,Liga 1,2023,Comerciantes Unidos,ADT,0,1
+Perú,Liga 1,2023,Comerciantes Unidos,Atlético Grau,2,1
+Perú,Liga 1,2023,Comerciantes Unidos,César Vallejo,0,2
+Perú,Liga 1,2023,Comerciantes Unidos,Sport Boys,0,0
+Perú,Liga 1,2023,Comerciantes Unidos,Alianza Atlético,4,2
+Perú,Liga 1,2023,Comerciantes Unidos,UTC Cajamarca,3,2
+Perú,Liga 1,2023,Comerciantes Unidos,Juan Pablo II,2,1
+Perú,Liga 1,2023,Comerciantes Unidos,Los Chankas,2,0
+Perú,Liga 1,2023,Comerciantes Unidos,Ayacucho FC,4,2
+Perú,Liga 1,2024,Universitario,Alianza Lima,3,2
+Perú,Liga 1,2024,Universitario,Sporting Cristal,0,0
+Perú,Liga 1,2024,Universitario,Melgar,1,1
+Perú,Liga 1,2024,Universitario,Cusco FC,1,0
+Perú,Liga 1,2024,Universitario,Cienciano,1,2
+Perú,Liga 1,2024,Universitario,Sport Huancayo,2,0
+Perú,Liga 1,2024,Universitario,Deportivo Garcilaso,4,1
+Perú,Liga 1,2024,Universitario,ADT,4,0
+Perú,Liga 1,2024,Universitario,Atlético Grau,3,1
+Perú,Liga 1,2024,Universitario,César Vallejo,1,0
+Perú,Liga 1,2024,Universitario,Sport Boys,7,1
+Perú,Liga 1,2024,Universitario,Alianza Atlético,1,2
+Perú,Liga 1,2024,Universitario,UTC Cajamarca,2,0
+Perú,Liga 1,2024,Universitario,Juan Pablo II,2,0
+Perú,Liga 1,2024,Universitario,Los Chankas,1,0
+Perú,Liga 1,2024,Universitario,Ayacucho FC,4,1
+Perú,Liga 1,2024,Universitario,Comerciantes Unidos,1,0
+Perú,Liga 1,2024,Alianza Lima,Universitario,2,2
+Perú,Liga 1,2024,Alianza Lima,Sporting Cristal,1,1
+Perú,Liga 1,2024,Alianza Lima,Melgar,1,0
+Perú,Liga 1,2024,Alianza Lima,Cusco FC,6,0
+Perú,Liga 1,2024,Alianza Lima,Cienciano,2,0
+Perú,Liga 1,2024,Alianza Lima,Sport Huancayo,1,0
+Perú,Liga 1,2024,Alianza Lima,Deportivo Garcilaso,0,0
+Perú,Liga 1,2024,Alianza Lima,ADT,1,3
+Perú,Liga 1,2024,Alianza Lima,Atlético Grau,2,0
+Perú,Liga 1,2024,Alianza Lima,César Vallejo,2,1
+Perú,Liga 1,2024,Alianza Lima,Sport Boys,1,0
+Perú,Liga 1,2024,Alianza Lima,Alianza Atlético,1,1
+Perú,Liga 1,2024,Alianza Lima,UTC Cajamarca,4,0
+Perú,Liga 1,2024,Alianza Lima,Juan Pablo II,1,1
+Perú,Liga 1,2024,Alianza Lima,Los Chankas,4,0
+Perú,Liga 1,2024,Alianza Lima,Ayacucho FC,0,0
+Perú,Liga 1,2024,Alianza Lima,Comerciantes Unidos,4,0
+Perú,Liga 1,2024,Sporting Cristal,Universitario,2,1
+Perú,Liga 1,2024,Sporting Cristal,Alianza Lima,2,0
+Perú,Liga 1,2024,Sporting Cristal,Melgar,0,0
+Perú,Liga 1,2024,Sporting Cristal,Cusco FC,3,2
+Perú,Liga 1,2024,Sporting Cristal,Cienciano,1,0
+Perú,Liga 1,2024,Sporting Cristal,Sport Huancayo,0,0
+Perú,Liga 1,2024,Sporting Cristal,Deportivo Garcilaso,2,2
+Perú,Liga 1,2024,Sporting Cristal,ADT,3,0
+Perú,Liga 1,2024,Sporting Cristal,Atlético Grau,2,1
+Perú,Liga 1,2024,Sporting Cristal,César Vallejo,4,0
+Perú,Liga 1,2024,Sporting Cristal,Sport Boys,2,0
+Perú,Liga 1,2024,Sporting Cristal,Alianza Atlético,1,0
+Perú,Liga 1,2024,Sporting Cristal,UTC Cajamarca,3,0
+Perú,Liga 1,2024,Sporting Cristal,Juan Pablo II,1,0
+Perú,Liga 1,2024,Sporting Cristal,Los Chankas,3,2
+Perú,Liga 1,2024,Sporting Cristal,Ayacucho FC,2,0
+Perú,Liga 1,2024,Sporting Cristal,Comerciantes Unidos,4,0
+Perú,Liga 1,2024,Melgar,Universitario,1,2
+Perú,Liga 1,2024,Melgar,Alianza Lima,0,1
+Perú,Liga 1,2024,Melgar,Sporting Cristal,1,2
+Perú,Liga 1,2024,Melgar,Cusco FC,0,0
+Perú,Liga 1,2024,Melgar,Cienciano,2,1
+Perú,Liga 1,2024,Melgar,Sport Huancayo,0,0
+Perú,Liga 1,2024,Melgar,Deportivo Garcilaso,0,0
+Perú,Liga 1,2024,Melgar,ADT,0,0
+Perú,Liga 1,2024,Melgar,Atlético Grau,3,2
+Perú,Liga 1,2024,Melgar,César Vallejo,1,0
+Perú,Liga 1,2024,Melgar,Sport Boys,0,1
+Perú,Liga 1,2024,Melgar,Alianza Atlético,0,0
+Perú,Liga 1,2024,Melgar,UTC Cajamarca,2,1
+Perú,Liga 1,2024,Melgar,Juan Pablo II,2,1
+Perú,Liga 1,2024,Melgar,Los Chankas,3,0
+Perú,Liga 1,2024,Melgar,Ayacucho FC,3,0
+Perú,Liga 1,2024,Melgar,Comerciantes Unidos,2,0
+Perú,Liga 1,2024,Cusco FC,Universitario,0,4
+Perú,Liga 1,2024,Cusco FC,Alianza Lima,1,3
+Perú,Liga 1,2024,Cusco FC,Sporting Cristal,1,5
+Perú,Liga 1,2024,Cusco FC,Melgar,0,1
+Perú,Liga 1,2024,Cusco FC,Cienciano,0,1
+Perú,Liga 1,2024,Cusco FC,Sport Huancayo,1,1
+Perú,Liga 1,2024,Cusco FC,Deportivo Garcilaso,1,1
+Perú,Liga 1,2024,Cusco FC,ADT,4,0
+Perú,Liga 1,2024,Cusco FC,Atlético Grau,2,2
+Perú,Liga 1,2024,Cusco FC,César Vallejo,3,1
+Perú,Liga 1,2024,Cusco FC,Sport Boys,2,1
+Perú,Liga 1,2024,Cusco FC,Alianza Atlético,3,1
+Perú,Liga 1,2024,Cusco FC,UTC Cajamarca,3,0
+Perú,Liga 1,2024,Cusco FC,Juan Pablo II,2,0
+Perú,Liga 1,2024,Cusco FC,Los Chankas,3,0
+Perú,Liga 1,2024,Cusco FC,Ayacucho FC,2,0
+Perú,Liga 1,2024,Cusco FC,Comerciantes Unidos,3,1
+Perú,Liga 1,2024,Cienciano,Universitario,5,0
+Perú,Liga 1,2024,Cienciano,Alianza Lima,1,1
+Perú,Liga 1,2024,Cienciano,Sporting Cristal,0,1
+Perú,Liga 1,2024,Cienciano,Melgar,3,2
+Perú,Liga 1,2024,Cienciano,Cusco FC,2,0
+Perú,Liga 1,2024,Cienciano,Sport Huancayo,1,1
+Perú,Liga 1,2024,Cienciano,Deportivo Garcilaso,3,2
+Perú,Liga 1,2024,Cienciano,ADT,0,1
+Perú,Liga 1,2024,Cienciano,Atlético Grau,2,0
+Perú,Liga 1,2024,Cienciano,César Vallejo,2,2
+Perú,Liga 1,2024,Cienciano,Sport Boys,2,1
+Perú,Liga 1,2024,Cienciano,Alianza Atlético,1,1
+Perú,Liga 1,2024,Cienciano,UTC Cajamarca,0,2
+Perú,Liga 1,2024,Cienciano,Juan Pablo II,4,0
+Perú,Liga 1,2024,Cienciano,Los Chankas,2,0
+Perú,Liga 1,2024,Cienciano,Ayacucho FC,1,1
+Perú,Liga 1,2024,Cienciano,Comerciantes Unidos,4,0
+Perú,Liga 1,2024,Sport Huancayo,Universitario,0,3
+Perú,Liga 1,2024,Sport Huancayo,Alianza Lima,0,1
+Perú,Liga 1,2024,Sport Huancayo,Sporting Cristal,1,0
+Perú,Liga 1,2024,Sport Huancayo,Melgar,0,1
+Perú,Liga 1,2024,Sport Huancayo,Cusco FC,0,3
+Perú,Liga 1,2024,Sport Huancayo,Cienciano,0,0
+Perú,Liga 1,2024,Sport Huancayo,Deportivo Garcilaso,1,2
+Perú,Liga 1,2024,Sport Huancayo,ADT,1,0
+Perú,Liga 1,2024,Sport Huancayo,Atlético Grau,2,1
+Perú,Liga 1,2024,Sport Huancayo,César Vallejo,1,0
+Perú,Liga 1,2024,Sport Huancayo,Sport Boys,1,0
+Perú,Liga 1,2024,Sport Huancayo,Alianza Atlético,1,1
+Perú,Liga 1,2024,Sport Huancayo,UTC Cajamarca,1,1
+Perú,Liga 1,2024,Sport Huancayo,Juan Pablo II,1,2
+Perú,Liga 1,2024,Sport Huancayo,Los Chankas,2,1
+Perú,Liga 1,2024,Sport Huancayo,Ayacucho FC,3,0
+Perú,Liga 1,2024,Sport Huancayo,Comerciantes Unidos,0,0
+Perú,Liga 1,2024,Deportivo Garcilaso,Universitario,0,0
+Perú,Liga 1,2024,Deportivo Garcilaso,Alianza Lima,0,0
+Perú,Liga 1,2024,Deportivo Garcilaso,Sporting Cristal,0,4
+Perú,Liga 1,2024,Deportivo Garcilaso,Melgar,1,5
+Perú,Liga 1,2024,Deportivo Garcilaso,Cusco FC,1,3
+Perú,Liga 1,2024,Deportivo Garcilaso,Cienciano,1,0
+Perú,Liga 1,2024,Deportivo Garcilaso,Sport Huancayo,1,1
+Perú,Liga 1,2024,Deportivo Garcilaso,ADT,2,3
+Perú,Liga 1,2024,Deportivo Garcilaso,Atlético Grau,1,1
+Perú,Liga 1,2024,Deportivo Garcilaso,César Vallejo,2,1
+Perú,Liga 1,2024,Deportivo Garcilaso,Sport Boys,0,0
+Perú,Liga 1,2024,Deportivo Garcilaso,Alianza Atlético,1,2
+Perú,Liga 1,2024,Deportivo Garcilaso,UTC Cajamarca,2,2
+Perú,Liga 1,2024,Deportivo Garcilaso,Juan Pablo II,1,2
+Perú,Liga 1,2024,Deportivo Garcilaso,Los Chankas,5,0
+Perú,Liga 1,2024,Deportivo Garcilaso,Ayacucho FC,1,0
+Perú,Liga 1,2024,Deportivo Garcilaso,Comerciantes Unidos,3,0
+Perú,Liga 1,2024,ADT,Universitario,0,2
+Perú,Liga 1,2024,ADT,Alianza Lima,0,3
+Perú,Liga 1,2024,ADT,Sporting Cristal,0,1
+Perú,Liga 1,2024,ADT,Melgar,0,0
+Perú,Liga 1,2024,ADT,Cusco FC,0,1
+Perú,Liga 1,2024,ADT,Cienciano,1,2
+Perú,Liga 1,2024,ADT,Sport Huancayo,4,4
+Perú,Liga 1,2024,ADT,Deportivo Garcilaso,2,0
+Perú,Liga 1,2024,ADT,Atlético Grau,3,1
+Perú,Liga 1,2024,ADT,César Vallejo,5,1
+Perú,Liga 1,2024,ADT,Sport Boys,2,0
+Perú,Liga 1,2024,ADT,Alianza Atlético,2,0
+Perú,Liga 1,2024,ADT,UTC Cajamarca,3,0
+Perú,Liga 1,2024,ADT,Juan Pablo II,0,0
+Perú,Liga 1,2024,ADT,Los Chankas,2,2
+Perú,Liga 1,2024,ADT,Ayacucho FC,1,0
+Perú,Liga 1,2024,ADT,Comerciantes Unidos,0,2
+Perú,Liga 1,2024,Atlético Grau,Universitario,0,0
+Perú,Liga 1,2024,Atlético Grau,Alianza Lima,1,0
+Perú,Liga 1,2024,Atlético Grau,Sporting Cristal,0,3
+Perú,Liga 1,2024,Atlético Grau,Melgar,1,1
+Perú,Liga 1,2024,Atlético Grau,Cusco FC,3,2
+Perú,Liga 1,2024,Atlético Grau,Cienciano,1,0
+Perú,Liga 1,2024,Atlético Grau,Sport Huancayo,4,1
+Perú,Liga 1,2024,Atlético Grau,Deportivo Garcilaso,1,1
+Perú,Liga 1,2024,Atlético Grau,ADT,1,1
+Perú,Liga 1,2024,Atlético Grau,César Vallejo,2,1
+Perú,Liga 1,2024,Atlético Grau,Sport Boys,1,2
+Perú,Liga 1,2024,Atlético Grau,Alianza Atlético,3,1
+Perú,Liga 1,2024,Atlético Grau,UTC Cajamarca,2,4
+Perú,Liga 1,2024,Atlético Grau,Juan Pablo II,3,1
+Perú,Liga 1,2024,Atlético Grau,Los Chankas,1,2
+Perú,Liga 1,2024,Atlético Grau,Ayacucho FC,4,0
+Perú,Liga 1,2024,Atlético Grau,Comerciantes Unidos,4,1
+Perú,Liga 1,2024,César Vallejo,Universitario,1,2
+Perú,Liga 1,2024,César Vallejo,Alianza Lima,0,2
+Perú,Liga 1,2024,César Vallejo,Sporting Cristal,1,2
+Perú,Liga 1,2024,César Vallejo,Melgar,1,2
+Perú,Liga 1,2024,César Vallejo,Cusco FC,2,1
+Perú,Liga 1,2024,César Vallejo,Cienciano,1,2
+Perú,Liga 1,2024,César Vallejo,Sport Huancayo,1,1
+Perú,Liga 1,2024,César Vallejo,Deportivo Garcilaso,1,1
+Perú,Liga 1,2024,César Vallejo,ADT,0,1
+Perú,Liga 1,2024,César Vallejo,Atlético Grau,1,2
+Perú,Liga 1,2024,César Vallejo,Sport Boys,2,0
+Perú,Liga 1,2024,César Vallejo,Alianza Atlético,3,0
+Perú,Liga 1,2024,César Vallejo,UTC Cajamarca,0,1
+Perú,Liga 1,2024,César Vallejo,Juan Pablo II,3,1
+Perú,Liga 1,2024,César Vallejo,Los Chankas,4,2
+Perú,Liga 1,2024,César Vallejo,Ayacucho FC,1,0
+Perú,Liga 1,2024,César Vallejo,Comerciantes Unidos,0,0
+Perú,Liga 1,2024,Sport Boys,Universitario,2,1
+Perú,Liga 1,2024,Sport Boys,Alianza Lima,1,2
+Perú,Liga 1,2024,Sport Boys,Sporting Cristal,2,1
+Perú,Liga 1,2024,Sport Boys,Melgar,2,3
+Perú,Liga 1,2024,Sport Boys,Cusco FC,1,2
+Perú,Liga 1,2024,Sport Boys,Cienciano,1,1
+Perú,Liga 1,2024,Sport Boys,Sport Huancayo,1,0
+Perú,Liga 1,2024,Sport Boys,Deportivo Garcilaso,1,0
+Perú,Liga 1,2024,Sport Boys,ADT,0,0
+Perú,Liga 1,2024,Sport Boys,Atlético Grau,0,0
+Perú,Liga 1,2024,Sport Boys,César Vallejo,2,1
+Perú,Liga 1,2024,Sport Boys,Alianza Atlético,1,0
+Perú,Liga 1,2024,Sport Boys,UTC Cajamarca,3,2
+Perú,Liga 1,2024,Sport Boys,Juan Pablo II,1,3
+Perú,Liga 1,2024,Sport Boys,Los Chankas,0,3
+Perú,Liga 1,2024,Sport Boys,Ayacucho FC,2,1
+Perú,Liga 1,2024,Sport Boys,Comerciantes Unidos,5,0
+Perú,Liga 1,2024,Alianza Atlético,Universitario,0,1
+Perú,Liga 1,2024,Alianza Atlético,Alianza Lima,2,2
+Perú,Liga 1,2024,Alianza Atlético,Sporting Cristal,1,4
+Perú,Liga 1,2024,Alianza Atlético,Melgar,2,1
+Perú,Liga 1,2024,Alianza Atlético,Cusco FC,1,1
+Perú,Liga 1,2024,Alianza Atlético,Cienciano,2,1
+Perú,Liga 1,2024,Alianza Atlético,Sport Huancayo,2,0
+Perú,Liga 1,2024,Alianza Atlético,Deportivo Garcilaso,1,2
+Perú,Liga 1,2024,Alianza Atlético,ADT,0,1
+Perú,Liga 1,2024,Alianza Atlético,Atlético Grau,2,5
+Perú,Liga 1,2024,Alianza Atlético,César Vallejo,2,1
+Perú,Liga 1,2024,Alianza Atlético,Sport Boys,3,1
+Perú,Liga 1,2024,Alianza Atlético,UTC Cajamarca,3,1
+Perú,Liga 1,2024,Alianza Atlético,Juan Pablo II,1,0
+Perú,Liga 1,2024,Alianza Atlético,Los Chankas,2,1
+Perú,Liga 1,2024,Alianza Atlético,Ayacucho FC,3,1
+Perú,Liga 1,2024,Alianza Atlético,Comerciantes Unidos,6,1
+Perú,Liga 1,2024,UTC Cajamarca,Universitario,0,1
+Perú,Liga 1,2024,UTC Cajamarca,Alianza Lima,1,3
+Perú,Liga 1,2024,UTC Cajamarca,Sporting Cristal,2,3
+Perú,Liga 1,2024,UTC Cajamarca,Melgar,1,0
+Perú,Liga 1,2024,UTC Cajamarca,Cusco FC,2,0
+Perú,Liga 1,2024,UTC Cajamarca,Cienciano,1,4
+Perú,Liga 1,2024,UTC Cajamarca,Sport Huancayo,3,1
+Perú,Liga 1,2024,UTC Cajamarca,Deportivo Garcilaso,1,2
+Perú,Liga 1,2024,UTC Cajamarca,ADT,2,1
+Perú,Liga 1,2024,UTC Cajamarca,Atlético Grau,0,2
+Perú,Liga 1,2024,UTC Cajamarca,César Vallejo,1,2
+Perú,Liga 1,2024,UTC Cajamarca,Sport Boys,0,0
+Perú,Liga 1,2024,UTC Cajamarca,Alianza Atlético,1,1
+Perú,Liga 1,2024,UTC Cajamarca,Juan Pablo II,1,0
+Perú,Liga 1,2024,UTC Cajamarca,Los Chankas,2,2
+Perú,Liga 1,2024,UTC Cajamarca,Ayacucho FC,2,1
+Perú,Liga 1,2024,UTC Cajamarca,Comerciantes Unidos,5,0
+Perú,Liga 1,2024,Juan Pablo II,Universitario,3,0
+Perú,Liga 1,2024,Juan Pablo II,Alianza Lima,0,1
+Perú,Liga 1,2024,Juan Pablo II,Sporting Cristal,0,3
+Perú,Liga 1,2024,Juan Pablo II,Melgar,0,1
+Perú,Liga 1,2024,Juan Pablo II,Cusco FC,1,1
+Perú,Liga 1,2024,Juan Pablo II,Cienciano,1,0
+Perú,Liga 1,2024,Juan Pablo II,Sport Huancayo,2,2
+Perú,Liga 1,2024,Juan Pablo II,Deportivo Garcilaso,2,1
+Perú,Liga 1,2024,Juan Pablo II,ADT,1,1
+Perú,Liga 1,2024,Juan Pablo II,Atlético Grau,3,0
+Perú,Liga 1,2024,Juan Pablo II,César Vallejo,2,0
+Perú,Liga 1,2024,Juan Pablo II,Sport Boys,0,1
+Perú,Liga 1,2024,Juan Pablo II,Alianza Atlético,4,2
+Perú,Liga 1,2024,Juan Pablo II,UTC Cajamarca,1,1
+Perú,Liga 1,2024,Juan Pablo II,Los Chankas,3,0
+Perú,Liga 1,2024,Juan Pablo II,Ayacucho FC,0,1
+Perú,Liga 1,2024,Juan Pablo II,Comerciantes Unidos,1,0
+Perú,Liga 1,2024,Los Chankas,Universitario,1,1
+Perú,Liga 1,2024,Los Chankas,Alianza Lima,0,4
+Perú,Liga 1,2024,Los Chankas,Sporting Cristal,0,3
+Perú,Liga 1,2024,Los Chankas,Melgar,2,4
+Perú,Liga 1,2024,Los Chankas,Cusco FC,2,2
+Perú,Liga 1,2024,Los Chankas,Cienciano,0,1
+Perú,Liga 1,2024,Los Chankas,Sport Huancayo,5,4
+Perú,Liga 1,2024,Los Chankas,Deportivo Garcilaso,3,3
+Perú,Liga 1,2024,Los Chankas,ADT,0,0
+Perú,Liga 1,2024,Los Chankas,Atlético Grau,1,1
+Perú,Liga 1,2024,Los Chankas,César Vallejo,1,2
+Perú,Liga 1,2024,Los Chankas,Sport Boys,2,1
+Perú,Liga 1,2024,Los Chankas,Alianza Atlético,2,1
+Perú,Liga 1,2024,Los Chankas,UTC Cajamarca,0,3
+Perú,Liga 1,2024,Los Chankas,Juan Pablo II,1,0
+Perú,Liga 1,2024,Los Chankas,Ayacucho FC,0,1
+Perú,Liga 1,2024,Los Chankas,Comerciantes Unidos,0,1
+Perú,Liga 1,2024,Ayacucho FC,Universitario,2,2
+Perú,Liga 1,2024,Ayacucho FC,Alianza Lima,1,3
+Perú,Liga 1,2024,Ayacucho FC,Sporting Cristal,0,3
+Perú,Liga 1,2024,Ayacucho FC,Melgar,1,3
+Perú,Liga 1,2024,Ayacucho FC,Cusco FC,1,2
+Perú,Liga 1,2024,Ayacucho FC,Cienciano,2,1
+Perú,Liga 1,2024,Ayacucho FC,Sport Huancayo,2,0
+Perú,Liga 1,2024,Ayacucho FC,Deportivo Garcilaso,2,1
+Perú,Liga 1,2024,Ayacucho FC,ADT,0,1
+Perú,Liga 1,2024,Ayacucho FC,Atlético Grau,1,2
+Perú,Liga 1,2024,Ayacucho FC,César Vallejo,3,2
+Perú,Liga 1,2024,Ayacucho FC,Sport Boys,2,0
+Perú,Liga 1,2024,Ayacucho FC,Alianza Atlético,3,1
+Perú,Liga 1,2024,Ayacucho FC,UTC Cajamarca,0,0
+Perú,Liga 1,2024,Ayacucho FC,Juan Pablo II,4,0
+Perú,Liga 1,2024,Ayacucho FC,Los Chankas,1,0
+Perú,Liga 1,2024,Ayacucho FC,Comerciantes Unidos,2,2
+Perú,Liga 1,2024,Comerciantes Unidos,Universitario,0,1
+Perú,Liga 1,2024,Comerciantes Unidos,Alianza Lima,1,3
+Perú,Liga 1,2024,Comerciantes Unidos,Sporting Cristal,0,2
+Perú,Liga 1,2024,Comerciantes Unidos,Melgar,1,2
+Perú,Liga 1,2024,Comerciantes Unidos,Cusco FC,1,1
+Perú,Liga 1,2024,Comerciantes Unidos,Cienciano,3,2
+Perú,Liga 1,2024,Comerciantes Unidos,Sport Huancayo,1,4
+Perú,Liga 1,2024,Comerciantes Unidos,Deportivo Garcilaso,0,0
+Perú,Liga 1,2024,Comerciantes Unidos,ADT,1,2
+Perú,Liga 1,2024,Comerciantes Unidos,Atlético Grau,1,0
+Perú,Liga 1,2024,Comerciantes Unidos,César Vallejo,1,3
+Perú,Liga 1,2024,Comerciantes Unidos,Sport Boys,2,3
+Perú,Liga 1,2024,Comerciantes Unidos,Alianza Atlético,0,1
+Perú,Liga 1,2024,Comerciantes Unidos,UTC Cajamarca,2,3
+Perú,Liga 1,2024,Comerciantes Unidos,Juan Pablo II,3,0
+Perú,Liga 1,2024,Comerciantes Unidos,Los Chankas,1,3
+Perú,Liga 1,2024,Comerciantes Unidos,Ayacucho FC,2,1
+Perú,Liga 1,2025,Universitario,Alianza Lima,1,0
+Perú,Liga 1,2025,Universitario,Sporting Cristal,0,1
+Perú,Liga 1,2025,Universitario,Melgar,0,1
+Perú,Liga 1,2025,Universitario,Cusco FC,3,0
+Perú,Liga 1,2025,Universitario,Cienciano,3,1
+Perú,Liga 1,2025,Universitario,Sport Huancayo,2,1
+Perú,Liga 1,2025,Universitario,Deportivo Garcilaso,3,0
+Perú,Liga 1,2025,Universitario,ADT,0,0
+Perú,Liga 1,2025,Universitario,Atlético Grau,3,0
+Perú,Liga 1,2025,Universitario,César Vallejo,2,1
+Perú,Liga 1,2025,Universitario,Sport Boys,2,0
+Perú,Liga 1,2025,Universitario,Alianza Atlético,4,0
+Perú,Liga 1,2025,Universitario,UTC Cajamarca,3,2
+Perú,Liga 1,2025,Universitario,Juan Pablo II,4,0
+Perú,Liga 1,2025,Universitario,Los Chankas,2,0
+Perú,Liga 1,2025,Universitario,Ayacucho FC,6,1
+Perú,Liga 1,2025,Universitario,Comerciantes Unidos,5,0
+Perú,Liga 1,2025,Alianza Lima,Universitario,1,4
+Perú,Liga 1,2025,Alianza Lima,Sporting Cristal,2,0
+Perú,Liga 1,2025,Alianza Lima,Melgar,2,0
+Perú,Liga 1,2025,Alianza Lima,Cusco FC,2,1
+Perú,Liga 1,2025,Alianza Lima,Cienciano,0,2
+Perú,Liga 1,2025,Alianza Lima,Sport Huancayo,1,0
+Perú,Liga 1,2025,Alianza Lima,Deportivo Garcilaso,2,0
+Perú,Liga 1,2025,Alianza Lima,ADT,4,0
+Perú,Liga 1,2025,Alianza Lima,Atlético Grau,3,0
+Perú,Liga 1,2025,Alianza Lima,César Vallejo,2,0
+Perú,Liga 1,2025,Alianza Lima,Sport Boys,4,1
+Perú,Liga 1,2025,Alianza Lima,Alianza Atlético,2,0
+Perú,Liga 1,2025,Alianza Lima,UTC Cajamarca,3,0
+Perú,Liga 1,2025,Alianza Lima,Juan Pablo II,2,0
+Perú,Liga 1,2025,Alianza Lima,Los Chankas,2,0
+Perú,Liga 1,2025,Alianza Lima,Ayacucho FC,3,0
+Perú,Liga 1,2025,Alianza Lima,Comerciantes Unidos,1,3
+Perú,Liga 1,2025,Sporting Cristal,Universitario,2,1
+Perú,Liga 1,2025,Sporting Cristal,Alianza Lima,2,1
+Perú,Liga 1,2025,Sporting Cristal,Melgar,2,1
+Perú,Liga 1,2025,Sporting Cristal,Cusco FC,3,2
+Perú,Liga 1,2025,Sporting Cristal,Cienciano,2,0
+Perú,Liga 1,2025,Sporting Cristal,Sport Huancayo,5,0
+Perú,Liga 1,2025,Sporting Cristal,Deportivo Garcilaso,0,1
+Perú,Liga 1,2025,Sporting Cristal,ADT,1,0
+Perú,Liga 1,2025,Sporting Cristal,Atlético Grau,1,0
+Perú,Liga 1,2025,Sporting Cristal,César Vallejo,3,1
+Perú,Liga 1,2025,Sporting Cristal,Sport Boys,3,1
+Perú,Liga 1,2025,Sporting Cristal,Alianza Atlético,0,0
+Perú,Liga 1,2025,Sporting Cristal,UTC Cajamarca,2,0
+Perú,Liga 1,2025,Sporting Cristal,Juan Pablo II,1,1
+Perú,Liga 1,2025,Sporting Cristal,Los Chankas,2,1
+Perú,Liga 1,2025,Sporting Cristal,Ayacucho FC,0,0
+Perú,Liga 1,2025,Sporting Cristal,Comerciantes Unidos,0,0
+Perú,Liga 1,2025,Melgar,Universitario,2,5
+Perú,Liga 1,2025,Melgar,Alianza Lima,3,1
+Perú,Liga 1,2025,Melgar,Sporting Cristal,1,0
+Perú,Liga 1,2025,Melgar,Cusco FC,1,1
+Perú,Liga 1,2025,Melgar,Cienciano,2,3
+Perú,Liga 1,2025,Melgar,Sport Huancayo,4,3
+Perú,Liga 1,2025,Melgar,Deportivo Garcilaso,2,0
+Perú,Liga 1,2025,Melgar,ADT,4,1
+Perú,Liga 1,2025,Melgar,Atlético Grau,2,0
+Perú,Liga 1,2025,Melgar,César Vallejo,0,1
+Perú,Liga 1,2025,Melgar,Sport Boys,1,0
+Perú,Liga 1,2025,Melgar,Alianza Atlético,4,1
+Perú,Liga 1,2025,Melgar,UTC Cajamarca,4,2
+Perú,Liga 1,2025,Melgar,Juan Pablo II,2,1
+Perú,Liga 1,2025,Melgar,Los Chankas,5,0
+Perú,Liga 1,2025,Melgar,Ayacucho FC,0,2
+Perú,Liga 1,2025,Melgar,Comerciantes Unidos,2,0
+Perú,Liga 1,2025,Cusco FC,Universitario,0,1
+Perú,Liga 1,2025,Cusco FC,Alianza Lima,2,0
+Perú,Liga 1,2025,Cusco FC,Sporting Cristal,1,1
+Perú,Liga 1,2025,Cusco FC,Melgar,2,1
+Perú,Liga 1,2025,Cusco FC,Cienciano,4,0
+Perú,Liga 1,2025,Cusco FC,Sport Huancayo,0,1
+Perú,Liga 1,2025,Cusco FC,Deportivo Garcilaso,1,1
+Perú,Liga 1,2025,Cusco FC,ADT,0,1
+Perú,Liga 1,2025,Cusco FC,Atlético Grau,1,1
+Perú,Liga 1,2025,Cusco FC,César Vallejo,2,2
+Perú,Liga 1,2025,Cusco FC,Sport Boys,0,2
+Perú,Liga 1,2025,Cusco FC,Alianza Atlético,0,3
+Perú,Liga 1,2025,Cusco FC,UTC Cajamarca,1,0
+Perú,Liga 1,2025,Cusco FC,Juan Pablo II,1,1
+Perú,Liga 1,2025,Cusco FC,Los Chankas,2,1
+Perú,Liga 1,2025,Cusco FC,Ayacucho FC,2,2
+Perú,Liga 1,2025,Cusco FC,Comerciantes Unidos,1,0
+Perú,Liga 1,2025,Cienciano,Universitario,0,1
+Perú,Liga 1,2025,Cienciano,Alianza Lima,0,3
+Perú,Liga 1,2025,Cienciano,Sporting Cristal,1,3
+Perú,Liga 1,2025,Cienciano,Melgar,1,1
+Perú,Liga 1,2025,Cienciano,Cusco FC,0,0
+Perú,Liga 1,2025,Cienciano,Sport Huancayo,0,1
+Perú,Liga 1,2025,Cienciano,Deportivo Garcilaso,1,0
+Perú,Liga 1,2025,Cienciano,ADT,5,0
+Perú,Liga 1,2025,Cienciano,Atlético Grau,1,2
+Perú,Liga 1,2025,Cienciano,César Vallejo,0,1
+Perú,Liga 1,2025,Cienciano,Sport Boys,2,1
+Perú,Liga 1,2025,Cienciano,Alianza Atlético,4,0
+Perú,Liga 1,2025,Cienciano,UTC Cajamarca,2,0
+Perú,Liga 1,2025,Cienciano,Juan Pablo II,1,2
+Perú,Liga 1,2025,Cienciano,Los Chankas,6,0
+Perú,Liga 1,2025,Cienciano,Ayacucho FC,2,1
+Perú,Liga 1,2025,Cienciano,Comerciantes Unidos,0,0
+Perú,Liga 1,2025,Sport Huancayo,Universitario,0,2
+Perú,Liga 1,2025,Sport Huancayo,Alianza Lima,1,2
+Perú,Liga 1,2025,Sport Huancayo,Sporting Cristal,1,1
+Perú,Liga 1,2025,Sport Huancayo,Melgar,2,1
+Perú,Liga 1,2025,Sport Huancayo,Cusco FC,3,0
+Perú,Liga 1,2025,Sport Huancayo,Cienciano,0,1
+Perú,Liga 1,2025,Sport Huancayo,Deportivo Garcilaso,0,0
+Perú,Liga 1,2025,Sport Huancayo,ADT,3,1
+Perú,Liga 1,2025,Sport Huancayo,Atlético Grau,1,0
+Perú,Liga 1,2025,Sport Huancayo,César Vallejo,1,2
+Perú,Liga 1,2025,Sport Huancayo,Sport Boys,3,3
+Perú,Liga 1,2025,Sport Huancayo,Alianza Atlético,4,0
+Perú,Liga 1,2025,Sport Huancayo,UTC Cajamarca,1,2
+Perú,Liga 1,2025,Sport Huancayo,Juan Pablo II,2,0
+Perú,Liga 1,2025,Sport Huancayo,Los Chankas,5,1
+Perú,Liga 1,2025,Sport Huancayo,Ayacucho FC,2,0
+Perú,Liga 1,2025,Sport Huancayo,Comerciantes Unidos,1,0
+Perú,Liga 1,2025,Deportivo Garcilaso,Universitario,0,2
+Perú,Liga 1,2025,Deportivo Garcilaso,Alianza Lima,2,2
+Perú,Liga 1,2025,Deportivo Garcilaso,Sporting Cristal,0,2
+Perú,Liga 1,2025,Deportivo Garcilaso,Melgar,2,3
+Perú,Liga 1,2025,Deportivo Garcilaso,Cusco FC,1,1
+Perú,Liga 1,2025,Deportivo Garcilaso,Cienciano,1,4
+Perú,Liga 1,2025,Deportivo Garcilaso,Sport Huancayo,2,0
+Perú,Liga 1,2025,Deportivo Garcilaso,ADT,1,1
+Perú,Liga 1,2025,Deportivo Garcilaso,Atlético Grau,1,1
+Perú,Liga 1,2025,Deportivo Garcilaso,César Vallejo,2,2
+Perú,Liga 1,2025,Deportivo Garcilaso,Sport Boys,3,1
+Perú,Liga 1,2025,Deportivo Garcilaso,Alianza Atlético,7,0
+Perú,Liga 1,2025,Deportivo Garcilaso,UTC Cajamarca,3,0
+Perú,Liga 1,2025,Deportivo Garcilaso,Juan Pablo II,3,0
+Perú,Liga 1,2025,Deportivo Garcilaso,Los Chankas,1,1
+Perú,Liga 1,2025,Deportivo Garcilaso,Ayacucho FC,2,1
+Perú,Liga 1,2025,Deportivo Garcilaso,Comerciantes Unidos,2,0
+Perú,Liga 1,2025,ADT,Universitario,1,4
+Perú,Liga 1,2025,ADT,Alianza Lima,1,1
+Perú,Liga 1,2025,ADT,Sporting Cristal,1,1
+Perú,Liga 1,2025,ADT,Melgar,0,0
+Perú,Liga 1,2025,ADT,Cusco FC,1,1
+Perú,Liga 1,2025,ADT,Cienciano,1,2
+Perú,Liga 1,2025,ADT,Sport Huancayo,2,4
+Perú,Liga 1,2025,ADT,Deportivo Garcilaso,1,1
+Perú,Liga 1,2025,ADT,Atlético Grau,2,3
+Perú,Liga 1,2025,ADT,César Vallejo,0,2
+Perú,Liga 1,2025,ADT,Sport Boys,0,0
+Perú,Liga 1,2025,ADT,Alianza Atlético,2,0
+Perú,Liga 1,2025,ADT,UTC Cajamarca,1,1
+Perú,Liga 1,2025,ADT,Juan Pablo II,4,0
+Perú,Liga 1,2025,ADT,Los Chankas,2,0
+Perú,Liga 1,2025,ADT,Ayacucho FC,1,3
+Perú,Liga 1,2025,ADT,Comerciantes Unidos,2,1
+Perú,Liga 1,2025,Atlético Grau,Universitario,1,1
+Perú,Liga 1,2025,Atlético Grau,Alianza Lima,4,1
+Perú,Liga 1,2025,Atlético Grau,Sporting Cristal,1,2
+Perú,Liga 1,2025,Atlético Grau,Melgar,1,3
+Perú,Liga 1,2025,Atlético Grau,Cusco FC,2,5
+Perú,Liga 1,2025,Atlético Grau,Cienciano,3,3
+Perú,Liga 1,2025,Atlético Grau,Sport Huancayo,0,3
+Perú,Liga 1,2025,Atlético Grau,Deportivo Garcilaso,3,1
+Perú,Liga 1,2025,Atlético Grau,ADT,1,0
+Perú,Liga 1,2025,Atlético Grau,César Vallejo,1,2
+Perú,Liga 1,2025,Atlético Grau,Sport Boys,1,1
+Perú,Liga 1,2025,Atlético Grau,Alianza Atlético,3,0
+Perú,Liga 1,2025,Atlético Grau,UTC Cajamarca,3,2
+Perú,Liga 1,2025,Atlético Grau,Juan Pablo II,4,1
+Perú,Liga 1,2025,Atlético Grau,Los Chankas,2,0
+Perú,Liga 1,2025,Atlético Grau,Ayacucho FC,3,2
+Perú,Liga 1,2025,Atlético Grau,Comerciantes Unidos,1,2
+Perú,Liga 1,2025,César Vallejo,Universitario,0,1
+Perú,Liga 1,2025,César Vallejo,Alianza Lima,0,1
+Perú,Liga 1,2025,César Vallejo,Sporting Cristal,2,1
+Perú,Liga 1,2025,César Vallejo,Melgar,1,0
+Perú,Liga 1,2025,César Vallejo,Cusco FC,1,1
+Perú,Liga 1,2025,César Vallejo,Cienciano,2,2
+Perú,Liga 1,2025,César Vallejo,Sport Huancayo,2,4
+Perú,Liga 1,2025,César Vallejo,Deportivo Garcilaso,0,2
+Perú,Liga 1,2025,César Vallejo,ADT,1,3
+Perú,Liga 1,2025,César Vallejo,Atlético Grau,3,3
+Perú,Liga 1,2025,César Vallejo,Sport Boys,1,0
+Perú,Liga 1,2025,César Vallejo,Alianza Atlético,4,1
+Perú,Liga 1,2025,César Vallejo,UTC Cajamarca,5,0
+Perú,Liga 1,2025,César Vallejo,Juan Pablo II,1,1
+Perú,Liga 1,2025,César Vallejo,Los Chankas,3,3
+Perú,Liga 1,2025,César Vallejo,Ayacucho FC,0,0
+Perú,Liga 1,2025,César Vallejo,Comerciantes Unidos,1,1
+Perú,Liga 1,2025,Sport Boys,Universitario,0,3
+Perú,Liga 1,2025,Sport Boys,Alianza Lima,0,1
+Perú,Liga 1,2025,Sport Boys,Sporting Cristal,2,3
+Perú,Liga 1,2025,Sport Boys,Melgar,3,1
+Perú,Liga 1,2025,Sport Boys,Cusco FC,2,1
+Perú,Liga 1,2025,Sport Boys,Cienciano,2,0
+Perú,Liga 1,2025,Sport Boys,Sport Huancayo,0,1
+Perú,Liga 1,2025,Sport Boys,Deportivo Garcilaso,4,2
+Perú,Liga 1,2025,Sport Boys,ADT,1,0
+Perú,Liga 1,2025,Sport Boys,Atlético Grau,0,1
+Perú,Liga 1,2025,Sport Boys,César Vallejo,1,1
+Perú,Liga 1,2025,Sport Boys,Alianza Atlético,5,0
+Perú,Liga 1,2025,Sport Boys,UTC Cajamarca,2,0
+Perú,Liga 1,2025,Sport Boys,Juan Pablo II,2,0
+Perú,Liga 1,2025,Sport Boys,Los Chankas,3,2
+Perú,Liga 1,2025,Sport Boys,Ayacucho FC,0,0
+Perú,Liga 1,2025,Sport Boys,Comerciantes Unidos,2,0
+Perú,Liga 1,2025,Alianza Atlético,Universitario,0,2
+Perú,Liga 1,2025,Alianza Atlético,Alianza Lima,1,2
+Perú,Liga 1,2025,Alianza Atlético,Sporting Cristal,1,4
+Perú,Liga 1,2025,Alianza Atlético,Melgar,3,2
+Perú,Liga 1,2025,Alianza Atlético,Cusco FC,2,2
+Perú,Liga 1,2025,Alianza Atlético,Cienciano,1,0
+Perú,Liga 1,2025,Alianza Atlético,Sport Huancayo,3,1
+Perú,Liga 1,2025,Alianza Atlético,Deportivo Garcilaso,0,2
+Perú,Liga 1,2025,Alianza Atlético,ADT,1,1
+Perú,Liga 1,2025,Alianza Atlético,Atlético Grau,0,2
+Perú,Liga 1,2025,Alianza Atlético,César Vallejo,1,1
+Perú,Liga 1,2025,Alianza Atlético,Sport Boys,0,2
+Perú,Liga 1,2025,Alianza Atlético,UTC Cajamarca,1,0
+Perú,Liga 1,2025,Alianza Atlético,Juan Pablo II,0,0
+Perú,Liga 1,2025,Alianza Atlético,Los Chankas,1,0
+Perú,Liga 1,2025,Alianza Atlético,Ayacucho FC,0,2
+Perú,Liga 1,2025,Alianza Atlético,Comerciantes Unidos,2,0
+Perú,Liga 1,2025,UTC Cajamarca,Universitario,3,4
+Perú,Liga 1,2025,UTC Cajamarca,Alianza Lima,0,0
+Perú,Liga 1,2025,UTC Cajamarca,Sporting Cristal,1,2
+Perú,Liga 1,2025,UTC Cajamarca,Melgar,1,1
+Perú,Liga 1,2025,UTC Cajamarca,Cusco FC,0,1
+Perú,Liga 1,2025,UTC Cajamarca,Cienciano,1,3
+Perú,Liga 1,2025,UTC Cajamarca,Sport Huancayo,1,0
+Perú,Liga 1,2025,UTC Cajamarca,Deportivo Garcilaso,1,0
+Perú,Liga 1,2025,UTC Cajamarca,ADT,0,2
+Perú,Liga 1,2025,UTC Cajamarca,Atlético Grau,1,2
+Perú,Liga 1,2025,UTC Cajamarca,César Vallejo,3,0
+Perú,Liga 1,2025,UTC Cajamarca,Sport Boys,4,2
+Perú,Liga 1,2025,UTC Cajamarca,Alianza Atlético,3,0
+Perú,Liga 1,2025,UTC Cajamarca,Juan Pablo II,2,1
+Perú,Liga 1,2025,UTC Cajamarca,Los Chankas,2,1
+Perú,Liga 1,2025,UTC Cajamarca,Ayacucho FC,2,2
+Perú,Liga 1,2025,UTC Cajamarca,Comerciantes Unidos,1,3
+Perú,Liga 1,2025,Juan Pablo II,Universitario,1,1
+Perú,Liga 1,2025,Juan Pablo II,Alianza Lima,0,2
+Perú,Liga 1,2025,Juan Pablo II,Sporting Cristal,2,1
+Perú,Liga 1,2025,Juan Pablo II,Melgar,2,4
+Perú,Liga 1,2025,Juan Pablo II,Cusco FC,0,4
+Perú,Liga 1,2025,Juan Pablo II,Cienciano,0,2
+Perú,Liga 1,2025,Juan Pablo II,Sport Huancayo,0,3
+Perú,Liga 1,2025,Juan Pablo II,Deportivo Garcilaso,0,3
+Perú,Liga 1,2025,Juan Pablo II,ADT,0,0
+Perú,Liga 1,2025,Juan Pablo II,Atlético Grau,2,2
+Perú,Liga 1,2025,Juan Pablo II,César Vallejo,0,3
+Perú,Liga 1,2025,Juan Pablo II,Sport Boys,1,1
+Perú,Liga 1,2025,Juan Pablo II,Alianza Atlético,0,0
+Perú,Liga 1,2025,Juan Pablo II,UTC Cajamarca,2,0
+Perú,Liga 1,2025,Juan Pablo II,Los Chankas,1,1
+Perú,Liga 1,2025,Juan Pablo II,Ayacucho FC,1,0
+Perú,Liga 1,2025,Juan Pablo II,Comerciantes Unidos,0,0
+Perú,Liga 1,2025,Los Chankas,Universitario,0,0
+Perú,Liga 1,2025,Los Chankas,Alianza Lima,1,5
+Perú,Liga 1,2025,Los Chankas,Sporting Cristal,1,1
+Perú,Liga 1,2025,Los Chankas,Melgar,1,1
+Perú,Liga 1,2025,Los Chankas,Cusco FC,1,1
+Perú,Liga 1,2025,Los Chankas,Cienciano,3,3
+Perú,Liga 1,2025,Los Chankas,Sport Huancayo,1,2
+Perú,Liga 1,2025,Los Chankas,Deportivo Garcilaso,1,1
+Perú,Liga 1,2025,Los Chankas,ADT,0,1
+Perú,Liga 1,2025,Los Chankas,Atlético Grau,5,1
+Perú,Liga 1,2025,Los Chankas,César Vallejo,1,2
+Perú,Liga 1,2025,Los Chankas,Sport Boys,1,2
+Perú,Liga 1,2025,Los Chankas,Alianza Atlético,2,1
+Perú,Liga 1,2025,Los Chankas,UTC Cajamarca,4,1
+Perú,Liga 1,2025,Los Chankas,Juan Pablo II,2,1
+Perú,Liga 1,2025,Los Chankas,Ayacucho FC,0,1
+Perú,Liga 1,2025,Los Chankas,Comerciantes Unidos,1,0
+Perú,Liga 1,2025,Ayacucho FC,Universitario,0,4
+Perú,Liga 1,2025,Ayacucho FC,Alianza Lima,1,0
+Perú,Liga 1,2025,Ayacucho FC,Sporting Cristal,0,1
+Perú,Liga 1,2025,Ayacucho FC,Melgar,3,1
+Perú,Liga 1,2025,Ayacucho FC,Cusco FC,0,2
+Perú,Liga 1,2025,Ayacucho FC,Cienciano,1,2
+Perú,Liga 1,2025,Ayacucho FC,Sport Huancayo,1,1
+Perú,Liga 1,2025,Ayacucho FC,Deportivo Garcilaso,3,1
+Perú,Liga 1,2025,Ayacucho FC,ADT,0,2
+Perú,Liga 1,2025,Ayacucho FC,Atlético Grau,0,0
+Perú,Liga 1,2025,Ayacucho FC,César Vallejo,1,0
+Perú,Liga 1,2025,Ayacucho FC,Sport Boys,2,0
+Perú,Liga 1,2025,Ayacucho FC,Alianza Atlético,0,1
+Perú,Liga 1,2025,Ayacucho FC,UTC Cajamarca,0,0
+Perú,Liga 1,2025,Ayacucho FC,Juan Pablo II,0,0
+Perú,Liga 1,2025,Ayacucho FC,Los Chankas,1,0
+Perú,Liga 1,2025,Ayacucho FC,Comerciantes Unidos,3,2
+Perú,Liga 1,2025,Comerciantes Unidos,Universitario,5,4
+Perú,Liga 1,2025,Comerciantes Unidos,Alianza Lima,1,4
+Perú,Liga 1,2025,Comerciantes Unidos,Sporting Cristal,0,2
+Perú,Liga 1,2025,Comerciantes Unidos,Melgar,0,2
+Perú,Liga 1,2025,Comerciantes Unidos,Cusco FC,1,3
+Perú,Liga 1,2025,Comerciantes Unidos,Cienciano,0,2
+Perú,Liga 1,2025,Comerciantes Unidos,Sport Huancayo,0,1
+Perú,Liga 1,2025,Comerciantes Unidos,Deportivo Garcilaso,3,2
+Perú,Liga 1,2025,Comerciantes Unidos,ADT,1,1
+Perú,Liga 1,2025,Comerciantes Unidos,Atlético Grau,2,3
+Perú,Liga 1,2025,Comerciantes Unidos,César Vallejo,5,2
+Perú,Liga 1,2025,Comerciantes Unidos,Sport Boys,0,1
+Perú,Liga 1,2025,Comerciantes Unidos,Alianza Atlético,3,2
+Perú,Liga 1,2025,Comerciantes Unidos,UTC Cajamarca,1,0
+Perú,Liga 1,2025,Comerciantes Unidos,Juan Pablo II,2,3
+Perú,Liga 1,2025,Comerciantes Unidos,Los Chankas,0,2
+Perú,Liga 1,2025,Comerciantes Unidos,Ayacucho FC,1,1

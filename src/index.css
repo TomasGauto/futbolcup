@@ -484,6 +484,33 @@ body::after {
 .timeline-row:last-child .timeline-entry { border-bottom: none; }
 .timeline-dt-badge { color: #86efac; border-color: #4ade80; }
 .timeline-titles { min-height: 24px; }
+
+/* Puntaje de la etapa (nota promedio): pill que hereda su color por rendimiento */
+.stint-nota {
+  flex-shrink: 0; display: inline-flex; align-items: baseline; gap: 3px;
+  font-family: "Bahnschrift", sans-serif; font-weight: 700; font-size: 13px; line-height: 1;
+  padding: 2px 6px; border-radius: 5px;
+  background: color-mix(in srgb, currentColor 13%, transparent);
+  border: 1px solid color-mix(in srgb, currentColor 32%, transparent);
+}
+.stint-nota i { font-size: 7px; font-style: normal; letter-spacing: 0.08em; opacity: 0.7; }
+
+/* Cartel PRIME: el pico de la carrera (oro para jugador, verde para DT) */
+.stint-prime {
+  flex-shrink: 0; display: inline-flex; align-items: center; gap: 3px; white-space: nowrap;
+  font-family: "Bahnschrift", sans-serif; font-weight: 800; font-size: 9px; letter-spacing: 0.12em;
+  padding: 2px 7px; border-radius: 4px; color: #1a1206;
+  background: linear-gradient(135deg, #ffe9a8, #f5b731);
+  box-shadow: 0 1px 5px rgba(245,183,49,0.45);
+}
+.stint-prime.dt { color: #08260f; background: linear-gradient(135deg, #bbf7d0, #4ade80); box-shadow: 0 1px 5px rgba(74,222,128,0.45); }
+.timeline-row-prime .timeline-entry {
+  background: linear-gradient(90deg, rgba(245,183,49,0.10), transparent 62%);
+  border-radius: 6px;
+}
+.timeline-row-prime.timeline-row-dt .timeline-entry { background: linear-gradient(90deg, rgba(74,222,128,0.10), transparent 62%); }
+.timeline-row-prime .timeline-crest { border-color: rgba(245,183,49,0.7); box-shadow: 0 0 8px rgba(245,183,49,0.3); }
+.timeline-row-prime.timeline-row-dt .timeline-crest { border-color: rgba(74,222,128,0.7); box-shadow: 0 0 8px rgba(74,222,128,0.3); }
 .rival-strip { border: 1px solid color-mix(in srgb, var(--warn) 35%, var(--line)); background: color-mix(in srgb, var(--warn) 5%, var(--panel-2)); border-radius: 4px; }
 .rival-chip { max-width: 48%; color: var(--text); }
 @keyframes stintGlow {
@@ -689,13 +716,35 @@ body::after {
 .pcard.frame-b-leyenda { border-color: rgba(125,211,252,0.7); box-shadow: 0 0 18px rgba(125,211,252,0.12); }
 .pcard.frame-b-dt { border-color: rgba(74,222,128,0.55); }
 
-/* ---- Badges de valoración (estilo FUT) ---- */
+/* ---- Rail de identidad (estilo FUT): badge + bandera + escudo ---- */
+.fut-rail { display: flex; flex-direction: column; align-items: center; gap: 5px; }
+.fut-rail-icons { display: flex; align-items: center; justify-content: center; gap: 4px; margin-top: 1px; }
+.fut-flag { width: 20px; height: 14px; border-radius: 2px; object-fit: cover; box-shadow: 0 1px 3px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.15); }
+.fut-flag-code { font-family: "Bahnschrift", sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.04em; color: var(--muted); }
+@media (min-width: 640px) {
+  .fut-rail { gap: 7px; }
+  .fut-flag { width: 28px; height: 20px; }
+  .fut-flag-code { font-size: 11px; }
+}
+
+/* Chip de marco/tier (BRONCE → LEYENDA): reutiliza los colores de .frame-<key> */
+.fut-tier-chip {
+  display: inline-block; font-family: "Bahnschrift", sans-serif; font-weight: 800;
+  font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 2px 8px; border-radius: 3px; border: 1px solid;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.35);
+}
+@media (min-width: 640px) { .fut-tier-chip { font-size: 10px; padding: 3px 10px; } }
+
+/* ---- Badges de valoración (estilo FUT premium, metálico) ---- */
 .fut-badge {
   width: 42px;
   height: 50px;
   clip-path: polygon(50% 0%, 100% 20%, 100% 80%, 50% 100%, 0% 80%, 0% 20%);
   color: #fff;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.85);
+  position: relative;
+  isolation: isolate;
 }
 @media (min-width: 640px) {
   .fut-badge {
@@ -703,16 +752,48 @@ body::after {
     height: 80px;
   }
 }
-.fut-bronze { background: linear-gradient(135deg, #b07d62, #6b4423); border: 2px solid #d4a373; box-shadow: inset 0 0 8px rgba(0,0,0,0.5); }
-.fut-silver { background: linear-gradient(135deg, #e2e8f0, #94a3b8); color: #1e293b; text-shadow: none; border: 2px solid #fff; box-shadow: inset 0 0 8px rgba(0,0,0,0.2); }
-.fut-gold { background: linear-gradient(135deg, #fbbf24, #b45309); border: 2px solid #fde047; box-shadow: inset 0 0 12px rgba(0,0,0,0.4); }
-.fut-elite { background: linear-gradient(135deg, #38bdf8, #1e3a8a); border: 2px solid #bae6fd; box-shadow: inset 0 0 16px rgba(0,0,0,0.6); }
+/* Gloss diagonal metálico + sombreado inferior, común a todos los tiers */
+.fut-badge::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  clip-path: polygon(50% 0%, 100% 20%, 100% 80%, 50% 100%, 0% 80%, 0% 20%);
+  background: linear-gradient(125deg, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.14) 20%, transparent 40%, transparent 62%, rgba(0,0,0,0.28) 100%);
+}
+/* Barrido de brillo (animado solo en oro/leyenda) */
+.fut-badge::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  clip-path: polygon(50% 0%, 100% 20%, 100% 80%, 50% 100%, 0% 80%, 0% 20%);
+  background: linear-gradient(60deg, transparent 42%, rgba(255,255,255,0.55) 50%, transparent 58%);
+  background-size: 300% 300%;
+  background-position: 160% 0;
+}
+.fut-gold::after, .fut-elite::after { animation: badgeShine 4s ease-in-out infinite; }
+@keyframes badgeShine { 0%, 100% { background-position: 160% 0; } 55% { background-position: -60% 0; } }
+
+.fut-bronze { background: linear-gradient(150deg, #e6b487 0%, #a86f43 46%, #5e3a1c 100%); border: 2px solid #e0b088; box-shadow: inset 0 1px 5px rgba(255,255,255,0.4), inset 0 -6px 12px rgba(0,0,0,0.45); }
+.fut-silver { background: linear-gradient(150deg, #ffffff 0%, #cbd5e1 46%, #7c8b9c 100%); color: #1e293b; text-shadow: 0 1px 1px rgba(255,255,255,0.5); border: 2px solid #ffffff; box-shadow: inset 0 1px 5px rgba(255,255,255,0.7), inset 0 -6px 12px rgba(0,0,0,0.25); }
+.fut-gold { background: linear-gradient(150deg, #ffe9a8 0%, #f5b731 46%, #9a5b06 100%); border: 2px solid #fde047; box-shadow: inset 0 1px 6px rgba(255,255,255,0.5), inset 0 -7px 14px rgba(0,0,0,0.4); }
+.fut-elite { background: linear-gradient(150deg, #a5e9ff 0%, #38bdf8 44%, #14245e 100%); border: 2px solid #bae6fd; box-shadow: inset 0 1px 6px rgba(255,255,255,0.55), inset 0 -8px 16px rgba(0,0,0,0.55); }
 
 /* Glow de fondo para la carta */
 .rating-bg-bronze { background: #b07d62; }
 .rating-bg-silver { background: #e2e8f0; }
 .rating-bg-gold { background: #fbbf24; }
 .rating-bg-elite { background: #38bdf8; }
+
+/* Foil holográfico animado (solo carta LEYENDA) */
+.pcard-foil {
+  position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  background: linear-gradient(115deg, transparent 32%, rgba(186,230,253,0.16) 44%, rgba(255,255,255,0.4) 50%, rgba(186,230,253,0.16) 56%, transparent 68%);
+  background-size: 260% 260%;
+  mix-blend-mode: screen; opacity: 0.75;
+  animation: foilSweep 5s ease-in-out infinite;
+}
+@keyframes foilSweep { 0% { background-position: 120% 0%; } 100% { background-position: -20% 100%; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .fut-badge::after { animation: none; }
+  .pcard-foil { animation: none; opacity: 0.35; }
+}
 
 .kpi-rating-wrapper {
   display: flex;

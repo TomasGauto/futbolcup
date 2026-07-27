@@ -159,7 +159,7 @@ export type League = {
 };
 
 // Confederación continental: define en qué copas compite la liga.
-export type Confederation = 'UEFA' | 'CONMEBOL' | 'CONCACAF';
+export type Confederation = 'UEFA' | 'CONMEBOL' | 'CONCACAF' | 'AFC';
 
 // ------------------------------ Partidos / temporada ------------------------------
 

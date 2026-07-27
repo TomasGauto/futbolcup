@@ -18,7 +18,7 @@ export type EtlLeague = {
   tvBase: number; homeAdvElo: number;
   continentalSlots: { elite: number; second: number; third: number };
   coeff: number; avgGoalsPerTeam: number;
-  confederation?: 'UEFA' | 'CONMEBOL' | 'CONCACAF';
+  confederation?: 'UEFA' | 'CONMEBOL' | 'CONCACAF' | 'AFC';
 };
 
 export type EtlData = { clubs: EtlClub[]; leagues: EtlLeague[]; history: Record<string, { season: string; champion: string; runnerUp: string }[]> };

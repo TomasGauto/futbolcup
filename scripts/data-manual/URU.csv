@@ -1,0 +1,721 @@
+Country,League,Season,Home,Away,HG,AG
+Uruguay,Primera División,2023,Peñarol,Nacional,0,3
+Uruguay,Primera División,2023,Peñarol,Defensor Sporting,0,0
+Uruguay,Primera División,2023,Peñarol,Liverpool de Montevideo,1,0
+Uruguay,Primera División,2023,Peñarol,Danubio,0,1
+Uruguay,Primera División,2023,Peñarol,River Plate Montevideo,4,0
+Uruguay,Primera División,2023,Peñarol,Montevideo Wanderers,1,0
+Uruguay,Primera División,2023,Peñarol,Boston River,0,0
+Uruguay,Primera División,2023,Peñarol,Cerro Largo,0,3
+Uruguay,Primera División,2023,Peñarol,Racing de Montevideo,2,0
+Uruguay,Primera División,2023,Peñarol,Montevideo City Torque,3,1
+Uruguay,Primera División,2023,Peñarol,Cerro,1,0
+Uruguay,Primera División,2023,Peñarol,Fénix,3,0
+Uruguay,Primera División,2023,Peñarol,Progreso,3,1
+Uruguay,Primera División,2023,Peñarol,Juventud de Las Piedras,2,0
+Uruguay,Primera División,2023,Peñarol,Plaza Colonia,6,1
+Uruguay,Primera División,2023,Nacional,Peñarol,1,3
+Uruguay,Primera División,2023,Nacional,Defensor Sporting,1,1
+Uruguay,Primera División,2023,Nacional,Liverpool de Montevideo,0,0
+Uruguay,Primera División,2023,Nacional,Danubio,0,1
+Uruguay,Primera División,2023,Nacional,River Plate Montevideo,2,0
+Uruguay,Primera División,2023,Nacional,Montevideo Wanderers,0,0
+Uruguay,Primera División,2023,Nacional,Boston River,2,0
+Uruguay,Primera División,2023,Nacional,Cerro Largo,4,1
+Uruguay,Primera División,2023,Nacional,Racing de Montevideo,4,0
+Uruguay,Primera División,2023,Nacional,Montevideo City Torque,3,0
+Uruguay,Primera División,2023,Nacional,Cerro,3,0
+Uruguay,Primera División,2023,Nacional,Fénix,3,0
+Uruguay,Primera División,2023,Nacional,Progreso,1,0
+Uruguay,Primera División,2023,Nacional,Juventud de Las Piedras,3,0
+Uruguay,Primera División,2023,Nacional,Plaza Colonia,1,0
+Uruguay,Primera División,2023,Defensor Sporting,Peñarol,1,2
+Uruguay,Primera División,2023,Defensor Sporting,Nacional,0,3
+Uruguay,Primera División,2023,Defensor Sporting,Liverpool de Montevideo,3,3
+Uruguay,Primera División,2023,Defensor Sporting,Danubio,0,0
+Uruguay,Primera División,2023,Defensor Sporting,River Plate Montevideo,1,0
+Uruguay,Primera División,2023,Defensor Sporting,Montevideo Wanderers,4,1
+Uruguay,Primera División,2023,Defensor Sporting,Boston River,5,1
+Uruguay,Primera División,2023,Defensor Sporting,Cerro Largo,1,0
+Uruguay,Primera División,2023,Defensor Sporting,Racing de Montevideo,1,0
+Uruguay,Primera División,2023,Defensor Sporting,Montevideo City Torque,2,1
+Uruguay,Primera División,2023,Defensor Sporting,Cerro,2,0
+Uruguay,Primera División,2023,Defensor Sporting,Fénix,1,2
+Uruguay,Primera División,2023,Defensor Sporting,Progreso,3,0
+Uruguay,Primera División,2023,Defensor Sporting,Juventud de Las Piedras,2,1
+Uruguay,Primera División,2023,Defensor Sporting,Plaza Colonia,1,0
+Uruguay,Primera División,2023,Liverpool de Montevideo,Peñarol,3,1
+Uruguay,Primera División,2023,Liverpool de Montevideo,Nacional,2,1
+Uruguay,Primera División,2023,Liverpool de Montevideo,Defensor Sporting,1,3
+Uruguay,Primera División,2023,Liverpool de Montevideo,Danubio,1,0
+Uruguay,Primera División,2023,Liverpool de Montevideo,River Plate Montevideo,0,0
+Uruguay,Primera División,2023,Liverpool de Montevideo,Montevideo Wanderers,3,0
+Uruguay,Primera División,2023,Liverpool de Montevideo,Boston River,5,1
+Uruguay,Primera División,2023,Liverpool de Montevideo,Cerro Largo,4,0
+Uruguay,Primera División,2023,Liverpool de Montevideo,Racing de Montevideo,2,0
+Uruguay,Primera División,2023,Liverpool de Montevideo,Montevideo City Torque,1,0
+Uruguay,Primera División,2023,Liverpool de Montevideo,Cerro,2,0
+Uruguay,Primera División,2023,Liverpool de Montevideo,Fénix,2,0
+Uruguay,Primera División,2023,Liverpool de Montevideo,Progreso,3,1
+Uruguay,Primera División,2023,Liverpool de Montevideo,Juventud de Las Piedras,1,0
+Uruguay,Primera División,2023,Liverpool de Montevideo,Plaza Colonia,1,0
+Uruguay,Primera División,2023,Danubio,Peñarol,1,0
+Uruguay,Primera División,2023,Danubio,Nacional,1,1
+Uruguay,Primera División,2023,Danubio,Defensor Sporting,2,0
+Uruguay,Primera División,2023,Danubio,Liverpool de Montevideo,1,4
+Uruguay,Primera División,2023,Danubio,River Plate Montevideo,2,4
+Uruguay,Primera División,2023,Danubio,Montevideo Wanderers,0,0
+Uruguay,Primera División,2023,Danubio,Boston River,0,1
+Uruguay,Primera División,2023,Danubio,Cerro Largo,2,0
+Uruguay,Primera División,2023,Danubio,Racing de Montevideo,2,1
+Uruguay,Primera División,2023,Danubio,Montevideo City Torque,2,1
+Uruguay,Primera División,2023,Danubio,Cerro,2,1
+Uruguay,Primera División,2023,Danubio,Fénix,0,0
+Uruguay,Primera División,2023,Danubio,Progreso,2,1
+Uruguay,Primera División,2023,Danubio,Juventud de Las Piedras,1,0
+Uruguay,Primera División,2023,Danubio,Plaza Colonia,2,0
+Uruguay,Primera División,2023,River Plate Montevideo,Peñarol,1,3
+Uruguay,Primera División,2023,River Plate Montevideo,Nacional,0,2
+Uruguay,Primera División,2023,River Plate Montevideo,Defensor Sporting,0,0
+Uruguay,Primera División,2023,River Plate Montevideo,Liverpool de Montevideo,1,4
+Uruguay,Primera División,2023,River Plate Montevideo,Danubio,0,1
+Uruguay,Primera División,2023,River Plate Montevideo,Montevideo Wanderers,0,0
+Uruguay,Primera División,2023,River Plate Montevideo,Boston River,1,1
+Uruguay,Primera División,2023,River Plate Montevideo,Cerro Largo,1,1
+Uruguay,Primera División,2023,River Plate Montevideo,Racing de Montevideo,1,0
+Uruguay,Primera División,2023,River Plate Montevideo,Montevideo City Torque,4,1
+Uruguay,Primera División,2023,River Plate Montevideo,Cerro,2,2
+Uruguay,Primera División,2023,River Plate Montevideo,Fénix,5,1
+Uruguay,Primera División,2023,River Plate Montevideo,Progreso,2,0
+Uruguay,Primera División,2023,River Plate Montevideo,Juventud de Las Piedras,2,1
+Uruguay,Primera División,2023,River Plate Montevideo,Plaza Colonia,3,0
+Uruguay,Primera División,2023,Montevideo Wanderers,Peñarol,0,3
+Uruguay,Primera División,2023,Montevideo Wanderers,Nacional,1,2
+Uruguay,Primera División,2023,Montevideo Wanderers,Defensor Sporting,2,0
+Uruguay,Primera División,2023,Montevideo Wanderers,Liverpool de Montevideo,2,1
+Uruguay,Primera División,2023,Montevideo Wanderers,Danubio,0,1
+Uruguay,Primera División,2023,Montevideo Wanderers,River Plate Montevideo,1,1
+Uruguay,Primera División,2023,Montevideo Wanderers,Boston River,4,3
+Uruguay,Primera División,2023,Montevideo Wanderers,Cerro Largo,1,1
+Uruguay,Primera División,2023,Montevideo Wanderers,Racing de Montevideo,0,1
+Uruguay,Primera División,2023,Montevideo Wanderers,Montevideo City Torque,2,2
+Uruguay,Primera División,2023,Montevideo Wanderers,Cerro,4,6
+Uruguay,Primera División,2023,Montevideo Wanderers,Fénix,4,0
+Uruguay,Primera División,2023,Montevideo Wanderers,Progreso,3,2
+Uruguay,Primera División,2023,Montevideo Wanderers,Juventud de Las Piedras,3,1
+Uruguay,Primera División,2023,Montevideo Wanderers,Plaza Colonia,1,0
+Uruguay,Primera División,2023,Boston River,Peñarol,1,4
+Uruguay,Primera División,2023,Boston River,Nacional,0,1
+Uruguay,Primera División,2023,Boston River,Defensor Sporting,0,1
+Uruguay,Primera División,2023,Boston River,Liverpool de Montevideo,2,0
+Uruguay,Primera División,2023,Boston River,Danubio,1,4
+Uruguay,Primera División,2023,Boston River,River Plate Montevideo,0,0
+Uruguay,Primera División,2023,Boston River,Montevideo Wanderers,2,0
+Uruguay,Primera División,2023,Boston River,Cerro Largo,3,0
+Uruguay,Primera División,2023,Boston River,Racing de Montevideo,1,2
+Uruguay,Primera División,2023,Boston River,Montevideo City Torque,3,1
+Uruguay,Primera División,2023,Boston River,Cerro,2,2
+Uruguay,Primera División,2023,Boston River,Fénix,4,2
+Uruguay,Primera División,2023,Boston River,Progreso,1,0
+Uruguay,Primera División,2023,Boston River,Juventud de Las Piedras,4,0
+Uruguay,Primera División,2023,Boston River,Plaza Colonia,2,1
+Uruguay,Primera División,2023,Cerro Largo,Peñarol,0,3
+Uruguay,Primera División,2023,Cerro Largo,Nacional,0,2
+Uruguay,Primera División,2023,Cerro Largo,Defensor Sporting,1,1
+Uruguay,Primera División,2023,Cerro Largo,Liverpool de Montevideo,0,4
+Uruguay,Primera División,2023,Cerro Largo,Danubio,1,1
+Uruguay,Primera División,2023,Cerro Largo,River Plate Montevideo,1,1
+Uruguay,Primera División,2023,Cerro Largo,Montevideo Wanderers,4,1
+Uruguay,Primera División,2023,Cerro Largo,Boston River,0,0
+Uruguay,Primera División,2023,Cerro Largo,Racing de Montevideo,5,0
+Uruguay,Primera División,2023,Cerro Largo,Montevideo City Torque,1,0
+Uruguay,Primera División,2023,Cerro Largo,Cerro,0,1
+Uruguay,Primera División,2023,Cerro Largo,Fénix,1,0
+Uruguay,Primera División,2023,Cerro Largo,Progreso,2,0
+Uruguay,Primera División,2023,Cerro Largo,Juventud de Las Piedras,1,0
+Uruguay,Primera División,2023,Cerro Largo,Plaza Colonia,2,1
+Uruguay,Primera División,2023,Racing de Montevideo,Peñarol,0,0
+Uruguay,Primera División,2023,Racing de Montevideo,Nacional,0,2
+Uruguay,Primera División,2023,Racing de Montevideo,Defensor Sporting,1,0
+Uruguay,Primera División,2023,Racing de Montevideo,Liverpool de Montevideo,2,1
+Uruguay,Primera División,2023,Racing de Montevideo,Danubio,2,0
+Uruguay,Primera División,2023,Racing de Montevideo,River Plate Montevideo,4,2
+Uruguay,Primera División,2023,Racing de Montevideo,Montevideo Wanderers,1,1
+Uruguay,Primera División,2023,Racing de Montevideo,Boston River,0,2
+Uruguay,Primera División,2023,Racing de Montevideo,Cerro Largo,1,1
+Uruguay,Primera División,2023,Racing de Montevideo,Montevideo City Torque,0,0
+Uruguay,Primera División,2023,Racing de Montevideo,Cerro,1,0
+Uruguay,Primera División,2023,Racing de Montevideo,Fénix,1,0
+Uruguay,Primera División,2023,Racing de Montevideo,Progreso,4,3
+Uruguay,Primera División,2023,Racing de Montevideo,Juventud de Las Piedras,2,0
+Uruguay,Primera División,2023,Racing de Montevideo,Plaza Colonia,1,0
+Uruguay,Primera División,2023,Montevideo City Torque,Peñarol,1,2
+Uruguay,Primera División,2023,Montevideo City Torque,Nacional,2,2
+Uruguay,Primera División,2023,Montevideo City Torque,Defensor Sporting,1,1
+Uruguay,Primera División,2023,Montevideo City Torque,Liverpool de Montevideo,0,0
+Uruguay,Primera División,2023,Montevideo City Torque,Danubio,2,2
+Uruguay,Primera División,2023,Montevideo City Torque,River Plate Montevideo,2,3
+Uruguay,Primera División,2023,Montevideo City Torque,Montevideo Wanderers,1,3
+Uruguay,Primera División,2023,Montevideo City Torque,Boston River,1,3
+Uruguay,Primera División,2023,Montevideo City Torque,Cerro Largo,0,1
+Uruguay,Primera División,2023,Montevideo City Torque,Racing de Montevideo,4,1
+Uruguay,Primera División,2023,Montevideo City Torque,Cerro,0,1
+Uruguay,Primera División,2023,Montevideo City Torque,Fénix,3,0
+Uruguay,Primera División,2023,Montevideo City Torque,Progreso,0,0
+Uruguay,Primera División,2023,Montevideo City Torque,Juventud de Las Piedras,0,1
+Uruguay,Primera División,2023,Montevideo City Torque,Plaza Colonia,3,1
+Uruguay,Primera División,2023,Cerro,Peñarol,3,0
+Uruguay,Primera División,2023,Cerro,Nacional,0,3
+Uruguay,Primera División,2023,Cerro,Defensor Sporting,0,0
+Uruguay,Primera División,2023,Cerro,Liverpool de Montevideo,1,1
+Uruguay,Primera División,2023,Cerro,Danubio,2,0
+Uruguay,Primera División,2023,Cerro,River Plate Montevideo,2,2
+Uruguay,Primera División,2023,Cerro,Montevideo Wanderers,0,1
+Uruguay,Primera División,2023,Cerro,Boston River,2,3
+Uruguay,Primera División,2023,Cerro,Cerro Largo,1,1
+Uruguay,Primera División,2023,Cerro,Racing de Montevideo,3,0
+Uruguay,Primera División,2023,Cerro,Montevideo City Torque,3,1
+Uruguay,Primera División,2023,Cerro,Fénix,2,0
+Uruguay,Primera División,2023,Cerro,Progreso,2,0
+Uruguay,Primera División,2023,Cerro,Juventud de Las Piedras,1,0
+Uruguay,Primera División,2023,Cerro,Plaza Colonia,2,1
+Uruguay,Primera División,2023,Fénix,Peñarol,0,1
+Uruguay,Primera División,2023,Fénix,Nacional,1,3
+Uruguay,Primera División,2023,Fénix,Defensor Sporting,2,1
+Uruguay,Primera División,2023,Fénix,Liverpool de Montevideo,1,2
+Uruguay,Primera División,2023,Fénix,Danubio,1,0
+Uruguay,Primera División,2023,Fénix,River Plate Montevideo,1,0
+Uruguay,Primera División,2023,Fénix,Montevideo Wanderers,2,2
+Uruguay,Primera División,2023,Fénix,Boston River,1,0
+Uruguay,Primera División,2023,Fénix,Cerro Largo,1,1
+Uruguay,Primera División,2023,Fénix,Racing de Montevideo,1,0
+Uruguay,Primera División,2023,Fénix,Montevideo City Torque,0,0
+Uruguay,Primera División,2023,Fénix,Cerro,0,0
+Uruguay,Primera División,2023,Fénix,Progreso,0,0
+Uruguay,Primera División,2023,Fénix,Juventud de Las Piedras,0,0
+Uruguay,Primera División,2023,Fénix,Plaza Colonia,1,1
+Uruguay,Primera División,2023,Progreso,Peñarol,1,3
+Uruguay,Primera División,2023,Progreso,Nacional,3,4
+Uruguay,Primera División,2023,Progreso,Defensor Sporting,0,2
+Uruguay,Primera División,2023,Progreso,Liverpool de Montevideo,0,2
+Uruguay,Primera División,2023,Progreso,Danubio,0,1
+Uruguay,Primera División,2023,Progreso,River Plate Montevideo,1,0
+Uruguay,Primera División,2023,Progreso,Montevideo Wanderers,2,2
+Uruguay,Primera División,2023,Progreso,Boston River,2,4
+Uruguay,Primera División,2023,Progreso,Cerro Largo,0,2
+Uruguay,Primera División,2023,Progreso,Racing de Montevideo,5,2
+Uruguay,Primera División,2023,Progreso,Montevideo City Torque,2,3
+Uruguay,Primera División,2023,Progreso,Cerro,0,0
+Uruguay,Primera División,2023,Progreso,Fénix,2,4
+Uruguay,Primera División,2023,Progreso,Juventud de Las Piedras,3,1
+Uruguay,Primera División,2023,Progreso,Plaza Colonia,2,2
+Uruguay,Primera División,2023,Juventud de Las Piedras,Peñarol,0,5
+Uruguay,Primera División,2023,Juventud de Las Piedras,Nacional,1,1
+Uruguay,Primera División,2023,Juventud de Las Piedras,Defensor Sporting,0,3
+Uruguay,Primera División,2023,Juventud de Las Piedras,Liverpool de Montevideo,3,0
+Uruguay,Primera División,2023,Juventud de Las Piedras,Danubio,0,5
+Uruguay,Primera División,2023,Juventud de Las Piedras,River Plate Montevideo,1,3
+Uruguay,Primera División,2023,Juventud de Las Piedras,Montevideo Wanderers,0,1
+Uruguay,Primera División,2023,Juventud de Las Piedras,Boston River,3,2
+Uruguay,Primera División,2023,Juventud de Las Piedras,Cerro Largo,1,1
+Uruguay,Primera División,2023,Juventud de Las Piedras,Racing de Montevideo,0,1
+Uruguay,Primera División,2023,Juventud de Las Piedras,Montevideo City Torque,1,2
+Uruguay,Primera División,2023,Juventud de Las Piedras,Cerro,4,0
+Uruguay,Primera División,2023,Juventud de Las Piedras,Fénix,0,2
+Uruguay,Primera División,2023,Juventud de Las Piedras,Progreso,0,2
+Uruguay,Primera División,2023,Juventud de Las Piedras,Plaza Colonia,3,1
+Uruguay,Primera División,2023,Plaza Colonia,Peñarol,0,1
+Uruguay,Primera División,2023,Plaza Colonia,Nacional,0,4
+Uruguay,Primera División,2023,Plaza Colonia,Defensor Sporting,1,1
+Uruguay,Primera División,2023,Plaza Colonia,Liverpool de Montevideo,0,1
+Uruguay,Primera División,2023,Plaza Colonia,Danubio,1,0
+Uruguay,Primera División,2023,Plaza Colonia,River Plate Montevideo,2,2
+Uruguay,Primera División,2023,Plaza Colonia,Montevideo Wanderers,0,1
+Uruguay,Primera División,2023,Plaza Colonia,Boston River,0,2
+Uruguay,Primera División,2023,Plaza Colonia,Cerro Largo,2,2
+Uruguay,Primera División,2023,Plaza Colonia,Racing de Montevideo,3,1
+Uruguay,Primera División,2023,Plaza Colonia,Montevideo City Torque,1,2
+Uruguay,Primera División,2023,Plaza Colonia,Cerro,3,0
+Uruguay,Primera División,2023,Plaza Colonia,Fénix,3,1
+Uruguay,Primera División,2023,Plaza Colonia,Progreso,1,0
+Uruguay,Primera División,2023,Plaza Colonia,Juventud de Las Piedras,2,1
+Uruguay,Primera División,2024,Peñarol,Nacional,1,2
+Uruguay,Primera División,2024,Peñarol,Defensor Sporting,0,1
+Uruguay,Primera División,2024,Peñarol,Liverpool de Montevideo,3,0
+Uruguay,Primera División,2024,Peñarol,Danubio,5,0
+Uruguay,Primera División,2024,Peñarol,River Plate Montevideo,2,0
+Uruguay,Primera División,2024,Peñarol,Montevideo Wanderers,1,0
+Uruguay,Primera División,2024,Peñarol,Boston River,3,0
+Uruguay,Primera División,2024,Peñarol,Cerro Largo,2,0
+Uruguay,Primera División,2024,Peñarol,Racing de Montevideo,4,1
+Uruguay,Primera División,2024,Peñarol,Montevideo City Torque,2,0
+Uruguay,Primera División,2024,Peñarol,Cerro,5,0
+Uruguay,Primera División,2024,Peñarol,Fénix,5,1
+Uruguay,Primera División,2024,Peñarol,Progreso,2,0
+Uruguay,Primera División,2024,Peñarol,Juventud de Las Piedras,3,1
+Uruguay,Primera División,2024,Peñarol,Plaza Colonia,6,0
+Uruguay,Primera División,2024,Nacional,Peñarol,0,2
+Uruguay,Primera División,2024,Nacional,Defensor Sporting,2,2
+Uruguay,Primera División,2024,Nacional,Liverpool de Montevideo,2,2
+Uruguay,Primera División,2024,Nacional,Danubio,3,1
+Uruguay,Primera División,2024,Nacional,River Plate Montevideo,2,1
+Uruguay,Primera División,2024,Nacional,Montevideo Wanderers,1,0
+Uruguay,Primera División,2024,Nacional,Boston River,2,0
+Uruguay,Primera División,2024,Nacional,Cerro Largo,0,0
+Uruguay,Primera División,2024,Nacional,Racing de Montevideo,5,0
+Uruguay,Primera División,2024,Nacional,Montevideo City Torque,1,1
+Uruguay,Primera División,2024,Nacional,Cerro,2,0
+Uruguay,Primera División,2024,Nacional,Fénix,1,0
+Uruguay,Primera División,2024,Nacional,Progreso,4,0
+Uruguay,Primera División,2024,Nacional,Juventud de Las Piedras,0,1
+Uruguay,Primera División,2024,Nacional,Plaza Colonia,3,1
+Uruguay,Primera División,2024,Defensor Sporting,Peñarol,3,3
+Uruguay,Primera División,2024,Defensor Sporting,Nacional,1,1
+Uruguay,Primera División,2024,Defensor Sporting,Liverpool de Montevideo,2,1
+Uruguay,Primera División,2024,Defensor Sporting,Danubio,4,1
+Uruguay,Primera División,2024,Defensor Sporting,River Plate Montevideo,4,1
+Uruguay,Primera División,2024,Defensor Sporting,Montevideo Wanderers,1,1
+Uruguay,Primera División,2024,Defensor Sporting,Boston River,4,0
+Uruguay,Primera División,2024,Defensor Sporting,Cerro Largo,3,0
+Uruguay,Primera División,2024,Defensor Sporting,Racing de Montevideo,1,1
+Uruguay,Primera División,2024,Defensor Sporting,Montevideo City Torque,1,2
+Uruguay,Primera División,2024,Defensor Sporting,Cerro,2,1
+Uruguay,Primera División,2024,Defensor Sporting,Fénix,0,1
+Uruguay,Primera División,2024,Defensor Sporting,Progreso,1,0
+Uruguay,Primera División,2024,Defensor Sporting,Juventud de Las Piedras,2,1
+Uruguay,Primera División,2024,Defensor Sporting,Plaza Colonia,0,0
+Uruguay,Primera División,2024,Liverpool de Montevideo,Peñarol,0,1
+Uruguay,Primera División,2024,Liverpool de Montevideo,Nacional,0,1
+Uruguay,Primera División,2024,Liverpool de Montevideo,Defensor Sporting,1,1
+Uruguay,Primera División,2024,Liverpool de Montevideo,Danubio,0,0
+Uruguay,Primera División,2024,Liverpool de Montevideo,River Plate Montevideo,2,1
+Uruguay,Primera División,2024,Liverpool de Montevideo,Montevideo Wanderers,1,0
+Uruguay,Primera División,2024,Liverpool de Montevideo,Boston River,1,0
+Uruguay,Primera División,2024,Liverpool de Montevideo,Cerro Largo,3,1
+Uruguay,Primera División,2024,Liverpool de Montevideo,Racing de Montevideo,4,0
+Uruguay,Primera División,2024,Liverpool de Montevideo,Montevideo City Torque,2,1
+Uruguay,Primera División,2024,Liverpool de Montevideo,Cerro,1,0
+Uruguay,Primera División,2024,Liverpool de Montevideo,Fénix,0,1
+Uruguay,Primera División,2024,Liverpool de Montevideo,Progreso,1,2
+Uruguay,Primera División,2024,Liverpool de Montevideo,Juventud de Las Piedras,3,1
+Uruguay,Primera División,2024,Liverpool de Montevideo,Plaza Colonia,0,0
+Uruguay,Primera División,2024,Danubio,Peñarol,0,3
+Uruguay,Primera División,2024,Danubio,Nacional,1,0
+Uruguay,Primera División,2024,Danubio,Defensor Sporting,3,1
+Uruguay,Primera División,2024,Danubio,Liverpool de Montevideo,1,1
+Uruguay,Primera División,2024,Danubio,River Plate Montevideo,0,2
+Uruguay,Primera División,2024,Danubio,Montevideo Wanderers,5,1
+Uruguay,Primera División,2024,Danubio,Boston River,2,0
+Uruguay,Primera División,2024,Danubio,Cerro Largo,2,1
+Uruguay,Primera División,2024,Danubio,Racing de Montevideo,1,3
+Uruguay,Primera División,2024,Danubio,Montevideo City Torque,2,0
+Uruguay,Primera División,2024,Danubio,Cerro,2,0
+Uruguay,Primera División,2024,Danubio,Fénix,1,0
+Uruguay,Primera División,2024,Danubio,Progreso,5,1
+Uruguay,Primera División,2024,Danubio,Juventud de Las Piedras,1,1
+Uruguay,Primera División,2024,Danubio,Plaza Colonia,2,0
+Uruguay,Primera División,2024,River Plate Montevideo,Peñarol,3,1
+Uruguay,Primera División,2024,River Plate Montevideo,Nacional,0,3
+Uruguay,Primera División,2024,River Plate Montevideo,Defensor Sporting,3,0
+Uruguay,Primera División,2024,River Plate Montevideo,Liverpool de Montevideo,2,1
+Uruguay,Primera División,2024,River Plate Montevideo,Danubio,5,0
+Uruguay,Primera División,2024,River Plate Montevideo,Montevideo Wanderers,3,0
+Uruguay,Primera División,2024,River Plate Montevideo,Boston River,2,2
+Uruguay,Primera División,2024,River Plate Montevideo,Cerro Largo,1,1
+Uruguay,Primera División,2024,River Plate Montevideo,Racing de Montevideo,3,2
+Uruguay,Primera División,2024,River Plate Montevideo,Montevideo City Torque,3,0
+Uruguay,Primera División,2024,River Plate Montevideo,Cerro,2,0
+Uruguay,Primera División,2024,River Plate Montevideo,Fénix,1,2
+Uruguay,Primera División,2024,River Plate Montevideo,Progreso,0,0
+Uruguay,Primera División,2024,River Plate Montevideo,Juventud de Las Piedras,2,0
+Uruguay,Primera División,2024,River Plate Montevideo,Plaza Colonia,3,0
+Uruguay,Primera División,2024,Montevideo Wanderers,Peñarol,2,2
+Uruguay,Primera División,2024,Montevideo Wanderers,Nacional,1,2
+Uruguay,Primera División,2024,Montevideo Wanderers,Defensor Sporting,1,2
+Uruguay,Primera División,2024,Montevideo Wanderers,Liverpool de Montevideo,1,1
+Uruguay,Primera División,2024,Montevideo Wanderers,Danubio,2,2
+Uruguay,Primera División,2024,Montevideo Wanderers,River Plate Montevideo,4,1
+Uruguay,Primera División,2024,Montevideo Wanderers,Boston River,2,1
+Uruguay,Primera División,2024,Montevideo Wanderers,Cerro Largo,2,1
+Uruguay,Primera División,2024,Montevideo Wanderers,Racing de Montevideo,2,1
+Uruguay,Primera División,2024,Montevideo Wanderers,Montevideo City Torque,1,0
+Uruguay,Primera División,2024,Montevideo Wanderers,Cerro,1,0
+Uruguay,Primera División,2024,Montevideo Wanderers,Fénix,5,0
+Uruguay,Primera División,2024,Montevideo Wanderers,Progreso,6,0
+Uruguay,Primera División,2024,Montevideo Wanderers,Juventud de Las Piedras,1,0
+Uruguay,Primera División,2024,Montevideo Wanderers,Plaza Colonia,3,0
+Uruguay,Primera División,2024,Boston River,Peñarol,0,1
+Uruguay,Primera División,2024,Boston River,Nacional,0,2
+Uruguay,Primera División,2024,Boston River,Defensor Sporting,1,1
+Uruguay,Primera División,2024,Boston River,Liverpool de Montevideo,0,1
+Uruguay,Primera División,2024,Boston River,Danubio,2,2
+Uruguay,Primera División,2024,Boston River,River Plate Montevideo,0,1
+Uruguay,Primera División,2024,Boston River,Montevideo Wanderers,0,3
+Uruguay,Primera División,2024,Boston River,Cerro Largo,1,0
+Uruguay,Primera División,2024,Boston River,Racing de Montevideo,0,0
+Uruguay,Primera División,2024,Boston River,Montevideo City Torque,0,3
+Uruguay,Primera División,2024,Boston River,Cerro,1,1
+Uruguay,Primera División,2024,Boston River,Fénix,3,1
+Uruguay,Primera División,2024,Boston River,Progreso,2,0
+Uruguay,Primera División,2024,Boston River,Juventud de Las Piedras,4,1
+Uruguay,Primera División,2024,Boston River,Plaza Colonia,0,0
+Uruguay,Primera División,2024,Cerro Largo,Peñarol,0,1
+Uruguay,Primera División,2024,Cerro Largo,Nacional,1,1
+Uruguay,Primera División,2024,Cerro Largo,Defensor Sporting,2,0
+Uruguay,Primera División,2024,Cerro Largo,Liverpool de Montevideo,1,1
+Uruguay,Primera División,2024,Cerro Largo,Danubio,1,1
+Uruguay,Primera División,2024,Cerro Largo,River Plate Montevideo,2,1
+Uruguay,Primera División,2024,Cerro Largo,Montevideo Wanderers,2,0
+Uruguay,Primera División,2024,Cerro Largo,Boston River,1,0
+Uruguay,Primera División,2024,Cerro Largo,Racing de Montevideo,1,1
+Uruguay,Primera División,2024,Cerro Largo,Montevideo City Torque,2,1
+Uruguay,Primera División,2024,Cerro Largo,Cerro,3,1
+Uruguay,Primera División,2024,Cerro Largo,Fénix,2,0
+Uruguay,Primera División,2024,Cerro Largo,Progreso,2,2
+Uruguay,Primera División,2024,Cerro Largo,Juventud de Las Piedras,1,1
+Uruguay,Primera División,2024,Cerro Largo,Plaza Colonia,2,0
+Uruguay,Primera División,2024,Racing de Montevideo,Peñarol,0,1
+Uruguay,Primera División,2024,Racing de Montevideo,Nacional,0,0
+Uruguay,Primera División,2024,Racing de Montevideo,Defensor Sporting,1,2
+Uruguay,Primera División,2024,Racing de Montevideo,Liverpool de Montevideo,1,1
+Uruguay,Primera División,2024,Racing de Montevideo,Danubio,2,0
+Uruguay,Primera División,2024,Racing de Montevideo,River Plate Montevideo,2,0
+Uruguay,Primera División,2024,Racing de Montevideo,Montevideo Wanderers,0,1
+Uruguay,Primera División,2024,Racing de Montevideo,Boston River,3,0
+Uruguay,Primera División,2024,Racing de Montevideo,Cerro Largo,3,0
+Uruguay,Primera División,2024,Racing de Montevideo,Montevideo City Torque,2,1
+Uruguay,Primera División,2024,Racing de Montevideo,Cerro,2,3
+Uruguay,Primera División,2024,Racing de Montevideo,Fénix,3,2
+Uruguay,Primera División,2024,Racing de Montevideo,Progreso,3,0
+Uruguay,Primera División,2024,Racing de Montevideo,Juventud de Las Piedras,3,2
+Uruguay,Primera División,2024,Racing de Montevideo,Plaza Colonia,2,0
+Uruguay,Primera División,2024,Montevideo City Torque,Peñarol,0,3
+Uruguay,Primera División,2024,Montevideo City Torque,Nacional,1,3
+Uruguay,Primera División,2024,Montevideo City Torque,Defensor Sporting,0,2
+Uruguay,Primera División,2024,Montevideo City Torque,Liverpool de Montevideo,0,1
+Uruguay,Primera División,2024,Montevideo City Torque,Danubio,2,0
+Uruguay,Primera División,2024,Montevideo City Torque,River Plate Montevideo,4,1
+Uruguay,Primera División,2024,Montevideo City Torque,Montevideo Wanderers,1,0
+Uruguay,Primera División,2024,Montevideo City Torque,Boston River,1,3
+Uruguay,Primera División,2024,Montevideo City Torque,Cerro Largo,1,1
+Uruguay,Primera División,2024,Montevideo City Torque,Racing de Montevideo,1,0
+Uruguay,Primera División,2024,Montevideo City Torque,Cerro,1,3
+Uruguay,Primera División,2024,Montevideo City Torque,Fénix,1,0
+Uruguay,Primera División,2024,Montevideo City Torque,Progreso,1,2
+Uruguay,Primera División,2024,Montevideo City Torque,Juventud de Las Piedras,1,0
+Uruguay,Primera División,2024,Montevideo City Torque,Plaza Colonia,2,1
+Uruguay,Primera División,2024,Cerro,Peñarol,0,4
+Uruguay,Primera División,2024,Cerro,Nacional,0,2
+Uruguay,Primera División,2024,Cerro,Defensor Sporting,1,0
+Uruguay,Primera División,2024,Cerro,Liverpool de Montevideo,1,0
+Uruguay,Primera División,2024,Cerro,Danubio,1,3
+Uruguay,Primera División,2024,Cerro,River Plate Montevideo,2,2
+Uruguay,Primera División,2024,Cerro,Montevideo Wanderers,1,0
+Uruguay,Primera División,2024,Cerro,Boston River,1,0
+Uruguay,Primera División,2024,Cerro,Cerro Largo,1,0
+Uruguay,Primera División,2024,Cerro,Racing de Montevideo,2,3
+Uruguay,Primera División,2024,Cerro,Montevideo City Torque,2,1
+Uruguay,Primera División,2024,Cerro,Fénix,1,2
+Uruguay,Primera División,2024,Cerro,Progreso,1,1
+Uruguay,Primera División,2024,Cerro,Juventud de Las Piedras,2,1
+Uruguay,Primera División,2024,Cerro,Plaza Colonia,1,1
+Uruguay,Primera División,2024,Fénix,Peñarol,1,3
+Uruguay,Primera División,2024,Fénix,Nacional,2,2
+Uruguay,Primera División,2024,Fénix,Defensor Sporting,1,1
+Uruguay,Primera División,2024,Fénix,Liverpool de Montevideo,1,1
+Uruguay,Primera División,2024,Fénix,Danubio,1,1
+Uruguay,Primera División,2024,Fénix,River Plate Montevideo,1,4
+Uruguay,Primera División,2024,Fénix,Montevideo Wanderers,0,1
+Uruguay,Primera División,2024,Fénix,Boston River,1,3
+Uruguay,Primera División,2024,Fénix,Cerro Largo,4,1
+Uruguay,Primera División,2024,Fénix,Racing de Montevideo,2,0
+Uruguay,Primera División,2024,Fénix,Montevideo City Torque,4,2
+Uruguay,Primera División,2024,Fénix,Cerro,1,0
+Uruguay,Primera División,2024,Fénix,Progreso,0,0
+Uruguay,Primera División,2024,Fénix,Juventud de Las Piedras,1,0
+Uruguay,Primera División,2024,Fénix,Plaza Colonia,3,2
+Uruguay,Primera División,2024,Progreso,Peñarol,1,0
+Uruguay,Primera División,2024,Progreso,Nacional,2,5
+Uruguay,Primera División,2024,Progreso,Defensor Sporting,0,2
+Uruguay,Primera División,2024,Progreso,Liverpool de Montevideo,1,2
+Uruguay,Primera División,2024,Progreso,Danubio,2,4
+Uruguay,Primera División,2024,Progreso,River Plate Montevideo,2,1
+Uruguay,Primera División,2024,Progreso,Montevideo Wanderers,4,0
+Uruguay,Primera División,2024,Progreso,Boston River,2,1
+Uruguay,Primera División,2024,Progreso,Cerro Largo,4,0
+Uruguay,Primera División,2024,Progreso,Racing de Montevideo,2,1
+Uruguay,Primera División,2024,Progreso,Montevideo City Torque,2,3
+Uruguay,Primera División,2024,Progreso,Cerro,1,1
+Uruguay,Primera División,2024,Progreso,Fénix,2,1
+Uruguay,Primera División,2024,Progreso,Juventud de Las Piedras,2,0
+Uruguay,Primera División,2024,Progreso,Plaza Colonia,1,1
+Uruguay,Primera División,2024,Juventud de Las Piedras,Peñarol,0,3
+Uruguay,Primera División,2024,Juventud de Las Piedras,Nacional,2,3
+Uruguay,Primera División,2024,Juventud de Las Piedras,Defensor Sporting,0,3
+Uruguay,Primera División,2024,Juventud de Las Piedras,Liverpool de Montevideo,1,2
+Uruguay,Primera División,2024,Juventud de Las Piedras,Danubio,0,1
+Uruguay,Primera División,2024,Juventud de Las Piedras,River Plate Montevideo,2,2
+Uruguay,Primera División,2024,Juventud de Las Piedras,Montevideo Wanderers,3,0
+Uruguay,Primera División,2024,Juventud de Las Piedras,Boston River,0,0
+Uruguay,Primera División,2024,Juventud de Las Piedras,Cerro Largo,0,0
+Uruguay,Primera División,2024,Juventud de Las Piedras,Racing de Montevideo,2,0
+Uruguay,Primera División,2024,Juventud de Las Piedras,Montevideo City Torque,1,0
+Uruguay,Primera División,2024,Juventud de Las Piedras,Cerro,4,0
+Uruguay,Primera División,2024,Juventud de Las Piedras,Fénix,3,2
+Uruguay,Primera División,2024,Juventud de Las Piedras,Progreso,2,0
+Uruguay,Primera División,2024,Juventud de Las Piedras,Plaza Colonia,2,1
+Uruguay,Primera División,2024,Plaza Colonia,Peñarol,1,4
+Uruguay,Primera División,2024,Plaza Colonia,Nacional,0,3
+Uruguay,Primera División,2024,Plaza Colonia,Defensor Sporting,0,0
+Uruguay,Primera División,2024,Plaza Colonia,Liverpool de Montevideo,0,1
+Uruguay,Primera División,2024,Plaza Colonia,Danubio,0,1
+Uruguay,Primera División,2024,Plaza Colonia,River Plate Montevideo,0,2
+Uruguay,Primera División,2024,Plaza Colonia,Montevideo Wanderers,1,1
+Uruguay,Primera División,2024,Plaza Colonia,Boston River,0,3
+Uruguay,Primera División,2024,Plaza Colonia,Cerro Largo,0,0
+Uruguay,Primera División,2024,Plaza Colonia,Racing de Montevideo,2,2
+Uruguay,Primera División,2024,Plaza Colonia,Montevideo City Torque,4,3
+Uruguay,Primera División,2024,Plaza Colonia,Cerro,3,1
+Uruguay,Primera División,2024,Plaza Colonia,Fénix,3,2
+Uruguay,Primera División,2024,Plaza Colonia,Progreso,3,0
+Uruguay,Primera División,2024,Plaza Colonia,Juventud de Las Piedras,0,2
+Uruguay,Primera División,2025,Peñarol,Nacional,1,0
+Uruguay,Primera División,2025,Peñarol,Defensor Sporting,3,0
+Uruguay,Primera División,2025,Peñarol,Liverpool de Montevideo,3,0
+Uruguay,Primera División,2025,Peñarol,Danubio,2,0
+Uruguay,Primera División,2025,Peñarol,River Plate Montevideo,3,0
+Uruguay,Primera División,2025,Peñarol,Montevideo Wanderers,1,0
+Uruguay,Primera División,2025,Peñarol,Boston River,3,1
+Uruguay,Primera División,2025,Peñarol,Cerro Largo,2,0
+Uruguay,Primera División,2025,Peñarol,Racing de Montevideo,0,0
+Uruguay,Primera División,2025,Peñarol,Montevideo City Torque,2,0
+Uruguay,Primera División,2025,Peñarol,Cerro,2,0
+Uruguay,Primera División,2025,Peñarol,Fénix,2,0
+Uruguay,Primera División,2025,Peñarol,Progreso,3,1
+Uruguay,Primera División,2025,Peñarol,Juventud de Las Piedras,2,0
+Uruguay,Primera División,2025,Peñarol,Plaza Colonia,1,0
+Uruguay,Primera División,2025,Nacional,Peñarol,2,0
+Uruguay,Primera División,2025,Nacional,Defensor Sporting,2,0
+Uruguay,Primera División,2025,Nacional,Liverpool de Montevideo,3,0
+Uruguay,Primera División,2025,Nacional,Danubio,0,0
+Uruguay,Primera División,2025,Nacional,River Plate Montevideo,3,0
+Uruguay,Primera División,2025,Nacional,Montevideo Wanderers,0,0
+Uruguay,Primera División,2025,Nacional,Boston River,5,0
+Uruguay,Primera División,2025,Nacional,Cerro Largo,2,0
+Uruguay,Primera División,2025,Nacional,Racing de Montevideo,0,0
+Uruguay,Primera División,2025,Nacional,Montevideo City Torque,0,0
+Uruguay,Primera División,2025,Nacional,Cerro,4,0
+Uruguay,Primera División,2025,Nacional,Fénix,6,0
+Uruguay,Primera División,2025,Nacional,Progreso,4,0
+Uruguay,Primera División,2025,Nacional,Juventud de Las Piedras,4,0
+Uruguay,Primera División,2025,Nacional,Plaza Colonia,0,0
+Uruguay,Primera División,2025,Defensor Sporting,Peñarol,0,2
+Uruguay,Primera División,2025,Defensor Sporting,Nacional,0,1
+Uruguay,Primera División,2025,Defensor Sporting,Liverpool de Montevideo,4,1
+Uruguay,Primera División,2025,Defensor Sporting,Danubio,1,0
+Uruguay,Primera División,2025,Defensor Sporting,River Plate Montevideo,0,0
+Uruguay,Primera División,2025,Defensor Sporting,Montevideo Wanderers,2,1
+Uruguay,Primera División,2025,Defensor Sporting,Boston River,0,0
+Uruguay,Primera División,2025,Defensor Sporting,Cerro Largo,5,2
+Uruguay,Primera División,2025,Defensor Sporting,Racing de Montevideo,2,0
+Uruguay,Primera División,2025,Defensor Sporting,Montevideo City Torque,2,1
+Uruguay,Primera División,2025,Defensor Sporting,Cerro,0,1
+Uruguay,Primera División,2025,Defensor Sporting,Fénix,1,0
+Uruguay,Primera División,2025,Defensor Sporting,Progreso,4,0
+Uruguay,Primera División,2025,Defensor Sporting,Juventud de Las Piedras,1,1
+Uruguay,Primera División,2025,Defensor Sporting,Plaza Colonia,3,0
+Uruguay,Primera División,2025,Liverpool de Montevideo,Peñarol,2,0
+Uruguay,Primera División,2025,Liverpool de Montevideo,Nacional,1,0
+Uruguay,Primera División,2025,Liverpool de Montevideo,Defensor Sporting,1,0
+Uruguay,Primera División,2025,Liverpool de Montevideo,Danubio,1,2
+Uruguay,Primera División,2025,Liverpool de Montevideo,River Plate Montevideo,2,1
+Uruguay,Primera División,2025,Liverpool de Montevideo,Montevideo Wanderers,2,0
+Uruguay,Primera División,2025,Liverpool de Montevideo,Boston River,4,0
+Uruguay,Primera División,2025,Liverpool de Montevideo,Cerro Largo,2,1
+Uruguay,Primera División,2025,Liverpool de Montevideo,Racing de Montevideo,2,0
+Uruguay,Primera División,2025,Liverpool de Montevideo,Montevideo City Torque,2,0
+Uruguay,Primera División,2025,Liverpool de Montevideo,Cerro,3,0
+Uruguay,Primera División,2025,Liverpool de Montevideo,Fénix,1,2
+Uruguay,Primera División,2025,Liverpool de Montevideo,Progreso,4,2
+Uruguay,Primera División,2025,Liverpool de Montevideo,Juventud de Las Piedras,0,0
+Uruguay,Primera División,2025,Liverpool de Montevideo,Plaza Colonia,4,0
+Uruguay,Primera División,2025,Danubio,Peñarol,1,4
+Uruguay,Primera División,2025,Danubio,Nacional,1,1
+Uruguay,Primera División,2025,Danubio,Defensor Sporting,1,0
+Uruguay,Primera División,2025,Danubio,Liverpool de Montevideo,0,2
+Uruguay,Primera División,2025,Danubio,River Plate Montevideo,2,2
+Uruguay,Primera División,2025,Danubio,Montevideo Wanderers,1,2
+Uruguay,Primera División,2025,Danubio,Boston River,3,0
+Uruguay,Primera División,2025,Danubio,Cerro Largo,0,1
+Uruguay,Primera División,2025,Danubio,Racing de Montevideo,3,1
+Uruguay,Primera División,2025,Danubio,Montevideo City Torque,2,0
+Uruguay,Primera División,2025,Danubio,Cerro,4,0
+Uruguay,Primera División,2025,Danubio,Fénix,0,0
+Uruguay,Primera División,2025,Danubio,Progreso,0,1
+Uruguay,Primera División,2025,Danubio,Juventud de Las Piedras,2,1
+Uruguay,Primera División,2025,Danubio,Plaza Colonia,5,3
+Uruguay,Primera División,2025,River Plate Montevideo,Peñarol,1,2
+Uruguay,Primera División,2025,River Plate Montevideo,Nacional,2,5
+Uruguay,Primera División,2025,River Plate Montevideo,Defensor Sporting,0,2
+Uruguay,Primera División,2025,River Plate Montevideo,Liverpool de Montevideo,2,0
+Uruguay,Primera División,2025,River Plate Montevideo,Danubio,1,0
+Uruguay,Primera División,2025,River Plate Montevideo,Montevideo Wanderers,3,0
+Uruguay,Primera División,2025,River Plate Montevideo,Boston River,3,0
+Uruguay,Primera División,2025,River Plate Montevideo,Cerro Largo,3,0
+Uruguay,Primera División,2025,River Plate Montevideo,Racing de Montevideo,1,1
+Uruguay,Primera División,2025,River Plate Montevideo,Montevideo City Torque,2,2
+Uruguay,Primera División,2025,River Plate Montevideo,Cerro,3,0
+Uruguay,Primera División,2025,River Plate Montevideo,Fénix,2,3
+Uruguay,Primera División,2025,River Plate Montevideo,Progreso,1,0
+Uruguay,Primera División,2025,River Plate Montevideo,Juventud de Las Piedras,3,0
+Uruguay,Primera División,2025,River Plate Montevideo,Plaza Colonia,2,1
+Uruguay,Primera División,2025,Montevideo Wanderers,Peñarol,0,1
+Uruguay,Primera División,2025,Montevideo Wanderers,Nacional,3,2
+Uruguay,Primera División,2025,Montevideo Wanderers,Defensor Sporting,3,1
+Uruguay,Primera División,2025,Montevideo Wanderers,Liverpool de Montevideo,0,1
+Uruguay,Primera División,2025,Montevideo Wanderers,Danubio,1,0
+Uruguay,Primera División,2025,Montevideo Wanderers,River Plate Montevideo,3,2
+Uruguay,Primera División,2025,Montevideo Wanderers,Boston River,1,2
+Uruguay,Primera División,2025,Montevideo Wanderers,Cerro Largo,3,1
+Uruguay,Primera División,2025,Montevideo Wanderers,Racing de Montevideo,0,1
+Uruguay,Primera División,2025,Montevideo Wanderers,Montevideo City Torque,1,0
+Uruguay,Primera División,2025,Montevideo Wanderers,Cerro,4,3
+Uruguay,Primera División,2025,Montevideo Wanderers,Fénix,4,0
+Uruguay,Primera División,2025,Montevideo Wanderers,Progreso,1,0
+Uruguay,Primera División,2025,Montevideo Wanderers,Juventud de Las Piedras,0,1
+Uruguay,Primera División,2025,Montevideo Wanderers,Plaza Colonia,3,0
+Uruguay,Primera División,2025,Boston River,Peñarol,0,2
+Uruguay,Primera División,2025,Boston River,Nacional,0,2
+Uruguay,Primera División,2025,Boston River,Defensor Sporting,2,0
+Uruguay,Primera División,2025,Boston River,Liverpool de Montevideo,0,1
+Uruguay,Primera División,2025,Boston River,Danubio,2,5
+Uruguay,Primera División,2025,Boston River,River Plate Montevideo,2,2
+Uruguay,Primera División,2025,Boston River,Montevideo Wanderers,0,0
+Uruguay,Primera División,2025,Boston River,Cerro Largo,2,0
+Uruguay,Primera División,2025,Boston River,Racing de Montevideo,1,3
+Uruguay,Primera División,2025,Boston River,Montevideo City Torque,1,1
+Uruguay,Primera División,2025,Boston River,Cerro,5,0
+Uruguay,Primera División,2025,Boston River,Fénix,1,0
+Uruguay,Primera División,2025,Boston River,Progreso,3,0
+Uruguay,Primera División,2025,Boston River,Juventud de Las Piedras,0,0
+Uruguay,Primera División,2025,Boston River,Plaza Colonia,4,0
+Uruguay,Primera División,2025,Cerro Largo,Peñarol,0,2
+Uruguay,Primera División,2025,Cerro Largo,Nacional,0,1
+Uruguay,Primera División,2025,Cerro Largo,Defensor Sporting,0,0
+Uruguay,Primera División,2025,Cerro Largo,Liverpool de Montevideo,1,2
+Uruguay,Primera División,2025,Cerro Largo,Danubio,2,1
+Uruguay,Primera División,2025,Cerro Largo,River Plate Montevideo,1,2
+Uruguay,Primera División,2025,Cerro Largo,Montevideo Wanderers,6,0
+Uruguay,Primera División,2025,Cerro Largo,Boston River,3,1
+Uruguay,Primera División,2025,Cerro Largo,Racing de Montevideo,2,1
+Uruguay,Primera División,2025,Cerro Largo,Montevideo City Torque,1,2
+Uruguay,Primera División,2025,Cerro Largo,Cerro,3,1
+Uruguay,Primera División,2025,Cerro Largo,Fénix,2,1
+Uruguay,Primera División,2025,Cerro Largo,Progreso,1,1
+Uruguay,Primera División,2025,Cerro Largo,Juventud de Las Piedras,3,2
+Uruguay,Primera División,2025,Cerro Largo,Plaza Colonia,1,0
+Uruguay,Primera División,2025,Racing de Montevideo,Peñarol,0,2
+Uruguay,Primera División,2025,Racing de Montevideo,Nacional,1,2
+Uruguay,Primera División,2025,Racing de Montevideo,Defensor Sporting,1,1
+Uruguay,Primera División,2025,Racing de Montevideo,Liverpool de Montevideo,2,1
+Uruguay,Primera División,2025,Racing de Montevideo,Danubio,1,3
+Uruguay,Primera División,2025,Racing de Montevideo,River Plate Montevideo,1,3
+Uruguay,Primera División,2025,Racing de Montevideo,Montevideo Wanderers,3,0
+Uruguay,Primera División,2025,Racing de Montevideo,Boston River,0,0
+Uruguay,Primera División,2025,Racing de Montevideo,Cerro Largo,1,0
+Uruguay,Primera División,2025,Racing de Montevideo,Montevideo City Torque,2,1
+Uruguay,Primera División,2025,Racing de Montevideo,Cerro,0,1
+Uruguay,Primera División,2025,Racing de Montevideo,Fénix,0,1
+Uruguay,Primera División,2025,Racing de Montevideo,Progreso,2,0
+Uruguay,Primera División,2025,Racing de Montevideo,Juventud de Las Piedras,0,3
+Uruguay,Primera División,2025,Racing de Montevideo,Plaza Colonia,1,0
+Uruguay,Primera División,2025,Montevideo City Torque,Peñarol,1,0
+Uruguay,Primera División,2025,Montevideo City Torque,Nacional,2,4
+Uruguay,Primera División,2025,Montevideo City Torque,Defensor Sporting,1,2
+Uruguay,Primera División,2025,Montevideo City Torque,Liverpool de Montevideo,3,2
+Uruguay,Primera División,2025,Montevideo City Torque,Danubio,3,1
+Uruguay,Primera División,2025,Montevideo City Torque,River Plate Montevideo,0,1
+Uruguay,Primera División,2025,Montevideo City Torque,Montevideo Wanderers,2,1
+Uruguay,Primera División,2025,Montevideo City Torque,Boston River,3,1
+Uruguay,Primera División,2025,Montevideo City Torque,Cerro Largo,1,1
+Uruguay,Primera División,2025,Montevideo City Torque,Racing de Montevideo,2,2
+Uruguay,Primera División,2025,Montevideo City Torque,Cerro,1,2
+Uruguay,Primera División,2025,Montevideo City Torque,Fénix,1,2
+Uruguay,Primera División,2025,Montevideo City Torque,Progreso,1,3
+Uruguay,Primera División,2025,Montevideo City Torque,Juventud de Las Piedras,1,0
+Uruguay,Primera División,2025,Montevideo City Torque,Plaza Colonia,2,0
+Uruguay,Primera División,2025,Cerro,Peñarol,1,4
+Uruguay,Primera División,2025,Cerro,Nacional,0,3
+Uruguay,Primera División,2025,Cerro,Defensor Sporting,1,0
+Uruguay,Primera División,2025,Cerro,Liverpool de Montevideo,0,1
+Uruguay,Primera División,2025,Cerro,Danubio,0,2
+Uruguay,Primera División,2025,Cerro,River Plate Montevideo,2,4
+Uruguay,Primera División,2025,Cerro,Montevideo Wanderers,3,0
+Uruguay,Primera División,2025,Cerro,Boston River,1,0
+Uruguay,Primera División,2025,Cerro,Cerro Largo,1,0
+Uruguay,Primera División,2025,Cerro,Racing de Montevideo,1,2
+Uruguay,Primera División,2025,Cerro,Montevideo City Torque,0,0
+Uruguay,Primera División,2025,Cerro,Fénix,2,1
+Uruguay,Primera División,2025,Cerro,Progreso,0,1
+Uruguay,Primera División,2025,Cerro,Juventud de Las Piedras,1,0
+Uruguay,Primera División,2025,Cerro,Plaza Colonia,2,0
+Uruguay,Primera División,2025,Fénix,Peñarol,2,2
+Uruguay,Primera División,2025,Fénix,Nacional,1,2
+Uruguay,Primera División,2025,Fénix,Defensor Sporting,0,2
+Uruguay,Primera División,2025,Fénix,Liverpool de Montevideo,3,0
+Uruguay,Primera División,2025,Fénix,Danubio,1,1
+Uruguay,Primera División,2025,Fénix,River Plate Montevideo,0,2
+Uruguay,Primera División,2025,Fénix,Montevideo Wanderers,4,1
+Uruguay,Primera División,2025,Fénix,Boston River,1,1
+Uruguay,Primera División,2025,Fénix,Cerro Largo,4,1
+Uruguay,Primera División,2025,Fénix,Racing de Montevideo,0,0
+Uruguay,Primera División,2025,Fénix,Montevideo City Torque,1,0
+Uruguay,Primera División,2025,Fénix,Cerro,0,0
+Uruguay,Primera División,2025,Fénix,Progreso,0,1
+Uruguay,Primera División,2025,Fénix,Juventud de Las Piedras,3,2
+Uruguay,Primera División,2025,Fénix,Plaza Colonia,0,0
+Uruguay,Primera División,2025,Progreso,Peñarol,0,3
+Uruguay,Primera División,2025,Progreso,Nacional,2,0
+Uruguay,Primera División,2025,Progreso,Defensor Sporting,0,0
+Uruguay,Primera División,2025,Progreso,Liverpool de Montevideo,2,2
+Uruguay,Primera División,2025,Progreso,Danubio,1,1
+Uruguay,Primera División,2025,Progreso,River Plate Montevideo,3,1
+Uruguay,Primera División,2025,Progreso,Montevideo Wanderers,0,1
+Uruguay,Primera División,2025,Progreso,Boston River,3,0
+Uruguay,Primera División,2025,Progreso,Cerro Largo,1,0
+Uruguay,Primera División,2025,Progreso,Racing de Montevideo,0,1
+Uruguay,Primera División,2025,Progreso,Montevideo City Torque,3,0
+Uruguay,Primera División,2025,Progreso,Cerro,3,0
+Uruguay,Primera División,2025,Progreso,Fénix,0,1
+Uruguay,Primera División,2025,Progreso,Juventud de Las Piedras,0,1
+Uruguay,Primera División,2025,Progreso,Plaza Colonia,1,0
+Uruguay,Primera División,2025,Juventud de Las Piedras,Peñarol,1,1
+Uruguay,Primera División,2025,Juventud de Las Piedras,Nacional,1,2
+Uruguay,Primera División,2025,Juventud de Las Piedras,Defensor Sporting,3,4
+Uruguay,Primera División,2025,Juventud de Las Piedras,Liverpool de Montevideo,1,2
+Uruguay,Primera División,2025,Juventud de Las Piedras,Danubio,0,2
+Uruguay,Primera División,2025,Juventud de Las Piedras,River Plate Montevideo,1,1
+Uruguay,Primera División,2025,Juventud de Las Piedras,Montevideo Wanderers,3,2
+Uruguay,Primera División,2025,Juventud de Las Piedras,Boston River,1,3
+Uruguay,Primera División,2025,Juventud de Las Piedras,Cerro Largo,0,1
+Uruguay,Primera División,2025,Juventud de Las Piedras,Racing de Montevideo,2,1
+Uruguay,Primera División,2025,Juventud de Las Piedras,Montevideo City Torque,1,0
+Uruguay,Primera División,2025,Juventud de Las Piedras,Cerro,1,2
+Uruguay,Primera División,2025,Juventud de Las Piedras,Fénix,0,1
+Uruguay,Primera División,2025,Juventud de Las Piedras,Progreso,2,1
+Uruguay,Primera División,2025,Juventud de Las Piedras,Plaza Colonia,2,0
+Uruguay,Primera División,2025,Plaza Colonia,Peñarol,2,2
+Uruguay,Primera División,2025,Plaza Colonia,Nacional,1,1
+Uruguay,Primera División,2025,Plaza Colonia,Defensor Sporting,0,3
+Uruguay,Primera División,2025,Plaza Colonia,Liverpool de Montevideo,3,3
+Uruguay,Primera División,2025,Plaza Colonia,Danubio,2,2
+Uruguay,Primera División,2025,Plaza Colonia,River Plate Montevideo,0,2
+Uruguay,Primera División,2025,Plaza Colonia,Montevideo Wanderers,1,0
+Uruguay,Primera División,2025,Plaza Colonia,Boston River,2,3
+Uruguay,Primera División,2025,Plaza Colonia,Cerro Largo,2,1
+Uruguay,Primera División,2025,Plaza Colonia,Racing de Montevideo,2,3
+Uruguay,Primera División,2025,Plaza Colonia,Montevideo City Torque,1,1
+Uruguay,Primera División,2025,Plaza Colonia,Cerro,2,1
+Uruguay,Primera División,2025,Plaza Colonia,Fénix,0,1
+Uruguay,Primera División,2025,Plaza Colonia,Progreso,2,1
+Uruguay,Primera División,2025,Plaza Colonia,Juventud de Las Piedras,2,1

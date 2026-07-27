@@ -1,2 +1,4 @@
 [primeira-liga] season-9394: solo 0 partidos (posible incompleta)
+[jupiler-pro-league] season-9394: no disponible
+[jupiler-pro-league] season-9495: no disponible
 [liga-mx] temporada 26: 9 partidos → descartada (incompleta)

@@ -3,7 +3,7 @@ import type { EtlData } from '../domain/worldgen';
 import {
   createCareer, chooseOption, computeCareerLegacy, clubLevel, flagEmoji,
   NATIONALITIES,
-  type CareerState, type CareerOption, type SeasonRow, type PlayerPosition, type Chip, type TurnResult,
+  type CareerState, type CareerOption, type SeasonRow, type PlayerPosition, type Chip, type TurnResult, type Stint,
 } from '../domain/career';
 import { loadAssetManifest, applyClubTheme } from './assets';
 import { Crest, Trophy, AwardMark } from './Crest';
@@ -793,26 +793,37 @@ function PlayerCard({ career }: { career: CareerState }) {
 
   return (
     <header className={`pcard frame-b-${frame.key} p-2 sm:p-4 relative overflow-hidden`}>
-      {/* Decorative background glow based on rating tier */}
+      {/* Glow de fondo según el tier de valoración */}
       <div className={`absolute -top-10 -left-10 w-40 h-40 rounded-full opacity-20 blur-2xl rating-bg-${tier}`} aria-hidden />
+      {/* Foil holográfico: solo la carta LEYENDA se siente épica */}
+      {frame.key === 'leyenda' && <div className="pcard-foil" aria-hidden />}
 
-      <div className="flex items-center gap-2 sm:gap-4 relative z-10">
+      <div className="flex items-stretch gap-2.5 sm:gap-4 relative z-10">
 
-        {/* FUT-style massive rating badge */}
-        <div className={`fut-badge fut-${tier} flex-shrink-0 flex flex-col items-center justify-center shadow-lg`}>
-          <div className="text-base sm:text-3xl font-num font-bold leading-none tracking-tighter"><CountNum value={rating} /></div>
-          <div className="text-[8px] sm:text-xs font-display font-bold mt-0.5 opacity-90">
-            {/* abreviatura siempre: el nombre completo no entra en el hexágono */}
-            {isDt ? 'DT' : (POS_META[career.position]?.abbr ?? career.position)}
+        {/* Rail de identidad estilo FUT: valoración + posición, bandera y escudo apilados */}
+        <div className="fut-rail flex-shrink-0">
+          <div className={`fut-badge fut-${tier} flex flex-col items-center justify-center`}>
+            <div className="text-base sm:text-3xl font-num font-bold leading-none tracking-tighter"><CountNum value={rating} /></div>
+            <div className="text-[8px] sm:text-xs font-display font-bold mt-0.5 opacity-90">
+              {/* abreviatura siempre: el nombre completo no entra en el hexágono */}
+              {isDt ? 'DT' : (POS_META[career.position]?.abbr ?? career.position)}
+            </div>
+          </div>
+          <div className="fut-rail-icons">
+            <NatFlag nationality={career.nationality} />
+            {club && <Crest clubId={club.id} name={club.name} size={18} />}
           </div>
         </div>
 
-        <div className="flex-1 min-w-0">
-          <div className="font-display text-sm sm:text-2xl leading-tight" style={{ color: 'var(--club-primary)', textShadow: '0 2px 4px rgba(0,0,0,0.4)' }}>
-            <span className="truncate block">{career.name}</span>
-            <span className={`inline-block mt-0.5 text-[8px] sm:text-[9px] px-1.5 py-0.5 rounded-sm border align-middle frame-${frame.key} shadow-sm`}>{frame.label}</span>
+        {/* Bloque principal: nombre protagonista + marco + datos + club */}
+        <div className="flex-1 min-w-0 flex flex-col justify-center">
+          <div className="font-display text-[15px] sm:text-2xl leading-none truncate" style={{ color: 'var(--club-primary)', textShadow: '0 2px 6px rgba(0,0,0,0.45)' }}>
+            {career.name}
           </div>
-          <div className="text-[9px] sm:text-xs font-num mt-0.5 sm:mt-1 flex flex-wrap items-center gap-x-1 gap-y-0.5" style={{ color: 'var(--text)' }}>
+          <div className="mt-1 sm:mt-1.5">
+            <span className={`fut-tier-chip frame-${frame.key}`}>{frame.label}</span>
+          </div>
+          <div className="text-[9px] sm:text-xs font-num mt-1 sm:mt-1.5 flex flex-wrap items-center gap-x-1 gap-y-0.5" style={{ color: 'var(--text)' }}>
             {career.dorsal != null && <>
               <span className="opacity-90 font-bold" style={{ color: 'var(--club-primary)' }}>Nº {career.dorsal}</span>
               <span className="opacity-40">·</span>
@@ -823,15 +834,13 @@ function PlayerCard({ career }: { career: CareerState }) {
             <span className="opacity-40">·</span>
             <span className="opacity-80 whitespace-nowrap">Temp. {career.year}/{String((career.year + 1) % 100).padStart(2, '0')}</span>
           </div>
+          {club && (
+            <div className="mt-1 flex items-center gap-1.5 min-w-0">
+              <span className="font-display text-[10px] sm:text-sm truncate" style={{ color: 'var(--text)' }}>{club.name}</span>
+              <span className="hidden sm:inline text-[10px] font-num opacity-50 whitespace-nowrap">· Nivel {clubLevel(club)}</span>
+            </div>
+          )}
         </div>
-
-        {club && (
-          <div className="flex flex-col items-end gap-1 text-right ml-2 flex-shrink-0">
-            <Crest clubId={club.id} name={club.name} size={30} />
-            <div className="font-display text-[9px] sm:text-sm truncate w-16 sm:w-28" style={{ color: 'var(--text)' }}>{club.name}</div>
-            <div className="hidden sm:block text-[10px] font-num opacity-60">Nivel {clubLevel(club)}</div>
-          </div>
-        )}
       </div>
 
       {club && rivals.length > 0 && (
@@ -857,6 +866,13 @@ function PlayerCard({ career }: { career: CareerState }) {
       </div>
     </header>
   );
+}
+
+/** Bandera del país en el rail de la carta: SVG offline, con fallback a código FIFA. */
+function NatFlag({ nationality }: { nationality: string }) {
+  const url = flagUrl(nationality);
+  if (url) return <img className="fut-flag" src={url} alt={nationality} title={nationality} loading="lazy" />;
+  return <span className="fut-flag-code" title={nationality}>{NAT_CODE[nationality] ?? flagEmoji(nationality)}</span>;
 }
 
 /** KPI de títulos: el número + las copas como imágenes (las últimas, con +N si hay más). */
@@ -980,6 +996,32 @@ function Trajectory({ career, full }: { career: CareerState; full?: boolean }) {
   const stints = [...career.stints].reverse();
   const newest = stints[0];
   const newestIsFresh = career.seasons.length > 0 && newest.endYear >= career.year; // etapa en curso
+
+  // Puntaje de una etapa: nota promedio de las temporadas de ese club en ese lapso.
+  // (los préstamos tienen su propio clubId, así que dos etapas en el mismo club no se mezclan)
+  const notaOf = (s: Stint): number | null => {
+    const rows = career.seasons.filter((r) => r.clubId === s.clubId && r.year >= s.startYear && r.year < s.endYear);
+    if (rows.length === 0) return null;
+    return rows.reduce((a, r) => a + r.rating, 0) / rows.length;
+  };
+
+  // "Prime": la etapa de mayor nota (con peso de minutos) en cada vida. Solo con ≥2 etapas de esa fase.
+  const keyOf = (s: Stint) => `${s.clubId}-${s.startYear}`;
+  const primeKeyFor = (as: Stint['as']): string | null => {
+    const phase = career.stints.filter((s) => s.as === as);
+    if (phase.length < 2) return null;
+    const cand = phase
+      .map((s) => ({ key: keyOf(s), nota: notaOf(s), apps: s.apps, y: s.startYear }))
+      .filter((x): x is { key: string; nota: number; apps: number; y: number } => x.nota != null);
+    const eligible = cand.filter((x) => x.apps >= 10);
+    const pool = eligible.length ? eligible : cand;
+    if (pool.length === 0) return null;
+    pool.sort((a, b) => (b.nota - a.nota) || (b.apps - a.apps) || (a.y - b.y));
+    return pool[0].key;
+  };
+  const primeKey = { jugador: primeKeyFor('jugador'), dt: primeKeyFor('dt') };
+  const notaColor = (n: number) => (n >= 7.5 ? 'var(--good)' : n >= 6.8 ? 'var(--text)' : n < 6 ? 'var(--bad)' : 'var(--muted)');
+
   return (
     <section className="panel p-3">
       <div className="flex items-baseline justify-between mb-3">
@@ -987,7 +1029,10 @@ function Trajectory({ career, full }: { career: CareerState; full?: boolean }) {
         <div className="text-[9px] font-num" style={{ color: 'var(--muted)' }}>{stints.length} etapas · {career.seasons.length} temporadas</div>
       </div>
       <div className="flex flex-col timeline">
-        {stints.map((s, i) => (
+        {stints.map((s, i) => {
+          const nota = notaOf(s);
+          const isPrime = keyOf(s) === primeKey[s.as];
+          return (
           <React.Fragment key={`${s.clubId}-${s.startYear}`}>
           {(i === 0 || stints[i - 1].as !== s.as) && (
             <div className={`timeline-phase-label font-display ${s.as === 'dt' ? 'timeline-phase-dt' : ''}`}>
@@ -995,20 +1040,24 @@ function Trajectory({ career, full }: { career: CareerState; full?: boolean }) {
             </div>
           )}
           <div
-            className={`timeline-row flex items-stretch gap-3 py-2 ${s.as === 'dt' ? 'timeline-row-dt' : ''} ${i === 0 && newestIsFresh ? 'stint-new' : ''}`}
+            className={`timeline-row flex items-stretch gap-3 py-2 ${s.as === 'dt' ? 'timeline-row-dt' : ''} ${isPrime ? 'timeline-row-prime' : ''} ${i === 0 && newestIsFresh ? 'stint-new' : ''}`}
             >
             <div className="timeline-marker" aria-hidden>
               <div className="timeline-crest"><Crest clubId={s.clubId} name={s.clubName} size={48} /></div>
               {i < stints.length - 1 && <div className="timeline-connector" />}
             </div>
             <div className="timeline-entry flex-1 min-w-0">
-              <div className="text-sm font-display truncate">
-                {s.clubName}
-                {s.as === 'dt' && <span className="text-[10px] ml-1.5 px-1 rounded-sm border" style={{ color: 'var(--warn)', borderColor: 'var(--warn)' }}>DT</span>}
-                {s.loan && <span className="text-[10px] ml-1.5" style={{ color: 'var(--warn)' }}>PRÉSTAMO</span>}
+              <div className="flex items-center gap-1.5">
+                <span className="text-sm font-display truncate flex-1 min-w-0">
+                  {s.clubName}
+                  {s.as === 'dt' && <span className="text-[10px] ml-1.5 px-1 rounded-sm border" style={{ color: 'var(--warn)', borderColor: 'var(--warn)' }}>DT</span>}
+                  {s.loan && <span className="text-[10px] ml-1.5" style={{ color: 'var(--warn)' }}>PRÉSTAMO</span>}
+                </span>
+                {isPrime && <span className={`stint-prime ${s.as === 'dt' ? 'dt' : ''}`}>★ PRIME</span>}
+                {nota != null && <span className="stint-nota" style={{ color: notaColor(nota) }}>{nota.toFixed(1)}<i>NOTA</i></span>}
               </div>
               <div className="text-[11px] font-num" style={{ color: 'var(--muted)' }}>
-                {s.startYear}–{s.endYear} · {s.apps} PJ · {s.goals} goles
+                {s.startYear}–{s.endYear} · {s.apps} PJ{s.as === 'dt' ? '' : ` · ${s.goals} goles`}
               </div>
               <div className="timeline-titles flex flex-wrap items-center gap-1 mt-1.5">
                 {s.titles.length === 0
@@ -1029,7 +1078,8 @@ function Trajectory({ career, full }: { career: CareerState; full?: boolean }) {
             </div>
           </div>
           </React.Fragment>
-        ))}
+        );
+        })}
       </div>
     </section>
   );

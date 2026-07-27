@@ -25,6 +25,8 @@ const COUNTRY = {
   Inglaterra: 'England', España: 'Spain', Italia: 'Italy', Alemania: 'Germany', Francia: 'France',
   Holanda: 'The Netherlands', Portugal: 'Portugal', Brasil: 'Brazil', Argentina: 'Argentina',
   'Estados Unidos': 'United States', México: 'Mexico', Colombia: 'Colombia',
+  Perú: 'Peru', Uruguay: 'Uruguay', Chile: 'Chile', Bélgica: 'Belgium', Rusia: 'Russia',
+  'Arabia Saudita': 'Saudi Arabia',
 };
 // paleta por liga: [primario, acento]
 const PALETTE = {
@@ -40,11 +42,119 @@ const PALETTE = {
   USA1: ['#0a1f44', '#c8102e'], // MLS
   MEX1: ['#006847', '#ce1126'], // Liga MX
   COL1: ['#0a3d91', '#fcd116'], // Primera A
+  PER1: ['#7a0c1e', '#f2e6e8'], // Liga 1 (Perú)
+  URU1: ['#0a2a5c', '#7ab8e6'], // Liga AUF Uruguaya
+  CHI1: ['#0a2d6b', '#d52b1e'], // Primera de Chile
+  BEL1: ['#111111', '#f0c419'], // Jupiler Pro League
+  RUS1: ['#0a2a5c', '#d52b1e'], // Premier Liga Rusa
+  SAU1: ['#0a5c36', '#e8d9a0'], // Liga Profesional Saudí
 };
 const LEAGUE_NAME = {
   ENG1: 'Premier League', ESP1: 'La Liga', ITA1: 'Serie A', GER1: 'Bundesliga', FRA1: 'Ligue 1',
   NED1: 'Eredivisie', POR1: 'Primeira Liga', BRA1: 'Brasileirão', ARG1: 'Liga Profesional',
   USA1: 'MLS', MEX1: 'Liga MX', COL1: 'Primera A',
+  // keyword de matching contra strLeague de TheSportsDB (no nombre de display)
+  PER1: 'Peruvian', URU1: 'Uruguayan', CHI1: 'Chilean', BEL1: 'Belgian', RUS1: 'Russian', SAU1: 'Saudi',
+};
+
+// Queries manuales por club: el nombre corto del dataset no matchea el nombre completo de la API.
+// Se prueban ANTES que name/rawName. El filtro por país (COUNTRY) desambigua homónimos.
+const ALIASES = {
+  // Perú
+  'PER1-Universitario': ['Universitario de Deportes'],
+  'PER1-CsarVallejo': ['Universidad Cesar Vallejo', 'Cesar Vallejo'],
+  'PER1-AlianzaAtltico': ['Alianza Atletico'],
+  'PER1-AtlticoGrau': ['Atletico Grau'],
+  'PER1-UTCCajamarca': ['UTC', 'Universidad Tecnica de Cajamarca'],
+  'PER1-ADT': ['ADT', 'Asociacion Deportiva Tarma'],
+  'PER1-Melgar': ['FBC Melgar', 'Melgar'],
+  'PER1-CuscoFC': ['Cusco'],
+  'PER1-AyacuchoFC': ['Ayacucho'],
+  'PER1-JuanPabloII': ['Juan Pablo II College', 'Juan Pablo II'],
+  // Uruguay
+  'URU1-Pearol': ['Penarol', 'Peñarol'],
+  'URU1-RiverPlateMontevideo': ['River Plate'],
+  'URU1-LiverpooldeMontevideo': ['Liverpool Montevideo', 'Liverpool'],
+  'URU1-RacingdeMontevideo': ['Racing Club de Montevideo', 'Racing Montevideo'],
+  'URU1-Fnix': ['Fenix'],
+  'URU1-Cerro': ['CA Cerro', 'Cerro'],
+  'URU1-Progreso': ['CA Progreso', 'Progreso'],
+  'URU1-JuventuddeLasPiedras': ['Juventud Las Piedras', 'Juventud'],
+  // Chile
+  'CHI1-ColoColo': ['Colo Colo', 'Colo-Colo'],
+  'CHI1-EvertondeVia': ['Everton', 'Everton de Vina del Mar'],
+  'CHI1-UniversidadCatlica': ['Universidad Catolica'],
+  'CHI1-ublense': ['Nublense', 'Ñublense'],
+  'CHI1-UninLaCalera': ['Union La Calera'],
+  'CHI1-UninEspaola': ['Union Espanola'],
+  'CHI1-OHiggins': ["O'Higgins", 'OHiggins'],
+  'CHI1-DeportesLaSerena': ['Deportes La Serena', 'La Serena'],
+  // Bélgica
+  'BEL1-StGilloise': ['Union Saint-Gilloise', 'Royale Union Saint-Gilloise'],
+  'BEL1-StTruiden': ['Sint-Truiden', 'Sint-Truidense VV'],
+  'BEL1-Standard': ['Standard Liege'],
+  'BEL1-Waregem': ['Zulte Waregem', 'Zulte-Waregem'],
+  'BEL1-Bergen': ['RAEC Mons', 'Mons'],
+  'BEL1-Germinal': ['Germinal Beerschot'],
+  'BEL1-BeerschotVA': ['Beerschot', 'Beerschot VA'],
+  'BEL1-Molenbeek': ['RWD Molenbeek', 'RWDM'],
+  'BEL1-RWDMolenbeek': ['RWD Molenbeek', 'RWDM'],
+  'BEL1-MouscronPeruwelz': ['Mouscron-Peruwelz', 'Royal Mouscron'],
+  'BEL1-Mouscron': ['Excelsior Mouscron', 'Mouscron'],
+  'BEL1-Louvieroise': ['RAA Louvieroise', 'La Louviere'],
+  'BEL1-RAALLaLouviere': ['RAAL La Louviere', 'La Louviere'],
+  'BEL1-Lierse': ['Lierse SK', 'Lierse Kempenzonen'],
+  'BEL1-Harelbeke': ['KRC Harelbeke'],
+  'BEL1-Aalst': ['Eendracht Aalst'],
+  'BEL1-Geel': ['Verbroedering Geel'],
+  'BEL1-HeusdenZolder': ['Heusden-Zolder'],
+  'BEL1-Lommel': ['Lommel SK', 'Lommel United'],
+  'BEL1-OudHeverleeLeuven': ['OH Leuven', 'Oud-Heverlee Leuven'],
+  'BEL1-Dender': ['Dender EH', 'FCV Dender EH'],
+  'BEL1-Tubize': ['AFC Tubize'],
+  'BEL1-Seraing': ['RFC Seraing', 'Seraing United'],
+  'BEL1-Beveren': ['SK Beveren', 'KSK Beveren'],
+  'BEL1-WaaslandBeveren': ['Waasland-Beveren'],
+  'BEL1-Lokeren': ['Sporting Lokeren', 'KSC Lokeren'],
+  'BEL1-Roeselare': ['KSV Roeselare'],
+  'BEL1-Kortrijk': ['KV Kortrijk'],
+  'BEL1-Mechelen': ['KV Mechelen'],
+  'BEL1-Oostende': ['KV Oostende'],
+  'BEL1-Eupen': ['KAS Eupen', 'Eupen'],
+  'BEL1-Charleroi': ['Sporting Charleroi', 'Charleroi'],
+  'BEL1-Genk': ['KRC Genk', 'Genk'],
+  'BEL1-Gent': ['KAA Gent', 'Gent'],
+  'BEL1-Antwerp': ['Royal Antwerp'],
+  'BEL1-Westerlo': ['KVC Westerlo', 'Westerlo'],
+  // Rusia
+  'RUS1-MSaransk': ['Mordovia Saransk'],
+  'RUS1-RVolgograd': ['Rotor Volgograd'],
+  'RUS1-VolgarAstrakhan': ['Volgar Astrakhan'],
+  'RUS1-Vladikavkaz': ['Alania Vladikavkaz'],
+  'RUS1-PariNN': ['Pari Nizhny Novgorod', 'Nizhny Novgorod'],
+  'RUS1-KrylyaSovetov': ['Krylya Sovetov Samara', 'Krylia Sovetov'],
+  'RUS1-Baltika': ['Baltika Kaliningrad'],
+  'RUS1-Ufa': ['FC Ufa', 'Ufa'],
+  'RUS1-Sochi': ['PFC Sochi', 'Sochi'],
+  'RUS1-Khimki': ['FC Khimki', 'Khimki'],
+  'RUS1-Tomsk': ['Tom Tomsk'],
+  'RUS1-Tosno': ['FC Tosno', 'Tosno'],
+  'RUS1-Tambov': ['FC Tambov', 'Tambov'],
+  'RUS1-Yenisey': ['Yenisey Krasnoyarsk', 'Enisey Krasnoyarsk'],
+  'RUS1-Kuban': ['Kuban Krasnodar'],
+  'RUS1-Amkar': ['Amkar Perm'],
+  'RUS1-Ural': ['Ural Yekaterinburg', 'Ural Ekaterinburg'],
+  'RUS1-Orenburg': ['FC Orenburg', 'Orenburg'],
+  'RUS1-FKAnziMakhackala': ['Anzhi Makhachkala', 'Anji Makhachkala'],
+  'RUS1-VolgaNNovgorod': ['Volga Nizhny Novgorod'],
+  'RUS1-AkronTogliatti': ['Akron Togliatti', 'Akron Tolyatti'],
+  'RUS1-SKAKhabarovsk': ['SKA-Khabarovsk', 'SKA Khabarovsk'],
+  // Arabia Saudita
+  'SAU1-AlIttihad': ['Al-Ittihad Jeddah', 'Al-Ittihad'],
+  'SAU1-AlAhli': ['Al-Ahli Saudi', 'Al-Ahli Jeddah', 'Al-Ahli'],
+  'SAU1-AlHilal': ['Al-Hilal Saudi', 'Al-Hilal'],
+  'SAU1-AlShabab': ['Al-Shabab Riyadh', 'Al-Shabab'],
+  'SAU1-AlWehda': ['Al-Wehda Mecca', 'Al-Wehda'],
 };
 
 // Color dominante de camiseta/escudo para el tema de la carrera. Se guarda en
@@ -77,7 +187,7 @@ function clubThemeColors(club) {
 }
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-const REQ_DELAY = 900; // ms entre búsquedas (ritmo amable con el free tier)
+const REQ_DELAY = 2200; // ms entre búsquedas (Cloudflare tira 1015 con ritmos más agresivos)
 
 function initials(name) {
   const stop = new Set(['fc', 'cf', 'ac', 'as', 'sc', 'ss', 'us', 'if', 'de', 'el', 'la', 'le', 'club', 'calcio', 'united', 'city', 'real']);
@@ -159,7 +269,7 @@ async function lookupBadge(club, cache) {
   const cached = cache[club.id];
   if (cached !== undefined && cached !== null) return cached; // null viejo => reintentar
   const wantCountry = COUNTRY[club.country];
-  const queries = [...new Set([club.name, club.rawName])].filter(Boolean);
+  const queries = [...new Set([...(ALIASES[club.id] || []), club.name, club.rawName])].filter(Boolean);
   let anySearched = false;
   for (const q of queries) {
     const teams = await searchOnce(q); // puede lanzar RateLimited -> lo maneja el caller
