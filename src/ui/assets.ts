@@ -115,6 +115,12 @@ export function trophySrcByTitle(title: string): string | null {
   return file ? `${base}data/${file}` : null;
 }
 
+/** URL del SVG de un premio individual. Solo el Balón de Oro tiene imagen; el resto usa emoji. */
+export function awardSrc(award: string): string | null {
+  if (award.startsWith('Balón de Oro')) return `${base}data/trophies/award-ballon-dor.svg`;
+  return null;
+}
+
 /** Como trophySrcByTitle pero tolera sufijos (ej. "La Liga 2031/32"): matchea por prefijo. */
 export function trophySrcByTitlePrefix(text: string): string | null {
   if (trophyByName.has(text)) return `${base}data/${trophyByName.get(text)}`;

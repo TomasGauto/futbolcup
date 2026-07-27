@@ -138,20 +138,29 @@ async function main() {
     await sleep(400);
   }
 
-  // 3) Copas continentales de clubes (CONMEBOL/CONCACAF) y de selecciones: SVG estilizado
+  // 3) Copas continentales de clubes (CONMEBOL/CONCACAF) y de selecciones.
+  // Si ya hay PNG oficial (scripts/fetch-cup-trophies.mjs), se conserva y no se regenera SVG.
   for (const [title, [p, a]] of [...Object.entries(OTHER_CONT), ...Object.entries(NATIONAL_CONT)]) {
     const key = `cont-${title.replace(/[^a-zA-Z]/g, '')}`;
+    if (existsSync(path.join(TROPHIES, `${key}.png`))) {
+      trophies.push({ key, kind: 'continental', title, file: `trophies/${key}.png`, source: 'real' });
+      official++; continue;
+    }
     const file = `${key}.svg`;
     await writeFile(path.join(TROPHIES, file), cupSvg(title, p, a));
     trophies.push({ key, kind: 'continental', title, file: `trophies/${file}`, source: 'generated' });
     styled++;
   }
 
-  // 4) Copas nacionales: SVG estilizado por país, título "Copa de {país}"
+  // 4) Copas nacionales, título "Copa de {país}". Igual que arriba: el PNG oficial manda.
   for (const l of leagues.filter((x) => x.division === 1 || true)) {
     if (!PALETTE[l.id]) continue;
     const title = `Copa de ${l.country}`;
     const key = `copa-${l.id}`;
+    if (existsSync(path.join(TROPHIES, `${key}.png`))) {
+      trophies.push({ key, kind: 'national', title, leagueId: l.id, file: `trophies/${key}.png`, source: 'real' });
+      official++; continue;
+    }
     const [p, a] = PALETTE[l.id];
     const file = `${key}.svg`;
     await writeFile(path.join(TROPHIES, file), cupSvg(title, p, a));

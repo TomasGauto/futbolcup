@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { crestSrc, trophySrc, trophySrcByTitlePrefix } from './assets';
+import { crestSrc, trophySrc, trophySrcByTitlePrefix, awardSrc } from './assets';
 
 interface CrestProps {
   clubId: string;
@@ -82,6 +82,26 @@ export function Trophy({ title, size = 20, className }: TrophyProps) {
       onError={() => setBroken(true)} className={className}
       style={{ height: size, width: 'auto', objectFit: 'contain' }} />
   );
+}
+
+interface AwardMarkProps {
+  award: string; // texto del premio (ej. "Balón de Oro 2041", "MVP de La Liga 2039")
+  size?: number;
+  className?: string;
+}
+
+/** Ícono de un premio individual: SVG del Balón de Oro; el MVP mantiene la estrella. */
+export function AwardMark({ award, size = 16, className }: AwardMarkProps) {
+  const src = awardSrc(award);
+  const [broken, setBroken] = useState(false);
+  if (src && !broken) {
+    return (
+      <img src={src} alt={award} title={award} height={size} loading="lazy"
+        onError={() => setBroken(true)} className={className}
+        style={{ height: size, width: 'auto', objectFit: 'contain', verticalAlign: 'middle' }} />
+    );
+  }
+  return <span className={className} aria-hidden>{award.startsWith('Balón de Oro') ? '🥇' : '⭐'}</span>;
 }
 
 function initials(raw: string): string {
