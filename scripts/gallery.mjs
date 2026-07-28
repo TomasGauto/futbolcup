@@ -27,7 +27,7 @@ const sections = Object.keys(LEAGUE).map((lid) => {
 }).join('');
 
 const html = `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Assets · Dinastía FC</title><style>
+<title>Assets · ElGoat.online</title><style>
 :root{color-scheme:dark}body{margin:0;background:#0b0f17;color:#e6e9ef;font:15px/1.4 system-ui,sans-serif}
 header{padding:24px 20px;border-bottom:1px solid #1e2637}h1{margin:0;font-size:20px}
 h2{margin:28px 20px 8px;font-size:16px;font-weight:600}h2 small{color:#8b93a7;font-weight:400;font-size:12px}
@@ -39,7 +39,7 @@ figcaption{font-size:11px;margin-top:6px;color:#c6cdda;overflow:hidden;text-over
 .d{display:block;color:#748099;font-size:10px}.card.generated{outline:1px dashed #33405c}
 .legend{padding:0 20px;color:#8b93a7;font-size:12px}
 </style></head><body>
-<header><h1>Dinastía FC — Escudos & Trofeos</h1>
+<header><h1>ElGoat.online — Escudos & Trofeos</h1>
 <p class="legend">${crests.length} escudos · ${crests.filter(c=>c.source==='real').length} reales, ${crests.filter(c=>c.source==='generated').length} SVG generados · ${trophies.length} trofeos. Borde punteado = SVG generado.</p></header>
 <section><h2>Trofeos por liga</h2><div class="grid">${trophyCards}</div></section>
 ${sections}

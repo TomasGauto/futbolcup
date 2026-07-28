@@ -1,4 +1,4 @@
-// ETL Dinastía FC — se corre OFFLINE una sola vez: descarga football-datasets,
+// ETL ElGoat.online — se corre OFFLINE una sola vez: descarga football-datasets,
 // calcula Elo histórico, ratings ataque/defensa, estilo y palmarés, y emite
 // /public/data/*.json. La app en runtime NO hace llamadas de red.
 //

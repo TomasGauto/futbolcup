@@ -1,4 +1,4 @@
-# Mi carrera profesional
+# ElGoat.online
 
 Simulador de dirección de club de fútbol: elegís un club real y lo dirigís durante **30 temporadas (2026/27 → 2055/56), avanzando en bienios**. No es un juego de partidos: es un juego de decisiones estructurales de largo plazo — fichajes, estadio, sponsors, deuda, cantera, precios — con consecuencias visibles diez años después.
 

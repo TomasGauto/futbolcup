@@ -1,6 +1,7 @@
 @import "tailwindcss";
+@import "./fonts/fonts.css";
 
-/* Dinastía FC — terminal deportiva: oscuro, condensado, numérico, acento del club */
+/* ElGoat.online — terminal deportiva: oscuro, condensado, numérico, acento del club */
 :root {
   --club-primary: #d4b062;
   --club-primary-rgb: 212,176,98;
@@ -14,7 +15,10 @@
   --good: #4ade80;
   --bad: #f87171;
   --warn: #fbbf24;
-  --font-cond: "Bahnschrift SemiBold Condensed", "Bahnschrift", "Arial Narrow", "Segoe UI", sans-serif;
+  /* títulos / display: DM Sans (auto-hospedada) */
+  --font-cond: "DM Sans", "Segoe UI", system-ui, sans-serif;
+  /* cuerpo de texto: Manrope */
+  --font-body: "Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
 }
 
 html, body, #root { height: 100%; }
@@ -23,7 +27,7 @@ html, body { overflow-x: hidden; } /* ningún desborde lateral en mobile */
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   -webkit-text-size-adjust: 100%; /* iOS no reescala el texto al girar */
 }
@@ -35,7 +39,7 @@ body {
 
 .font-num {
   font-variant-numeric: tabular-nums;
-  font-family: "Bahnschrift", "Segoe UI Semibold", "Arial Narrow", sans-serif;
+  font-family: "DM Sans", "Segoe UI Semibold", sans-serif;
   letter-spacing: 0.01em;
 }
 
@@ -93,7 +97,7 @@ body {
 
 .stat-num {
   font-variant-numeric: tabular-nums;
-  font-family: "Bahnschrift", "Segoe UI Semibold", "Arial Narrow", sans-serif;
+  font-family: "DM Sans", "Segoe UI Semibold", sans-serif;
   font-size: 20px;
   font-weight: 700;
 }
@@ -230,6 +234,8 @@ input:focus-visible, select:focus-visible { outline: 2px solid var(--club-primar
 
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
+  /* elementos que arrancan invisibles y se revelan por animación: sin animación, mostrarlos */
+  .reveal-item, .chip-in, .trophy-drop { opacity: 1 !important; }
 }
 
 @keyframes slideIn { from { transform: translateY(8px); opacity: 0; } to { transform: none; opacity: 1; } }
@@ -237,6 +243,36 @@ input:focus-visible, select:focus-visible { outline: 2px solid var(--club-primar
 
 @keyframes pulseGold { 0%, 100% { box-shadow: 0 0 0 0 rgba(var(--club-primary-rgb),0.0); } 50% { box-shadow: 0 0 18px 0 rgba(var(--club-primary-rgb),0.25); } }
 .pulse-cta { animation: pulseGold 2.4s ease-in-out infinite; }
+
+/* Banner de evento ("flash"): el giro de la temporada tiene que saltar a la vista */
+.flash-banner {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 14px; border-radius: 8px;
+  background: linear-gradient(100deg, color-mix(in srgb, var(--warn) 24%, var(--panel)) 0%, color-mix(in srgb, var(--warn) 6%, var(--panel)) 62%, var(--panel) 100%);
+  border: 1px solid color-mix(in srgb, var(--warn) 55%, var(--line));
+  border-left: 4px solid var(--warn);
+  color: var(--text);
+  animation: slideIn 240ms ease, flashPulse 1.7s ease-out 1;
+}
+.flash-banner-icon {
+  flex-shrink: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 30px; height: 30px; border-radius: 50%;
+  background: radial-gradient(circle at 32% 28%, #fde68a, var(--warn));
+  color: #3a2c05; font-size: 15px; line-height: 1;
+  box-shadow: 0 0 12px rgba(251,191,36,0.55);
+  animation: flashBolt 1.7s ease-out 2;
+}
+.flash-banner-text { font-size: 13px; line-height: 1.32; font-weight: 600; }
+@media (min-width: 640px) { .flash-banner-text { font-size: 14.5px; } }
+@keyframes flashPulse {
+  0% { box-shadow: 0 0 0 1px rgba(251,191,36,0.65), 0 0 26px 2px rgba(251,191,36,0.5); }
+  100% { box-shadow: 0 0 0 0 rgba(251,191,36,0), 0 0 0 0 rgba(251,191,36,0); }
+}
+@keyframes flashBolt { 0%, 100% { transform: scale(1); } 40% { transform: scale(1.18); } }
+@media (prefers-reduced-motion: reduce) {
+  .flash-banner, .flash-banner-icon { animation: none; }
+}
 
 /* Interstitial de "sorteo" de temporada */
 @keyframes spinRing { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
@@ -488,7 +524,7 @@ body::after {
 /* Puntaje de la etapa (nota promedio): pill que hereda su color por rendimiento */
 .stint-nota {
   flex-shrink: 0; display: inline-flex; align-items: baseline; gap: 3px;
-  font-family: "Bahnschrift", sans-serif; font-weight: 700; font-size: 13px; line-height: 1;
+  font-family: "DM Sans", sans-serif; font-weight: 700; font-size: 13px; line-height: 1;
   padding: 2px 6px; border-radius: 5px;
   background: color-mix(in srgb, currentColor 13%, transparent);
   border: 1px solid color-mix(in srgb, currentColor 32%, transparent);
@@ -498,7 +534,7 @@ body::after {
 /* Cartel PRIME: el pico de la carrera (oro para jugador, verde para DT) */
 .stint-prime {
   flex-shrink: 0; display: inline-flex; align-items: center; gap: 3px; white-space: nowrap;
-  font-family: "Bahnschrift", sans-serif; font-weight: 800; font-size: 9px; letter-spacing: 0.12em;
+  font-family: "DM Sans", sans-serif; font-weight: 800; font-size: 9px; letter-spacing: 0.12em;
   padding: 2px 7px; border-radius: 4px; color: #1a1206;
   background: linear-gradient(135deg, #ffe9a8, #f5b731);
   box-shadow: 0 1px 5px rgba(245,183,49,0.45);
@@ -610,7 +646,7 @@ body::after {
 }
 /* código de país (ARG, BRA…): pastilla monoespaciada */
 .code {
-  font-family: "Bahnschrift", "Arial Narrow", sans-serif; font-weight: 700;
+  font-family: "DM Sans", sans-serif; font-weight: 700;
   font-size: 10px; letter-spacing: 0.08em; line-height: 1;
   min-width: 34px; text-align: center; padding: 5px 4px; border-radius: 5px;
   background: var(--bg); border: 1px solid var(--line); color: var(--muted);
@@ -619,7 +655,7 @@ body::after {
 .pick:hover .code { color: var(--text); }
 .pick.sel .code, .code.sel-code { background: var(--club-primary); border-color: var(--club-primary); color: #0b0e13; }
 /* badge de posición: color por línea del campo */
-.posb { min-width: 34px; text-align: center; padding: 5px 4px; border-radius: 5px; font-family: "Bahnschrift", sans-serif; font-weight: 700; font-size: 10px; letter-spacing: 0.06em; line-height: 1; border: 1px solid; }
+.posb { min-width: 34px; text-align: center; padding: 5px 4px; border-radius: 5px; font-family: "DM Sans", sans-serif; font-weight: 700; font-size: 10px; letter-spacing: 0.06em; line-height: 1; border: 1px solid; }
 .posb.arco { color: #fcd34d; border-color: #fcd34d55; background: #fcd34d18; }
 .posb.def  { color: #7dd3fc; border-color: #7dd3fc55; background: #7dd3fc18; }
 .posb.med  { color: #86efac; border-color: #86efac55; background: #86efac18; }
@@ -720,7 +756,7 @@ body::after {
 .fut-rail { display: flex; flex-direction: column; align-items: center; gap: 5px; }
 .fut-rail-icons { display: flex; align-items: center; justify-content: center; gap: 4px; margin-top: 1px; }
 .fut-flag { width: 20px; height: 14px; border-radius: 2px; object-fit: cover; box-shadow: 0 1px 3px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.15); }
-.fut-flag-code { font-family: "Bahnschrift", sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.04em; color: var(--muted); }
+.fut-flag-code { font-family: "DM Sans", sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.04em; color: var(--muted); }
 @media (min-width: 640px) {
   .fut-rail { gap: 7px; }
   .fut-flag { width: 28px; height: 20px; }
@@ -729,7 +765,7 @@ body::after {
 
 /* Chip de marco/tier (BRONCE → LEYENDA): reutiliza los colores de .frame-<key> */
 .fut-tier-chip {
-  display: inline-block; font-family: "Bahnschrift", sans-serif; font-weight: 800;
+  display: inline-block; font-family: "DM Sans", sans-serif; font-weight: 800;
   font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase;
   padding: 2px 8px; border-radius: 3px; border: 1px solid;
   box-shadow: 0 1px 2px rgba(0,0,0,0.35);

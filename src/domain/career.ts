@@ -47,6 +47,7 @@ export type SeasonRow = {
   leaguePos: number;
   titles: string[];
   note: string;
+  ability?: number;
 };
 
 export type CareerOption = {
@@ -87,6 +88,8 @@ export type CareerState = {
   year: number;
   age: number;
   ability: number; // 1-99, nivel real
+  /** pico de valoración alcanzado como jugador (para la carta final; opcional en saves viejos) */
+  peakAbility?: number;
   potential: number;
   fame: number; // 0-100
   caps: number;
@@ -257,6 +260,7 @@ export function createCareer(
     };
   }
 
+  const startAbility = 58 + rng.int('world', 0, 6);
   const state: CareerState = {
     seed: opts.seed, rng: rngState,
     // nombre capitalizado: "john cena" → "John Cena" (el input llega tal cual se tipeó)
@@ -264,7 +268,8 @@ export function createCareer(
     nationality: opts.nationality, position: opts.position,
     dorsal: Math.max(1, Math.min(99, Math.round(opts.dorsal ?? 10))),
     year: START_YEAR, age: 16,
-    ability: 58 + rng.int('world', 0, 6),
+    ability: startAbility,
+    peakAbility: startAbility,
     potential: 74 + rng.int('world', 0, 22), // el techo es secreto: se descubre jugando
     fame: 5, caps: 0, intlGoals: 0,
     clubId: null, firstClubId: null,
@@ -653,6 +658,7 @@ function playSeason(state: CareerState, rng: Rng): SeasonRow {
   let delta = ageCurve(state.age) * minutesFactor * (0.8 + level / 400) + state.trainingBoost + rng.normal('dev', 0, 0.9);
   if (delta > 0) delta = Math.min(delta, (state.potential - state.ability) * 0.55);
   state.ability = Math.round(Math.max(40, Math.min(99, state.ability + delta)));
+  state.peakAbility = Math.max(state.peakAbility ?? state.ability, state.ability); // pico histórico para la carta final
   state.trainingBoost = 0;
   state.formBoost = 0;
   state.promisedStarter = false;
@@ -686,7 +692,7 @@ function playSeason(state: CareerState, rng: Rng): SeasonRow {
 
   const row: SeasonRow = {
     year: state.year, clubId: club.id, clubName: club.name, role, apps, goals, rating,
-    leaguePos: out.pos, titles, note,
+    leaguePos: out.pos, titles, note, ability: state.ability,
   };
   state.seasons.push(row);
 
@@ -703,13 +709,13 @@ function optionBadge(option: CareerOption): CareerOption['badge'] | undefined {
     return { t: 'Arriesgado', tone: 'warn', icon: '⚠️' };
   }
   if (option.id.endsWith(':skip') || option.id === 'stay' || option.id === 'nat:keep' || option.id === 'dt:no' || option.id === 'risk:skip') {
-    return { t: 'Seguro', tone: 'good', icon: '🛡️' };
+    return { t: 'Sin riesgo', tone: 'good', icon: '🛡️' };
   }
   if (option.id.startsWith('join:') || option.id.startsWith('dtjoin:')) {
-    return { t: 'Popular', tone: 'good', icon: '🔥' };
+    return { t: 'Fichaje', tone: 'good', icon: '📝' };
   }
   if (option.id.startsWith('loan:')) {
-    return { t: 'Movida viral', tone: 'muted', icon: '🎒' };
+    return { t: 'A sumar minutos', tone: 'good', icon: '🎒' };
   }
   if (option.id.startsWith('retire:')) {
     return { t: 'Cierre épico', tone: 'muted', icon: '🏁' };
@@ -729,10 +735,17 @@ function offerOption(state: CareerState, c: CareerClub, promise: boolean): Caree
   const level = clubLevel(c);
   const role = roleFor(state.ability, level, promise);
   const proj = projectLabel(c, state.clubs);
+  // contexto relativo a tu club actual: ¿es un salto, un escalón abajo, o parejo?
+  const myClub = state.clubId ? state.clubs[state.clubId] : null;
+  const myLevel = myClub ? clubLevel(myClub) : null;
+  const rel = myLevel == null ? ''
+    : level >= myLevel + 3 ? ' · ↑ salto'
+      : level <= myLevel - 3 ? ' · ↓ más chico'
+        : ' · ≈ parejo';
   return withBadge({
     id: `join:${c.id}${promise ? ':promesa' : ''}`,
     label: c.name,
-    sub: `${c.leagueName} · nivel ${level}`,
+    sub: `${c.leagueName} · nivel ${level}${rel}`,
     clubId: c.id,
     chips: [
       { t: `Rol: ${role}`, tone: role.startsWith('Titular') ? 'good' : role === 'Rotación' ? 'warn' : 'bad' },
@@ -898,8 +911,8 @@ function nextEvent(state: CareerState, rng: Rng): CareerEvent {
         title: `${club.name} quiere cederte a préstamo`,
         body: 'No estás teniendo minutos y el club quiere que juegues. Elegí dónde seguir tu desarrollo (o quedate a pelearla).',
         options: [
-          { ...offerOption(state, d1, true), id: `loan:${d1.id}`, chips: [{ t: 'Rol: Titular', tone: 'good' }, { t: 'Volvés en 1 año', tone: 'muted' }, { t: `Liga: ${d1.leagueName}`, tone: 'muted' }] },
-          { ...offerOption(state, d2, true), id: `loan:${d2.id}`, chips: [{ t: 'Rol: Titular', tone: 'good' }, { t: 'Volvés en 1 año', tone: 'muted' }, { t: `Liga: ${d2.leagueName}`, tone: 'muted' }] },
+          { ...offerOption(state, d1, true), id: `loan:${d1.id}`, badge: { t: 'A sumar minutos', tone: 'good', icon: '🎒' }, chips: [{ t: 'Rol: Titular', tone: 'good' }, { t: 'Volvés en 1 año', tone: 'muted' }, { t: `Liga: ${d1.leagueName}`, tone: 'muted' }] },
+          { ...offerOption(state, d2, true), id: `loan:${d2.id}`, badge: { t: 'A sumar minutos', tone: 'good', icon: '🎒' }, chips: [{ t: 'Rol: Titular', tone: 'good' }, { t: 'Volvés en 1 año', tone: 'muted' }, { t: `Liga: ${d2.leagueName}`, tone: 'muted' }] },
           { ...stayOption(state), label: `Quedarte a pelearla en ${club.name}`, sub: 'Contra pronóstico' },
         ],
       };
@@ -1127,7 +1140,7 @@ function playDtSeason(state: CareerState, rng: Rng): SeasonRow {
 
   const row: SeasonRow = {
     year: state.year, clubId: club.id, clubName: club.name, role: 'Director técnico',
-    apps: matches, goals: 0, rating, leaguePos: out.pos, titles, note,
+    apps: matches, goals: 0, rating, leaguePos: out.pos, titles, note, ability: state.dtSkill,
   };
   state.seasons.push(row);
   driftWorld(state, rng);

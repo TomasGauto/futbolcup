@@ -8,7 +8,7 @@ import { drawCards, simulateBiennium, squadStrength, type BienniumRecap, type Qu
 import { loadAssetManifest } from './assets';
 import { Crest, LeagueTrophy, Trophy } from './Crest';
 
-// Dinastía FC — modo único "partida rápida": 15 decisiones, una por bienio.
+// ElGoat.online — modo único "partida rápida": 15 decisiones, una por bienio.
 // Un clic = un bienio simulado. Una partida completa dura ~5 minutos.
 
 type BestRun = { club: string; score: number; title: string; titles: number; date: string };

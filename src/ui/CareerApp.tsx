@@ -10,6 +10,73 @@ import { Crest, Trophy, AwardMark } from './Crest';
 import { buildShareCard } from './sharecard';
 import { getClubRivals } from '../domain/rivalries';
 
+/**
+ * Logo de la marca: una cabra (el "GOAT" — Greatest Of All Time).
+ * SVG inline y auto-contenido (sin assets externos, offline-safe). Toma el
+ * color de `currentColor`, así hereda el tema cromático del club. Los ojos y
+ * hocico se recortan con el color de fondo del panel para que lea como cabra.
+ */
+function GoatMark({ size = 72, style }: { size?: number; style?: React.CSSProperties }) {
+  return (
+    <svg viewBox="0 0 120 120" width={size} height={size} role="img"
+      aria-label="ElGoat" fill="currentColor" style={style}>
+      {/* cuernos curvos hacia atrás */}
+      <path d="M52 42 C44 20 26 10 18 16 C30 18 40 30 47 46 Z" />
+      <path d="M68 42 C76 20 94 10 102 16 C90 18 80 30 73 46 Z" />
+      {/* orejas */}
+      <path d="M44 50 C34 46 26 50 29 58 C37 61 44 56 47 52 Z" />
+      <path d="M76 50 C86 46 94 50 91 58 C83 61 76 56 73 52 Z" />
+      {/* cabeza */}
+      <path d="M47 44 C40 47 38 58 42 71 C46 85 54 93 60 95 C66 93 74 85 78 71 C82 58 80 47 73 44 C66 41 54 41 47 44 Z" />
+      {/* barba/chiva */}
+      <path d="M55 92 C56 101 58 108 60 111 C62 108 64 101 65 92 Z" />
+      {/* ojos y hocico recortados con el fondo del panel */}
+      <circle cx="52" cy="64" r="3.4" fill="var(--panel)" />
+      <circle cx="68" cy="64" r="3.4" fill="var(--panel)" />
+      <circle cx="56" cy="82" r="1.7" fill="var(--panel)" />
+      <circle cx="64" cy="82" r="1.7" fill="var(--panel)" />
+    </svg>
+  );
+}
+
+// Silueta de la cabra (misma que GoatMark) para el medidor "Nivel de GOAT".
+const GOAT_PATHS = [
+  'M52 42 C44 20 26 10 18 16 C30 18 40 30 47 46 Z',
+  'M68 42 C76 20 94 10 102 16 C90 18 80 30 73 46 Z',
+  'M44 50 C34 46 26 50 29 58 C37 61 44 56 47 52 Z',
+  'M76 50 C86 46 94 50 91 58 C83 61 76 56 73 52 Z',
+  'M47 44 C40 47 38 58 42 71 C46 85 54 93 60 95 C66 93 74 85 78 71 C82 58 80 47 73 44 C66 41 54 41 47 44 Z',
+  'M55 92 C56 101 58 108 60 111 C62 108 64 101 65 92 Z',
+];
+
+/** Medidor "Nivel de GOAT": la cabra se pinta de oro de abajo hacia arriba según el porcentaje. */
+function GoatMeter({ pct, size = 84 }: { pct: number; size?: number }) {
+  const p = Math.max(0, Math.min(1, pct));
+  const TOP = 8, BOT = 113; // rango vertical visible de la cabra
+  const fillY = TOP + (BOT - TOP) * (1 - p);
+  return (
+    <svg viewBox="0 0 120 120" width={size} height={size} role="img" aria-label={`Nivel de GOAT ${Math.round(p * 100)}%`} style={{ flexShrink: 0 }}>
+      <defs>
+        <clipPath id="goatFillClip">{GOAT_PATHS.map((d, i) => <path key={i} d={d} />)}</clipPath>
+        <linearGradient id="goatGold" x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0" stopColor="#a86a10" />
+          <stop offset="1" stopColor="#fcd34d" />
+        </linearGradient>
+      </defs>
+      {/* base "vacía" (gris) */}
+      <g fill="rgba(255,255,255,0.10)">{GOAT_PATHS.map((d, i) => <path key={i} d={d} />)}</g>
+      {/* relleno dorado hasta el %, recortado a la silueta */}
+      <rect x="0" y={fillY} width="120" height={120 - fillY} fill="url(#goatGold)" clipPath="url(#goatFillClip)" />
+      {p > 0.02 && p < 0.99 && <rect x="0" y={fillY - 1} width="120" height="2" fill="#fef3c7" opacity="0.85" clipPath="url(#goatFillClip)" />}
+      {/* ojos y hocico */}
+      <g fill="var(--panel)">
+        <circle cx="52" cy="64" r="3.4" /><circle cx="68" cy="64" r="3.4" />
+        <circle cx="56" cy="82" r="1.7" /><circle cx="64" cy="82" r="1.7" />
+      </g>
+    </svg>
+  );
+}
+
 /** Número que "cuenta" hasta su valor (respeta prefers-reduced-motion). */
 function useCountUp(target: number, ms = 650): number {
   const [shown, setShown] = useState(target);
@@ -321,7 +388,10 @@ export default function CareerApp() {
       <PlayerCard career={career} />
 
       {flash && (
-        <div className="panel p-2 sm:p-3 text-xs sm:text-sm slide-in" style={{ borderColor: 'var(--warn)' }}>⚡ {flash}</div>
+        <div className="flash-banner slide-in" role="status" key={flash}>
+          <span className="flash-banner-icon" aria-hidden>⚡</span>
+          <span className="flash-banner-text">{flash}</span>
+        </div>
       )}
       {lastCycle
         ? <CycleResult rows={lastCycle} />
@@ -789,7 +859,10 @@ function PlayerCard({ career }: { career: CareerState }) {
   const frame = fameFrame(career);
   
   const rating = isDt ? career.dtSkill : career.ability;
-  const tier = rating >= 85 ? 'elite' : rating >= 75 ? 'gold' : rating >= 65 ? 'silver' : 'bronze';
+  // El material del badge sigue el MARCO DE FAMA (BRONCE→LEYENDA), no la valoración,
+  // para que el badge y el chip hablen el mismo idioma (la fama define el marco estilo FUT).
+  const FRAME_TO_TIER: Record<string, string> = { bronce: 'bronze', plata: 'silver', oro: 'gold', leyenda: 'elite', dt: 'gold' };
+  const tier = FRAME_TO_TIER[frame.key] ?? 'bronze';
 
   return (
     <header className={`pcard frame-b-${frame.key} p-2 sm:p-4 relative overflow-hidden`}>
@@ -952,27 +1025,33 @@ function CycleResult({ rows }: { rows: SeasonRow[] }) {
   );
 }
 
-function SeasonResult({ career, row }: { career: CareerState; row: SeasonRow }) {
+function SeasonResult({ career: _career, row }: { career: CareerState; row: SeasonRow }) {
+  const isDtRow = row.role === 'Director técnico';
   const posColor = row.leaguePos === 1 ? 'var(--club-primary)' : row.leaguePos <= 4 ? 'var(--good)' : row.leaguePos >= 17 ? 'var(--bad)' : 'var(--text)';
-  // el resultado cae por etapas: PJ → goles → nota → posición → título
-  const d = (i: number) => ({ '--d': `${i * 150}ms` } as React.CSSProperties);
+  const notaColor = row.rating >= 7 ? 'var(--good)' : row.rating < 6 ? 'var(--bad)' : 'var(--text)';
+  const yy = `${row.year}/${String((row.year + 1) % 100).padStart(2, '0')}`;
+  const d = (i: number) => ({ '--d': `${i * 110}ms` } as React.CSSProperties);
+  const muted = { color: 'var(--muted)' };
+  const dot = <span className="opacity-30">·</span>;
+  // Compacto: una línea de stats (mismo idioma que la trayectoria), sin duplicar la etapa.
   return (
-    <section className="panel p-2 sm:p-3 slide-in" key={`${row.year}-${row.clubId}`}>
-      <div className="flex items-center gap-1.5 sm:gap-2">
-        <Crest clubId={row.clubId} name={row.clubName} size={20} />
-        <div className="font-display text-[10px] sm:text-xs truncate" style={{ color: 'var(--muted)' }}>
-          TEMPORADA {row.year}/{String((row.year + 1) % 100).padStart(2, '0')} · {row.clubName}
+    <section className="panel p-2 sm:p-2.5 slide-in" key={`${row.year}-${row.clubId}`}>
+      <div className="flex items-center justify-between gap-2">
+        <div className="flex items-center gap-1.5 min-w-0">
+          <Crest clubId={row.clubId} name={row.clubName} size={18} />
+          <span className="font-display text-[10px] sm:text-xs truncate" style={muted}>TEMP {yy} · {row.clubName}</span>
         </div>
+        <span className="font-num text-[9px] sm:text-[11px] whitespace-nowrap flex-shrink-0" style={muted}>{row.role}</span>
       </div>
-      <div className="grid grid-cols-4 gap-1 sm:gap-2 mt-1 sm:mt-2 text-center font-num">
-        <div className="reveal-item" style={d(0)}><div className="text-sm sm:text-lg font-bold">{row.apps}</div><div className="text-[7px] sm:text-[9px] font-display" style={{ color: 'var(--muted)' }}>{row.role === 'Director técnico' ? 'PJ DIRIGIDOS' : 'PARTIDOS'}</div></div>
-        <div className="reveal-item" style={d(1)}><div className="text-sm sm:text-lg font-bold">{row.role === 'Director técnico' ? '—' : row.goals}</div><div className="text-[7px] sm:text-[9px] font-display" style={{ color: 'var(--muted)' }}>GOLES</div></div>
-        <div className="reveal-item" style={d(2)}><div className="text-sm sm:text-lg font-bold" style={{ color: row.rating >= 7 ? 'var(--good)' : row.rating < 6 ? 'var(--bad)' : 'var(--text)' }}>{row.rating.toFixed(1)}</div><div className="text-[7px] sm:text-[9px] font-display" style={{ color: 'var(--muted)' }}>NOTA</div></div>
-        <div className="reveal-item" style={d(3)}><div className="text-sm sm:text-lg font-bold" style={{ color: posColor }}>{row.leaguePos}°</div><div className="text-[7px] sm:text-[9px] font-display" style={{ color: 'var(--muted)' }}>EL EQUIPO</div></div>
+      <div className="flex items-center flex-wrap gap-x-1.5 gap-y-0.5 mt-1.5 font-num text-sm sm:text-base">
+        <span className="reveal-item" style={d(0)}><b>{row.apps}</b> <span className="text-[10px]" style={muted}>{isDtRow ? 'PJ dir' : 'PJ'}</span></span>
+        {!isDtRow && <>{dot}<span className="reveal-item" style={d(1)}><b>{row.goals}</b> <span className="text-[10px]" style={muted}>G</span></span></>}
+        {dot}<span className="reveal-item" style={d(2)}><span className="text-[10px]" style={muted}>nota</span> <b style={{ color: notaColor }}>{row.rating.toFixed(1)}</b></span>
+        {dot}<span className="reveal-item" style={d(3)}><b style={{ color: posColor }}>{row.leaguePos}°</b></span>
+        {row.note && <>{dot}<span className="reveal-item text-[10px]" style={{ ...muted, ...d(4) }}>{row.note}</span></>}
       </div>
-      <div className="text-[9px] sm:text-[11px] mt-1 sm:mt-1.5 font-num reveal-item" style={{ color: 'var(--muted)', ...d(4) }}>Rol: {row.role}{row.note ? ` · ${row.note}` : ''}</div>
       {row.titles.length > 0 && (
-        <div className="panel p-1.5 sm:p-2 mt-1.5 sm:mt-2 text-center reveal-item" style={{ borderColor: 'var(--club-primary)', background: 'rgba(var(--club-primary-rgb),0.08)', ...d(5) }}>
+        <div className="panel p-1.5 mt-1.5 text-center reveal-item" style={{ borderColor: 'var(--club-primary)', background: 'rgba(var(--club-primary-rgb),0.08)', ...d(5) }}>
           <span className="font-display text-xs sm:text-sm inline-flex items-center gap-1 flex-wrap justify-center" style={{ color: 'var(--club-primary)' }}>
             {row.titles.map((t, i) => <TitleMark key={i} title={t} size={16} />)} ¡CAMPEÓN! {row.titles.join(' + ')}
           </span>
@@ -1005,18 +1084,22 @@ function Trajectory({ career, full }: { career: CareerState; full?: boolean }) {
     return rows.reduce((a, r) => a + r.rating, 0) / rows.length;
   };
 
-  // "Prime": la etapa de mayor nota (con peso de minutos) en cada vida. Solo con ≥2 etapas de esa fase.
+  // "Prime": la etapa de mayor valoración (con peso de minutos) en cada vida. Solo con ≥2 etapas de esa fase.
   const keyOf = (s: Stint) => `${s.clubId}-${s.startYear}`;
   const primeKeyFor = (as: Stint['as']): string | null => {
     const phase = career.stints.filter((s) => s.as === as);
     if (phase.length < 2) return null;
     const cand = phase
-      .map((s) => ({ key: keyOf(s), nota: notaOf(s), apps: s.apps, y: s.startYear }))
-      .filter((x): x is { key: string; nota: number; apps: number; y: number } => x.nota != null);
+      .map((s) => {
+        const rows = career.seasons.filter((r) => r.clubId === s.clubId && r.year >= s.startYear && r.year < s.endYear);
+        const ability = rows.length > 0 ? Math.max(...rows.map(r => r.ability ?? 0)) : 0;
+        return { key: keyOf(s), nota: notaOf(s), ability: ability > 0 ? ability : (notaOf(s) ?? 0), apps: s.apps, y: s.startYear };
+      })
+      .filter((x): x is { key: string; nota: number; ability: number; apps: number; y: number } => x.nota != null);
     const eligible = cand.filter((x) => x.apps >= 10);
     const pool = eligible.length ? eligible : cand;
     if (pool.length === 0) return null;
-    pool.sort((a, b) => (b.nota - a.nota) || (b.apps - a.apps) || (a.y - b.y));
+    pool.sort((a, b) => (b.ability - a.ability) || (b.apps - a.apps) || (a.y - b.y));
     return pool[0].key;
   };
   const primeKey = { jugador: primeKeyFor('jugador'), dt: primeKeyFor('dt') };
@@ -1200,8 +1283,11 @@ function StartScreen({ onStart }: { onStart: (name: string, nat: string, pos: Pl
   return (
     <div className="max-w-xl mx-auto p-3 sm:p-4 flex flex-col gap-3 sm:gap-4 min-h-dvh justify-start sm:justify-center">
       <header className="create-hero px-5 pt-4 pb-4 sm:pt-6 sm:pb-5 text-center">
+        <GoatMark size={60} style={{ color: 'var(--club-primary)', margin: '0 auto 2px' }} />
         <div className="field-label" style={{ opacity: 0.8 }}>Simulador de carrera</div>
-        <h1 className="font-display text-3xl sm:text-5xl mt-1 leading-none" style={{ color: 'var(--club-primary)' }}>MI CARRERA PROFESIONAL</h1>
+        <h1 className="font-display text-3xl sm:text-5xl mt-1 leading-none" style={{ color: 'var(--club-primary)' }}>
+          ELGOAT<span style={{ opacity: 0.6, fontWeight: 700 }}>.online</span>
+        </h1>
         <p className="mt-2 sm:mt-3 text-xs sm:text-sm mx-auto" style={{ color: 'var(--muted)', maxWidth: '38ch' }}>
           De la cantera al retiro, un club a la vez. Tomá decisiones, asumí consecuencias y construí tu leyenda.
         </p>
@@ -1382,8 +1468,9 @@ function RetirementScreen({ career, onReset, saved, onSaved }: { career: CareerS
       const canShareFile = !!file && typeof navigator.share === 'function'
         && typeof navigator.canShare === 'function' && navigator.canShare({ files: [file] });
       if (canShareFile && file) {
-        // hoja nativa de compartir (WhatsApp, Instagram, etc.) con la tarjeta como imagen adjunta
-        await navigator.share({ files: [file], title: 'Mi carrera profesional', text: shareText });
+        // hoja nativa de compartir: SOLO la imagen — el texto largo ensuciaba el
+        // mensaje (quien quiera el resumen tiene el botón "Copiar resumen")
+        await navigator.share({ files: [file] });
       } else {
         // sin soporte para adjuntar imágenes (típico en desktop): manda el resumen directo a WhatsApp
         window.open(`https://wa.me/?text=${encodeURIComponent(shareText)}`, '_blank', 'noopener,noreferrer');
@@ -1413,7 +1500,7 @@ function RetirementScreen({ career, onReset, saved, onSaved }: { career: CareerS
     `${career.seasons.length} temporadas · ${legacy.totalApps} PJ · ${legacy.totalGoals} goles · ${career.titles.length} títulos\n` +
     (legacy.awards.length > 0 ? `${legacy.awards.map((a) => a.award).join(' · ')}\n` : '') +
     career.stints.map((s) => `${s.startYear}-${s.endYear} ${s.as === 'dt' ? '[DT] ' : ''}${s.clubName}${s.titles.length ? ' ×' + s.titles.length : ''}`).join('\n') +
-    `\n¿Cómo sería tu carrera? — Mi carrera profesional`;
+    `\n🐐 ¿Cómo sería tu carrera? — ElGoat.online`;
 
   return (
     <div className="max-w-xl mx-auto p-3 sm:p-4 flex flex-col gap-3 min-h-dvh justify-start sm:justify-center">
@@ -1422,10 +1509,14 @@ function RetirementScreen({ career, onReset, saved, onSaved }: { career: CareerS
         <h1 className="font-display text-3xl sm:text-4xl mt-1" style={{ color: 'var(--club-primary)' }}>{legacy.tier}</h1>
         <p className="mt-1 text-sm">{career.name} · {career.position} · {career.nationality}</p>
         <p className="text-xs mt-1" style={{ color: 'var(--muted)' }}>{legacy.tagline}</p>
-        <div className="mt-3 inline-block panel px-8 py-3">
-          <div className="font-display text-[10px]" style={{ color: 'var(--muted)' }}>PUNTAJE DE LEYENDA</div>
-          <div className="font-num text-4xl font-bold" style={{ color: legacy.score >= 550 ? 'var(--good)' : legacy.score >= 220 ? 'var(--warn)' : 'var(--bad)' }}>
-            {legacy.score}<span className="text-base" style={{ color: 'var(--muted)' }}>/1000</span>
+        <div className="mt-3 inline-flex items-center gap-3 sm:gap-4 panel px-5 sm:px-6 py-3">
+          <GoatMeter pct={legacy.score / 1000} size={78} />
+          <div className="text-left">
+            <div className="font-display text-[10px]" style={{ color: 'var(--muted)' }}>NIVEL DE GOAT</div>
+            <div className="font-num text-4xl font-bold leading-none mt-0.5" style={{ color: legacy.score >= 550 ? 'var(--good)' : legacy.score >= 220 ? 'var(--warn)' : 'var(--bad)' }}>
+              {legacy.score}<span className="text-base" style={{ color: 'var(--muted)' }}>/1000</span>
+            </div>
+            <div className="font-num text-[11px] font-bold mt-1" style={{ color: 'var(--club-primary)' }}>{(legacy.score / 10).toFixed(0)}% GOAT 🐐</div>
           </div>
         </div>
         {career.retirementNote && <p className="text-xs mt-2" style={{ color: 'var(--muted)' }}>{career.retirementNote}</p>}

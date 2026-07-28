@@ -6,7 +6,7 @@
 
 import type { CareerState, Stint } from '../domain/career';
 import type { CareerLegacy } from '../domain/career';
-import { crestSrc, trophySrcByTitle } from './assets';
+import { crestSrc, trophySrcByTitlePrefix } from './assets';
 
 const W = 1080;
 const MAX_H = 1920; // formato story / pantalla de teléfono
@@ -18,7 +18,7 @@ const TEXT = '#d8dde6';
 const MUTED = '#78829a';
 const GOOD = '#4ade80';
 const GOOD_DIM = 'rgba(74,222,128,0.35)';
-const COND = '"Bahnschrift SemiBold Condensed", "Bahnschrift", "Arial Narrow", sans-serif';
+const COND = '"DM Sans", "Segoe UI", sans-serif';
 
 const MARGIN = 90;
 const ROW_H = 56;
@@ -54,6 +54,45 @@ function roundRect(ctx: CanvasRenderingContext2D, x: number, y: number, w: numbe
   ctx.closePath();
 }
 
+// Silueta de la cabra (misma que GoatMark) para el medidor "Nivel de GOAT" en canvas.
+const GOAT_PATHS = [
+  'M52 42 C44 20 26 10 18 16 C30 18 40 30 47 46 Z',
+  'M68 42 C76 20 94 10 102 16 C90 18 80 30 73 46 Z',
+  'M44 50 C34 46 26 50 29 58 C37 61 44 56 47 52 Z',
+  'M76 50 C86 46 94 50 91 58 C83 61 76 56 73 52 Z',
+  'M47 44 C40 47 38 58 42 71 C46 85 54 93 60 95 C66 93 74 85 78 71 C82 58 80 47 73 44 C66 41 54 41 47 44 Z',
+  'M55 92 C56 101 58 108 60 111 C62 108 64 101 65 92 Z',
+];
+
+/** Dibuja la cabra "Nivel de GOAT" pintada de oro de abajo hacia arriba hasta pct (0..1). */
+function drawGoatMeter(ctx: CanvasRenderingContext2D, x: number, y: number, size: number, pct: number): void {
+  const p = Math.max(0, Math.min(1, pct));
+  const s = size / 120;
+  const TOP = 8, BOT = 113;
+  const fillY = TOP + (BOT - TOP) * (1 - p);
+  const goat = new Path2D();
+  for (const d of GOAT_PATHS) goat.addPath(new Path2D(d));
+  ctx.save();
+  ctx.translate(x, y);
+  ctx.scale(s, s);
+  ctx.fillStyle = 'rgba(255,255,255,0.13)';
+  ctx.fill(goat);
+  ctx.save();
+  ctx.clip(goat);
+  const grad = ctx.createLinearGradient(0, 120, 0, 0);
+  grad.addColorStop(0, '#a86a10');
+  grad.addColorStop(1, '#fcd34d');
+  ctx.fillStyle = grad;
+  ctx.fillRect(0, fillY, 120, 120 - fillY);
+  if (p > 0.02 && p < 0.99) { ctx.fillStyle = 'rgba(254,243,199,0.85)'; ctx.fillRect(0, fillY - 1.5, 120, 3); }
+  ctx.restore();
+  ctx.fillStyle = PANEL;
+  for (const [cx, cy, r] of [[52, 64, 3.4], [68, 64, 3.4], [56, 82, 1.7], [64, 82, 1.7]]) {
+    ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2); ctx.fill();
+  }
+  ctx.restore();
+}
+
 function titleEmoji(t: string): string {
   if (t.startsWith('Copa del Mundo')) return '🌍';
   if (/Champions League|Europa League|Conference League|Copa Libertadores|Copa Sudamericana|Concacaf Champions|Copa América|Eurocopa|Copa Oro|Copa Africana|Copa Asiática/.test(t)) return '🌟';
@@ -85,8 +124,18 @@ function groupTitleNames(names: string[]): [string, number][] {
   return [...map.entries()].sort((a, b) => titleOrder(a[0]) - titleOrder(b[0]));
 }
 
-function groupTitles(s: Stint): [string, number][] {
-  return groupTitleNames(s.titles);
+// Títulos de selección (Mundial + continental de selección). Se guardan en el palmarés
+// general (career.titles) pero los definidos por penal / con source 'nt' no quedan en el
+// stint. Los inyectamos en la etapa cuyo rango de años los contiene.
+const SEL_RE = /Copa del Mundo|Copa América|Eurocopa|Copa Oro|Copa Africana|Copa Asiática/;
+
+/** Títulos a mostrar en la fila de una etapa: los del club + los de selección del período. */
+function stintDisplayTitles(s: Stint, careerTitles: CareerState['titles']): string[] {
+  const sel = careerTitles
+    .filter((t) => t.as === s.as && SEL_RE.test(t.title) && t.year >= s.startYear && t.year < s.endYear)
+    .map((t) => t.title);
+  const extra = sel.filter((t) => !s.titles.includes(t));
+  return extra.length ? [...s.titles, ...extra] : s.titles;
 }
 
 function chipLabel(title: string, count: number): string {
@@ -180,7 +229,9 @@ function drawStintRows(
   crests: (HTMLImageElement | null)[],
   trophyImgs: Map<string, HTMLImageElement>,
   rowHeights: number[],
+  displayTitles: string[][],
   startY: number,
+  compactCounts: number[] | null = null, // modo compacto: "×N" dorado en vez de sub-fila de trofeos
 ): number {
   let y = startY;
   stints.forEach((s, i) => {
@@ -195,7 +246,14 @@ function drawStintRows(
     ctx.textAlign = 'left';
     ctx.fillStyle = TEXT;
     ctx.font = `700 29px ${COND}`;
-    ctx.fillText(fitText(ctx, `${s.clubName}${s.loan ? ' (prést.)' : ''}`, 460), 150, y);
+    const clubLabel = fitText(ctx, `${s.clubName}${s.loan ? ' (prést.)' : ''}`, 440);
+    ctx.fillText(clubLabel, 150, y);
+    if (compactCounts && compactCounts[i] > 0) {
+      const nameW = ctx.measureText(clubLabel).width;
+      ctx.fillStyle = GOLD;
+      ctx.font = `700 24px ${COND}`;
+      ctx.fillText(`★×${compactCounts[i]}`, 150 + nameW + 14, y);
+    }
 
     ctx.fillStyle = MUTED;
     ctx.font = `500 24px ${COND}`;
@@ -204,11 +262,12 @@ function drawStintRows(
     ctx.fillText(s.as === 'dt' ? `${s.apps} PJ dir.` : `${s.apps} PJ · ${s.goals} g`, W - MARGIN, y);
     ctx.textAlign = 'left';
 
-    // sub-fila: LOS TROFEOS de la etapa, con su dibujito
-    if (s.titles.length > 0) {
+    // sub-fila: LOS TROFEOS de la etapa (club + selección del período), con su dibujito
+    const rowTitles = displayTitles[i];
+    if (rowTitles.length > 0) {
       let tx = 150;
       const ty = y + 12; // top de la sub-fila (iconos de 30px)
-      for (const [title, count] of groupTitles(s)) {
+      for (const [title, count] of groupTitleNames(rowTitles)) {
         const timg = trophyImgs.get(title);
         if (timg && timg.width > 0) {
           const tw = (timg.width / timg.height) * 30 || 30;
@@ -254,6 +313,18 @@ function drawStintRows(
 }
 
 export async function buildShareCard(career: CareerState, legacy: CareerLegacy): Promise<Blob | null> {
+  // el canvas dibuja con la fuente sólo si ya está cargada; forzamos DM Sans en los pesos usados
+  try {
+    const fonts = (document as Document & { fonts?: FontFaceSet }).fonts;
+    if (fonts) {
+      await Promise.all([
+        fonts.load('700 40px "DM Sans"'),
+        fonts.load('800 40px "DM Sans"'),
+        fonts.load('500 40px "DM Sans"'),
+      ]);
+    }
+  } catch { /* si falla, cae a la fuente de sistema */ }
+
   const stints = career.stints.slice(0, 24);
   const playerStints = stints.filter((s) => s.as === 'jugador');
   const dtStints = stints.filter((s) => s.as === 'dt');
@@ -275,7 +346,9 @@ export async function buildShareCard(career: CareerState, legacy: CareerLegacy):
     loadCrests(playerStints),
     loadCrests(dtStints),
     Promise.all(trophyTitles.map(async (t) => {
-      const src = trophySrcByTitle(t);
+      // por prefijo: los títulos guardados traen el año ("Copa del Mundo 2038"),
+      // igual que hace el componente Trophy de la UI (si no, caen a emoji)
+      const src = trophySrcByTitlePrefix(t);
       if (!src) return;
       const img = await loadImage(src);
       if (img) trophyImgs.set(t, img);
@@ -300,19 +373,43 @@ export async function buildShareCard(career: CareerState, legacy: CareerLegacy):
       + (palDt.length > 0 && palJug.length > 0 ? 14 : 0)
       + (labelDt ? PAL_LABEL_H : 0) + dtChipLines.length * PAL_LINE_H;
 
-  const rowHeightsOf = (list: Stint[]) => list.map((s) => ROW_H + (s.titles.length > 0 ? TROPHY_ROW_H : 0));
-  const playerRowHs = rowHeightsOf(playerStints);
-  const dtRowHs = rowHeightsOf(dtStints);
+  // títulos a mostrar por etapa (club + selección del período): usados para altura y dibujo
+  const playerTitles = playerStints.map((s) => stintDisplayTitles(s, career.titles));
+  const dtTitles = dtStints.map((s) => stintDisplayTitles(s, career.titles));
+  const rowHeightsOf = (dts: string[][]) => dts.map((t) => ROW_H + (t.length > 0 ? TROPHY_ROW_H : 0));
+  const playerRowHs = rowHeightsOf(playerTitles);
+  const dtRowHs = rowHeightsOf(dtTitles);
   const blockH = (rowHs: number[]) => 36 + rowHs.reduce((a, b) => a + b, 0);
 
   const palTop = 606 + headerShift; // el header (nombre + puntaje + stats) termina en 534
   const palBottom = palTop + 56 + palContentH;
   const awardsH = awards.length > 0 ? 68 : 0;
-  const playerTop = palBottom + awardsH + 54;
-  const playerBottom = playerTop + blockH(playerRowHs);
-  const dtTop = playerBottom + 58;
-  const dtBottom = dtStints.length > 0 ? dtTop + blockH(dtRowHs) : playerBottom;
-  const naturalH = dtBottom + 100;
+  const computeLayout = (pRH: number[], dRH: number[]) => {
+    const playerTop = palBottom + awardsH + 54;
+    const playerBottom = playerTop + blockH(pRH);
+    const dtTop = playerBottom + 58;
+    const dtBottom = dtStints.length > 0 ? dtTop + blockH(dRH) : playerBottom;
+    return { playerTop, playerBottom, dtTop, dtBottom, naturalH: dtBottom + 100 };
+  };
+  // Carreras larguísimas: en vez de encoger todo el contenido (queda una carta
+  // angosta con franjas negras), MODO COMPACTO: las etapas pierden su sub-fila de
+  // trofeos (ya están todos en el palmarés de arriba) y muestran "★×N" dorado.
+  let shownPlayerTitles = playerTitles;
+  let shownDtTitles = dtTitles;
+  let pRowHs = playerRowHs;
+  let dRowHs = dtRowHs;
+  let compact = false;
+  let lay = computeLayout(playerRowHs, dtRowHs);
+  if (lay.naturalH > MAX_H) {
+    compact = true;
+    shownPlayerTitles = playerTitles.map(() => []);
+    shownDtTitles = dtTitles.map(() => []);
+    pRowHs = playerStints.map(() => ROW_H);
+    dRowHs = dtStints.map(() => ROW_H);
+    lay = computeLayout(pRowHs, dRowHs);
+  }
+  const { playerTop, dtTop, dtBottom } = lay;
+  const naturalH = lay.naturalH;
 
   // --- canvas en formato mobile: si el contenido es más alto, se escala para entrar ---
   const H = Math.min(MAX_H, Math.max(1350, naturalH));
@@ -356,7 +453,7 @@ export async function buildShareCard(career: CareerState, legacy: CareerLegacy):
   ctx.textAlign = 'center';
   ctx.fillStyle = MUTED;
   ctx.font = `600 25px ${COND}`;
-  ctx.fillText('MI CARRERA PROFESIONAL · SIMULADOR', W / 2, 64);
+  ctx.fillText('ELGOAT.ONLINE · SIMULADOR', W / 2, 64);
 
   // Dibujar el Escudo Hexagonal FUT
   const badgeSize = 90;
@@ -400,10 +497,24 @@ export async function buildShareCard(career: CareerState, legacy: CareerLegacy):
   ctx.fillText(nameText, startX + badgeSize + 20, 168);
   ctx.textAlign = 'center';
 
+  // meta line: PRIME (valoración pico, en dorado) + posición · nacionalidad · años
+  const firstYear = career.seasons[0]?.year ?? 2026;
+  const primeRating = career.peakAbility ?? career.potential ?? career.ability;
+  const primeStr = `PRIME ${primeRating}`;
+  const metaStr = `  ·  ${career.position.toUpperCase()} · ${career.nationality.toUpperCase()} · ${firstYear}–${career.year}`;
+  ctx.font = `700 28px ${COND}`;
+  const primeW = ctx.measureText(primeStr).width;
+  ctx.font = `500 28px ${COND}`;
+  const metaW = ctx.measureText(metaStr).width;
+  const metaX = W / 2 - (primeW + metaW) / 2;
+  ctx.textAlign = 'left';
+  ctx.fillStyle = GOLD;
+  ctx.font = `700 28px ${COND}`;
+  ctx.fillText(primeStr, metaX, 202);
   ctx.fillStyle = MUTED;
   ctx.font = `500 28px ${COND}`;
-  const firstYear = career.seasons[0]?.year ?? 2026;
-  ctx.fillText(`${career.position.toUpperCase()} · ${career.nationality.toUpperCase()} · ${firstYear}–${career.year}`, W / 2, 202);
+  ctx.fillText(metaStr, metaX + primeW, 202);
+  ctx.textAlign = 'center';
 
   if (viralMoment) {
     ctx.font = `600 20px ${COND}`;
@@ -434,12 +545,22 @@ export async function buildShareCard(career: CareerState, legacy: CareerLegacy):
   ctx.lineWidth = 2;
   roundRect(ctx, W / 2 - 165, 300 + headerShift, 330, 102, 10);
   ctx.stroke();
+  // "Nivel de GOAT": la cabra pintada hasta el % a la izquierda, label + puntaje a la derecha
+  const boxX = W / 2 - 165, boxY = 300 + headerShift;
+  drawGoatMeter(ctx, boxX + 16, boxY + 12, 78, legacy.score / 1000);
+  ctx.textAlign = 'left';
   ctx.fillStyle = MUTED;
   ctx.font = `600 21px ${COND}`;
-  ctx.fillText('PUNTAJE DE LEYENDA', W / 2, 334 + headerShift);
+  ctx.fillText('NIVEL DE GOAT', boxX + 108, boxY + 34);
+  const scoreStr = String(legacy.score);
   ctx.fillStyle = GOLD;
-  ctx.font = `800 56px ${COND}`;
-  ctx.fillText(`${legacy.score} / 1000`, W / 2, 390 + headerShift);
+  ctx.font = `800 50px ${COND}`;
+  ctx.fillText(scoreStr, boxX + 108, boxY + 82);
+  const sw = ctx.measureText(scoreStr).width;
+  ctx.fillStyle = MUTED;
+  ctx.font = `600 23px ${COND}`;
+  ctx.fillText(`/1000 · ${(legacy.score / 10).toFixed(0)}%`, boxX + 108 + sw + 8, boxY + 82);
+  ctx.textAlign = 'center';
 
   const stats: [string, string][] = [
     ['TEMPORADAS', String(career.seasons.length)],
@@ -507,7 +628,8 @@ export async function buildShareCard(career: CareerState, legacy: CareerLegacy):
 
   // --- CARRERA COMO JUGADOR ---
   sectionHeader(ctx, hasDt ? 'CARRERA COMO JUGADOR' : 'TRAYECTORIA', playerTop, MUTED);
-  drawStintRows(ctx, playerStints, playerCrests, trophyImgs, playerRowHs, playerTop + 56);
+  drawStintRows(ctx, playerStints, playerCrests, trophyImgs, pRowHs, shownPlayerTitles, playerTop + 56,
+    compact ? playerTitles.map((t) => t.length) : null);
 
   // --- SEGUNDA VIDA: DT (sección propia, en verde) ---
   if (dtStints.length > 0) {
@@ -521,14 +643,15 @@ export async function buildShareCard(career: CareerState, legacy: CareerLegacy):
     // barra de acento verde a la izquierda de toda la sección
     ctx.fillStyle = GOOD_DIM;
     ctx.fillRect(MARGIN - 26, dtTop + 30, 4, dtBottom - dtTop - 44);
-    drawStintRows(ctx, dtStints, dtCrests, trophyImgs, dtRowHs, dtTop + 56);
+    drawStintRows(ctx, dtStints, dtCrests, trophyImgs, dRowHs, shownDtTitles, dtTop + 56,
+      compact ? dtTitles.map((t) => t.length) : null);
   }
 
   // --- pie ---
   ctx.textAlign = 'center';
   ctx.fillStyle = MUTED;
   ctx.font = `500 25px ${COND}`;
-  ctx.fillText('¿Cómo sería tu carrera? — MI CARRERA PROFESIONAL', W / 2, k < 1 ? naturalH - 40 : H - 44);
+  ctx.fillText('¿Cómo sería tu carrera? — ELGOAT.ONLINE', W / 2, k < 1 ? naturalH - 40 : H - 44);
 
   ctx.restore();
 
