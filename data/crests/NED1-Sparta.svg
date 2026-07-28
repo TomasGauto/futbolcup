@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 148" width="128" height="148" role="img" aria-label="Sparta">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ff6b00"/><stop offset="1" stop-color="#0a0a0a"/></linearGradient></defs>
+  <path d="M64 4 118 22 118 78 Q118 122 64 144 Q10 122 10 78 L10 22 Z" fill="url(#g)" stroke="#ffffff" stroke-width="4"/>
+  <path d="M64 4 118 22 118 78 Q118 122 64 144 Q10 122 10 78 L10 22 Z" fill="none" stroke="rgba(0,0,0,.25)" stroke-width="1"/>
+  <text x="64" y="82" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-weight="700" font-size="40" fill="#ffffff" style="letter-spacing:1px">SPA</text>
+</svg>

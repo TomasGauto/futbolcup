@@ -1,0 +1,6373 @@
+{
+  "trophies": [
+    {
+      "key": "ENG1",
+      "kind": "league",
+      "title": "Premier League",
+      "leagueId": "ENG1",
+      "file": "trophies/ENG1.png",
+      "source": "real"
+    },
+    {
+      "key": "ESP1",
+      "kind": "league",
+      "title": "La Liga",
+      "leagueId": "ESP1",
+      "file": "trophies/ESP1.png",
+      "source": "real"
+    },
+    {
+      "key": "ITA1",
+      "kind": "league",
+      "title": "Serie A",
+      "leagueId": "ITA1",
+      "file": "trophies/ITA1.png",
+      "source": "real"
+    },
+    {
+      "key": "GER1",
+      "kind": "league",
+      "title": "Bundesliga",
+      "leagueId": "GER1",
+      "file": "trophies/GER1.png",
+      "source": "real"
+    },
+    {
+      "key": "FRA1",
+      "kind": "league",
+      "title": "Ligue 1",
+      "leagueId": "FRA1",
+      "file": "trophies/FRA1.png",
+      "source": "real"
+    },
+    {
+      "key": "NED1",
+      "kind": "league",
+      "title": "Eredivisie",
+      "leagueId": "NED1",
+      "file": "trophies/NED1.png",
+      "source": "real"
+    },
+    {
+      "key": "POR1",
+      "kind": "league",
+      "title": "Primeira Liga",
+      "leagueId": "POR1",
+      "file": "trophies/POR1.png",
+      "source": "real"
+    },
+    {
+      "key": "BRA1",
+      "kind": "league",
+      "title": "Brasileirão Série A",
+      "leagueId": "BRA1",
+      "file": "trophies/BRA1.png",
+      "source": "real"
+    },
+    {
+      "key": "ARG1",
+      "kind": "league",
+      "title": "Liga Profesional",
+      "leagueId": "ARG1",
+      "file": "trophies/ARG1.png",
+      "source": "real"
+    },
+    {
+      "key": "USA1",
+      "kind": "league",
+      "title": "MLS",
+      "leagueId": "USA1",
+      "file": "trophies/USA1.png",
+      "source": "real"
+    },
+    {
+      "key": "MEX1",
+      "kind": "league",
+      "title": "Liga MX",
+      "leagueId": "MEX1",
+      "file": "trophies/MEX1.png",
+      "source": "real"
+    },
+    {
+      "key": "COL1",
+      "kind": "league",
+      "title": "Primera A",
+      "leagueId": "COL1",
+      "file": "trophies/COL1.png",
+      "source": "real"
+    },
+    {
+      "key": "cont-UEFAChampionsLeague",
+      "kind": "continental",
+      "title": "UEFA Champions League",
+      "file": "trophies/cont-UEFAChampionsLeague.png",
+      "source": "real"
+    },
+    {
+      "key": "cont-UEFAEuropaLeague",
+      "kind": "continental",
+      "title": "UEFA Europa League",
+      "file": "trophies/cont-UEFAEuropaLeague.png",
+      "source": "real"
+    },
+    {
+      "key": "cont-UEFAConferenceLeague",
+      "kind": "continental",
+      "title": "UEFA Conference League",
+      "file": "trophies/cont-UEFAConferenceLeague.png",
+      "source": "real"
+    },
+    {
+      "key": "cont-CopaLibertadores",
+      "kind": "continental",
+      "title": "Copa Libertadores",
+      "file": "trophies/cont-CopaLibertadores.png",
+      "source": "real"
+    },
+    {
+      "key": "cont-CopaSudamericana",
+      "kind": "continental",
+      "title": "Copa Sudamericana",
+      "file": "trophies/cont-CopaSudamericana.png",
+      "source": "real"
+    },
+    {
+      "key": "cont-ConcacafChampionsCup",
+      "kind": "continental",
+      "title": "Concacaf Champions Cup",
+      "file": "trophies/cont-ConcacafChampionsCup.png",
+      "source": "real"
+    },
+    {
+      "key": "cont-CopaAmrica",
+      "kind": "continental",
+      "title": "Copa América",
+      "file": "trophies/cont-CopaAmrica.png",
+      "source": "real"
+    },
+    {
+      "key": "cont-Eurocopa",
+      "kind": "continental",
+      "title": "Eurocopa",
+      "file": "trophies/cont-Eurocopa.png",
+      "source": "real"
+    },
+    {
+      "key": "cont-CopaOro",
+      "kind": "continental",
+      "title": "Copa Oro",
+      "file": "trophies/cont-CopaOro.png",
+      "source": "real"
+    },
+    {
+      "key": "cont-CopaAfricanadeNaciones",
+      "kind": "continental",
+      "title": "Copa Africana de Naciones",
+      "file": "trophies/cont-CopaAfricanadeNaciones.png",
+      "source": "real"
+    },
+    {
+      "key": "cont-CopaAsitica",
+      "kind": "continental",
+      "title": "Copa Asiática",
+      "file": "trophies/cont-CopaAsitica.png",
+      "source": "real"
+    },
+    {
+      "key": "copa-ENG1",
+      "kind": "national",
+      "title": "Copa de Inglaterra",
+      "leagueId": "ENG1",
+      "file": "trophies/copa-ENG1.png",
+      "source": "real"
+    },
+    {
+      "key": "copa-ESP1",
+      "kind": "national",
+      "title": "Copa de España",
+      "leagueId": "ESP1",
+      "file": "trophies/copa-ESP1.png",
+      "source": "real"
+    },
+    {
+      "key": "copa-ITA1",
+      "kind": "national",
+      "title": "Copa de Italia",
+      "leagueId": "ITA1",
+      "file": "trophies/copa-ITA1.png",
+      "source": "real"
+    },
+    {
+      "key": "copa-GER1",
+      "kind": "national",
+      "title": "Copa de Alemania",
+      "leagueId": "GER1",
+      "file": "trophies/copa-GER1.png",
+      "source": "real"
+    },
+    {
+      "key": "copa-FRA1",
+      "kind": "national",
+      "title": "Copa de Francia",
+      "leagueId": "FRA1",
+      "file": "trophies/copa-FRA1.png",
+      "source": "real"
+    },
+    {
+      "key": "copa-NED1",
+      "kind": "national",
+      "title": "Copa de Holanda",
+      "leagueId": "NED1",
+      "file": "trophies/copa-NED1.png",
+      "source": "real"
+    },
+    {
+      "key": "copa-POR1",
+      "kind": "national",
+      "title": "Copa de Portugal",
+      "leagueId": "POR1",
+      "file": "trophies/copa-POR1.png",
+      "source": "real"
+    },
+    {
+      "key": "copa-BRA1",
+      "kind": "national",
+      "title": "Copa de Brasil",
+      "leagueId": "BRA1",
+      "file": "trophies/copa-BRA1.png",
+      "source": "real"
+    },
+    {
+      "key": "copa-ARG1",
+      "kind": "national",
+      "title": "Copa de Argentina",
+      "leagueId": "ARG1",
+      "file": "trophies/copa-ARG1.png",
+      "source": "real"
+    },
+    {
+      "key": "copa-USA1",
+      "kind": "national",
+      "title": "Copa de Estados Unidos",
+      "leagueId": "USA1",
+      "file": "trophies/copa-USA1.png",
+      "source": "real"
+    },
+    {
+      "key": "copa-MEX1",
+      "kind": "national",
+      "title": "Copa de México",
+      "leagueId": "MEX1",
+      "file": "trophies/copa-MEX1.png",
+      "source": "real"
+    },
+    {
+      "key": "copa-COL1",
+      "kind": "national",
+      "title": "Copa de Colombia",
+      "leagueId": "COL1",
+      "file": "trophies/copa-COL1.png",
+      "source": "real"
+    },
+    {
+      "key": "cont-mundial",
+      "kind": "continental",
+      "title": "Copa del Mundo",
+      "file": "trophies/cont-CopaDelMundo.png",
+      "source": "real"
+    },
+    {
+      "key": "PER1",
+      "kind": "league",
+      "title": "Liga 1",
+      "leagueId": "PER1",
+      "file": "trophies/PER1.png",
+      "source": "real"
+    },
+    {
+      "key": "URU1",
+      "kind": "league",
+      "title": "Liga AUF Uruguaya",
+      "leagueId": "URU1",
+      "file": "trophies/URU1.png",
+      "source": "real"
+    },
+    {
+      "key": "CHI1",
+      "kind": "league",
+      "title": "Primera de Chile",
+      "leagueId": "CHI1",
+      "file": "trophies/CHI1.png",
+      "source": "real"
+    },
+    {
+      "key": "BEL1",
+      "kind": "league",
+      "title": "Jupiler Pro League",
+      "leagueId": "BEL1",
+      "file": "trophies/BEL1.png",
+      "source": "real"
+    },
+    {
+      "key": "RUS1",
+      "kind": "league",
+      "title": "Premier Liga Rusa",
+      "leagueId": "RUS1",
+      "file": "trophies/RUS1.png",
+      "source": "real"
+    },
+    {
+      "key": "SAU1",
+      "kind": "league",
+      "title": "Liga Profesional Saudí",
+      "leagueId": "SAU1",
+      "file": "trophies/SAU1.png",
+      "source": "real"
+    },
+    {
+      "key": "copa-PER1",
+      "kind": "national",
+      "title": "Copa de Perú",
+      "leagueId": "PER1",
+      "file": "trophies/copa-PER1.png",
+      "source": "real"
+    },
+    {
+      "key": "copa-URU1",
+      "kind": "national",
+      "title": "Copa de Uruguay",
+      "leagueId": "URU1",
+      "file": "trophies/copa-URU1.png",
+      "source": "real"
+    },
+    {
+      "key": "copa-CHI1",
+      "kind": "national",
+      "title": "Copa de Chile",
+      "leagueId": "CHI1",
+      "file": "trophies/copa-CHI1.png",
+      "source": "real"
+    },
+    {
+      "key": "copa-BEL1",
+      "kind": "national",
+      "title": "Copa de Bélgica",
+      "leagueId": "BEL1",
+      "file": "trophies/copa-BEL1.png",
+      "source": "real"
+    },
+    {
+      "key": "copa-RUS1",
+      "kind": "national",
+      "title": "Copa de Rusia",
+      "leagueId": "RUS1",
+      "file": "trophies/copa-RUS1.png",
+      "source": "real"
+    },
+    {
+      "key": "copa-SAU1",
+      "kind": "national",
+      "title": "Copa de Arabia Saudita",
+      "leagueId": "SAU1",
+      "file": "trophies/copa-SAU1.png",
+      "source": "real"
+    },
+    {
+      "key": "cont-AFCChampionsLeague",
+      "kind": "continental",
+      "title": "AFC Champions League",
+      "file": "trophies/cont-AFCChampionsLeague.png",
+      "source": "real"
+    }
+  ],
+  "generatedAt": "2026-07-27T15:05:00.937Z",
+  "crests": [
+    {
+      "id": "ENG1-Arsenal",
+      "name": "Arsenal",
+      "leagueId": "ENG1",
+      "division": 1,
+      "file": "crests/ENG1-Arsenal.png",
+      "source": "real",
+      "matched": "Arsenal"
+    },
+    {
+      "id": "ENG1-ManCity",
+      "name": "Manchester City",
+      "leagueId": "ENG1",
+      "division": 1,
+      "file": "crests/ENG1-ManCity.png",
+      "source": "real",
+      "matched": "Manchester City"
+    },
+    {
+      "id": "ENG1-ManUnited",
+      "name": "Manchester United",
+      "leagueId": "ENG1",
+      "division": 1,
+      "file": "crests/ENG1-ManUnited.png",
+      "source": "real",
+      "matched": "Manchester United"
+    },
+    {
+      "id": "ENG1-Bournemouth",
+      "name": "Bournemouth",
+      "leagueId": "ENG1",
+      "division": 1,
+      "file": "crests/ENG1-Bournemouth.png",
+      "source": "real",
+      "matched": "Bournemouth"
+    },
+    {
+      "id": "ENG1-Liverpool",
+      "name": "Liverpool",
+      "leagueId": "ENG1",
+      "division": 1,
+      "file": "crests/ENG1-Liverpool.png",
+      "source": "real",
+      "matched": "Liverpool"
+    },
+    {
+      "id": "ENG1-AstonVilla",
+      "name": "Aston Villa",
+      "leagueId": "ENG1",
+      "division": 1,
+      "file": "crests/ENG1-AstonVilla.png",
+      "source": "real",
+      "matched": "Aston Villa"
+    },
+    {
+      "id": "ENG1-Brentford",
+      "name": "Brentford",
+      "leagueId": "ENG1",
+      "division": 1,
+      "file": "crests/ENG1-Brentford.png",
+      "source": "real",
+      "matched": "Brentford"
+    },
+    {
+      "id": "ENG1-NottmForest",
+      "name": "Nottingham Forest",
+      "leagueId": "ENG1",
+      "division": 1,
+      "file": "crests/ENG1-NottmForest.svg",
+      "source": "generated"
+    },
+    {
+      "id": "ENG1-Brighton",
+      "name": "Brighton",
+      "leagueId": "ENG1",
+      "division": 1,
+      "file": "crests/ENG1-Brighton.png",
+      "source": "real",
+      "matched": "Brighton WFC"
+    },
+    {
+      "id": "ENG1-Newcastle",
+      "name": "Newcastle United",
+      "leagueId": "ENG1",
+      "division": 1,
+      "file": "crests/ENG1-Newcastle.png",
+      "source": "real",
+      "matched": "Newcastle United"
+    },
+    {
+      "id": "ENG1-Fulham",
+      "name": "Fulham",
+      "leagueId": "ENG1",
+      "division": 1,
+      "file": "crests/ENG1-Fulham.png",
+      "source": "real",
+      "matched": "Fulham"
+    },
+    {
+      "id": "ENG1-Chelsea",
+      "name": "Chelsea",
+      "leagueId": "ENG1",
+      "division": 1,
+      "file": "crests/ENG1-Chelsea.png",
+      "source": "real",
+      "matched": "Chelsea"
+    },
+    {
+      "id": "ENG1-Everton",
+      "name": "Everton",
+      "leagueId": "ENG1",
+      "division": 1,
+      "file": "crests/ENG1-Everton.png",
+      "source": "real",
+      "matched": "Everton"
+    },
+    {
+      "id": "ENG1-Leeds",
+      "name": "Leeds United",
+      "leagueId": "ENG1",
+      "division": 1,
+      "file": "crests/ENG1-Leeds.png",
+      "source": "real",
+      "matched": "Leeds United"
+    },
+    {
+      "id": "ENG1-CrystalPalace",
+      "name": "Crystal Palace",
+      "leagueId": "ENG1",
+      "division": 1,
+      "file": "crests/ENG1-CrystalPalace.png",
+      "source": "real",
+      "matched": "Crystal Palace"
+    },
+    {
+      "id": "ENG1-Sunderland",
+      "name": "Sunderland",
+      "leagueId": "ENG1",
+      "division": 1,
+      "file": "crests/ENG1-Sunderland.png",
+      "source": "real",
+      "matched": "Sunderland"
+    },
+    {
+      "id": "ENG1-WestHam",
+      "name": "West Ham United",
+      "leagueId": "ENG1",
+      "division": 1,
+      "file": "crests/ENG1-WestHam.png",
+      "source": "real",
+      "matched": "West Ham United"
+    },
+    {
+      "id": "ENG1-Tottenham",
+      "name": "Tottenham",
+      "leagueId": "ENG1",
+      "division": 1,
+      "file": "crests/ENG1-Tottenham.png",
+      "source": "real",
+      "matched": "Tottenham Women"
+    },
+    {
+      "id": "ENG1-Wolves",
+      "name": "Wolverhampton",
+      "leagueId": "ENG1",
+      "division": 1,
+      "file": "crests/ENG1-Wolves.png",
+      "source": "real",
+      "matched": "Wolverhampton Casuals"
+    },
+    {
+      "id": "ENG1-Burnley",
+      "name": "Burnley",
+      "leagueId": "ENG1",
+      "division": 1,
+      "file": "crests/ENG1-Burnley.png",
+      "source": "real",
+      "matched": "Burnley"
+    },
+    {
+      "id": "ENG1-Wigan",
+      "name": "Wigan",
+      "leagueId": "ENG1",
+      "division": 2,
+      "file": "crests/ENG1-Wigan.png",
+      "source": "real",
+      "matched": "Wigan Athletic"
+    },
+    {
+      "id": "ENG1-Stoke",
+      "name": "Stoke",
+      "leagueId": "ENG1",
+      "division": 2,
+      "file": "crests/ENG1-Stoke.png",
+      "source": "real",
+      "matched": "Stoke City"
+    },
+    {
+      "id": "ENG1-Swansea",
+      "name": "Swansea",
+      "leagueId": "ENG1",
+      "division": 2,
+      "file": "crests/ENG1-Swansea.png",
+      "source": "real",
+      "matched": "Swansea City"
+    },
+    {
+      "id": "ENG1-Birmingham",
+      "name": "Birmingham",
+      "leagueId": "ENG1",
+      "division": 2,
+      "file": "crests/ENG1-Birmingham.png",
+      "source": "real",
+      "matched": "Birmingham City"
+    },
+    {
+      "id": "ENG1-Bolton",
+      "name": "Bolton",
+      "leagueId": "ENG1",
+      "division": 2,
+      "file": "crests/ENG1-Bolton.png",
+      "source": "real",
+      "matched": "Bolton Wanderers"
+    },
+    {
+      "id": "ENG1-Charlton",
+      "name": "Charlton",
+      "leagueId": "ENG1",
+      "division": 2,
+      "file": "crests/ENG1-Charlton.png",
+      "source": "real",
+      "matched": "Charlton Athletic"
+    },
+    {
+      "id": "ENG1-Blackpool",
+      "name": "Blackpool",
+      "leagueId": "ENG1",
+      "division": 2,
+      "file": "crests/ENG1-Blackpool.png",
+      "source": "real",
+      "matched": "Blackpool"
+    },
+    {
+      "id": "ENG1-SheffieldWeds",
+      "name": "Sheffield Wednesday",
+      "leagueId": "ENG1",
+      "division": 2,
+      "file": "crests/ENG1-SheffieldWeds.png",
+      "source": "real",
+      "matched": "Sheffield Wednesday"
+    },
+    {
+      "id": "ENG1-Cardiff",
+      "name": "Cardiff",
+      "leagueId": "ENG1",
+      "division": 2,
+      "file": "crests/ENG1-Cardiff.png",
+      "source": "real",
+      "matched": "Cardiff City"
+    },
+    {
+      "id": "ENG1-Blackburn",
+      "name": "Blackburn",
+      "leagueId": "ENG1",
+      "division": 2,
+      "file": "crests/ENG1-Blackburn.png",
+      "source": "real",
+      "matched": "Blackburn Rovers"
+    },
+    {
+      "id": "ENG1-Portsmouth",
+      "name": "Portsmouth",
+      "leagueId": "ENG1",
+      "division": 2,
+      "file": "crests/ENG1-Portsmouth.png",
+      "source": "real",
+      "matched": "Portsmouth"
+    },
+    {
+      "id": "ENG1-Coventry",
+      "name": "Coventry City",
+      "leagueId": "ENG1",
+      "division": 2,
+      "file": "crests/ENG1-Coventry.png",
+      "source": "real",
+      "matched": "Coventry City"
+    },
+    {
+      "id": "ENG1-Hull",
+      "name": "Hull",
+      "leagueId": "ENG1",
+      "division": 2,
+      "file": "crests/ENG1-Hull.png",
+      "source": "real",
+      "matched": "Hull City"
+    },
+    {
+      "id": "ENG1-WestBrom",
+      "name": "West Bromwich",
+      "leagueId": "ENG1",
+      "division": 2,
+      "file": "crests/ENG1-WestBrom.png",
+      "source": "real",
+      "matched": "West Bromwich Albion"
+    },
+    {
+      "id": "ENG1-QPR",
+      "name": "Queens Park Rangers",
+      "leagueId": "ENG1",
+      "division": 2,
+      "file": "crests/ENG1-QPR.png",
+      "source": "real",
+      "matched": "Queens Park Rangers"
+    },
+    {
+      "id": "ENG1-Luton",
+      "name": "Luton Town",
+      "leagueId": "ENG1",
+      "division": 2,
+      "file": "crests/ENG1-Luton.png",
+      "source": "real",
+      "matched": "Luton Town"
+    },
+    {
+      "id": "ENG1-Reading",
+      "name": "Reading",
+      "leagueId": "ENG1",
+      "division": 2,
+      "file": "crests/ENG1-Reading.png",
+      "source": "real",
+      "matched": "Reading"
+    },
+    {
+      "id": "ENG1-Oldham",
+      "name": "Oldham",
+      "leagueId": "ENG1",
+      "division": 2,
+      "file": "crests/ENG1-Oldham.png",
+      "source": "real",
+      "matched": "Oldham Athletic"
+    },
+    {
+      "id": "ENG1-Barnsley",
+      "name": "Barnsley",
+      "leagueId": "ENG1",
+      "division": 3,
+      "file": "crests/ENG1-Barnsley.png",
+      "source": "real",
+      "matched": "Barnsley"
+    },
+    {
+      "id": "ENG1-Middlesbrough",
+      "name": "Middlesbrough",
+      "leagueId": "ENG1",
+      "division": 3,
+      "file": "crests/ENG1-Middlesbrough.png",
+      "source": "real",
+      "matched": "Middlesbrough"
+    },
+    {
+      "id": "ENG1-Leicester",
+      "name": "Leicester City",
+      "leagueId": "ENG1",
+      "division": 3,
+      "file": "crests/ENG1-Leicester.png",
+      "source": "real",
+      "matched": "Leicester City"
+    },
+    {
+      "id": "ENG1-Bradford",
+      "name": "Bradford",
+      "leagueId": "ENG1",
+      "division": 3,
+      "file": "crests/ENG1-Bradford.png",
+      "source": "real",
+      "matched": "Bradford City"
+    },
+    {
+      "id": "ENG1-Ipswich",
+      "name": "Ipswich Town",
+      "leagueId": "ENG1",
+      "division": 3,
+      "file": "crests/ENG1-Ipswich.png",
+      "source": "real",
+      "matched": "Ipswich Town"
+    },
+    {
+      "id": "ENG1-Wimbledon",
+      "name": "Wimbledon",
+      "leagueId": "ENG1",
+      "division": 3,
+      "file": "crests/ENG1-Wimbledon.svg",
+      "source": "generated"
+    },
+    {
+      "id": "ENG1-Watford",
+      "name": "Watford",
+      "leagueId": "ENG1",
+      "division": 3,
+      "file": "crests/ENG1-Watford.png",
+      "source": "real",
+      "matched": "Watford"
+    },
+    {
+      "id": "ENG1-Swindon",
+      "name": "Swindon",
+      "leagueId": "ENG1",
+      "division": 3,
+      "file": "crests/ENG1-Swindon.png",
+      "source": "real",
+      "matched": "Swindon Town"
+    },
+    {
+      "id": "ENG1-Norwich",
+      "name": "Norwich City",
+      "leagueId": "ENG1",
+      "division": 3,
+      "file": "crests/ENG1-Norwich.png",
+      "source": "real",
+      "matched": "Norwich City"
+    },
+    {
+      "id": "ENG1-Huddersfield",
+      "name": "Huddersfield",
+      "leagueId": "ENG1",
+      "division": 3,
+      "file": "crests/ENG1-Huddersfield.png",
+      "source": "real",
+      "matched": "Huddersfield Town"
+    },
+    {
+      "id": "ENG1-SheffieldUnited",
+      "name": "Sheffield United",
+      "leagueId": "ENG1",
+      "division": 3,
+      "file": "crests/ENG1-SheffieldUnited.png",
+      "source": "real",
+      "matched": "Sheffield United"
+    },
+    {
+      "id": "ENG1-Southampton",
+      "name": "Southampton",
+      "leagueId": "ENG1",
+      "division": 3,
+      "file": "crests/ENG1-Southampton.png",
+      "source": "real",
+      "matched": "Southampton"
+    },
+    {
+      "id": "ENG1-Derby",
+      "name": "Derby County",
+      "leagueId": "ENG1",
+      "division": 3,
+      "file": "crests/ENG1-Derby.png",
+      "source": "real",
+      "matched": "Derby County"
+    },
+    {
+      "id": "ESP1-Barcelona",
+      "name": "Barcelona",
+      "leagueId": "ESP1",
+      "division": 1,
+      "file": "crests/ESP1-Barcelona.png",
+      "source": "real",
+      "matched": "Barcelona"
+    },
+    {
+      "id": "ESP1-RealMadrid",
+      "name": "Real Madrid",
+      "leagueId": "ESP1",
+      "division": 1,
+      "file": "crests/ESP1-RealMadrid.png",
+      "source": "real",
+      "matched": "Real Madrid"
+    },
+    {
+      "id": "ESP1-Villarreal",
+      "name": "Villarreal",
+      "leagueId": "ESP1",
+      "division": 1,
+      "file": "crests/ESP1-Villarreal.png",
+      "source": "real",
+      "matched": "Villarreal"
+    },
+    {
+      "id": "ESP1-AthMadrid",
+      "name": "Atlético de Madrid",
+      "leagueId": "ESP1",
+      "division": 1,
+      "file": "crests/ESP1-AthMadrid.png",
+      "source": "real",
+      "matched": "Atlético Madrid"
+    },
+    {
+      "id": "ESP1-Betis",
+      "name": "Real Betis",
+      "leagueId": "ESP1",
+      "division": 1,
+      "file": "crests/ESP1-Betis.png",
+      "source": "real",
+      "matched": "Real Betis"
+    },
+    {
+      "id": "ESP1-Vallecano",
+      "name": "Rayo Vallecano",
+      "leagueId": "ESP1",
+      "division": 1,
+      "file": "crests/ESP1-Vallecano.png",
+      "source": "real",
+      "matched": "Rayo Vallecano"
+    },
+    {
+      "id": "ESP1-Valencia",
+      "name": "Valencia",
+      "leagueId": "ESP1",
+      "division": 1,
+      "file": "crests/ESP1-Valencia.png",
+      "source": "real",
+      "matched": "Valencia"
+    },
+    {
+      "id": "ESP1-Celta",
+      "name": "Celta de Vigo",
+      "leagueId": "ESP1",
+      "division": 1,
+      "file": "crests/ESP1-Celta.png",
+      "source": "real",
+      "matched": "Gran Peña"
+    },
+    {
+      "id": "ESP1-Getafe",
+      "name": "Getafe",
+      "leagueId": "ESP1",
+      "division": 1,
+      "file": "crests/ESP1-Getafe.png",
+      "source": "real",
+      "matched": "Getafe"
+    },
+    {
+      "id": "ESP1-Levante",
+      "name": "Levante",
+      "leagueId": "ESP1",
+      "division": 1,
+      "file": "crests/ESP1-Levante.png",
+      "source": "real",
+      "matched": "Levante"
+    },
+    {
+      "id": "ESP1-Sociedad",
+      "name": "Real Sociedad",
+      "leagueId": "ESP1",
+      "division": 1,
+      "file": "crests/ESP1-Sociedad.png",
+      "source": "real",
+      "matched": "Real Sociedad"
+    },
+    {
+      "id": "ESP1-AthBilbao",
+      "name": "Athletic Club",
+      "leagueId": "ESP1",
+      "division": 1,
+      "file": "crests/ESP1-AthBilbao.png",
+      "source": "real",
+      "matched": "Athletic Bilbao"
+    },
+    {
+      "id": "ESP1-Mallorca",
+      "name": "Mallorca",
+      "leagueId": "ESP1",
+      "division": 1,
+      "file": "crests/ESP1-Mallorca.png",
+      "source": "real",
+      "matched": "Mallorca"
+    },
+    {
+      "id": "ESP1-Alaves",
+      "name": "Alavés",
+      "leagueId": "ESP1",
+      "division": 1,
+      "file": "crests/ESP1-Alaves.png",
+      "source": "real",
+      "matched": "Alavés Gloriosas"
+    },
+    {
+      "id": "ESP1-Elche",
+      "name": "Elche",
+      "leagueId": "ESP1",
+      "division": 1,
+      "file": "crests/ESP1-Elche.png",
+      "source": "real",
+      "matched": "Elche"
+    },
+    {
+      "id": "ESP1-Osasuna",
+      "name": "Osasuna",
+      "leagueId": "ESP1",
+      "division": 1,
+      "file": "crests/ESP1-Osasuna.png",
+      "source": "real",
+      "matched": "Osasuna"
+    },
+    {
+      "id": "ESP1-Espanol",
+      "name": "Espanyol",
+      "leagueId": "ESP1",
+      "division": 1,
+      "file": "crests/ESP1-Espanol.png",
+      "source": "real",
+      "matched": "Espanyol"
+    },
+    {
+      "id": "ESP1-Girona",
+      "name": "Girona",
+      "leagueId": "ESP1",
+      "division": 1,
+      "file": "crests/ESP1-Girona.png",
+      "source": "real",
+      "matched": "Girona"
+    },
+    {
+      "id": "ESP1-Sevilla",
+      "name": "Sevilla",
+      "leagueId": "ESP1",
+      "division": 1,
+      "file": "crests/ESP1-Sevilla.png",
+      "source": "real",
+      "matched": "Sevilla"
+    },
+    {
+      "id": "ESP1-Oviedo",
+      "name": "Oviedo",
+      "leagueId": "ESP1",
+      "division": 1,
+      "file": "crests/ESP1-Oviedo.png",
+      "source": "real",
+      "matched": "Real Oviedo"
+    },
+    {
+      "id": "ESP1-Compostela",
+      "name": "Compostela",
+      "leagueId": "ESP1",
+      "division": 2,
+      "file": "crests/ESP1-Compostela.png",
+      "source": "real",
+      "matched": "Compostela"
+    },
+    {
+      "id": "ESP1-Leganes",
+      "name": "Leganés",
+      "leagueId": "ESP1",
+      "division": 2,
+      "file": "crests/ESP1-Leganes.png",
+      "source": "real",
+      "matched": "Leganés"
+    },
+    {
+      "id": "ESP1-Huesca",
+      "name": "Huesca",
+      "leagueId": "ESP1",
+      "division": 2,
+      "file": "crests/ESP1-Huesca.png",
+      "source": "real",
+      "matched": "Huesca"
+    },
+    {
+      "id": "ESP1-Xerez",
+      "name": "Xerez",
+      "leagueId": "ESP1",
+      "division": 2,
+      "file": "crests/ESP1-Xerez.png",
+      "source": "real",
+      "matched": "Xerez"
+    },
+    {
+      "id": "ESP1-Eibar",
+      "name": "Eibar",
+      "leagueId": "ESP1",
+      "division": 2,
+      "file": "crests/ESP1-Eibar.png",
+      "source": "real",
+      "matched": "Eibar"
+    },
+    {
+      "id": "ESP1-Extremadura",
+      "name": "Extremadura",
+      "leagueId": "ESP1",
+      "division": 2,
+      "file": "crests/ESP1-Extremadura.png",
+      "source": "real",
+      "matched": "Extremadura"
+    },
+    {
+      "id": "ESP1-SpGijon",
+      "name": "Sporting Gijón",
+      "leagueId": "ESP1",
+      "division": 2,
+      "file": "crests/ESP1-SpGijon.png",
+      "source": "real",
+      "matched": "Sporting Atlético"
+    },
+    {
+      "id": "ESP1-Cadiz",
+      "name": "Cádiz",
+      "leagueId": "ESP1",
+      "division": 2,
+      "file": "crests/ESP1-Cadiz.png",
+      "source": "real",
+      "matched": "Cádiz"
+    },
+    {
+      "id": "ESP1-Tenerife",
+      "name": "Tenerife",
+      "leagueId": "ESP1",
+      "division": 2,
+      "file": "crests/ESP1-Tenerife.png",
+      "source": "real",
+      "matched": "Tenerife"
+    },
+    {
+      "id": "ESP1-Merida",
+      "name": "Mérida",
+      "leagueId": "ESP1",
+      "division": 2,
+      "file": "crests/ESP1-Merida.png",
+      "source": "real",
+      "matched": "Mérida"
+    },
+    {
+      "id": "ESP1-Villareal",
+      "name": "Villareal",
+      "leagueId": "ESP1",
+      "division": 2,
+      "file": "crests/ESP1-Villareal.png",
+      "source": "real",
+      "matched": "Villarreal"
+    },
+    {
+      "id": "ESP1-Zaragoza",
+      "name": "Zaragoza",
+      "leagueId": "ESP1",
+      "division": 2,
+      "file": "crests/ESP1-Zaragoza.png",
+      "source": "real",
+      "matched": "Zaragoza Femenino"
+    },
+    {
+      "id": "ESP1-LasPalmas",
+      "name": "Las Palmas",
+      "leagueId": "ESP1",
+      "division": 2,
+      "file": "crests/ESP1-LasPalmas.png",
+      "source": "real",
+      "matched": "Las Palmas"
+    },
+    {
+      "id": "ESP1-LaCoruna",
+      "name": "Deportivo La Coruña",
+      "leagueId": "ESP1",
+      "division": 2,
+      "file": "crests/ESP1-LaCoruna.png",
+      "source": "real",
+      "matched": "Deportivo Fabril"
+    },
+    {
+      "id": "ESP1-Almeria",
+      "name": "Almería",
+      "leagueId": "ESP1",
+      "division": 2,
+      "file": "crests/ESP1-Almeria.png",
+      "source": "real",
+      "matched": "Almería"
+    },
+    {
+      "id": "ESP1-Lerida",
+      "name": "Lerida",
+      "leagueId": "ESP1",
+      "division": 2,
+      "file": "crests/ESP1-Lerida.svg",
+      "source": "generated"
+    },
+    {
+      "id": "ESP1-Gimnastic",
+      "name": "Gimnàstic",
+      "leagueId": "ESP1",
+      "division": 2,
+      "file": "crests/ESP1-Gimnastic.png",
+      "source": "real",
+      "matched": "Gimnàstic"
+    },
+    {
+      "id": "ESP1-Recreativo",
+      "name": "Recreativo",
+      "leagueId": "ESP1",
+      "division": 2,
+      "file": "crests/ESP1-Recreativo.png",
+      "source": "real",
+      "matched": "Recreativo Granada"
+    },
+    {
+      "id": "ESP1-Numancia",
+      "name": "Numancia",
+      "leagueId": "ESP1",
+      "division": 3,
+      "file": "crests/ESP1-Numancia.png",
+      "source": "real",
+      "matched": "Numancia"
+    },
+    {
+      "id": "ESP1-Albacete",
+      "name": "Albacete",
+      "leagueId": "ESP1",
+      "division": 3,
+      "file": "crests/ESP1-Albacete.png",
+      "source": "real",
+      "matched": "Albacete"
+    },
+    {
+      "id": "ESP1-Hercules",
+      "name": "Hércules",
+      "leagueId": "ESP1",
+      "division": 3,
+      "file": "crests/ESP1-Hercules.png",
+      "source": "real",
+      "matched": "Hércules"
+    },
+    {
+      "id": "ESP1-Malaga",
+      "name": "Málaga",
+      "leagueId": "ESP1",
+      "division": 3,
+      "file": "crests/ESP1-Malaga.png",
+      "source": "real",
+      "matched": "Málaga"
+    },
+    {
+      "id": "ESP1-Granada",
+      "name": "Granada",
+      "leagueId": "ESP1",
+      "division": 3,
+      "file": "crests/ESP1-Granada.png",
+      "source": "real",
+      "matched": "Granada"
+    },
+    {
+      "id": "ESP1-Murcia",
+      "name": "Murcia",
+      "leagueId": "ESP1",
+      "division": 3,
+      "file": "crests/ESP1-Murcia.png",
+      "source": "real",
+      "matched": "Real Murcia"
+    },
+    {
+      "id": "ESP1-Santander",
+      "name": "Racing Santander",
+      "leagueId": "ESP1",
+      "division": 3,
+      "file": "crests/ESP1-Santander.png",
+      "source": "real",
+      "matched": "Racing de Santander"
+    },
+    {
+      "id": "ESP1-Salamanca",
+      "name": "Salamanca",
+      "leagueId": "ESP1",
+      "division": 3,
+      "file": "crests/ESP1-Salamanca.png",
+      "source": "real",
+      "matched": "Salamanca UDS"
+    },
+    {
+      "id": "ESP1-Cordoba",
+      "name": "Córdoba",
+      "leagueId": "ESP1",
+      "division": 3,
+      "file": "crests/ESP1-Cordoba.png",
+      "source": "real",
+      "matched": "Córdoba"
+    },
+    {
+      "id": "ESP1-Valladolid",
+      "name": "Real Valladolid",
+      "leagueId": "ESP1",
+      "division": 3,
+      "file": "crests/ESP1-Valladolid.png",
+      "source": "real",
+      "matched": "Real Valladolid"
+    },
+    {
+      "id": "ESP1-Logrones",
+      "name": "Logroñés",
+      "leagueId": "ESP1",
+      "division": 3,
+      "file": "crests/ESP1-Logrones.png",
+      "source": "real",
+      "matched": "SD Logroñés"
+    },
+    {
+      "id": "ITA1-Inter",
+      "name": "Inter de Milán",
+      "leagueId": "ITA1",
+      "division": 1,
+      "file": "crests/ITA1-Inter.png",
+      "source": "real",
+      "matched": "Inter Milan"
+    },
+    {
+      "id": "ITA1-Roma",
+      "name": "AS Roma",
+      "leagueId": "ITA1",
+      "division": 1,
+      "file": "crests/ITA1-Roma.png",
+      "source": "real",
+      "matched": "Roma"
+    },
+    {
+      "id": "ITA1-Como",
+      "name": "Como",
+      "leagueId": "ITA1",
+      "division": 1,
+      "file": "crests/ITA1-Como.png",
+      "source": "real",
+      "matched": "Como"
+    },
+    {
+      "id": "ITA1-Napoli",
+      "name": "Napoli",
+      "leagueId": "ITA1",
+      "division": 1,
+      "file": "crests/ITA1-Napoli.png",
+      "source": "real",
+      "matched": "Napoli"
+    },
+    {
+      "id": "ITA1-Juventus",
+      "name": "Juventus",
+      "leagueId": "ITA1",
+      "division": 1,
+      "file": "crests/ITA1-Juventus.png",
+      "source": "real",
+      "matched": "Juventus"
+    },
+    {
+      "id": "ITA1-Atalanta",
+      "name": "Atalanta",
+      "leagueId": "ITA1",
+      "division": 1,
+      "file": "crests/ITA1-Atalanta.png",
+      "source": "real",
+      "matched": "Atalanta"
+    },
+    {
+      "id": "ITA1-Milan",
+      "name": "AC Milan",
+      "leagueId": "ITA1",
+      "division": 1,
+      "file": "crests/ITA1-Milan.png",
+      "source": "real",
+      "matched": "AC Milan"
+    },
+    {
+      "id": "ITA1-Lazio",
+      "name": "Lazio",
+      "leagueId": "ITA1",
+      "division": 1,
+      "file": "crests/ITA1-Lazio.png",
+      "source": "real",
+      "matched": "Lazio"
+    },
+    {
+      "id": "ITA1-Bologna",
+      "name": "Bologna",
+      "leagueId": "ITA1",
+      "division": 1,
+      "file": "crests/ITA1-Bologna.png",
+      "source": "real",
+      "matched": "Bologna"
+    },
+    {
+      "id": "ITA1-Fiorentina",
+      "name": "Fiorentina",
+      "leagueId": "ITA1",
+      "division": 1,
+      "file": "crests/ITA1-Fiorentina.png",
+      "source": "real",
+      "matched": "Fiorentina"
+    },
+    {
+      "id": "ITA1-Udinese",
+      "name": "Udinese",
+      "leagueId": "ITA1",
+      "division": 1,
+      "file": "crests/ITA1-Udinese.png",
+      "source": "real",
+      "matched": "Udinese"
+    },
+    {
+      "id": "ITA1-Sassuolo",
+      "name": "Sassuolo",
+      "leagueId": "ITA1",
+      "division": 1,
+      "file": "crests/ITA1-Sassuolo.png",
+      "source": "real",
+      "matched": "Sassuolo"
+    },
+    {
+      "id": "ITA1-Torino",
+      "name": "Torino",
+      "leagueId": "ITA1",
+      "division": 1,
+      "file": "crests/ITA1-Torino.png",
+      "source": "real",
+      "matched": "Torino"
+    },
+    {
+      "id": "ITA1-Genoa",
+      "name": "Genoa",
+      "leagueId": "ITA1",
+      "division": 1,
+      "file": "crests/ITA1-Genoa.png",
+      "source": "real",
+      "matched": "Genoa"
+    },
+    {
+      "id": "ITA1-Parma",
+      "name": "Parma",
+      "leagueId": "ITA1",
+      "division": 1,
+      "file": "crests/ITA1-Parma.png",
+      "source": "real",
+      "matched": "Parma"
+    },
+    {
+      "id": "ITA1-Cagliari",
+      "name": "Cagliari",
+      "leagueId": "ITA1",
+      "division": 1,
+      "file": "crests/ITA1-Cagliari.png",
+      "source": "real",
+      "matched": "Cagliari"
+    },
+    {
+      "id": "ITA1-Lecce",
+      "name": "Lecce",
+      "leagueId": "ITA1",
+      "division": 1,
+      "file": "crests/ITA1-Lecce.png",
+      "source": "real",
+      "matched": "Lecce"
+    },
+    {
+      "id": "ITA1-Cremonese",
+      "name": "Cremonese",
+      "leagueId": "ITA1",
+      "division": 1,
+      "file": "crests/ITA1-Cremonese.png",
+      "source": "real",
+      "matched": "Cremonese"
+    },
+    {
+      "id": "ITA1-Verona",
+      "name": "Hellas Verona",
+      "leagueId": "ITA1",
+      "division": 1,
+      "file": "crests/ITA1-Verona.png",
+      "source": "real",
+      "matched": "Hellas Verona"
+    },
+    {
+      "id": "ITA1-Pisa",
+      "name": "Pisa",
+      "leagueId": "ITA1",
+      "division": 1,
+      "file": "crests/ITA1-Pisa.png",
+      "source": "real",
+      "matched": "Pisa"
+    },
+    {
+      "id": "ITA1-Carpi",
+      "name": "Carpi",
+      "leagueId": "ITA1",
+      "division": 2,
+      "file": "crests/ITA1-Carpi.png",
+      "source": "real",
+      "matched": "Carpi"
+    },
+    {
+      "id": "ITA1-Perugia",
+      "name": "Perugia",
+      "leagueId": "ITA1",
+      "division": 2,
+      "file": "crests/ITA1-Perugia.png",
+      "source": "real",
+      "matched": "Perugia"
+    },
+    {
+      "id": "ITA1-Catania",
+      "name": "Catania",
+      "leagueId": "ITA1",
+      "division": 2,
+      "file": "crests/ITA1-Catania.png",
+      "source": "real",
+      "matched": "Catania"
+    },
+    {
+      "id": "ITA1-Piacenza",
+      "name": "Piacenza",
+      "leagueId": "ITA1",
+      "division": 2,
+      "file": "crests/ITA1-Piacenza.png",
+      "source": "real",
+      "matched": "Piacenza"
+    },
+    {
+      "id": "ITA1-Frosinone",
+      "name": "Frosinone",
+      "leagueId": "ITA1",
+      "division": 2,
+      "file": "crests/ITA1-Frosinone.png",
+      "source": "real",
+      "matched": "Frosinone"
+    },
+    {
+      "id": "ITA1-Empoli",
+      "name": "Empoli",
+      "leagueId": "ITA1",
+      "division": 2,
+      "file": "crests/ITA1-Empoli.png",
+      "source": "real",
+      "matched": "Empoli"
+    },
+    {
+      "id": "ITA1-Vicenza",
+      "name": "Vicenza",
+      "leagueId": "ITA1",
+      "division": 2,
+      "file": "crests/ITA1-Vicenza.png",
+      "source": "real",
+      "matched": "Vicenza"
+    },
+    {
+      "id": "ITA1-Spezia",
+      "name": "Spezia",
+      "leagueId": "ITA1",
+      "division": 2,
+      "file": "crests/ITA1-Spezia.png",
+      "source": "real",
+      "matched": "Spezia"
+    },
+    {
+      "id": "ITA1-Novara",
+      "name": "Novara",
+      "leagueId": "ITA1",
+      "division": 2,
+      "file": "crests/ITA1-Novara.png",
+      "source": "real",
+      "matched": "Novara"
+    },
+    {
+      "id": "ITA1-Siena",
+      "name": "Siena",
+      "leagueId": "ITA1",
+      "division": 2,
+      "file": "crests/ITA1-Siena.png",
+      "source": "real",
+      "matched": "Siena"
+    },
+    {
+      "id": "ITA1-Reggina",
+      "name": "Reggina",
+      "leagueId": "ITA1",
+      "division": 2,
+      "file": "crests/ITA1-Reggina.png",
+      "source": "real",
+      "matched": "Reggina"
+    },
+    {
+      "id": "ITA1-Venezia",
+      "name": "Venezia",
+      "leagueId": "ITA1",
+      "division": 2,
+      "file": "crests/ITA1-Venezia.png",
+      "source": "real",
+      "matched": "Venezia"
+    },
+    {
+      "id": "ITA1-Modena",
+      "name": "Modena",
+      "leagueId": "ITA1",
+      "division": 2,
+      "file": "crests/ITA1-Modena.png",
+      "source": "real",
+      "matched": "Modena"
+    },
+    {
+      "id": "ITA1-Benevento",
+      "name": "Benevento",
+      "leagueId": "ITA1",
+      "division": 2,
+      "file": "crests/ITA1-Benevento.png",
+      "source": "real",
+      "matched": "Benevento"
+    },
+    {
+      "id": "ITA1-Crotone",
+      "name": "Crotone",
+      "leagueId": "ITA1",
+      "division": 2,
+      "file": "crests/ITA1-Crotone.png",
+      "source": "real",
+      "matched": "Crotone"
+    },
+    {
+      "id": "ITA1-Ascoli",
+      "name": "Ascoli",
+      "leagueId": "ITA1",
+      "division": 2,
+      "file": "crests/ITA1-Ascoli.png",
+      "source": "real",
+      "matched": "Ascoli"
+    },
+    {
+      "id": "ITA1-Foggia",
+      "name": "Foggia",
+      "leagueId": "ITA1",
+      "division": 2,
+      "file": "crests/ITA1-Foggia.png",
+      "source": "real",
+      "matched": "Foggia"
+    },
+    {
+      "id": "ITA1-Bari",
+      "name": "Bari",
+      "leagueId": "ITA1",
+      "division": 2,
+      "file": "crests/ITA1-Bari.png",
+      "source": "real",
+      "matched": "Bari"
+    },
+    {
+      "id": "ITA1-Palermo",
+      "name": "Palermo",
+      "leagueId": "ITA1",
+      "division": 3,
+      "file": "crests/ITA1-Palermo.png",
+      "source": "real",
+      "matched": "Palermo"
+    },
+    {
+      "id": "ITA1-Sampdoria",
+      "name": "Sampdoria",
+      "leagueId": "ITA1",
+      "division": 3,
+      "file": "crests/ITA1-Sampdoria.png",
+      "source": "real",
+      "matched": "Sampdoria"
+    },
+    {
+      "id": "ITA1-Brescia",
+      "name": "Brescia",
+      "leagueId": "ITA1",
+      "division": 3,
+      "file": "crests/ITA1-Brescia.png",
+      "source": "real",
+      "matched": "Brescia"
+    },
+    {
+      "id": "ITA1-Monza",
+      "name": "Monza",
+      "leagueId": "ITA1",
+      "division": 3,
+      "file": "crests/ITA1-Monza.png",
+      "source": "real",
+      "matched": "Monza"
+    },
+    {
+      "id": "ITA1-Salernitana",
+      "name": "Salernitana",
+      "leagueId": "ITA1",
+      "division": 3,
+      "file": "crests/ITA1-Salernitana.png",
+      "source": "real",
+      "matched": "Salernitana"
+    },
+    {
+      "id": "ITA1-Treviso",
+      "name": "Treviso",
+      "leagueId": "ITA1",
+      "division": 3,
+      "file": "crests/ITA1-Treviso.png",
+      "source": "real",
+      "matched": "Treviso"
+    },
+    {
+      "id": "ITA1-Chievo",
+      "name": "Chievo Verona",
+      "leagueId": "ITA1",
+      "division": 3,
+      "file": "crests/ITA1-Chievo.png",
+      "source": "real",
+      "matched": "ChievoVerona"
+    },
+    {
+      "id": "ITA1-Cesena",
+      "name": "Cesena",
+      "leagueId": "ITA1",
+      "division": 3,
+      "file": "crests/ITA1-Cesena.png",
+      "source": "real",
+      "matched": "Cesena"
+    },
+    {
+      "id": "ITA1-Livorno",
+      "name": "Livorno",
+      "leagueId": "ITA1",
+      "division": 3,
+      "file": "crests/ITA1-Livorno.png",
+      "source": "real",
+      "matched": "Livorno"
+    },
+    {
+      "id": "ITA1-Spal",
+      "name": "SPAL",
+      "leagueId": "ITA1",
+      "division": 3,
+      "file": "crests/ITA1-Spal.png",
+      "source": "real",
+      "matched": "SPAL"
+    },
+    {
+      "id": "ITA1-Messina",
+      "name": "Messina",
+      "leagueId": "ITA1",
+      "division": 3,
+      "file": "crests/ITA1-Messina.png",
+      "source": "real",
+      "matched": "Messina"
+    },
+    {
+      "id": "ITA1-Padova",
+      "name": "Padova",
+      "leagueId": "ITA1",
+      "division": 3,
+      "file": "crests/ITA1-Padova.png",
+      "source": "real",
+      "matched": "Padova"
+    },
+    {
+      "id": "ITA1-Pescara",
+      "name": "Pescara",
+      "leagueId": "ITA1",
+      "division": 3,
+      "file": "crests/ITA1-Pescara.png",
+      "source": "real",
+      "matched": "Pescara"
+    },
+    {
+      "id": "ITA1-Ancona",
+      "name": "Ancona",
+      "leagueId": "ITA1",
+      "division": 3,
+      "file": "crests/ITA1-Ancona.png",
+      "source": "real",
+      "matched": "Ancona"
+    },
+    {
+      "id": "ITA1-Reggiana",
+      "name": "Reggiana",
+      "leagueId": "ITA1",
+      "division": 3,
+      "file": "crests/ITA1-Reggiana.png",
+      "source": "real",
+      "matched": "Reggiana"
+    },
+    {
+      "id": "GER1-BayernMunich",
+      "name": "Bayern Múnich",
+      "leagueId": "GER1",
+      "division": 1,
+      "file": "crests/GER1-BayernMunich.png",
+      "source": "real",
+      "matched": "Bayern Munich"
+    },
+    {
+      "id": "GER1-Dortmund",
+      "name": "Borussia Dortmund",
+      "leagueId": "GER1",
+      "division": 1,
+      "file": "crests/GER1-Dortmund.png",
+      "source": "real",
+      "matched": "Borussia Dortmund"
+    },
+    {
+      "id": "GER1-Stuttgart",
+      "name": "Stuttgart",
+      "leagueId": "GER1",
+      "division": 1,
+      "file": "crests/GER1-Stuttgart.png",
+      "source": "real",
+      "matched": "Stuttgart"
+    },
+    {
+      "id": "GER1-Leverkusen",
+      "name": "Bayer Leverkusen",
+      "leagueId": "GER1",
+      "division": 1,
+      "file": "crests/GER1-Leverkusen.png",
+      "source": "real",
+      "matched": "Bayer Leverkusen"
+    },
+    {
+      "id": "GER1-RBLeipzig",
+      "name": "RB Leipzig",
+      "leagueId": "GER1",
+      "division": 1,
+      "file": "crests/GER1-RBLeipzig.png",
+      "source": "real",
+      "matched": "RB Leipzig"
+    },
+    {
+      "id": "GER1-Hoffenheim",
+      "name": "Hoffenheim",
+      "leagueId": "GER1",
+      "division": 1,
+      "file": "crests/GER1-Hoffenheim.png",
+      "source": "real",
+      "matched": "Hoffenheim"
+    },
+    {
+      "id": "GER1-Freiburg",
+      "name": "Freiburg",
+      "leagueId": "GER1",
+      "division": 1,
+      "file": "crests/GER1-Freiburg.png",
+      "source": "real",
+      "matched": "Freiburg"
+    },
+    {
+      "id": "GER1-Mainz",
+      "name": "Mainz",
+      "leagueId": "GER1",
+      "division": 1,
+      "file": "crests/GER1-Mainz.png",
+      "source": "real",
+      "matched": "Mainz"
+    },
+    {
+      "id": "GER1-EinFrankfurt",
+      "name": "Eintracht Frankfurt",
+      "leagueId": "GER1",
+      "division": 1,
+      "file": "crests/GER1-EinFrankfurt.png",
+      "source": "real",
+      "matched": "Eintracht Frankfurt"
+    },
+    {
+      "id": "GER1-Mgladbach",
+      "name": "Borussia Mönchengladbach",
+      "leagueId": "GER1",
+      "division": 1,
+      "file": "crests/GER1-Mgladbach.png",
+      "source": "real",
+      "matched": "Borussia Mönchengladbach"
+    },
+    {
+      "id": "GER1-Augsburg",
+      "name": "Augsburg",
+      "leagueId": "GER1",
+      "division": 1,
+      "file": "crests/GER1-Augsburg.png",
+      "source": "real",
+      "matched": "Augsburg"
+    },
+    {
+      "id": "GER1-Hamburg",
+      "name": "Hamburgo",
+      "leagueId": "GER1",
+      "division": 1,
+      "file": "crests/GER1-Hamburg.png",
+      "source": "real",
+      "matched": "Hamburg"
+    },
+    {
+      "id": "GER1-UnionBerlin",
+      "name": "Union Berlin",
+      "leagueId": "GER1",
+      "division": 1,
+      "file": "crests/GER1-UnionBerlin.png",
+      "source": "real",
+      "matched": "Union Berlin"
+    },
+    {
+      "id": "GER1-WerderBremen",
+      "name": "Werder Bremen",
+      "leagueId": "GER1",
+      "division": 1,
+      "file": "crests/GER1-WerderBremen.png",
+      "source": "real",
+      "matched": "Werder Bremen"
+    },
+    {
+      "id": "GER1-Wolfsburg",
+      "name": "Wolfsburg",
+      "leagueId": "GER1",
+      "division": 1,
+      "file": "crests/GER1-Wolfsburg.png",
+      "source": "real",
+      "matched": "Wolfsburg"
+    },
+    {
+      "id": "GER1-FCKoln",
+      "name": "Colonia",
+      "leagueId": "GER1",
+      "division": 1,
+      "file": "crests/GER1-FCKoln.png",
+      "source": "real",
+      "matched": "Köln"
+    },
+    {
+      "id": "GER1-Heidenheim",
+      "name": "Heidenheim",
+      "leagueId": "GER1",
+      "division": 1,
+      "file": "crests/GER1-Heidenheim.png",
+      "source": "real",
+      "matched": "Heidenheim"
+    },
+    {
+      "id": "GER1-StPauli",
+      "name": "St. Pauli",
+      "leagueId": "GER1",
+      "division": 1,
+      "file": "crests/GER1-StPauli.png",
+      "source": "real",
+      "matched": "St Pauli"
+    },
+    {
+      "id": "GER1-MGladbach",
+      "name": "M'Gladbach",
+      "leagueId": "GER1",
+      "division": 2,
+      "file": "crests/GER1-Mgladbach.png",
+      "source": "real",
+      "matched": "Borussia Mönchengladbach II",
+      "primary": "#111111",
+      "secondary": "#d20515"
+    },
+    {
+      "id": "GER1-Ingolstadt",
+      "name": "Ingolstadt",
+      "leagueId": "GER1",
+      "division": 2,
+      "file": "crests/GER1-Ingolstadt.png",
+      "source": "real",
+      "matched": "Ingolstadt"
+    },
+    {
+      "id": "GER1-FortunaDusseldorf",
+      "name": "Fortuna Düsseldorf",
+      "leagueId": "GER1",
+      "division": 2,
+      "file": "crests/GER1-FortunaDusseldorf.png",
+      "source": "real",
+      "matched": "Fortuna Düsseldorf"
+    },
+    {
+      "id": "GER1-Karlsruhe",
+      "name": "Karlsruhe",
+      "leagueId": "GER1",
+      "division": 2,
+      "file": "crests/GER1-Karlsruhe.png",
+      "source": "real",
+      "matched": "Karlsruhe"
+    },
+    {
+      "id": "GER1-Unterhaching",
+      "name": "Unterhaching",
+      "leagueId": "GER1",
+      "division": 2,
+      "file": "crests/GER1-Unterhaching.png",
+      "source": "real",
+      "matched": "Unterhaching"
+    },
+    {
+      "id": "GER1-Cottbus",
+      "name": "Cottbus",
+      "leagueId": "GER1",
+      "division": 2,
+      "file": "crests/GER1-Cottbus.png",
+      "source": "real",
+      "matched": "Energie Cottbus"
+    },
+    {
+      "id": "GER1-Schalke04",
+      "name": "Schalke 04",
+      "leagueId": "GER1",
+      "division": 2,
+      "file": "crests/GER1-Schalke04.png",
+      "source": "real",
+      "matched": "Schalke 04"
+    },
+    {
+      "id": "GER1-Bielefeld",
+      "name": "Bielefeld",
+      "leagueId": "GER1",
+      "division": 2,
+      "file": "crests/GER1-Bielefeld.png",
+      "source": "real",
+      "matched": "Arminia Bielefeld"
+    },
+    {
+      "id": "GER1-HolsteinKiel",
+      "name": "Holstein Kiel",
+      "leagueId": "GER1",
+      "division": 2,
+      "file": "crests/GER1-HolsteinKiel.png",
+      "source": "real",
+      "matched": "Holstein Kiel"
+    },
+    {
+      "id": "GER1-Hertha",
+      "name": "Hertha Berlín",
+      "leagueId": "GER1",
+      "division": 2,
+      "file": "crests/GER1-Hertha.png",
+      "source": "real",
+      "matched": "Hertha Berlin Women"
+    },
+    {
+      "id": "GER1-Bochum",
+      "name": "Bochum",
+      "leagueId": "GER1",
+      "division": 2,
+      "file": "crests/GER1-Bochum.png",
+      "source": "real",
+      "matched": "Bochum"
+    },
+    {
+      "id": "GER1-Ulm",
+      "name": "Ulm",
+      "leagueId": "GER1",
+      "division": 2,
+      "file": "crests/GER1-Ulm.png",
+      "source": "real",
+      "matched": "Ulm"
+    },
+    {
+      "id": "GER1-HansaRostock",
+      "name": "Hansa Rostock",
+      "leagueId": "GER1",
+      "division": 2,
+      "file": "crests/GER1-HansaRostock.png",
+      "source": "real",
+      "matched": "Hansa Rostock"
+    },
+    {
+      "id": "GER1-Braunschweig",
+      "name": "Braunschweig",
+      "leagueId": "GER1",
+      "division": 2,
+      "file": "crests/GER1-Braunschweig.png",
+      "source": "real",
+      "matched": "Eintracht Braunschweig"
+    },
+    {
+      "id": "GER1-Duisburg",
+      "name": "Duisburg",
+      "leagueId": "GER1",
+      "division": 2,
+      "file": "crests/GER1-Duisburg.png",
+      "source": "real",
+      "matched": "Duisburg"
+    },
+    {
+      "id": "GER1-Munich1860",
+      "name": "1860 Múnich",
+      "leagueId": "GER1",
+      "division": 2,
+      "file": "crests/GER1-Munich1860.png",
+      "source": "real",
+      "matched": "1860 Munich"
+    },
+    {
+      "id": "GER1-Aachen",
+      "name": "Aachen",
+      "leagueId": "GER1",
+      "division": 2,
+      "file": "crests/GER1-Aachen.png",
+      "source": "real",
+      "matched": "Alemannia Aachen"
+    },
+    {
+      "id": "GER1-Wattenscheid",
+      "name": "Wattenscheid",
+      "leagueId": "GER1",
+      "division": 2,
+      "file": "crests/GER1-Wattenscheid.png",
+      "source": "real",
+      "matched": "Wattenscheid 09"
+    },
+    {
+      "id": "GER1-Dusseldorf",
+      "name": "Dusseldorf",
+      "leagueId": "GER1",
+      "division": 3,
+      "file": "crests/GER1-Dusseldorf.png",
+      "source": "real",
+      "matched": "Fortuna Düsseldorf"
+    },
+    {
+      "id": "GER1-Kaiserslautern",
+      "name": "Kaiserslautern",
+      "leagueId": "GER1",
+      "division": 3,
+      "file": "crests/GER1-Kaiserslautern.png",
+      "source": "real",
+      "matched": "Kaiserslautern"
+    },
+    {
+      "id": "GER1-Uerdingen",
+      "name": "Uerdingen",
+      "leagueId": "GER1",
+      "division": 3,
+      "file": "crests/GER1-Uerdingen.png",
+      "source": "real",
+      "matched": "Uerdingen 05"
+    },
+    {
+      "id": "GER1-Hannover",
+      "name": "Hannover",
+      "leagueId": "GER1",
+      "division": 3,
+      "file": "crests/GER1-Hannover.png",
+      "source": "real",
+      "matched": "Hannover 96"
+    },
+    {
+      "id": "GER1-GreutherFurth",
+      "name": "Greuther Fürth",
+      "leagueId": "GER1",
+      "division": 3,
+      "file": "crests/GER1-GreutherFurth.png",
+      "source": "real",
+      "matched": "Greuther Fürth"
+    },
+    {
+      "id": "GER1-Paderborn",
+      "name": "Paderborn",
+      "leagueId": "GER1",
+      "division": 3,
+      "file": "crests/GER1-Paderborn.png",
+      "source": "real",
+      "matched": "Paderborn"
+    },
+    {
+      "id": "GER1-Nurnberg",
+      "name": "Núremberg",
+      "leagueId": "GER1",
+      "division": 3,
+      "file": "crests/GER1-Nurnberg.png",
+      "source": "real",
+      "matched": "Nürnberg"
+    },
+    {
+      "id": "GER1-Darmstadt",
+      "name": "Darmstadt",
+      "leagueId": "GER1",
+      "division": 3,
+      "file": "crests/GER1-Darmstadt.png",
+      "source": "real",
+      "matched": "Darmstadt"
+    },
+    {
+      "id": "GER1-Dresden",
+      "name": "Dresden",
+      "leagueId": "GER1",
+      "division": 3,
+      "file": "crests/GER1-Dresden.png",
+      "source": "real",
+      "matched": "Dynamo Dresden"
+    },
+    {
+      "id": "GER1-Leipzig",
+      "name": "Leipzig",
+      "leagueId": "GER1",
+      "division": 3,
+      "file": "crests/GER1-Leipzig.svg",
+      "source": "generated"
+    },
+    {
+      "id": "FRA1-ParisSG",
+      "name": "Paris Saint-Germain",
+      "leagueId": "FRA1",
+      "division": 1,
+      "file": "crests/FRA1-ParisSG.png",
+      "source": "real",
+      "matched": "Torcy"
+    },
+    {
+      "id": "FRA1-Lens",
+      "name": "Lens",
+      "leagueId": "FRA1",
+      "division": 1,
+      "file": "crests/FRA1-Lens.png",
+      "source": "real",
+      "matched": "Lens"
+    },
+    {
+      "id": "FRA1-Lille",
+      "name": "Lille",
+      "leagueId": "FRA1",
+      "division": 1,
+      "file": "crests/FRA1-Lille.png",
+      "source": "real",
+      "matched": "Lille"
+    },
+    {
+      "id": "FRA1-Rennes",
+      "name": "Rennes",
+      "leagueId": "FRA1",
+      "division": 1,
+      "file": "crests/FRA1-Rennes.png",
+      "source": "real",
+      "matched": "Rennes"
+    },
+    {
+      "id": "FRA1-Lyon",
+      "name": "Olympique de Lyon",
+      "leagueId": "FRA1",
+      "division": 1,
+      "file": "crests/FRA1-Lyon.png",
+      "source": "real",
+      "matched": "Lyon"
+    },
+    {
+      "id": "FRA1-Marseille",
+      "name": "Olympique de Marsella",
+      "leagueId": "FRA1",
+      "division": 1,
+      "file": "crests/FRA1-Marseille.png",
+      "source": "real",
+      "matched": "Marseille"
+    },
+    {
+      "id": "FRA1-Monaco",
+      "name": "Monaco",
+      "leagueId": "FRA1",
+      "division": 1,
+      "file": "crests/FRA1-Monaco.png",
+      "source": "real",
+      "matched": "Monaco"
+    },
+    {
+      "id": "FRA1-Strasbourg",
+      "name": "Strasbourg",
+      "leagueId": "FRA1",
+      "division": 1,
+      "file": "crests/FRA1-Strasbourg.png",
+      "source": "real",
+      "matched": "Strasbourg"
+    },
+    {
+      "id": "FRA1-ParisFC",
+      "name": "Paris FC",
+      "leagueId": "FRA1",
+      "division": 1,
+      "file": "crests/FRA1-ParisFC.png",
+      "source": "real",
+      "matched": "Paris FC"
+    },
+    {
+      "id": "FRA1-Toulouse",
+      "name": "Toulouse",
+      "leagueId": "FRA1",
+      "division": 1,
+      "file": "crests/FRA1-Toulouse.png",
+      "source": "real",
+      "matched": "Toulouse"
+    },
+    {
+      "id": "FRA1-Lorient",
+      "name": "Lorient",
+      "leagueId": "FRA1",
+      "division": 1,
+      "file": "crests/FRA1-Lorient.png",
+      "source": "real",
+      "matched": "Lorient"
+    },
+    {
+      "id": "FRA1-Auxerre",
+      "name": "Auxerre",
+      "leagueId": "FRA1",
+      "division": 1,
+      "file": "crests/FRA1-Auxerre.png",
+      "source": "real",
+      "matched": "Auxerre"
+    },
+    {
+      "id": "FRA1-Brest",
+      "name": "Brest",
+      "leagueId": "FRA1",
+      "division": 1,
+      "file": "crests/FRA1-Brest.png",
+      "source": "real",
+      "matched": "Brest"
+    },
+    {
+      "id": "FRA1-LeHavre",
+      "name": "Le Havre",
+      "leagueId": "FRA1",
+      "division": 1,
+      "file": "crests/FRA1-LeHavre.png",
+      "source": "real",
+      "matched": "Le Havre"
+    },
+    {
+      "id": "FRA1-Nice",
+      "name": "Nice",
+      "leagueId": "FRA1",
+      "division": 1,
+      "file": "crests/FRA1-Nice.png",
+      "source": "real",
+      "matched": "Nice"
+    },
+    {
+      "id": "FRA1-Angers",
+      "name": "Angers",
+      "leagueId": "FRA1",
+      "division": 1,
+      "file": "crests/FRA1-Angers.png",
+      "source": "real",
+      "matched": "Angers"
+    },
+    {
+      "id": "FRA1-Nantes",
+      "name": "Nantes",
+      "leagueId": "FRA1",
+      "division": 1,
+      "file": "crests/FRA1-Nantes.png",
+      "source": "real",
+      "matched": "Nantes"
+    },
+    {
+      "id": "FRA1-Metz",
+      "name": "Metz",
+      "leagueId": "FRA1",
+      "division": 1,
+      "file": "crests/FRA1-Metz.png",
+      "source": "real",
+      "matched": "Metz"
+    },
+    {
+      "id": "FRA1-Sochaux",
+      "name": "Sochaux",
+      "leagueId": "FRA1",
+      "division": 2,
+      "file": "crests/FRA1-Sochaux.png",
+      "source": "real",
+      "matched": "Sochaux"
+    },
+    {
+      "id": "FRA1-Reims",
+      "name": "Reims",
+      "leagueId": "FRA1",
+      "division": 2,
+      "file": "crests/FRA1-Reims.png",
+      "source": "real",
+      "matched": "Stade de Reims"
+    },
+    {
+      "id": "FRA1-Nimes",
+      "name": "Nimes",
+      "leagueId": "FRA1",
+      "division": 2,
+      "file": "crests/FRA1-Nimes.png",
+      "source": "real",
+      "matched": "Nîmes Olympique"
+    },
+    {
+      "id": "FRA1-Gueugnon",
+      "name": "Gueugnon",
+      "leagueId": "FRA1",
+      "division": 2,
+      "file": "crests/FRA1-Gueugnon.png",
+      "source": "real",
+      "matched": "Gueugnon"
+    },
+    {
+      "id": "FRA1-Sedan",
+      "name": "Sedan",
+      "leagueId": "FRA1",
+      "division": 2,
+      "file": "crests/FRA1-Sedan.png",
+      "source": "real",
+      "matched": "Sedan"
+    },
+    {
+      "id": "FRA1-AjaccioGFCO",
+      "name": "Ajaccio GFCO",
+      "leagueId": "FRA1",
+      "division": 2,
+      "file": "crests/FRA1-AjaccioGFCO.png",
+      "source": "real",
+      "matched": "Gazélec Ajaccio"
+    },
+    {
+      "id": "FRA1-Bastia",
+      "name": "Bastia",
+      "leagueId": "FRA1",
+      "division": 2,
+      "file": "crests/FRA1-Bastia.png",
+      "source": "real",
+      "matched": "Bastia"
+    },
+    {
+      "id": "FRA1-StEtienne",
+      "name": "Saint-Étienne",
+      "leagueId": "FRA1",
+      "division": 2,
+      "file": "crests/FRA1-StEtienne.png",
+      "source": "real",
+      "matched": "Saint-Étienne"
+    },
+    {
+      "id": "FRA1-EvianThononGaillard",
+      "name": "Evian Thonon Gaillard",
+      "leagueId": "FRA1",
+      "division": 2,
+      "file": "crests/FRA1-EvianThononGaillard.png",
+      "source": "real",
+      "matched": "Evian Thonon Gaillard"
+    },
+    {
+      "id": "FRA1-Nancy",
+      "name": "Nancy",
+      "leagueId": "FRA1",
+      "division": 2,
+      "file": "crests/FRA1-Nancy.png",
+      "source": "real",
+      "matched": "Nancy Lorraine"
+    },
+    {
+      "id": "FRA1-Clermont",
+      "name": "Clermont Foot",
+      "leagueId": "FRA1",
+      "division": 2,
+      "file": "crests/FRA1-Clermont.png",
+      "source": "real",
+      "matched": "Clermont Foot"
+    },
+    {
+      "id": "FRA1-Amiens",
+      "name": "Amiens",
+      "leagueId": "FRA1",
+      "division": 2,
+      "file": "crests/FRA1-Amiens.png",
+      "source": "real",
+      "matched": "Amiens"
+    },
+    {
+      "id": "FRA1-LeMans",
+      "name": "Le Mans",
+      "leagueId": "FRA1",
+      "division": 2,
+      "file": "crests/FRA1-LeMans.png",
+      "source": "real",
+      "matched": "Le Mans"
+    },
+    {
+      "id": "FRA1-Grenoble",
+      "name": "Grenoble",
+      "leagueId": "FRA1",
+      "division": 2,
+      "file": "crests/FRA1-Grenoble.png",
+      "source": "real",
+      "matched": "Grenoble"
+    },
+    {
+      "id": "FRA1-Bordeaux",
+      "name": "Bordeaux",
+      "leagueId": "FRA1",
+      "division": 2,
+      "file": "crests/FRA1-Bordeaux.png",
+      "source": "real",
+      "matched": "Bordeaux"
+    },
+    {
+      "id": "FRA1-Istres",
+      "name": "Istres",
+      "leagueId": "FRA1",
+      "division": 2,
+      "file": "crests/FRA1-Istres.png",
+      "source": "real",
+      "matched": "Istres"
+    },
+    {
+      "id": "FRA1-Caen",
+      "name": "Caen",
+      "leagueId": "FRA1",
+      "division": 2,
+      "file": "crests/FRA1-Caen.png",
+      "source": "real",
+      "matched": "Caen"
+    },
+    {
+      "id": "FRA1-Boulogne",
+      "name": "Boulogne",
+      "leagueId": "FRA1",
+      "division": 2,
+      "file": "crests/FRA1-Boulogne.png",
+      "source": "real",
+      "matched": "Boulogne"
+    },
+    {
+      "id": "FRA1-Guingamp",
+      "name": "Guingamp",
+      "leagueId": "FRA1",
+      "division": 3,
+      "file": "crests/FRA1-Guingamp.png",
+      "source": "real",
+      "matched": "Guingamp"
+    },
+    {
+      "id": "FRA1-Martigues",
+      "name": "Martigues",
+      "leagueId": "FRA1",
+      "division": 3,
+      "file": "crests/FRA1-Martigues.png",
+      "source": "real",
+      "matched": "Martigues"
+    },
+    {
+      "id": "FRA1-Chateauroux",
+      "name": "Chateauroux",
+      "leagueId": "FRA1",
+      "division": 3,
+      "file": "crests/FRA1-Chateauroux.png",
+      "source": "real",
+      "matched": "Châteauroux"
+    },
+    {
+      "id": "FRA1-Valenciennes",
+      "name": "Valenciennes",
+      "leagueId": "FRA1",
+      "division": 3,
+      "file": "crests/FRA1-Valenciennes.png",
+      "source": "real",
+      "matched": "Valenciennes"
+    },
+    {
+      "id": "FRA1-Cannes",
+      "name": "Cannes",
+      "leagueId": "FRA1",
+      "division": 3,
+      "file": "crests/FRA1-Cannes.png",
+      "source": "real",
+      "matched": "Cannes"
+    },
+    {
+      "id": "FRA1-Arles",
+      "name": "Arles",
+      "leagueId": "FRA1",
+      "division": 3,
+      "file": "crests/FRA1-Arles.png",
+      "source": "real",
+      "matched": "Arles"
+    },
+    {
+      "id": "FRA1-Troyes",
+      "name": "Troyes",
+      "leagueId": "FRA1",
+      "division": 3,
+      "file": "crests/FRA1-Troyes.png",
+      "source": "real",
+      "matched": "Troyes"
+    },
+    {
+      "id": "FRA1-Dijon",
+      "name": "Dijon",
+      "leagueId": "FRA1",
+      "division": 3,
+      "file": "crests/FRA1-Dijon.png",
+      "source": "real",
+      "matched": "Dijon"
+    },
+    {
+      "id": "FRA1-Ajaccio",
+      "name": "Ajaccio",
+      "leagueId": "FRA1",
+      "division": 3,
+      "file": "crests/FRA1-Ajaccio.png",
+      "source": "real",
+      "matched": "Ajaccio"
+    },
+    {
+      "id": "FRA1-Montpellier",
+      "name": "Montpellier",
+      "leagueId": "FRA1",
+      "division": 3,
+      "file": "crests/FRA1-Montpellier.png",
+      "source": "real",
+      "matched": "Montpellier"
+    },
+    {
+      "id": "NED1-PSVEindhoven",
+      "name": "PSV",
+      "leagueId": "NED1",
+      "division": 1,
+      "file": "crests/NED1-PSVEindhoven.png",
+      "source": "real",
+      "matched": "PSV Eindhoven"
+    },
+    {
+      "id": "NED1-Feyenoord",
+      "name": "Feyenoord",
+      "leagueId": "NED1",
+      "division": 1,
+      "file": "crests/NED1-Feyenoord.png",
+      "source": "real",
+      "matched": "Feyenoord"
+    },
+    {
+      "id": "NED1-Twente",
+      "name": "FC Twente",
+      "leagueId": "NED1",
+      "division": 1,
+      "file": "crests/NED1-Twente.png",
+      "source": "real",
+      "matched": "Twente"
+    },
+    {
+      "id": "NED1-Ajax",
+      "name": "Ajax",
+      "leagueId": "NED1",
+      "division": 1,
+      "file": "crests/NED1-Ajax.png",
+      "source": "real",
+      "matched": "Ajax"
+    },
+    {
+      "id": "NED1-Nijmegen",
+      "name": "NEC Nijmegen",
+      "leagueId": "NED1",
+      "division": 1,
+      "file": "crests/NED1-Nijmegen.png",
+      "source": "real",
+      "matched": "NEC Nijmegen"
+    },
+    {
+      "id": "NED1-Utrecht",
+      "name": "FC Utrecht",
+      "leagueId": "NED1",
+      "division": 1,
+      "file": "crests/NED1-Utrecht.png",
+      "source": "real",
+      "matched": "Utrecht"
+    },
+    {
+      "id": "NED1-AZAlkmaar",
+      "name": "AZ",
+      "leagueId": "NED1",
+      "division": 1,
+      "file": "crests/NED1-AZAlkmaar.png",
+      "source": "real",
+      "matched": "AZ Alkmaar"
+    },
+    {
+      "id": "NED1-Heerenveen",
+      "name": "Heerenveen",
+      "leagueId": "NED1",
+      "division": 1,
+      "file": "crests/NED1-Heerenveen.png",
+      "source": "real",
+      "matched": "Heerenveen"
+    },
+    {
+      "id": "NED1-Groningen",
+      "name": "FC Groningen",
+      "leagueId": "NED1",
+      "division": 1,
+      "file": "crests/NED1-Groningen.png",
+      "source": "real",
+      "matched": "Groningen"
+    },
+    {
+      "id": "NED1-GoAheadEagles",
+      "name": "Go Ahead Eagles",
+      "leagueId": "NED1",
+      "division": 1,
+      "file": "crests/NED1-GoAheadEagles.png",
+      "source": "real",
+      "matched": "Go Ahead Eagles"
+    },
+    {
+      "id": "NED1-Telstar",
+      "name": "Telstar",
+      "leagueId": "NED1",
+      "division": 1,
+      "file": "crests/NED1-Telstar.png",
+      "source": "real",
+      "matched": "Telstar"
+    },
+    {
+      "id": "NED1-Excelsior",
+      "name": "Excelsior",
+      "leagueId": "NED1",
+      "division": 1,
+      "file": "crests/NED1-Excelsior.png",
+      "source": "real",
+      "matched": "Excelsior"
+    },
+    {
+      "id": "NED1-SpartaRotterdam",
+      "name": "Sparta Rotterdam",
+      "leagueId": "NED1",
+      "division": 1,
+      "file": "crests/NED1-SpartaRotterdam.png",
+      "source": "real",
+      "matched": "Sparta Rotterdam"
+    },
+    {
+      "id": "NED1-ForSittard",
+      "name": "Fortuna Sittard",
+      "leagueId": "NED1",
+      "division": 1,
+      "file": "crests/NED1-ForSittard.png",
+      "source": "real",
+      "matched": "Fortuna Sittard"
+    },
+    {
+      "id": "NED1-Zwolle",
+      "name": "PEC Zwolle",
+      "leagueId": "NED1",
+      "division": 1,
+      "file": "crests/NED1-Zwolle.png",
+      "source": "real",
+      "matched": "PEC Zwolle"
+    },
+    {
+      "id": "NED1-NACBreda",
+      "name": "NAC Breda",
+      "leagueId": "NED1",
+      "division": 1,
+      "file": "crests/NED1-NACBreda.png",
+      "source": "real",
+      "matched": "NAC Breda"
+    },
+    {
+      "id": "NED1-Volendam",
+      "name": "FC Volendam",
+      "leagueId": "NED1",
+      "division": 1,
+      "file": "crests/NED1-Volendam.png",
+      "source": "real",
+      "matched": "Volendam"
+    },
+    {
+      "id": "NED1-Heracles",
+      "name": "Heracles Almelo",
+      "leagueId": "NED1",
+      "division": 1,
+      "file": "crests/NED1-Heracles.png",
+      "source": "real",
+      "matched": "Heracles Almelo"
+    },
+    {
+      "id": "NED1-RodaJC",
+      "name": "Roda JC",
+      "leagueId": "NED1",
+      "division": 2,
+      "file": "crests/NED1-RodaJC.png",
+      "source": "real",
+      "matched": "Roda JC"
+    },
+    {
+      "id": "NED1-Roda",
+      "name": "Roda JC",
+      "leagueId": "NED1",
+      "division": 2,
+      "file": "crests/NED1-Roda.png",
+      "source": "real",
+      "matched": "Roda JC"
+    },
+    {
+      "id": "NED1-Waalwijk",
+      "name": "RKC Waalwijk",
+      "leagueId": "NED1",
+      "division": 2,
+      "file": "crests/NED1-Waalwijk.png",
+      "source": "real",
+      "matched": "RKC Waalwijk"
+    },
+    {
+      "id": "NED1-Graafschap",
+      "name": "Graafschap",
+      "leagueId": "NED1",
+      "division": 2,
+      "file": "crests/NED1-Graafschap.png",
+      "source": "real",
+      "matched": "De Graafschap"
+    },
+    {
+      "id": "NED1-FCEmmen",
+      "name": "FC Emmen",
+      "leagueId": "NED1",
+      "division": 2,
+      "file": "crests/NED1-FCEmmen.png",
+      "source": "real",
+      "matched": "FC Emmen"
+    },
+    {
+      "id": "NED1-Vitesse",
+      "name": "Vitesse",
+      "leagueId": "NED1",
+      "division": 2,
+      "file": "crests/NED1-Vitesse.png",
+      "source": "real",
+      "matched": "Vitesse"
+    },
+    {
+      "id": "NED1-AlmereCity",
+      "name": "Almere City",
+      "leagueId": "NED1",
+      "division": 2,
+      "file": "crests/NED1-AlmereCity.png",
+      "source": "real",
+      "matched": "Almere City"
+    },
+    {
+      "id": "NED1-MVVMaastricht",
+      "name": "MVV Maastricht",
+      "leagueId": "NED1",
+      "division": 2,
+      "file": "crests/NED1-MVVMaastricht.png",
+      "source": "real",
+      "matched": "MVV Maastricht"
+    },
+    {
+      "id": "NED1-WillemII",
+      "name": "Willem II",
+      "leagueId": "NED1",
+      "division": 2,
+      "file": "crests/NED1-WillemII.png",
+      "source": "real",
+      "matched": "Willem II"
+    },
+    {
+      "id": "NED1-Sparta",
+      "name": "Sparta",
+      "leagueId": "NED1",
+      "division": 2,
+      "file": "crests/NED1-Sparta.svg",
+      "source": "generated"
+    },
+    {
+      "id": "NED1-DenHaag",
+      "name": "ADO Den Haag",
+      "leagueId": "NED1",
+      "division": 2,
+      "file": "crests/NED1-DenHaag.png",
+      "source": "real",
+      "matched": "ADO Den Haag"
+    },
+    {
+      "id": "NED1-Cambuur",
+      "name": "SC Cambuur",
+      "leagueId": "NED1",
+      "division": 2,
+      "file": "crests/NED1-Cambuur.png",
+      "source": "real",
+      "matched": "Cambuur"
+    },
+    {
+      "id": "NED1-VVVVenlo",
+      "name": "VVV Venlo",
+      "leagueId": "NED1",
+      "division": 2,
+      "file": "crests/NED1-VVVVenlo.png",
+      "source": "real",
+      "matched": "VVV-Venlo"
+    },
+    {
+      "id": "NED1-Dordrecht",
+      "name": "Dordrecht",
+      "leagueId": "NED1",
+      "division": 2,
+      "file": "crests/NED1-Dordrecht.png",
+      "source": "real",
+      "matched": "Dordrecht"
+    },
+    {
+      "id": "NED1-DenBosch",
+      "name": "Den Bosch",
+      "leagueId": "NED1",
+      "division": 2,
+      "file": "crests/NED1-DenBosch.png",
+      "source": "real",
+      "matched": "Den Bosch"
+    },
+    {
+      "id": "NED1-Roosendaal",
+      "name": "Roosendaal",
+      "leagueId": "NED1",
+      "division": 2,
+      "file": "crests/NED1-Roosendaal.png",
+      "source": "real",
+      "matched": "RBC"
+    },
+    {
+      "id": "POR1-SpLisbon",
+      "name": "Sporting CP",
+      "leagueId": "POR1",
+      "division": 1,
+      "file": "crests/POR1-SpLisbon.png",
+      "source": "real",
+      "matched": "Sporting CP"
+    },
+    {
+      "id": "POR1-Benfica",
+      "name": "Benfica",
+      "leagueId": "POR1",
+      "division": 1,
+      "file": "crests/POR1-Benfica.png",
+      "source": "real",
+      "matched": "Benfica"
+    },
+    {
+      "id": "POR1-Porto",
+      "name": "FC Porto",
+      "leagueId": "POR1",
+      "division": 1,
+      "file": "crests/POR1-Porto.png",
+      "source": "real",
+      "matched": "FC Porto Juniors"
+    },
+    {
+      "id": "POR1-SpBraga",
+      "name": "Sporting Braga",
+      "leagueId": "POR1",
+      "division": 1,
+      "file": "crests/POR1-SpBraga.png",
+      "source": "real",
+      "matched": "Braga"
+    },
+    {
+      "id": "POR1-Famalicao",
+      "name": "Famalicão",
+      "leagueId": "POR1",
+      "division": 1,
+      "file": "crests/POR1-Famalicao.png",
+      "source": "real",
+      "matched": "Famalicao"
+    },
+    {
+      "id": "POR1-Arouca",
+      "name": "Arouca",
+      "leagueId": "POR1",
+      "division": 1,
+      "file": "crests/POR1-Arouca.png",
+      "source": "real",
+      "matched": "Arouca"
+    },
+    {
+      "id": "POR1-GilVicente",
+      "name": "Gil Vicente",
+      "leagueId": "POR1",
+      "division": 1,
+      "file": "crests/POR1-GilVicente.png",
+      "source": "real",
+      "matched": "Gil Vicente"
+    },
+    {
+      "id": "POR1-Estoril",
+      "name": "Estoril",
+      "leagueId": "POR1",
+      "division": 1,
+      "file": "crests/POR1-Estoril.png",
+      "source": "real",
+      "matched": "Estoril Praia"
+    },
+    {
+      "id": "POR1-SantaClara",
+      "name": "Santa Clara",
+      "leagueId": "POR1",
+      "division": 1,
+      "file": "crests/POR1-SantaClara.png",
+      "source": "real",
+      "matched": "Santa Clara"
+    },
+    {
+      "id": "POR1-Guimaraes",
+      "name": "Vitória Guimarães",
+      "leagueId": "POR1",
+      "division": 1,
+      "file": "crests/POR1-Guimaraes.png",
+      "source": "real",
+      "matched": "Vitória de Guimarães"
+    },
+    {
+      "id": "POR1-Moreirense",
+      "name": "Moreirense",
+      "leagueId": "POR1",
+      "division": 1,
+      "file": "crests/POR1-Moreirense.png",
+      "source": "real",
+      "matched": "Moreirense"
+    },
+    {
+      "id": "POR1-Alverca",
+      "name": "Alverca",
+      "leagueId": "POR1",
+      "division": 1,
+      "file": "crests/POR1-Alverca.png",
+      "source": "real",
+      "matched": "Alverca"
+    },
+    {
+      "id": "POR1-Nacional",
+      "name": "Nacional",
+      "leagueId": "POR1",
+      "division": 1,
+      "file": "crests/POR1-Nacional.svg",
+      "source": "generated"
+    },
+    {
+      "id": "POR1-RioAve",
+      "name": "Rio Ave",
+      "leagueId": "POR1",
+      "division": 1,
+      "file": "crests/POR1-RioAve.png",
+      "source": "real",
+      "matched": "Rio Ave"
+    },
+    {
+      "id": "POR1-CasaPia",
+      "name": "Casa Pia",
+      "leagueId": "POR1",
+      "division": 1,
+      "file": "crests/POR1-CasaPia.png",
+      "source": "real",
+      "matched": "Casa Pia"
+    },
+    {
+      "id": "POR1-Estrela",
+      "name": "Estrela",
+      "leagueId": "POR1",
+      "division": 1,
+      "file": "crests/POR1-Estrela.png",
+      "source": "real",
+      "matched": "Estrela Amadora"
+    },
+    {
+      "id": "POR1-Tondela",
+      "name": "Tondela",
+      "leagueId": "POR1",
+      "division": 1,
+      "file": "crests/POR1-Tondela.png",
+      "source": "real",
+      "matched": "Tondela"
+    },
+    {
+      "id": "POR1-AVS",
+      "name": "AVS",
+      "leagueId": "POR1",
+      "division": 1,
+      "file": "crests/POR1-AVS.png",
+      "source": "real",
+      "matched": "AVS"
+    },
+    {
+      "id": "POR1-EstAmadora",
+      "name": "Est Amadora",
+      "leagueId": "POR1",
+      "division": 2,
+      "file": "crests/POR1-EstAmadora.png",
+      "source": "real",
+      "matched": "Estrela Amadora"
+    },
+    {
+      "id": "POR1-DespChaves",
+      "name": "Desp. Chaves",
+      "leagueId": "POR1",
+      "division": 2,
+      "file": "crests/POR1-DespChaves.png",
+      "source": "real",
+      "matched": "Chaves B"
+    },
+    {
+      "id": "POR1-Setubal",
+      "name": "Setubal",
+      "leagueId": "POR1",
+      "division": 2,
+      "file": "crests/POR1-Setubal.png",
+      "source": "real",
+      "matched": "Vitória de Setúbal"
+    },
+    {
+      "id": "POR1-Portimonense",
+      "name": "Portimonense",
+      "leagueId": "POR1",
+      "division": 2,
+      "file": "crests/POR1-Portimonense.png",
+      "source": "real",
+      "matched": "Portimonense"
+    },
+    {
+      "id": "POR1-Farense",
+      "name": "Farense",
+      "leagueId": "POR1",
+      "division": 2,
+      "file": "crests/POR1-Farense.png",
+      "source": "real",
+      "matched": "Farense"
+    },
+    {
+      "id": "POR1-Maritimo",
+      "name": "Marítimo",
+      "leagueId": "POR1",
+      "division": 2,
+      "file": "crests/POR1-Maritimo.png",
+      "source": "real",
+      "matched": "Marítimo"
+    },
+    {
+      "id": "POR1-Belenenses",
+      "name": "Belenenses",
+      "leagueId": "POR1",
+      "division": 2,
+      "file": "crests/POR1-Belenenses.png",
+      "source": "real",
+      "matched": "Belenenses"
+    },
+    {
+      "id": "POR1-Vizela",
+      "name": "Vizela",
+      "leagueId": "POR1",
+      "division": 2,
+      "file": "crests/POR1-Vizela.png",
+      "source": "real",
+      "matched": "Vizela"
+    },
+    {
+      "id": "POR1-PacosFerreira",
+      "name": "Paços de Ferreira",
+      "leagueId": "POR1",
+      "division": 2,
+      "file": "crests/POR1-PacosFerreira.png",
+      "source": "real",
+      "matched": "Paços de Ferreira"
+    },
+    {
+      "id": "POR1-Trofense",
+      "name": "Trofense",
+      "leagueId": "POR1",
+      "division": 2,
+      "file": "crests/POR1-Trofense.png",
+      "source": "real",
+      "matched": "Trofense"
+    },
+    {
+      "id": "POR1-Olhanense",
+      "name": "Olhanense",
+      "leagueId": "POR1",
+      "division": 2,
+      "file": "crests/POR1-Olhanense.png",
+      "source": "real",
+      "matched": "Olhanense"
+    },
+    {
+      "id": "POR1-BeiraMar",
+      "name": "Beira Mar",
+      "leagueId": "POR1",
+      "division": 2,
+      "file": "crests/POR1-BeiraMar.png",
+      "source": "real",
+      "matched": "Beira Mar"
+    },
+    {
+      "id": "POR1-UniaoMadeira",
+      "name": "Uniao Madeira",
+      "leagueId": "POR1",
+      "division": 2,
+      "file": "crests/POR1-UniaoMadeira.png",
+      "source": "real",
+      "matched": "Uniao da Madeira"
+    },
+    {
+      "id": "POR1-Naval",
+      "name": "Naval",
+      "leagueId": "POR1",
+      "division": 2,
+      "file": "crests/POR1-Naval.png",
+      "source": "real",
+      "matched": "Naval 1893"
+    },
+    {
+      "id": "POR1-Campomaior",
+      "name": "Campomaior",
+      "leagueId": "POR1",
+      "division": 2,
+      "file": "crests/POR1-Campomaior.svg",
+      "source": "generated"
+    },
+    {
+      "id": "POR1-Campomaiorense",
+      "name": "Campomaiorense",
+      "leagueId": "POR1",
+      "division": 2,
+      "file": "crests/POR1-Campomaiorense.svg",
+      "source": "generated"
+    },
+    {
+      "id": "POR1-Academica",
+      "name": "Academica",
+      "leagueId": "POR1",
+      "division": 2,
+      "file": "crests/POR1-Academica.svg",
+      "source": "generated"
+    },
+    {
+      "id": "POR1-Chaves",
+      "name": "Chaves",
+      "leagueId": "POR1",
+      "division": 2,
+      "file": "crests/POR1-Chaves.png",
+      "source": "real",
+      "matched": "Chaves"
+    },
+    {
+      "id": "POR1-Varzim",
+      "name": "Varzim",
+      "leagueId": "POR1",
+      "division": 3,
+      "file": "crests/POR1-Varzim.png",
+      "source": "real",
+      "matched": "Varzim"
+    },
+    {
+      "id": "POR1-Leixoes",
+      "name": "Leixoes",
+      "leagueId": "POR1",
+      "division": 3,
+      "file": "crests/POR1-Leixoes.png",
+      "source": "real",
+      "matched": "Leixões"
+    },
+    {
+      "id": "POR1-Boavista",
+      "name": "Boavista",
+      "leagueId": "POR1",
+      "division": 3,
+      "file": "crests/POR1-Boavista.png",
+      "source": "real",
+      "matched": "Boavista"
+    },
+    {
+      "id": "POR1-Leca",
+      "name": "Leca",
+      "leagueId": "POR1",
+      "division": 3,
+      "file": "crests/POR1-Leca.png",
+      "source": "real",
+      "matched": "Leça"
+    },
+    {
+      "id": "POR1-Felgueiras",
+      "name": "Felgueiras",
+      "leagueId": "POR1",
+      "division": 3,
+      "file": "crests/POR1-Felgueiras.png",
+      "source": "real",
+      "matched": "Felgueiras"
+    },
+    {
+      "id": "POR1-Tirsense",
+      "name": "Tirsense",
+      "leagueId": "POR1",
+      "division": 3,
+      "file": "crests/POR1-Tirsense.png",
+      "source": "real",
+      "matched": "Tirsense"
+    },
+    {
+      "id": "POR1-Salgueiros",
+      "name": "Salgueiros",
+      "leagueId": "POR1",
+      "division": 3,
+      "file": "crests/POR1-Salgueiros.png",
+      "source": "real",
+      "matched": "Salgueiros"
+    },
+    {
+      "id": "POR1-Madeira",
+      "name": "Madeira",
+      "leagueId": "POR1",
+      "division": 3,
+      "file": "crests/POR1-Madeira.png",
+      "source": "real",
+      "matched": "Uniao da Madeira"
+    },
+    {
+      "id": "POR1-Feirense",
+      "name": "Feirense",
+      "leagueId": "POR1",
+      "division": 3,
+      "file": "crests/POR1-Feirense.png",
+      "source": "real",
+      "matched": "Feirense"
+    },
+    {
+      "id": "POR1-Leiria",
+      "name": "Leiria",
+      "leagueId": "POR1",
+      "division": 3,
+      "file": "crests/POR1-Leiria.png",
+      "source": "real",
+      "matched": "União de Leiria"
+    },
+    {
+      "id": "POR1-Penafiel",
+      "name": "Penafiel",
+      "leagueId": "POR1",
+      "division": 3,
+      "file": "crests/POR1-Penafiel.png",
+      "source": "real",
+      "matched": "Penafiel"
+    },
+    {
+      "id": "POR1-Espinho",
+      "name": "Espinho",
+      "leagueId": "POR1",
+      "division": 3,
+      "file": "crests/POR1-Espinho.png",
+      "source": "real",
+      "matched": "Espinho"
+    },
+    {
+      "id": "POR1-Aves",
+      "name": "Aves",
+      "leagueId": "POR1",
+      "division": 3,
+      "file": "crests/POR1-Aves.png",
+      "source": "real",
+      "matched": "Aves"
+    },
+    {
+      "id": "BEL1-ClubBrugge",
+      "name": "Club Brugge",
+      "leagueId": "BEL1",
+      "division": 1,
+      "file": "crests/BEL1-ClubBrugge.png",
+      "source": "real",
+      "matched": "Club Brugge",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-StGilloise",
+      "name": "St. Gilloise",
+      "leagueId": "BEL1",
+      "division": 1,
+      "file": "crests/BEL1-StGilloise.png",
+      "source": "real",
+      "matched": "Union Saint-Gilloise",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-StTruiden",
+      "name": "St Truiden",
+      "leagueId": "BEL1",
+      "division": 1,
+      "file": "crests/BEL1-StTruiden.png",
+      "source": "real",
+      "matched": "Sint-Truiden",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-Genk",
+      "name": "Genk",
+      "leagueId": "BEL1",
+      "division": 1,
+      "file": "crests/BEL1-Genk.png",
+      "source": "real",
+      "matched": "Genk",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-Standard",
+      "name": "Standard",
+      "leagueId": "BEL1",
+      "division": 1,
+      "file": "crests/BEL1-Standard.png",
+      "source": "real",
+      "matched": "Standard Liège",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-Anderlecht",
+      "name": "Anderlecht",
+      "leagueId": "BEL1",
+      "division": 1,
+      "file": "crests/BEL1-Anderlecht.png",
+      "source": "real",
+      "matched": "Anderlecht",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-Charleroi",
+      "name": "Charleroi",
+      "leagueId": "BEL1",
+      "division": 1,
+      "file": "crests/BEL1-Charleroi.png",
+      "source": "real",
+      "matched": "Zébra Élites",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-Gent",
+      "name": "Gent",
+      "leagueId": "BEL1",
+      "division": 1,
+      "file": "crests/BEL1-Gent.png",
+      "source": "real",
+      "matched": "Gent",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-Waregem",
+      "name": "Waregem",
+      "leagueId": "BEL1",
+      "division": 1,
+      "file": "crests/BEL1-Waregem.png",
+      "source": "real",
+      "matched": "Zulte Waregem",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-Westerlo",
+      "name": "Westerlo",
+      "leagueId": "BEL1",
+      "division": 1,
+      "file": "crests/BEL1-Westerlo.png",
+      "source": "real",
+      "matched": "Westerlo",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-Mechelen",
+      "name": "Mechelen",
+      "leagueId": "BEL1",
+      "division": 1,
+      "file": "crests/BEL1-Mechelen.png",
+      "source": "real",
+      "matched": "Mechelen",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-Antwerp",
+      "name": "Antwerp",
+      "leagueId": "BEL1",
+      "division": 1,
+      "file": "crests/BEL1-Antwerp.png",
+      "source": "real",
+      "matched": "Antwerp",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-CercleBrugge",
+      "name": "Cercle Brugge",
+      "leagueId": "BEL1",
+      "division": 1,
+      "file": "crests/BEL1-CercleBrugge.png",
+      "source": "real",
+      "matched": "Cercle Brugge",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-OudHeverleeLeuven",
+      "name": "Oud-Heverlee Leuven",
+      "leagueId": "BEL1",
+      "division": 1,
+      "file": "crests/BEL1-OudHeverleeLeuven.svg",
+      "source": "generated",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-RAALLaLouviere",
+      "name": "RAAL La Louviere",
+      "leagueId": "BEL1",
+      "division": 1,
+      "file": "crests/BEL1-RAALLaLouviere.png",
+      "source": "real",
+      "matched": "RAAL La Louvière",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-Dender",
+      "name": "Dender",
+      "leagueId": "BEL1",
+      "division": 1,
+      "file": "crests/BEL1-Dender.png",
+      "source": "real",
+      "matched": "Dender",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-Molenbeek",
+      "name": "Molenbeek",
+      "leagueId": "BEL1",
+      "division": 2,
+      "file": "crests/BEL1-Molenbeek.png",
+      "source": "real",
+      "matched": "RWDM Brussels",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-Kortrijk",
+      "name": "Kortrijk",
+      "leagueId": "BEL1",
+      "division": 2,
+      "file": "crests/BEL1-Kortrijk.png",
+      "source": "real",
+      "matched": "Kortrijk",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-MouscronPeruwelz",
+      "name": "Mouscron-Peruwelz",
+      "leagueId": "BEL1",
+      "division": 2,
+      "file": "crests/BEL1-MouscronPeruwelz.png",
+      "source": "real",
+      "matched": "Mouscron-Peruwelz",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-Lommel",
+      "name": "Lommel",
+      "leagueId": "BEL1",
+      "division": 2,
+      "file": "crests/BEL1-Lommel.png",
+      "source": "real",
+      "matched": "Lommel",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-Mouscron",
+      "name": "Mouscron",
+      "leagueId": "BEL1",
+      "division": 2,
+      "file": "crests/BEL1-Mouscron.png",
+      "source": "real",
+      "matched": "Mouscron-Peruwelz",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-Bergen",
+      "name": "Bergen",
+      "leagueId": "BEL1",
+      "division": 2,
+      "file": "crests/BEL1-Bergen.png",
+      "source": "real",
+      "matched": "Mons",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-Geel",
+      "name": "Geel",
+      "leagueId": "BEL1",
+      "division": 2,
+      "file": "crests/BEL1-Geel.png",
+      "source": "real",
+      "matched": "Geel",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-HeusdenZolder",
+      "name": "Heusden Zolder",
+      "leagueId": "BEL1",
+      "division": 2,
+      "file": "crests/BEL1-HeusdenZolder.png",
+      "source": "real",
+      "matched": "Heusden Zolder",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-Lierse",
+      "name": "Lierse",
+      "leagueId": "BEL1",
+      "division": 2,
+      "file": "crests/BEL1-Lierse.png",
+      "source": "real",
+      "matched": "Lierse",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-WaaslandBeveren",
+      "name": "Waasland-Beveren",
+      "leagueId": "BEL1",
+      "division": 2,
+      "file": "crests/BEL1-WaaslandBeveren.svg",
+      "source": "generated",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-Roeselare",
+      "name": "Roeselare",
+      "leagueId": "BEL1",
+      "division": 2,
+      "file": "crests/BEL1-Roeselare.png",
+      "source": "real",
+      "matched": "Roeselare",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-Louvieroise",
+      "name": "Louvieroise",
+      "leagueId": "BEL1",
+      "division": 2,
+      "file": "crests/BEL1-Louvieroise.png",
+      "source": "real",
+      "matched": "RAAL La Louvière",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-Lokeren",
+      "name": "Lokeren",
+      "leagueId": "BEL1",
+      "division": 2,
+      "file": "crests/BEL1-Lokeren.png",
+      "source": "real",
+      "matched": "Lokeren",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-BeerschotVA",
+      "name": "Beerschot VA",
+      "leagueId": "BEL1",
+      "division": 2,
+      "file": "crests/BEL1-BeerschotVA.png",
+      "source": "real",
+      "matched": "Beerschot",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-Oostende",
+      "name": "Oostende",
+      "leagueId": "BEL1",
+      "division": 2,
+      "file": "crests/BEL1-Oostende.png",
+      "source": "real",
+      "matched": "KV Oostende",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-RWDMolenbeek",
+      "name": "RWD Molenbeek",
+      "leagueId": "BEL1",
+      "division": 2,
+      "file": "crests/BEL1-RWDMolenbeek.png",
+      "source": "real",
+      "matched": "RWDM Brussels",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-Tubize",
+      "name": "Tubize",
+      "leagueId": "BEL1",
+      "division": 2,
+      "file": "crests/BEL1-Tubize.png",
+      "source": "real",
+      "matched": "Tubize-Braine",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-Germinal",
+      "name": "Germinal",
+      "leagueId": "BEL1",
+      "division": 2,
+      "file": "crests/BEL1-Germinal.png",
+      "source": "real",
+      "matched": "Beerschot AC",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-Harelbeke",
+      "name": "Harelbeke",
+      "leagueId": "BEL1",
+      "division": 3,
+      "file": "crests/BEL1-Harelbeke.png",
+      "source": "real",
+      "matched": "Harelbeke",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-Beveren",
+      "name": "Beveren",
+      "leagueId": "BEL1",
+      "division": 3,
+      "file": "crests/BEL1-Beveren.png",
+      "source": "real",
+      "matched": "Beveren",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-Eupen",
+      "name": "Eupen",
+      "leagueId": "BEL1",
+      "division": 3,
+      "file": "crests/BEL1-Eupen.png",
+      "source": "real",
+      "matched": "Eupen",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-FCBrussels",
+      "name": "FC Brussels",
+      "leagueId": "BEL1",
+      "division": 3,
+      "file": "crests/BEL1-FCBrussels.png",
+      "source": "real",
+      "matched": "FC Brussels",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-Seraing",
+      "name": "Seraing",
+      "leagueId": "BEL1",
+      "division": 3,
+      "file": "crests/BEL1-Seraing.png",
+      "source": "real",
+      "matched": "Seraing",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "BEL1-Aalst",
+      "name": "Aalst",
+      "leagueId": "BEL1",
+      "division": 3,
+      "file": "crests/BEL1-Aalst.png",
+      "source": "real",
+      "matched": "Eendracht Aalst",
+      "primary": "#111111",
+      "secondary": "#f0c419"
+    },
+    {
+      "id": "RUS1-Zenit",
+      "name": "Zenit",
+      "leagueId": "RUS1",
+      "division": 1,
+      "file": "crests/RUS1-Zenit.png",
+      "source": "real",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-Krasnodar",
+      "name": "Krasnodar",
+      "leagueId": "RUS1",
+      "division": 1,
+      "file": "crests/RUS1-Krasnodar.png",
+      "source": "real",
+      "matched": "Krasnodar",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-SpartakMoscow",
+      "name": "Spartak Moscow",
+      "leagueId": "RUS1",
+      "division": 1,
+      "file": "crests/RUS1-SpartakMoscow.png",
+      "source": "real",
+      "matched": "Spartak Moscow",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-DynamoMoscow",
+      "name": "Dynamo Moscow",
+      "leagueId": "RUS1",
+      "division": 1,
+      "file": "crests/RUS1-DynamoMoscow.svg",
+      "source": "generated",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-CSKAMoscow",
+      "name": "CSKA Moscow",
+      "leagueId": "RUS1",
+      "division": 1,
+      "file": "crests/RUS1-CSKAMoscow.png",
+      "source": "real",
+      "matched": "CSKA Moscow",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-LokomotivMoscow",
+      "name": "Lokomotiv Moscow",
+      "leagueId": "RUS1",
+      "division": 1,
+      "file": "crests/RUS1-LokomotivMoscow.png",
+      "source": "real",
+      "matched": "Lokomotiv Moscow",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-RubinKazan",
+      "name": "Rubin Kazan",
+      "leagueId": "RUS1",
+      "division": 1,
+      "file": "crests/RUS1-RubinKazan.png",
+      "source": "real",
+      "matched": "Rubin Kazan",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-Baltika",
+      "name": "Baltika",
+      "leagueId": "RUS1",
+      "division": 1,
+      "file": "crests/RUS1-Baltika.png",
+      "source": "real",
+      "matched": "Baltika Kaliningrad",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-AkhmatGrozny",
+      "name": "Akhmat Grozny",
+      "leagueId": "RUS1",
+      "division": 1,
+      "file": "crests/RUS1-AkhmatGrozny.png",
+      "source": "real",
+      "matched": "Akhmat Grozny",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-FKRostov",
+      "name": "FK Rostov",
+      "leagueId": "RUS1",
+      "division": 1,
+      "file": "crests/RUS1-FKRostov.png",
+      "source": "real",
+      "matched": "Rostov",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-KrylyaSovetov",
+      "name": "Krylya Sovetov",
+      "leagueId": "RUS1",
+      "division": 1,
+      "file": "crests/RUS1-KrylyaSovetov.png",
+      "source": "real",
+      "matched": "Krylia Sovetov Samara",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-Orenburg",
+      "name": "Orenburg",
+      "leagueId": "RUS1",
+      "division": 1,
+      "file": "crests/RUS1-Orenburg.png",
+      "source": "real",
+      "matched": "Orenburg",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-DynamoMakhachkala",
+      "name": "Dynamo Makhachkala",
+      "leagueId": "RUS1",
+      "division": 1,
+      "file": "crests/RUS1-DynamoMakhachkala.png",
+      "source": "real",
+      "matched": "Dynamo Makhachkala",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-AkronTogliatti",
+      "name": "Akron Togliatti",
+      "leagueId": "RUS1",
+      "division": 1,
+      "file": "crests/RUS1-AkronTogliatti.png",
+      "source": "real",
+      "matched": "Akron Tolyatti",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-Sochi",
+      "name": "Sochi",
+      "leagueId": "RUS1",
+      "division": 1,
+      "file": "crests/RUS1-Sochi.png",
+      "source": "real",
+      "matched": "Sochi",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-PariNN",
+      "name": "Pari NN",
+      "leagueId": "RUS1",
+      "division": 1,
+      "file": "crests/RUS1-PariNN.png",
+      "source": "real",
+      "matched": "Nizhny Novgorod",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-Amkar",
+      "name": "Amkar",
+      "leagueId": "RUS1",
+      "division": 2,
+      "file": "crests/RUS1-Amkar.png",
+      "source": "real",
+      "matched": "Amkar Perm",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-Ural",
+      "name": "Ural",
+      "leagueId": "RUS1",
+      "division": 2,
+      "file": "crests/RUS1-Ural.png",
+      "source": "real",
+      "matched": "Ural Yekaterinburg",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-RodinaMoscow",
+      "name": "Rodina Moscow",
+      "leagueId": "RUS1",
+      "division": 2,
+      "file": "crests/RUS1-RodinaMoscow.png",
+      "source": "real",
+      "matched": "Rodina Moscow",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-Ufa",
+      "name": "Ufa",
+      "leagueId": "RUS1",
+      "division": 2,
+      "file": "crests/RUS1-Ufa.png",
+      "source": "real",
+      "matched": "Ufa",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-TMoscow",
+      "name": "T. Moscow",
+      "leagueId": "RUS1",
+      "division": 2,
+      "file": "crests/RUS1-TMoscow.png",
+      "source": "real",
+      "matched": "FC Moscow",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-Khimki",
+      "name": "Khimki",
+      "leagueId": "RUS1",
+      "division": 2,
+      "file": "crests/RUS1-Khimki.png",
+      "source": "real",
+      "matched": "Khimki",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-VolgarAstrakhan",
+      "name": "Volgar-Astrakhan",
+      "leagueId": "RUS1",
+      "division": 2,
+      "file": "crests/RUS1-VolgarAstrakhan.png",
+      "source": "real",
+      "matched": "Volgar Astrakhan",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-SpartakNalchik",
+      "name": "Spartak Nalchik",
+      "leagueId": "RUS1",
+      "division": 2,
+      "file": "crests/RUS1-SpartakNalchik.png",
+      "source": "real",
+      "matched": "Spartak Nalchik",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-Kuban",
+      "name": "Kuban",
+      "leagueId": "RUS1",
+      "division": 2,
+      "file": "crests/RUS1-Kuban.png",
+      "source": "real",
+      "matched": "Kuban Krasnodar",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-FakelVoronezh",
+      "name": "Fakel Voronezh",
+      "leagueId": "RUS1",
+      "division": 2,
+      "file": "crests/RUS1-FakelVoronezh.png",
+      "source": "real",
+      "matched": "Fakel Voronezh",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-ArsenalTula",
+      "name": "Arsenal Tula",
+      "leagueId": "RUS1",
+      "division": 2,
+      "file": "crests/RUS1-ArsenalTula.png",
+      "source": "real",
+      "matched": "Arsenal Tula",
+      "primary": "#d71920",
+      "secondary": "#10151d"
+    },
+    {
+      "id": "RUS1-RVolgograd",
+      "name": "R. Volgograd",
+      "leagueId": "RUS1",
+      "division": 2,
+      "file": "crests/RUS1-RVolgograd.png",
+      "source": "real",
+      "matched": "Rotor Volgograd",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-Yenisey",
+      "name": "Yenisey",
+      "leagueId": "RUS1",
+      "division": 2,
+      "file": "crests/RUS1-Yenisey.png",
+      "source": "real",
+      "matched": "Yenisey Krasnoyarsk",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-MSaransk",
+      "name": "M. Saransk",
+      "leagueId": "RUS1",
+      "division": 2,
+      "file": "crests/RUS1-MSaransk.png",
+      "source": "real",
+      "matched": "Mordovya",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-Tosno",
+      "name": "Tosno",
+      "leagueId": "RUS1",
+      "division": 2,
+      "file": "crests/RUS1-Tosno.png",
+      "source": "real",
+      "matched": "Tosno",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-SKAKhabarovsk",
+      "name": "SKA Khabarovsk",
+      "leagueId": "RUS1",
+      "division": 2,
+      "file": "crests/RUS1-SKAKhabarovsk.png",
+      "source": "real",
+      "matched": "SKA-Khabarovsk",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-FKAnziMakhackala",
+      "name": "FK Anzi Makhackala",
+      "leagueId": "RUS1",
+      "division": 2,
+      "file": "crests/RUS1-FKAnziMakhackala.png",
+      "source": "real",
+      "matched": "Anzhi Makhachkala",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-TorpedoMoscow",
+      "name": "Torpedo Moscow",
+      "leagueId": "RUS1",
+      "division": 2,
+      "file": "crests/RUS1-TorpedoMoscow.png",
+      "source": "real",
+      "matched": "Torpedo Moscow",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-Tomsk",
+      "name": "Tomsk",
+      "leagueId": "RUS1",
+      "division": 3,
+      "file": "crests/RUS1-Tomsk.png",
+      "source": "real",
+      "matched": "Tomsk",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-Vladikavkaz",
+      "name": "Vladikavkaz",
+      "leagueId": "RUS1",
+      "division": 3,
+      "file": "crests/RUS1-Vladikavkaz.png",
+      "source": "real",
+      "matched": "Alania Vladikavkaz",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-Tambov",
+      "name": "Tambov",
+      "leagueId": "RUS1",
+      "division": 3,
+      "file": "crests/RUS1-Tambov.png",
+      "source": "real",
+      "matched": "FC Tambov",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "RUS1-VolgaNNovgorod",
+      "name": "Volga N. Novgorod",
+      "leagueId": "RUS1",
+      "division": 3,
+      "file": "crests/RUS1-VolgaNNovgorod.png",
+      "source": "real",
+      "matched": "Volga Nyzhnyi",
+      "primary": "#0a2a5c",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "BRA1-Palmeiras",
+      "name": "Palmeiras",
+      "leagueId": "BRA1",
+      "division": 1,
+      "file": "crests/BRA1-Palmeiras.png",
+      "source": "real",
+      "matched": "Palmeiras"
+    },
+    {
+      "id": "BRA1-FlamengoRJ",
+      "name": "Flamengo RJ",
+      "leagueId": "BRA1",
+      "division": 1,
+      "file": "crests/BRA1-FlamengoRJ.png",
+      "source": "real",
+      "matched": "Flamengo"
+    },
+    {
+      "id": "BRA1-Fluminense",
+      "name": "Fluminense",
+      "leagueId": "BRA1",
+      "division": 1,
+      "file": "crests/BRA1-Fluminense.png",
+      "source": "real",
+      "matched": "Fluminense"
+    },
+    {
+      "id": "BRA1-BotafogoRJ",
+      "name": "Botafogo RJ",
+      "leagueId": "BRA1",
+      "division": 1,
+      "file": "crests/BRA1-BotafogoRJ.png",
+      "source": "real",
+      "matched": "Botafogo"
+    },
+    {
+      "id": "BRA1-Cruzeiro",
+      "name": "Cruzeiro",
+      "leagueId": "BRA1",
+      "division": 1,
+      "file": "crests/BRA1-Cruzeiro.png",
+      "source": "real",
+      "matched": "Cruzeiro"
+    },
+    {
+      "id": "BRA1-Bragantino",
+      "name": "Bragantino",
+      "leagueId": "BRA1",
+      "division": 1,
+      "file": "crests/BRA1-Bragantino.png",
+      "source": "real",
+      "matched": "Bragantino"
+    },
+    {
+      "id": "BRA1-Bahia",
+      "name": "Bahia",
+      "leagueId": "BRA1",
+      "division": 1,
+      "file": "crests/BRA1-Bahia.png",
+      "source": "real",
+      "matched": "Bahia"
+    },
+    {
+      "id": "BRA1-AthleticoPR",
+      "name": "Athletico-PR",
+      "leagueId": "BRA1",
+      "division": 1,
+      "file": "crests/BRA1-AthleticoPR.svg",
+      "source": "generated"
+    },
+    {
+      "id": "BRA1-Corinthians",
+      "name": "Corinthians",
+      "leagueId": "BRA1",
+      "division": 1,
+      "file": "crests/BRA1-Corinthians.png",
+      "source": "real",
+      "matched": "Corinthians"
+    },
+    {
+      "id": "BRA1-AtleticoMG",
+      "name": "Atletico-MG",
+      "leagueId": "BRA1",
+      "division": 1,
+      "file": "crests/BRA1-AtleticoMG.svg",
+      "source": "generated"
+    },
+    {
+      "id": "BRA1-Mirassol",
+      "name": "Mirassol",
+      "leagueId": "BRA1",
+      "division": 1,
+      "file": "crests/BRA1-Mirassol.png",
+      "source": "real",
+      "matched": "Mirassol"
+    },
+    {
+      "id": "BRA1-SaoPaulo",
+      "name": "Sao Paulo",
+      "leagueId": "BRA1",
+      "division": 1,
+      "file": "crests/BRA1-SaoPaulo.png",
+      "source": "real",
+      "matched": "São Paulo"
+    },
+    {
+      "id": "BRA1-Vitoria",
+      "name": "Vitória Setúbal",
+      "leagueId": "BRA1",
+      "division": 1,
+      "file": "crests/BRA1-Vitoria.png",
+      "source": "real",
+      "matched": "Vitória"
+    },
+    {
+      "id": "BRA1-Internacional",
+      "name": "Internacional",
+      "leagueId": "BRA1",
+      "division": 1,
+      "file": "crests/BRA1-Internacional.png",
+      "source": "real",
+      "matched": "Internacional"
+    },
+    {
+      "id": "BRA1-Coritiba",
+      "name": "Coritiba",
+      "leagueId": "BRA1",
+      "division": 1,
+      "file": "crests/BRA1-Coritiba.png",
+      "source": "real",
+      "matched": "Coritiba"
+    },
+    {
+      "id": "BRA1-Gremio",
+      "name": "Gremio",
+      "leagueId": "BRA1",
+      "division": 1,
+      "file": "crests/BRA1-Gremio.png",
+      "source": "real",
+      "matched": "Grêmio"
+    },
+    {
+      "id": "BRA1-Santos",
+      "name": "Santos",
+      "leagueId": "BRA1",
+      "division": 1,
+      "file": "crests/BRA1-Santos.png",
+      "source": "real",
+      "matched": "Santos"
+    },
+    {
+      "id": "BRA1-Remo",
+      "name": "Remo",
+      "leagueId": "BRA1",
+      "division": 1,
+      "file": "crests/BRA1-Remo.png",
+      "source": "real",
+      "matched": "Remo"
+    },
+    {
+      "id": "BRA1-Vasco",
+      "name": "Vasco",
+      "leagueId": "BRA1",
+      "division": 1,
+      "file": "crests/BRA1-Vasco.png",
+      "source": "real",
+      "matched": "Vasco da Gama"
+    },
+    {
+      "id": "BRA1-ChapecoenseSC",
+      "name": "Chapecoense-SC",
+      "leagueId": "BRA1",
+      "division": 1,
+      "file": "crests/BRA1-ChapecoenseSC.svg",
+      "source": "generated"
+    },
+    {
+      "id": "BRA1-Fortaleza",
+      "name": "Fortaleza",
+      "leagueId": "BRA1",
+      "division": 2,
+      "file": "crests/BRA1-Fortaleza.png",
+      "source": "real",
+      "matched": "Fortaleza"
+    },
+    {
+      "id": "BRA1-Portuguesa",
+      "name": "Portuguesa",
+      "leagueId": "BRA1",
+      "division": 2,
+      "file": "crests/BRA1-Portuguesa.png",
+      "source": "real",
+      "matched": "Portuguesa"
+    },
+    {
+      "id": "BRA1-Ceara",
+      "name": "Ceara",
+      "leagueId": "BRA1",
+      "division": 2,
+      "file": "crests/BRA1-Ceara.png",
+      "source": "real",
+      "matched": "Ceará"
+    },
+    {
+      "id": "BRA1-Goias",
+      "name": "Goias",
+      "leagueId": "BRA1",
+      "division": 2,
+      "file": "crests/BRA1-Goias.png",
+      "source": "real",
+      "matched": "Goiás"
+    },
+    {
+      "id": "BRA1-Juventude",
+      "name": "Juventude",
+      "leagueId": "BRA1",
+      "division": 2,
+      "file": "crests/BRA1-Juventude.png",
+      "source": "real",
+      "matched": "Juventude"
+    },
+    {
+      "id": "BRA1-Cuiaba",
+      "name": "Cuiaba",
+      "leagueId": "BRA1",
+      "division": 2,
+      "file": "crests/BRA1-Cuiaba.png",
+      "source": "real",
+      "matched": "Cuiabá"
+    },
+    {
+      "id": "BRA1-PontePreta",
+      "name": "Ponte Preta",
+      "leagueId": "BRA1",
+      "division": 2,
+      "file": "crests/BRA1-PontePreta.png",
+      "source": "real",
+      "matched": "Ponte Preta"
+    },
+    {
+      "id": "BRA1-Criciuma",
+      "name": "Criciuma",
+      "leagueId": "BRA1",
+      "division": 2,
+      "file": "crests/BRA1-Criciuma.png",
+      "source": "real",
+      "matched": "Criciúma"
+    },
+    {
+      "id": "BRA1-AtleticoGO",
+      "name": "Atletico GO",
+      "leagueId": "BRA1",
+      "division": 2,
+      "file": "crests/BRA1-AtleticoGO.png",
+      "source": "real",
+      "matched": "Atlético Goianiense"
+    },
+    {
+      "id": "BRA1-Figueirense",
+      "name": "Figueirense",
+      "leagueId": "BRA1",
+      "division": 2,
+      "file": "crests/BRA1-Figueirense.png",
+      "source": "real",
+      "matched": "Figueirense"
+    },
+    {
+      "id": "BRA1-Joinville",
+      "name": "Joinville",
+      "leagueId": "BRA1",
+      "division": 2,
+      "file": "crests/BRA1-Joinville.png",
+      "source": "real",
+      "matched": "Joinville"
+    },
+    {
+      "id": "BRA1-SantaCruz",
+      "name": "Santa Cruz",
+      "leagueId": "BRA1",
+      "division": 2,
+      "file": "crests/BRA1-SantaCruz.png",
+      "source": "real",
+      "matched": "Santa Cruz"
+    },
+    {
+      "id": "BRA1-Avai",
+      "name": "Avai",
+      "leagueId": "BRA1",
+      "division": 2,
+      "file": "crests/BRA1-Avai.png",
+      "source": "real",
+      "matched": "Avaí"
+    },
+    {
+      "id": "BRA1-AmericaMG",
+      "name": "America MG",
+      "leagueId": "BRA1",
+      "division": 2,
+      "file": "crests/BRA1-AmericaMG.svg",
+      "source": "generated"
+    },
+    {
+      "id": "BRA1-CSA",
+      "name": "CSA",
+      "leagueId": "BRA1",
+      "division": 2,
+      "file": "crests/BRA1-CSA.png",
+      "source": "real",
+      "matched": "CSA"
+    },
+    {
+      "id": "BRA1-Parana",
+      "name": "Parana",
+      "leagueId": "BRA1",
+      "division": 2,
+      "file": "crests/BRA1-Parana.png",
+      "source": "real",
+      "matched": "Paraná"
+    },
+    {
+      "id": "BRA1-SportRecife",
+      "name": "Sport Recife",
+      "leagueId": "BRA1",
+      "division": 2,
+      "file": "crests/BRA1-SportRecife.png",
+      "source": "real",
+      "matched": "Sport Recife"
+    },
+    {
+      "id": "BRA1-Nautico",
+      "name": "Nautico",
+      "leagueId": "BRA1",
+      "division": 2,
+      "file": "crests/BRA1-Nautico.png",
+      "source": "real",
+      "matched": "Náutico"
+    },
+    {
+      "id": "ARG1-BocaJuniors",
+      "name": "Boca Juniors",
+      "leagueId": "ARG1",
+      "division": 1,
+      "file": "crests/ARG1-BocaJuniors.png",
+      "source": "real",
+      "matched": "Boca Juniors"
+    },
+    {
+      "id": "ARG1-EstudiantesLP",
+      "name": "Estudiantes L.P.",
+      "leagueId": "ARG1",
+      "division": 1,
+      "file": "crests/ARG1-EstudiantesLP.svg",
+      "source": "generated"
+    },
+    {
+      "id": "ARG1-RiverPlate",
+      "name": "River Plate",
+      "leagueId": "ARG1",
+      "division": 1,
+      "file": "crests/ARG1-RiverPlate.png",
+      "source": "real",
+      "matched": "River Plate"
+    },
+    {
+      "id": "ARG1-RosarioCentral",
+      "name": "Rosario Central",
+      "leagueId": "ARG1",
+      "division": 1,
+      "file": "crests/ARG1-RosarioCentral.png",
+      "source": "real",
+      "matched": "Rosario Central"
+    },
+    {
+      "id": "ARG1-ArgentinosJrs",
+      "name": "Argentinos Jrs",
+      "leagueId": "ARG1",
+      "division": 1,
+      "file": "crests/ARG1-ArgentinosJrs.png",
+      "source": "real",
+      "matched": "Argentinos Juniors"
+    },
+    {
+      "id": "ARG1-IndRivadavia",
+      "name": "Ind. Rivadavia",
+      "leagueId": "ARG1",
+      "division": 1,
+      "file": "crests/ARG1-IndRivadavia.png",
+      "source": "real",
+      "matched": "Independiente Rivadavia"
+    },
+    {
+      "id": "ARG1-RacingClub",
+      "name": "Racing Club",
+      "leagueId": "ARG1",
+      "division": 1,
+      "file": "crests/ARG1-RacingClub.png",
+      "source": "real",
+      "matched": "Racing Club"
+    },
+    {
+      "id": "ARG1-Belgrano",
+      "name": "Belgrano",
+      "leagueId": "ARG1",
+      "division": 1,
+      "file": "crests/ARG1-Belgrano.png",
+      "source": "real",
+      "matched": "Belgrano"
+    },
+    {
+      "id": "ARG1-Independiente",
+      "name": "Independiente",
+      "leagueId": "ARG1",
+      "division": 1,
+      "file": "crests/ARG1-Independiente.png",
+      "source": "real",
+      "matched": "Independiente"
+    },
+    {
+      "id": "ARG1-Huracan",
+      "name": "Huracan",
+      "leagueId": "ARG1",
+      "division": 1,
+      "file": "crests/ARG1-Huracan.png",
+      "source": "real",
+      "matched": "Huracán"
+    },
+    {
+      "id": "ARG1-VelezSarsfield",
+      "name": "Velez Sarsfield",
+      "leagueId": "ARG1",
+      "division": 1,
+      "file": "crests/ARG1-VelezSarsfield.png",
+      "source": "real",
+      "matched": "Vélez Sarsfield"
+    },
+    {
+      "id": "ARG1-TalleresCordoba",
+      "name": "Talleres Cordoba",
+      "leagueId": "ARG1",
+      "division": 1,
+      "file": "crests/ARG1-TalleresCordoba.png",
+      "source": "real",
+      "matched": "Talleres de Córdoba"
+    },
+    {
+      "id": "ARG1-GimnasiaLP",
+      "name": "Gimnasia L.P.",
+      "leagueId": "ARG1",
+      "division": 1,
+      "file": "crests/ARG1-GimnasiaLP.png",
+      "source": "real",
+      "matched": "Gimnasia y Esgrima de La Plata"
+    },
+    {
+      "id": "ARG1-Tigre",
+      "name": "Tigre",
+      "leagueId": "ARG1",
+      "division": 1,
+      "file": "crests/ARG1-Tigre.png",
+      "source": "real",
+      "matched": "Tigre"
+    },
+    {
+      "id": "ARG1-SanLorenzo",
+      "name": "San Lorenzo",
+      "leagueId": "ARG1",
+      "division": 1,
+      "file": "crests/ARG1-SanLorenzo.svg",
+      "source": "generated"
+    },
+    {
+      "id": "ARG1-Lanus",
+      "name": "Lanus",
+      "leagueId": "ARG1",
+      "division": 1,
+      "file": "crests/ARG1-Lanus.png",
+      "source": "real",
+      "matched": "Lanús"
+    },
+    {
+      "id": "ARG1-UniondeSantaFe",
+      "name": "Union de Santa Fe",
+      "leagueId": "ARG1",
+      "division": 1,
+      "file": "crests/ARG1-UniondeSantaFe.svg",
+      "source": "generated"
+    },
+    {
+      "id": "ARG1-BarracasCentral",
+      "name": "Barracas Central",
+      "leagueId": "ARG1",
+      "division": 1,
+      "file": "crests/ARG1-BarracasCentral.png",
+      "source": "real",
+      "matched": "Barracas Central"
+    },
+    {
+      "id": "ARG1-Instituto",
+      "name": "Instituto",
+      "leagueId": "ARG1",
+      "division": 1,
+      "file": "crests/ARG1-Instituto.png",
+      "source": "real",
+      "matched": "Instituto"
+    },
+    {
+      "id": "ARG1-DepRiestra",
+      "name": "Dep. Riestra",
+      "leagueId": "ARG1",
+      "division": 1,
+      "file": "crests/ARG1-DepRiestra.png",
+      "source": "real",
+      "matched": "Deportivo Riestra"
+    },
+    {
+      "id": "ARG1-GimnasiaMendoza",
+      "name": "Gimnasia Mendoza",
+      "leagueId": "ARG1",
+      "division": 2,
+      "file": "crests/ARG1-GimnasiaMendoza.png",
+      "source": "real",
+      "matched": "Gimnasia y Esgrima de Mendoza"
+    },
+    {
+      "id": "ARG1-Banfield",
+      "name": "Banfield",
+      "leagueId": "ARG1",
+      "division": 2,
+      "file": "crests/ARG1-Banfield.png",
+      "source": "real",
+      "matched": "Banfield"
+    },
+    {
+      "id": "ARG1-DefensayJusticia",
+      "name": "Defensa y Justicia",
+      "leagueId": "ARG1",
+      "division": 2,
+      "file": "crests/ARG1-DefensayJusticia.png",
+      "source": "real",
+      "matched": "Defensa y Justicia"
+    },
+    {
+      "id": "ARG1-CentralCordoba",
+      "name": "Central Cordoba",
+      "leagueId": "ARG1",
+      "division": 2,
+      "file": "crests/ARG1-CentralCordoba.png",
+      "source": "real",
+      "matched": "Central Córdoba de Rosario"
+    },
+    {
+      "id": "ARG1-AtlTucuman",
+      "name": "Atl. Tucuman",
+      "leagueId": "ARG1",
+      "division": 2,
+      "file": "crests/ARG1-AtlTucuman.png",
+      "source": "real",
+      "matched": "Atlético Tucumán"
+    },
+    {
+      "id": "ARG1-SarmientoJunin",
+      "name": "Sarmiento Junin",
+      "leagueId": "ARG1",
+      "division": 2,
+      "file": "crests/ARG1-SarmientoJunin.png",
+      "source": "real",
+      "matched": "Sarmiento"
+    },
+    {
+      "id": "ARG1-NewellsOldBoys",
+      "name": "Newells Old Boys",
+      "leagueId": "ARG1",
+      "division": 2,
+      "file": "crests/ARG1-NewellsOldBoys.png",
+      "source": "real",
+      "matched": "Newell's Old Boys"
+    },
+    {
+      "id": "ARG1-Platense",
+      "name": "Platense",
+      "leagueId": "ARG1",
+      "division": 2,
+      "file": "crests/ARG1-Platense.png",
+      "source": "real",
+      "matched": "Platense"
+    },
+    {
+      "id": "ARG1-Aldosivi",
+      "name": "Aldosivi",
+      "leagueId": "ARG1",
+      "division": 2,
+      "file": "crests/ARG1-Aldosivi.png",
+      "source": "real",
+      "matched": "Aldosivi"
+    },
+    {
+      "id": "ARG1-EstudiantesRioCuarto",
+      "name": "Estudiantes Rio Cuarto",
+      "leagueId": "ARG1",
+      "division": 2,
+      "file": "crests/ARG1-EstudiantesRioCuarto.png",
+      "source": "real",
+      "matched": "Estudiantes de Río Cuarto"
+    },
+    {
+      "id": "ARG1-Patronato",
+      "name": "Patronato",
+      "leagueId": "ARG1",
+      "division": 2,
+      "file": "crests/ARG1-Patronato.png",
+      "source": "real",
+      "matched": "Patronato"
+    },
+    {
+      "id": "ARG1-ColonSantaFE",
+      "name": "Colon Santa FE",
+      "leagueId": "ARG1",
+      "division": 2,
+      "file": "crests/ARG1-ColonSantaFE.png",
+      "source": "real",
+      "matched": "Colón"
+    },
+    {
+      "id": "ARG1-NuevaChicago",
+      "name": "Nueva Chicago",
+      "leagueId": "ARG1",
+      "division": 2,
+      "file": "crests/ARG1-NuevaChicago.png",
+      "source": "real",
+      "matched": "Nueva Chicago"
+    },
+    {
+      "id": "ARG1-SanMartinT",
+      "name": "San Martin T.",
+      "leagueId": "ARG1",
+      "division": 2,
+      "file": "crests/ARG1-SanMartinT.svg",
+      "source": "generated"
+    },
+    {
+      "id": "ARG1-GodoyCruz",
+      "name": "Godoy Cruz",
+      "leagueId": "ARG1",
+      "division": 2,
+      "file": "crests/ARG1-GodoyCruz.png",
+      "source": "real",
+      "matched": "Godoy Cruz"
+    },
+    {
+      "id": "ARG1-SanMartinSJ",
+      "name": "San Martin S.J.",
+      "leagueId": "ARG1",
+      "division": 2,
+      "file": "crests/ARG1-SanMartinSJ.svg",
+      "source": "generated"
+    },
+    {
+      "id": "ARG1-AtlRafaela",
+      "name": "Atl. Rafaela",
+      "leagueId": "ARG1",
+      "division": 2,
+      "file": "crests/ARG1-AtlRafaela.png",
+      "source": "real",
+      "matched": "Atlético de Rafaela"
+    },
+    {
+      "id": "ARG1-ColonSantaFe",
+      "name": "Colon Santa Fe",
+      "leagueId": "ARG1",
+      "division": 2,
+      "file": "crests/ARG1-ColonSantaFE.png",
+      "source": "real",
+      "matched": "Colón",
+      "primary": "#e30613",
+      "secondary": "#143d8d"
+    },
+    {
+      "id": "ARG1-Temperley",
+      "name": "Temperley",
+      "leagueId": "ARG1",
+      "division": 3,
+      "file": "crests/ARG1-Temperley.png",
+      "source": "real",
+      "matched": "Temperley"
+    },
+    {
+      "id": "ARG1-ArsenalSarandi",
+      "name": "Arsenal Sarandi",
+      "leagueId": "ARG1",
+      "division": 3,
+      "file": "crests/ARG1-ArsenalSarandi.png",
+      "source": "real",
+      "matched": "Arsenal de Sarandí"
+    },
+    {
+      "id": "ARG1-AllBoys",
+      "name": "All Boys",
+      "leagueId": "ARG1",
+      "division": 3,
+      "file": "crests/ARG1-AllBoys.png",
+      "source": "real",
+      "matched": "All Boys"
+    },
+    {
+      "id": "ARG1-ChacaritaJuniors",
+      "name": "Chacarita Juniors",
+      "leagueId": "ARG1",
+      "division": 3,
+      "file": "crests/ARG1-ChacaritaJuniors.png",
+      "source": "real",
+      "matched": "Chacarita Juniors"
+    },
+    {
+      "id": "ARG1-Quilmes",
+      "name": "Quilmes",
+      "leagueId": "ARG1",
+      "division": 3,
+      "file": "crests/ARG1-Quilmes.png",
+      "source": "real",
+      "matched": "Quilmes"
+    },
+    {
+      "id": "ARG1-OlimpoBahiaBlanca",
+      "name": "Olimpo Bahia Blanca",
+      "leagueId": "ARG1",
+      "division": 3,
+      "file": "crests/ARG1-OlimpoBahiaBlanca.png",
+      "source": "real",
+      "matched": "Olimpo"
+    },
+    {
+      "id": "ARG1-CrucerodelNorte",
+      "name": "Crucero del Norte",
+      "leagueId": "ARG1",
+      "division": 3,
+      "file": "crests/ARG1-CrucerodelNorte.png",
+      "source": "real",
+      "matched": "Crucero del Norte"
+    },
+    {
+      "id": "USA1-InterMiami",
+      "name": "Inter Miami",
+      "leagueId": "USA1",
+      "division": 1,
+      "file": "crests/USA1-InterMiami.png",
+      "source": "real",
+      "matched": "Inter Miami"
+    },
+    {
+      "id": "USA1-VancouverWhitecaps",
+      "name": "Vancouver Whitecaps",
+      "leagueId": "USA1",
+      "division": 1,
+      "file": "crests/USA1-VancouverWhitecaps.svg",
+      "source": "generated"
+    },
+    {
+      "id": "USA1-NashvilleSC",
+      "name": "Nashville SC",
+      "leagueId": "USA1",
+      "division": 1,
+      "file": "crests/USA1-NashvilleSC.png",
+      "source": "real",
+      "matched": "Nashville SC"
+    },
+    {
+      "id": "USA1-LosAngelesFC",
+      "name": "Los Angeles FC",
+      "leagueId": "USA1",
+      "division": 1,
+      "file": "crests/USA1-LosAngelesFC.png",
+      "source": "real",
+      "matched": "Los Angeles FC"
+    },
+    {
+      "id": "USA1-SanJoseEarthquakes",
+      "name": "San Jose Earthquakes",
+      "leagueId": "USA1",
+      "division": 1,
+      "file": "crests/USA1-SanJoseEarthquakes.png",
+      "source": "real",
+      "matched": "San Jose Earthquakes"
+    },
+    {
+      "id": "USA1-FCDallas",
+      "name": "FC Dallas",
+      "leagueId": "USA1",
+      "division": 1,
+      "file": "crests/USA1-FCDallas.png",
+      "source": "real",
+      "matched": "FC Dallas"
+    },
+    {
+      "id": "USA1-ChicagoFire",
+      "name": "Chicago Fire",
+      "leagueId": "USA1",
+      "division": 1,
+      "file": "crests/USA1-ChicagoFire.png",
+      "source": "real",
+      "matched": "Chicago Fire"
+    },
+    {
+      "id": "USA1-SeattleSounders",
+      "name": "Seattle Sounders",
+      "leagueId": "USA1",
+      "division": 1,
+      "file": "crests/USA1-SeattleSounders.png",
+      "source": "real",
+      "matched": "Seattle Sounders"
+    },
+    {
+      "id": "USA1-NewYorkCity",
+      "name": "New York City",
+      "leagueId": "USA1",
+      "division": 1,
+      "file": "crests/USA1-NewYorkCity.png",
+      "source": "real",
+      "matched": "New York City FC"
+    },
+    {
+      "id": "USA1-MinnesotaUnited",
+      "name": "Minnesota United",
+      "leagueId": "USA1",
+      "division": 1,
+      "file": "crests/USA1-MinnesotaUnited.png",
+      "source": "real",
+      "matched": "Minnesota United"
+    },
+    {
+      "id": "USA1-FCCincinnati",
+      "name": "FC Cincinnati",
+      "leagueId": "USA1",
+      "division": 1,
+      "file": "crests/USA1-FCCincinnati.png",
+      "source": "real",
+      "matched": "FC Cincinnati"
+    },
+    {
+      "id": "USA1-RealSaltLake",
+      "name": "Real Salt Lake",
+      "leagueId": "USA1",
+      "division": 1,
+      "file": "crests/USA1-RealSaltLake.png",
+      "source": "real",
+      "matched": "Real Salt Lake"
+    },
+    {
+      "id": "USA1-SanDiegoFC",
+      "name": "San Diego FC",
+      "leagueId": "USA1",
+      "division": 1,
+      "file": "crests/USA1-SanDiegoFC.png",
+      "source": "real",
+      "matched": "San Diego FC"
+    },
+    {
+      "id": "USA1-Charlotte",
+      "name": "Charlotte",
+      "leagueId": "USA1",
+      "division": 1,
+      "file": "crests/USA1-Charlotte.svg",
+      "source": "generated"
+    },
+    {
+      "id": "USA1-HoustonDynamo",
+      "name": "Houston Dynamo",
+      "leagueId": "USA1",
+      "division": 1,
+      "file": "crests/USA1-HoustonDynamo.png",
+      "source": "real",
+      "matched": "Houston Dynamo"
+    },
+    {
+      "id": "USA1-ColumbusCrew",
+      "name": "Columbus Crew",
+      "leagueId": "USA1",
+      "division": 1,
+      "file": "crests/USA1-ColumbusCrew.png",
+      "source": "real",
+      "matched": "Columbus Crew"
+    },
+    {
+      "id": "USA1-PortlandTimbers",
+      "name": "Portland Timbers",
+      "leagueId": "USA1",
+      "division": 1,
+      "file": "crests/USA1-PortlandTimbers.png",
+      "source": "real",
+      "matched": "Portland Timbers"
+    },
+    {
+      "id": "USA1-NewEnglandRevolution",
+      "name": "New England Revolution",
+      "leagueId": "USA1",
+      "division": 1,
+      "file": "crests/USA1-NewEnglandRevolution.png",
+      "source": "real",
+      "matched": "New England Revolution"
+    },
+    {
+      "id": "USA1-StLouisCity",
+      "name": "St. Louis City",
+      "leagueId": "USA1",
+      "division": 1,
+      "file": "crests/USA1-StLouisCity.png",
+      "source": "real",
+      "matched": "Louisville City"
+    },
+    {
+      "id": "USA1-NewYorkRedBulls",
+      "name": "New York Red Bulls",
+      "leagueId": "USA1",
+      "division": 1,
+      "file": "crests/USA1-NewYorkRedBulls.png",
+      "source": "real",
+      "matched": "New York Red Bulls"
+    },
+    {
+      "id": "USA1-LosAngelesGalaxy",
+      "name": "Los Angeles Galaxy",
+      "leagueId": "USA1",
+      "division": 2,
+      "file": "crests/USA1-LosAngelesGalaxy.png",
+      "source": "real",
+      "matched": "LA Galaxy"
+    },
+    {
+      "id": "USA1-PhiladelphiaUnion",
+      "name": "Philadelphia Union",
+      "leagueId": "USA1",
+      "division": 2,
+      "file": "crests/USA1-PhiladelphiaUnion.png",
+      "source": "real",
+      "matched": "Philadelphia Union"
+    },
+    {
+      "id": "USA1-OrlandoCity",
+      "name": "Orlando City",
+      "leagueId": "USA1",
+      "division": 2,
+      "file": "crests/USA1-OrlandoCity.png",
+      "source": "real",
+      "matched": "Orlando City"
+    },
+    {
+      "id": "USA1-ColoradoRapids",
+      "name": "Colorado Rapids",
+      "leagueId": "USA1",
+      "division": 2,
+      "file": "crests/USA1-ColoradoRapids.png",
+      "source": "real",
+      "matched": "Colorado Rapids"
+    },
+    {
+      "id": "USA1-TorontoFC",
+      "name": "Toronto FC",
+      "leagueId": "USA1",
+      "division": 2,
+      "file": "crests/USA1-TorontoFC.svg",
+      "source": "generated"
+    },
+    {
+      "id": "USA1-CFMontreal",
+      "name": "CF Montreal",
+      "leagueId": "USA1",
+      "division": 2,
+      "file": "crests/USA1-CFMontreal.svg",
+      "source": "generated"
+    },
+    {
+      "id": "USA1-AustinFC",
+      "name": "Austin FC",
+      "leagueId": "USA1",
+      "division": 2,
+      "file": "crests/USA1-AustinFC.png",
+      "source": "real",
+      "matched": "Austin FC"
+    },
+    {
+      "id": "USA1-DCUnited",
+      "name": "DC United",
+      "leagueId": "USA1",
+      "division": 2,
+      "file": "crests/USA1-DCUnited.png",
+      "source": "real",
+      "matched": "DC United"
+    },
+    {
+      "id": "USA1-AtlantaUtd",
+      "name": "Atlanta Utd",
+      "leagueId": "USA1",
+      "division": 2,
+      "file": "crests/USA1-AtlantaUtd.png",
+      "source": "real",
+      "matched": "Atlanta United"
+    },
+    {
+      "id": "USA1-SportingKansasCity",
+      "name": "Sporting Kansas City",
+      "leagueId": "USA1",
+      "division": 2,
+      "file": "crests/USA1-SportingKansasCity.png",
+      "source": "real",
+      "matched": "Sporting Kansas City"
+    },
+    {
+      "id": "USA1-ChivasUSA",
+      "name": "Chivas USA",
+      "leagueId": "USA1",
+      "division": 2,
+      "file": "crests/USA1-ChivasUSA.png",
+      "source": "real",
+      "matched": "CD Chivas USA"
+    },
+    {
+      "id": "MEX1-CruzAzul",
+      "name": "Cruz Azul",
+      "leagueId": "MEX1",
+      "division": 1,
+      "file": "crests/MEX1-CruzAzul.png",
+      "source": "real",
+      "matched": "Cruz Azul"
+    },
+    {
+      "id": "MEX1-Toluca",
+      "name": "Toluca",
+      "leagueId": "MEX1",
+      "division": 1,
+      "file": "crests/MEX1-Toluca.png",
+      "source": "real",
+      "matched": "Toluca"
+    },
+    {
+      "id": "MEX1-TigresUANL",
+      "name": "Tigres UANL",
+      "leagueId": "MEX1",
+      "division": 1,
+      "file": "crests/MEX1-TigresUANL.png",
+      "source": "real",
+      "matched": "Tigres UANL"
+    },
+    {
+      "id": "MEX1-UNAMPumas",
+      "name": "UNAM Pumas",
+      "leagueId": "MEX1",
+      "division": 1,
+      "file": "crests/MEX1-UNAMPumas.png",
+      "source": "real",
+      "matched": "Pumas UNAM"
+    },
+    {
+      "id": "MEX1-GuadalajaraChivas",
+      "name": "Guadalajara Chivas",
+      "leagueId": "MEX1",
+      "division": 1,
+      "file": "crests/MEX1-GuadalajaraChivas.png",
+      "source": "real",
+      "matched": "CD Guadalajara"
+    },
+    {
+      "id": "MEX1-Pachuca",
+      "name": "Pachuca",
+      "leagueId": "MEX1",
+      "division": 1,
+      "file": "crests/MEX1-Pachuca.png",
+      "source": "real",
+      "matched": "Pachuca"
+    },
+    {
+      "id": "MEX1-ClubAmerica",
+      "name": "Club America",
+      "leagueId": "MEX1",
+      "division": 1,
+      "file": "crests/MEX1-ClubAmerica.png",
+      "source": "real",
+      "matched": "América"
+    },
+    {
+      "id": "MEX1-ClubTijuana",
+      "name": "Club Tijuana",
+      "leagueId": "MEX1",
+      "division": 1,
+      "file": "crests/MEX1-ClubTijuana.png",
+      "source": "real",
+      "matched": "Tijuana"
+    },
+    {
+      "id": "MEX1-Monterrey",
+      "name": "Monterrey",
+      "leagueId": "MEX1",
+      "division": 1,
+      "file": "crests/MEX1-Monterrey.png",
+      "source": "real",
+      "matched": "Monterrey"
+    },
+    {
+      "id": "MEX1-Queretaro",
+      "name": "Queretaro",
+      "leagueId": "MEX1",
+      "division": 1,
+      "file": "crests/MEX1-Queretaro.png",
+      "source": "real",
+      "matched": "Querétaro"
+    },
+    {
+      "id": "MEX1-Atlas",
+      "name": "Atlas",
+      "leagueId": "MEX1",
+      "division": 1,
+      "file": "crests/MEX1-Atlas.png",
+      "source": "real",
+      "matched": "Atlas"
+    },
+    {
+      "id": "MEX1-Necaxa",
+      "name": "Necaxa",
+      "leagueId": "MEX1",
+      "division": 1,
+      "file": "crests/MEX1-Necaxa.png",
+      "source": "real",
+      "matched": "Necaxa"
+    },
+    {
+      "id": "MEX1-Juarez",
+      "name": "Juarez",
+      "leagueId": "MEX1",
+      "division": 1,
+      "file": "crests/MEX1-Juarez.png",
+      "source": "real",
+      "matched": "Juárez"
+    },
+    {
+      "id": "MEX1-AtlSanLuis",
+      "name": "Atl. San Luis",
+      "leagueId": "MEX1",
+      "division": 1,
+      "file": "crests/MEX1-AtlSanLuis.png",
+      "source": "real",
+      "matched": "Atlético de San Luis"
+    },
+    {
+      "id": "MEX1-ClubLeon",
+      "name": "Club Leon",
+      "leagueId": "MEX1",
+      "division": 1,
+      "file": "crests/MEX1-ClubLeon.png",
+      "source": "real",
+      "matched": "León"
+    },
+    {
+      "id": "MEX1-MazatlanFC",
+      "name": "Mazatlan FC",
+      "leagueId": "MEX1",
+      "division": 1,
+      "file": "crests/MEX1-MazatlanFC.png",
+      "source": "real",
+      "matched": "Mazatlán"
+    },
+    {
+      "id": "MEX1-SantosLaguna",
+      "name": "Santos Laguna",
+      "leagueId": "MEX1",
+      "division": 1,
+      "file": "crests/MEX1-SantosLaguna.png",
+      "source": "real",
+      "matched": "Santos Laguna"
+    },
+    {
+      "id": "MEX1-Puebla",
+      "name": "Puebla",
+      "leagueId": "MEX1",
+      "division": 1,
+      "file": "crests/MEX1-Puebla.png",
+      "source": "real",
+      "matched": "Puebla"
+    },
+    {
+      "id": "MEX1-Monarcas",
+      "name": "Monarcas",
+      "leagueId": "MEX1",
+      "division": 2,
+      "file": "crests/MEX1-Monarcas.png",
+      "source": "real",
+      "matched": "Atlético Morelia"
+    },
+    {
+      "id": "MEX1-LeonesNegros",
+      "name": "Leones Negros",
+      "leagueId": "MEX1",
+      "division": 2,
+      "file": "crests/MEX1-LeonesNegros.png",
+      "source": "real",
+      "matched": "Leones Negros UdeG"
+    },
+    {
+      "id": "MEX1-LobosBUAP",
+      "name": "Lobos BUAP",
+      "leagueId": "MEX1",
+      "division": 2,
+      "file": "crests/MEX1-LobosBUAP.svg",
+      "source": "generated"
+    },
+    {
+      "id": "MEX1-DoradosdeSinaloa",
+      "name": "Dorados de Sinaloa",
+      "leagueId": "MEX1",
+      "division": 2,
+      "file": "crests/MEX1-DoradosdeSinaloa.png",
+      "source": "real",
+      "matched": "Dorados de Sinaloa"
+    },
+    {
+      "id": "MEX1-Chiapas",
+      "name": "Chiapas",
+      "leagueId": "MEX1",
+      "division": 2,
+      "file": "crests/MEX1-Chiapas.png",
+      "source": "real",
+      "matched": "Chiapas"
+    },
+    {
+      "id": "MEX1-Atlante",
+      "name": "Atlante",
+      "leagueId": "MEX1",
+      "division": 2,
+      "file": "crests/MEX1-Atlante.png",
+      "source": "real",
+      "matched": "Atlante"
+    },
+    {
+      "id": "MEX1-Veracruz",
+      "name": "Veracruz",
+      "leagueId": "MEX1",
+      "division": 2,
+      "file": "crests/MEX1-Veracruz.png",
+      "source": "real",
+      "matched": "Veracruz"
+    },
+    {
+      "id": "COL1-Millonarios",
+      "name": "Millonarios",
+      "leagueId": "COL1",
+      "division": 1,
+      "file": "crests/COL1-Millonarios.png",
+      "source": "real",
+      "matched": "Millonarios"
+    },
+    {
+      "id": "COL1-AtlticoNacional",
+      "name": "Atlético Nacional",
+      "leagueId": "COL1",
+      "division": 1,
+      "file": "crests/COL1-AtlticoNacional.png",
+      "source": "real",
+      "matched": "Atlético Nacional"
+    },
+    {
+      "id": "COL1-IndependienteMedelln",
+      "name": "Independiente Medellín",
+      "leagueId": "COL1",
+      "division": 1,
+      "file": "crests/COL1-IndependienteMedelln.png",
+      "source": "real",
+      "matched": "Independiente Medellín"
+    },
+    {
+      "id": "COL1-DeportesTolima",
+      "name": "Deportes Tolima",
+      "leagueId": "COL1",
+      "division": 1,
+      "file": "crests/COL1-DeportesTolima.png",
+      "source": "real",
+      "matched": "Deportes Tolima"
+    },
+    {
+      "id": "COL1-AmricadeCali",
+      "name": "América de Cali",
+      "leagueId": "COL1",
+      "division": 1,
+      "file": "crests/COL1-AmricadeCali.png",
+      "source": "real",
+      "matched": "América de Cali"
+    },
+    {
+      "id": "COL1-AtlticoJunior",
+      "name": "Atlético Junior",
+      "leagueId": "COL1",
+      "division": 1,
+      "file": "crests/COL1-AtlticoJunior.png",
+      "source": "real",
+      "matched": "Atlético Junior"
+    },
+    {
+      "id": "COL1-SantaFe",
+      "name": "Santa Fe",
+      "leagueId": "COL1",
+      "division": 1,
+      "file": "crests/COL1-SantaFe.svg",
+      "source": "generated"
+    },
+    {
+      "id": "COL1-OnceCaldas",
+      "name": "Once Caldas",
+      "leagueId": "COL1",
+      "division": 1,
+      "file": "crests/COL1-OnceCaldas.png",
+      "source": "real",
+      "matched": "Once Caldas"
+    },
+    {
+      "id": "COL1-DeportivoPereira",
+      "name": "Deportivo Pereira",
+      "leagueId": "COL1",
+      "division": 1,
+      "file": "crests/COL1-DeportivoPereira.png",
+      "source": "real",
+      "matched": "Deportivo Pereira"
+    },
+    {
+      "id": "COL1-DeportivoPasto",
+      "name": "Deportivo Pasto",
+      "leagueId": "COL1",
+      "division": 1,
+      "file": "crests/COL1-DeportivoPasto.png",
+      "source": "real",
+      "matched": "Deportivo Pasto"
+    },
+    {
+      "id": "COL1-AtlticoBucaramanga",
+      "name": "Atlético Bucaramanga",
+      "leagueId": "COL1",
+      "division": 1,
+      "file": "crests/COL1-AtlticoBucaramanga.png",
+      "source": "real",
+      "matched": "Atlético Bucaramanga"
+    },
+    {
+      "id": "COL1-DeportivoCali",
+      "name": "Deportivo Cali",
+      "leagueId": "COL1",
+      "division": 1,
+      "file": "crests/COL1-DeportivoCali.png",
+      "source": "real",
+      "matched": "Deportivo Cali"
+    },
+    {
+      "id": "COL1-AlianzaFC",
+      "name": "Alianza FC",
+      "leagueId": "COL1",
+      "division": 1,
+      "file": "crests/COL1-AlianzaFC.svg",
+      "source": "generated"
+    },
+    {
+      "id": "COL1-FortalezaFC",
+      "name": "Fortaleza FC",
+      "leagueId": "COL1",
+      "division": 1,
+      "file": "crests/COL1-FortalezaFC.png",
+      "source": "real",
+      "matched": "Fortaleza FC"
+    },
+    {
+      "id": "COL1-LlanerosFC",
+      "name": "Llaneros FC",
+      "leagueId": "COL1",
+      "division": 1,
+      "file": "crests/COL1-LlanerosFC.png",
+      "source": "real",
+      "matched": "Llaneros"
+    },
+    {
+      "id": "COL1-guilasDoradas",
+      "name": "Águilas Doradas",
+      "leagueId": "COL1",
+      "division": 1,
+      "file": "crests/COL1-guilasDoradas.png",
+      "source": "real",
+      "matched": "Rionegro Águilas"
+    },
+    {
+      "id": "COL1-EnvigadoFC",
+      "name": "Envigado FC",
+      "leagueId": "COL1",
+      "division": 1,
+      "file": "crests/COL1-EnvigadoFC.png",
+      "source": "real",
+      "matched": "Envigado"
+    },
+    {
+      "id": "COL1-LaEquidad",
+      "name": "La Equidad",
+      "leagueId": "COL1",
+      "division": 1,
+      "file": "crests/COL1-LaEquidad.png",
+      "source": "real",
+      "matched": "Internacional de Bogotá"
+    },
+    {
+      "id": "COL1-UninMagdalena",
+      "name": "Unión Magdalena",
+      "leagueId": "COL1",
+      "division": 1,
+      "file": "crests/COL1-UninMagdalena.png",
+      "source": "real",
+      "matched": "Unión Magdalena"
+    },
+    {
+      "id": "COL1-BoyacChic",
+      "name": "Boyacá Chicó",
+      "leagueId": "COL1",
+      "division": 1,
+      "file": "crests/COL1-BoyacChic.png",
+      "source": "real",
+      "matched": "Boyacá Chicó"
+    },
+    {
+      "id": "COL1-AlianzaPetrolera",
+      "name": "Alianza Petrolera",
+      "leagueId": "COL1",
+      "division": 2,
+      "file": "crests/COL1-AlianzaPetrolera.png",
+      "source": "real",
+      "matched": "Alianza de Valledupar"
+    },
+    {
+      "id": "COL1-PatriotasFC",
+      "name": "Patriotas FC",
+      "leagueId": "COL1",
+      "division": 2,
+      "file": "crests/COL1-PatriotasFC.png",
+      "source": "real",
+      "matched": "Patriotas Boyacá"
+    },
+    {
+      "id": "COL1-AtlticoHuila",
+      "name": "Atlético Huila",
+      "leagueId": "COL1",
+      "division": 2,
+      "file": "crests/COL1-AtlticoHuila.png",
+      "source": "real",
+      "matched": "Atlético Huila"
+    },
+    {
+      "id": "COL1-JaguaresdeCrdoba",
+      "name": "Jaguares de Córdoba",
+      "leagueId": "COL1",
+      "division": 2,
+      "file": "crests/COL1-JaguaresdeCrdoba.png",
+      "source": "real",
+      "matched": "Jaguares de Córdoba"
+    },
+    {
+      "id": "PER1-Universitario",
+      "name": "Universitario",
+      "leagueId": "PER1",
+      "division": 1,
+      "file": "crests/PER1-Universitario.png",
+      "source": "real",
+      "matched": "Universitario",
+      "primary": "#7a0c1e",
+      "secondary": "#f2e6e8"
+    },
+    {
+      "id": "PER1-SportingCristal",
+      "name": "Sporting Cristal",
+      "leagueId": "PER1",
+      "division": 1,
+      "file": "crests/PER1-SportingCristal.png",
+      "source": "real",
+      "matched": "Sporting Cristal",
+      "primary": "#006b3c",
+      "secondary": "#ffffff"
+    },
+    {
+      "id": "PER1-AlianzaLima",
+      "name": "Alianza Lima",
+      "leagueId": "PER1",
+      "division": 1,
+      "file": "crests/PER1-AlianzaLima.png",
+      "source": "real",
+      "matched": "Alianza Lima",
+      "primary": "#7a0c1e",
+      "secondary": "#f2e6e8"
+    },
+    {
+      "id": "PER1-Cienciano",
+      "name": "Cienciano",
+      "leagueId": "PER1",
+      "division": 1,
+      "file": "crests/PER1-Cienciano.png",
+      "source": "real",
+      "matched": "Cienciano",
+      "primary": "#7a0c1e",
+      "secondary": "#f2e6e8"
+    },
+    {
+      "id": "PER1-SportHuancayo",
+      "name": "Sport Huancayo",
+      "leagueId": "PER1",
+      "division": 1,
+      "file": "crests/PER1-SportHuancayo.png",
+      "source": "real",
+      "matched": "Sport Huancayo",
+      "primary": "#7a0c1e",
+      "secondary": "#f2e6e8"
+    },
+    {
+      "id": "PER1-CuscoFC",
+      "name": "Cusco FC",
+      "leagueId": "PER1",
+      "division": 1,
+      "file": "crests/PER1-CuscoFC.png",
+      "source": "real",
+      "matched": "Cusco",
+      "primary": "#7a0c1e",
+      "secondary": "#f2e6e8"
+    },
+    {
+      "id": "PER1-Melgar",
+      "name": "Melgar",
+      "leagueId": "PER1",
+      "division": 1,
+      "file": "crests/PER1-Melgar.png",
+      "source": "real",
+      "matched": "Melgar",
+      "primary": "#7a0c1e",
+      "secondary": "#f2e6e8"
+    },
+    {
+      "id": "PER1-SportBoys",
+      "name": "Sport Boys",
+      "leagueId": "PER1",
+      "division": 1,
+      "file": "crests/PER1-SportBoys.png",
+      "source": "real",
+      "matched": "Sport Boys",
+      "primary": "#7a0c1e",
+      "secondary": "#f2e6e8"
+    },
+    {
+      "id": "PER1-AtlticoGrau",
+      "name": "Atlético Grau",
+      "leagueId": "PER1",
+      "division": 1,
+      "file": "crests/PER1-AtlticoGrau.png",
+      "source": "real",
+      "matched": "Atlético Grau",
+      "primary": "#7a0c1e",
+      "secondary": "#f2e6e8"
+    },
+    {
+      "id": "PER1-ADT",
+      "name": "ADT",
+      "leagueId": "PER1",
+      "division": 1,
+      "file": "crests/PER1-ADT.png",
+      "source": "real",
+      "matched": "ADT",
+      "primary": "#7a0c1e",
+      "secondary": "#f2e6e8"
+    },
+    {
+      "id": "PER1-DeportivoGarcilaso",
+      "name": "Deportivo Garcilaso",
+      "leagueId": "PER1",
+      "division": 1,
+      "file": "crests/PER1-DeportivoGarcilaso.png",
+      "source": "real",
+      "matched": "Deportivo Garcilaso",
+      "primary": "#7a0c1e",
+      "secondary": "#f2e6e8"
+    },
+    {
+      "id": "PER1-AyacuchoFC",
+      "name": "Ayacucho FC",
+      "leagueId": "PER1",
+      "division": 1,
+      "file": "crests/PER1-AyacuchoFC.png",
+      "source": "real",
+      "matched": "Ayacucho",
+      "primary": "#7a0c1e",
+      "secondary": "#f2e6e8"
+    },
+    {
+      "id": "PER1-CsarVallejo",
+      "name": "César Vallejo",
+      "leagueId": "PER1",
+      "division": 1,
+      "file": "crests/PER1-CsarVallejo.png",
+      "source": "real",
+      "matched": "Universidad César Vallejo",
+      "primary": "#7a0c1e",
+      "secondary": "#f2e6e8"
+    },
+    {
+      "id": "PER1-LosChankas",
+      "name": "Los Chankas",
+      "leagueId": "PER1",
+      "division": 1,
+      "file": "crests/PER1-LosChankas.png",
+      "source": "real",
+      "matched": "Los Chankas",
+      "primary": "#7a0c1e",
+      "secondary": "#f2e6e8"
+    },
+    {
+      "id": "PER1-UTCCajamarca",
+      "name": "UTC Cajamarca",
+      "leagueId": "PER1",
+      "division": 1,
+      "file": "crests/PER1-UTCCajamarca.png",
+      "source": "real",
+      "matched": "Universidad Técnica de Cajamarca",
+      "primary": "#7a0c1e",
+      "secondary": "#f2e6e8"
+    },
+    {
+      "id": "PER1-AlianzaAtltico",
+      "name": "Alianza Atlético",
+      "leagueId": "PER1",
+      "division": 1,
+      "file": "crests/PER1-AlianzaAtltico.png",
+      "source": "real",
+      "matched": "Alianza Atlético",
+      "primary": "#7a0c1e",
+      "secondary": "#f2e6e8"
+    },
+    {
+      "id": "PER1-JuanPabloII",
+      "name": "Juan Pablo II",
+      "leagueId": "PER1",
+      "division": 1,
+      "file": "crests/PER1-JuanPabloII.png",
+      "source": "real",
+      "matched": "Juan Pablo II College",
+      "primary": "#7a0c1e",
+      "secondary": "#f2e6e8"
+    },
+    {
+      "id": "PER1-ComerciantesUnidos",
+      "name": "Comerciantes Unidos",
+      "leagueId": "PER1",
+      "division": 1,
+      "file": "crests/PER1-ComerciantesUnidos.png",
+      "source": "real",
+      "matched": "Comerciantes Unidos",
+      "primary": "#7a0c1e",
+      "secondary": "#f2e6e8"
+    },
+    {
+      "id": "URU1-Pearol",
+      "name": "Peñarol",
+      "leagueId": "URU1",
+      "division": 1,
+      "file": "crests/URU1-Pearol.png",
+      "source": "real",
+      "matched": "Peñarol",
+      "primary": "#0a2a5c",
+      "secondary": "#7ab8e6"
+    },
+    {
+      "id": "URU1-Nacional",
+      "name": "Nacional",
+      "leagueId": "URU1",
+      "division": 1,
+      "file": "crests/URU1-Nacional.svg",
+      "source": "generated",
+      "primary": "#0a2a5c",
+      "secondary": "#7ab8e6"
+    },
+    {
+      "id": "URU1-RiverPlateMontevideo",
+      "name": "River Plate Montevideo",
+      "leagueId": "URU1",
+      "division": 1,
+      "file": "crests/URU1-RiverPlateMontevideo.png",
+      "source": "real",
+      "matched": "River Plate Montevideo",
+      "primary": "#b91c35",
+      "secondary": "#10151d"
+    },
+    {
+      "id": "URU1-LiverpooldeMontevideo",
+      "name": "Liverpool de Montevideo",
+      "leagueId": "URU1",
+      "division": 1,
+      "file": "crests/URU1-LiverpooldeMontevideo.png",
+      "source": "real",
+      "matched": "Liverpool Montevideo",
+      "primary": "#d71920",
+      "secondary": "#10151d"
+    },
+    {
+      "id": "URU1-DefensorSporting",
+      "name": "Defensor Sporting",
+      "leagueId": "URU1",
+      "division": 1,
+      "file": "crests/URU1-DefensorSporting.png",
+      "source": "real",
+      "matched": "Defensor Sporting",
+      "primary": "#006b3c",
+      "secondary": "#ffffff"
+    },
+    {
+      "id": "URU1-Danubio",
+      "name": "Danubio",
+      "leagueId": "URU1",
+      "division": 1,
+      "file": "crests/URU1-Danubio.png",
+      "source": "real",
+      "matched": "Danubio",
+      "primary": "#0a2a5c",
+      "secondary": "#7ab8e6"
+    },
+    {
+      "id": "URU1-Fnix",
+      "name": "Fénix",
+      "leagueId": "URU1",
+      "division": 1,
+      "file": "crests/URU1-Fnix.png",
+      "source": "real",
+      "matched": "Fénix",
+      "primary": "#0a2a5c",
+      "secondary": "#7ab8e6"
+    },
+    {
+      "id": "URU1-RacingdeMontevideo",
+      "name": "Racing de Montevideo",
+      "leagueId": "URU1",
+      "division": 1,
+      "file": "crests/URU1-RacingdeMontevideo.png",
+      "source": "real",
+      "matched": "Racing Montevideo",
+      "primary": "#0a2a5c",
+      "secondary": "#7ab8e6"
+    },
+    {
+      "id": "URU1-BostonRiver",
+      "name": "Boston River",
+      "leagueId": "URU1",
+      "division": 1,
+      "file": "crests/URU1-BostonRiver.png",
+      "source": "real",
+      "matched": "Boston River",
+      "primary": "#0a2a5c",
+      "secondary": "#7ab8e6"
+    },
+    {
+      "id": "URU1-Progreso",
+      "name": "Progreso",
+      "leagueId": "URU1",
+      "division": 1,
+      "file": "crests/URU1-Progreso.png",
+      "source": "real",
+      "matched": "Progreso",
+      "primary": "#0a2a5c",
+      "secondary": "#7ab8e6"
+    },
+    {
+      "id": "URU1-CerroLargo",
+      "name": "Cerro Largo",
+      "leagueId": "URU1",
+      "division": 1,
+      "file": "crests/URU1-CerroLargo.png",
+      "source": "real",
+      "matched": "Cerro Largo",
+      "primary": "#0a2a5c",
+      "secondary": "#7ab8e6"
+    },
+    {
+      "id": "URU1-Cerro",
+      "name": "Cerro",
+      "leagueId": "URU1",
+      "division": 1,
+      "file": "crests/URU1-Cerro.png",
+      "source": "real",
+      "matched": "Cerro",
+      "primary": "#0a2a5c",
+      "secondary": "#7ab8e6"
+    },
+    {
+      "id": "URU1-MontevideoWanderers",
+      "name": "Montevideo Wanderers",
+      "leagueId": "URU1",
+      "division": 1,
+      "file": "crests/URU1-MontevideoWanderers.png",
+      "source": "real",
+      "matched": "Montevideo Wanderers",
+      "primary": "#0a2a5c",
+      "secondary": "#7ab8e6"
+    },
+    {
+      "id": "URU1-JuventuddeLasPiedras",
+      "name": "Juventud de Las Piedras",
+      "leagueId": "URU1",
+      "division": 1,
+      "file": "crests/URU1-JuventuddeLasPiedras.png",
+      "source": "real",
+      "matched": "Juventud Las Piedras",
+      "primary": "#0a2a5c",
+      "secondary": "#7ab8e6"
+    },
+    {
+      "id": "URU1-MontevideoCityTorque",
+      "name": "Montevideo City Torque",
+      "leagueId": "URU1",
+      "division": 1,
+      "file": "crests/URU1-MontevideoCityTorque.png",
+      "source": "real",
+      "matched": "Montevideo City Torque",
+      "primary": "#0a2a5c",
+      "secondary": "#7ab8e6"
+    },
+    {
+      "id": "URU1-PlazaColonia",
+      "name": "Plaza Colonia",
+      "leagueId": "URU1",
+      "division": 1,
+      "file": "crests/URU1-PlazaColonia.png",
+      "source": "real",
+      "matched": "Plaza Colonia",
+      "primary": "#0a2a5c",
+      "secondary": "#7ab8e6"
+    },
+    {
+      "id": "CHI1-ColoColo",
+      "name": "Colo-Colo",
+      "leagueId": "CHI1",
+      "division": 1,
+      "file": "crests/CHI1-ColoColo.svg",
+      "source": "generated",
+      "primary": "#0a2d6b",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "CHI1-UniversidaddeChile",
+      "name": "Universidad de Chile",
+      "leagueId": "CHI1",
+      "division": 1,
+      "file": "crests/CHI1-UniversidaddeChile.png",
+      "source": "real",
+      "matched": "Universidad de Chile",
+      "primary": "#0a2d6b",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "CHI1-UniversidadCatlica",
+      "name": "Universidad Católica",
+      "leagueId": "CHI1",
+      "division": 1,
+      "file": "crests/CHI1-UniversidadCatlica.png",
+      "source": "real",
+      "matched": "Universidad Católica",
+      "primary": "#0a2d6b",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "CHI1-Palestino",
+      "name": "Palestino",
+      "leagueId": "CHI1",
+      "division": 1,
+      "file": "crests/CHI1-Palestino.png",
+      "source": "real",
+      "matched": "Palestino",
+      "primary": "#0a2d6b",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "CHI1-Cobresal",
+      "name": "Cobresal",
+      "leagueId": "CHI1",
+      "division": 1,
+      "file": "crests/CHI1-Cobresal.png",
+      "source": "real",
+      "matched": "Cobresal",
+      "primary": "#0a2d6b",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "CHI1-CoquimboUnido",
+      "name": "Coquimbo Unido",
+      "leagueId": "CHI1",
+      "division": 1,
+      "file": "crests/CHI1-CoquimboUnido.png",
+      "source": "real",
+      "matched": "Coquimbo Unido",
+      "primary": "#0a2d6b",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "CHI1-EvertondeVia",
+      "name": "Everton de Viña",
+      "leagueId": "CHI1",
+      "division": 1,
+      "file": "crests/CHI1-EvertondeVia.png",
+      "source": "real",
+      "matched": "Everton de Viña del Mar",
+      "primary": "#d71920",
+      "secondary": "#10151d"
+    },
+    {
+      "id": "CHI1-Huachipato",
+      "name": "Huachipato",
+      "leagueId": "CHI1",
+      "division": 1,
+      "file": "crests/CHI1-Huachipato.png",
+      "source": "real",
+      "matched": "Huachipato",
+      "primary": "#0a2d6b",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "CHI1-DeportesIquique",
+      "name": "Deportes Iquique",
+      "leagueId": "CHI1",
+      "division": 1,
+      "file": "crests/CHI1-DeportesIquique.png",
+      "source": "real",
+      "matched": "Deportes Iquique",
+      "primary": "#0a2d6b",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "CHI1-ublense",
+      "name": "Ñublense",
+      "leagueId": "CHI1",
+      "division": 1,
+      "file": "crests/CHI1-ublense.png",
+      "source": "real",
+      "matched": "Ñublense",
+      "primary": "#e30613",
+      "secondary": "#143d8d"
+    },
+    {
+      "id": "CHI1-UninLaCalera",
+      "name": "Unión La Calera",
+      "leagueId": "CHI1",
+      "division": 1,
+      "file": "crests/CHI1-UninLaCalera.png",
+      "source": "real",
+      "matched": "Unión La Calera",
+      "primary": "#0a2d6b",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "CHI1-DeportesLaSerena",
+      "name": "Deportes La Serena",
+      "leagueId": "CHI1",
+      "division": 1,
+      "file": "crests/CHI1-DeportesLaSerena.png",
+      "source": "real",
+      "matched": "Deportes La Serena",
+      "primary": "#0a2d6b",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "CHI1-Cobreloa",
+      "name": "Cobreloa",
+      "leagueId": "CHI1",
+      "division": 1,
+      "file": "crests/CHI1-Cobreloa.png",
+      "source": "real",
+      "matched": "Cobreloa",
+      "primary": "#0a2d6b",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "CHI1-UninEspaola",
+      "name": "Unión Española",
+      "leagueId": "CHI1",
+      "division": 1,
+      "file": "crests/CHI1-UninEspaola.png",
+      "source": "real",
+      "matched": "Unión Española",
+      "primary": "#0a2d6b",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "CHI1-OHiggins",
+      "name": "O'Higgins",
+      "leagueId": "CHI1",
+      "division": 1,
+      "file": "crests/CHI1-OHiggins.svg",
+      "source": "generated",
+      "primary": "#0a2d6b",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "CHI1-AudaxItaliano",
+      "name": "Audax Italiano",
+      "leagueId": "CHI1",
+      "division": 1,
+      "file": "crests/CHI1-AudaxItaliano.png",
+      "source": "real",
+      "matched": "Audax Italiano",
+      "primary": "#0a2d6b",
+      "secondary": "#d52b1e"
+    },
+    {
+      "id": "SAU1-AlIttihad",
+      "name": "Al-Ittihad",
+      "leagueId": "SAU1",
+      "division": 1,
+      "file": "crests/SAU1-AlIttihad.png",
+      "source": "real",
+      "primary": "#0a5c36",
+      "secondary": "#e8d9a0"
+    },
+    {
+      "id": "SAU1-AlNassr",
+      "name": "Al-Nassr",
+      "leagueId": "SAU1",
+      "division": 1,
+      "file": "crests/SAU1-AlNassr.png",
+      "source": "real",
+      "primary": "#0a5c36",
+      "secondary": "#e8d9a0"
+    },
+    {
+      "id": "SAU1-AlHilal",
+      "name": "Al-Hilal",
+      "leagueId": "SAU1",
+      "division": 1,
+      "file": "crests/SAU1-AlHilal.png",
+      "source": "real",
+      "primary": "#0a5c36",
+      "secondary": "#e8d9a0"
+    },
+    {
+      "id": "SAU1-AlAhli",
+      "name": "Al-Ahli",
+      "leagueId": "SAU1",
+      "division": 1,
+      "file": "crests/SAU1-AlAhli.png",
+      "source": "real",
+      "primary": "#0a5c36",
+      "secondary": "#e8d9a0"
+    },
+    {
+      "id": "SAU1-AlEttifaq",
+      "name": "Al-Ettifaq",
+      "leagueId": "SAU1",
+      "division": 1,
+      "file": "crests/SAU1-AlEttifaq.png",
+      "source": "real",
+      "primary": "#0a5c36",
+      "secondary": "#e8d9a0"
+    },
+    {
+      "id": "SAU1-AlTaawoun",
+      "name": "Al-Taawoun",
+      "leagueId": "SAU1",
+      "division": 1,
+      "file": "crests/SAU1-AlTaawoun.png",
+      "source": "real",
+      "primary": "#0a5c36",
+      "secondary": "#e8d9a0"
+    },
+    {
+      "id": "SAU1-AlShabab",
+      "name": "Al-Shabab",
+      "leagueId": "SAU1",
+      "division": 1,
+      "file": "crests/SAU1-AlShabab.png",
+      "source": "real",
+      "primary": "#0a5c36",
+      "secondary": "#e8d9a0"
+    },
+    {
+      "id": "SAU1-AlQadsiah",
+      "name": "Al-Qadsiah",
+      "leagueId": "SAU1",
+      "division": 1,
+      "file": "crests/SAU1-AlQadsiah.png",
+      "source": "real",
+      "primary": "#0a5c36",
+      "secondary": "#e8d9a0"
+    },
+    {
+      "id": "SAU1-Damac",
+      "name": "Damac",
+      "leagueId": "SAU1",
+      "division": 1,
+      "file": "crests/SAU1-Damac.png",
+      "source": "real",
+      "matched": "Damac",
+      "primary": "#0a5c36",
+      "secondary": "#e8d9a0"
+    },
+    {
+      "id": "SAU1-AlFayha",
+      "name": "Al-Fayha",
+      "leagueId": "SAU1",
+      "division": 1,
+      "file": "crests/SAU1-AlFayha.png",
+      "source": "real",
+      "primary": "#0a5c36",
+      "secondary": "#e8d9a0"
+    },
+    {
+      "id": "SAU1-AlRiyadh",
+      "name": "Al-Riyadh",
+      "leagueId": "SAU1",
+      "division": 1,
+      "file": "crests/SAU1-AlRiyadh.png",
+      "source": "real",
+      "primary": "#0a5c36",
+      "secondary": "#e8d9a0"
+    },
+    {
+      "id": "SAU1-AlHazem",
+      "name": "Al-Hazem",
+      "leagueId": "SAU1",
+      "division": 1,
+      "file": "crests/SAU1-AlHazem.png",
+      "source": "real",
+      "matched": "Al-Hazem",
+      "primary": "#0a5c36",
+      "secondary": "#e8d9a0"
+    },
+    {
+      "id": "SAU1-AlFateh",
+      "name": "Al-Fateh",
+      "leagueId": "SAU1",
+      "division": 1,
+      "file": "crests/SAU1-AlFateh.png",
+      "source": "real",
+      "matched": "Al-Fateh",
+      "primary": "#0a5c36",
+      "secondary": "#e8d9a0"
+    },
+    {
+      "id": "SAU1-AlKhaleej",
+      "name": "Al-Khaleej",
+      "leagueId": "SAU1",
+      "division": 1,
+      "file": "crests/SAU1-AlKhaleej.png",
+      "source": "real",
+      "matched": "Al-Khaleej",
+      "primary": "#0a5c36",
+      "secondary": "#e8d9a0"
+    },
+    {
+      "id": "SAU1-AlRaed",
+      "name": "Al-Raed",
+      "leagueId": "SAU1",
+      "division": 1,
+      "file": "crests/SAU1-AlRaed.png",
+      "source": "real",
+      "matched": "Al-Raed",
+      "primary": "#0a5c36",
+      "secondary": "#e8d9a0"
+    },
+    {
+      "id": "SAU1-AlOkhdood",
+      "name": "Al-Okhdood",
+      "leagueId": "SAU1",
+      "division": 1,
+      "file": "crests/SAU1-AlOkhdood.png",
+      "source": "real",
+      "matched": "Al-Okhdood",
+      "primary": "#0a5c36",
+      "secondary": "#e8d9a0"
+    },
+    {
+      "id": "SAU1-AlWehda",
+      "name": "Al-Wehda",
+      "leagueId": "SAU1",
+      "division": 1,
+      "file": "crests/SAU1-AlWehda.png",
+      "source": "real",
+      "matched": "Al-Wehda",
+      "primary": "#0a5c36",
+      "secondary": "#e8d9a0"
+    },
+    {
+      "id": "SAU1-AlOrobah",
+      "name": "Al-Orobah",
+      "leagueId": "SAU1",
+      "division": 1,
+      "file": "crests/SAU1-AlOrobah.png",
+      "source": "real",
+      "matched": "Al-Orobah",
+      "primary": "#0a5c36",
+      "secondary": "#e8d9a0"
+    }
+  ]
+}
